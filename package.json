@@ -19,8 +19,8 @@
     "build-css": "node-sass-chokidar lib/ -o lib/",
     "watch-css": "npm run build-css && node-sass-chokidar lib/ -o lib/ --watch --recursive",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c",
-    "storybook": "npm run watch-css && start-storybook -p 7200 -c .storybook"
+    "build": "npm run build-css && rollup -c",
+    "storybook": "start-storybook -p 7200 -c .storybook"
   },
   "keywords": [
     "reactjs",
@@ -40,6 +40,7 @@
     "node-sass-chokidar": "^1.2.2",
     "postcss-modules": "^1.1.0",
     "prettier": "^1.11.1",
+    "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "rollup": "^0.57.1",
@@ -50,7 +51,6 @@
     "rollup-plugin-scss": "^0.4.0"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.6.1"
+    "classnames": "^2.2.5"
   }
 }
