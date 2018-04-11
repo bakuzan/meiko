@@ -35,6 +35,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^0.28.11",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.4",
     "node-sass-chokidar": "^1.2.2",
@@ -48,7 +49,9 @@
     "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-postcss": "^1.5.1",
-    "rollup-plugin-scss": "^0.4.0"
+    "rollup-plugin-scss": "^0.4.0",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3"
   },
   "dependencies": {
     "classnames": "^2.2.5"
