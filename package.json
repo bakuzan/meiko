@@ -1,0 +1,56 @@
+{
+  "name": "meiko",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Component Library",
+  "main": "dist/index.js",
+  "style": "dist/styles.css",
+  "files": [
+    "dist"
+  ],
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,scss}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "build-css": "node-sass-chokidar lib/ -o lib/",
+    "watch-css": "npm run build-css && node-sass-chokidar lib/ -o lib/ --watch --recursive",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "storybook": "npm run watch-css && start-storybook -p 7200 -c .storybook"
+  },
+  "keywords": [
+    "reactjs",
+    "component-library"
+  ],
+  "author": "bakuzan",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/react": "^3.4.1",
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.4",
+    "node-sass-chokidar": "^1.2.2",
+    "postcss-modules": "^1.1.0",
+    "prettier": "^1.11.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-postcss": "^1.5.1",
+    "rollup-plugin-scss": "^0.4.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.1"
+  }
+}
