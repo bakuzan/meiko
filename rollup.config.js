@@ -10,8 +10,10 @@ import uglify from 'rollup-plugin-uglify';
 export default {
   input: 'lib/index.js',
   output: {
-    file: 'dist/bundle.js',
-    format: 'cjs'
+    name: "meiko",
+    file: 'dist/bundle.min.js',
+    format: 'iife',
+    globals: ['React', 'PropTypes']
   },
   external: [
     'react',
@@ -21,7 +23,11 @@ export default {
     replace({
       ["process.env.NODE_ENV"]: JSON.stringify('production')
     }),
-    resolve(),
+    resolve({
+      module: true,
+      main: true,
+      browser: true
+    }),
     postcss({
       preprocessor: (content, id) => new Promise((resolve, reject) => {
         const result = scss.renderSync({ file: id })

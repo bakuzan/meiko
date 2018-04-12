@@ -4,6 +4,8 @@
   "private": true,
   "description": "Component Library",
   "main": "dist/bundle.js",
+  "module": "dist/bundle.esm.js",
+  "browser": "dist/bundle.umd.js",
   "style": "dist/bundle.css",
   "files": [
     "dist"
