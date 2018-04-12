@@ -4,9 +4,8 @@ import scss from 'rollup-plugin-scss';
 import commonjs from 'rollup-plugin-commonjs';
 import autoprefixer from 'autoprefixer'
 import postcss from 'rollup-plugin-postcss';
-import postcssModules from 'postcss-modules';
+import replace from 'rollup-plugin-replace';
 
-const cssExportMap = {};
 export default {
   input: 'lib/index.js',
   output: {
@@ -17,6 +16,9 @@ export default {
     'react'
   ],
   plugins: [
+    replace({
+      ["process.env.NODE_ENV"]: JSON.stringify('production')
+    }),
     resolve(),
     postcss({
       preprocessor: (content, id) => new Promise((resolve, reject) => {
@@ -24,18 +26,12 @@ export default {
         resolve({ code: result.css.toString() })
       }),
       plugins: [
-        autoprefixer,
-        postcssModules({
-          getJSON (id, exportTokens) {
-            cssExportMap[id] = exportTokens;
-          }
-        })
+        autoprefixer
       ],
       modules: true,
       minimize: false,
-      getExportNamed: false,
-      getExport(id) {
-        return cssExportMap[id];
+      namedExports(name) {
+        return name.replace(/-/g, '_')
       },
       extract: 'dist/bundle.css',
       extensions: ['.scss']
