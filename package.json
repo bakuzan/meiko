@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "description": "Component Library",
-  "main": "dist/index.js",
-  "style": "dist/styles.css",
+  "main": "dist/bundle.js",
+  "style": "dist/bundle.css",
   "files": [
     "dist"
   ],
