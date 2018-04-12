@@ -5,6 +5,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import autoprefixer from 'autoprefixer'
 import postcss from 'rollup-plugin-postcss';
 import replace from 'rollup-plugin-replace';
+import uglify from 'rollup-plugin-uglify';
 
 export default {
   input: 'lib/index.js',
@@ -13,7 +14,8 @@ export default {
     format: 'cjs'
   },
   external: [
-    'react'
+    'react',
+    'prop-types'
   ],
   plugins: [
     replace({
@@ -39,6 +41,7 @@ export default {
     babel({
       exclude: 'node_modules/**'
     }),
-    commonjs()
+    commonjs(),
+    uglify()
   ]
 }
