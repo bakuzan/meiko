@@ -19,7 +19,7 @@
     "build-css": "node-sass-chokidar lib/ -o lib/",
     "watch-css": "npm run build-css && node-sass-chokidar lib/ -o lib/ --watch --recursive",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build-css && rollup -c",
+    "build": "rollup -c",
     "storybook": "start-storybook -p 7200 -c .storybook"
   },
   "keywords": [
