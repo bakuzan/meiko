@@ -6,12 +6,13 @@ import autoprefixer from 'autoprefixer'
 import postcss from 'rollup-plugin-postcss';
 import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
+const pkg from './package.json';
 
 export default {
   input: 'lib/index.js',
   output: {
-    name: "meiko",
-    file: 'dist/bundle.min.js',
+    name: pkg.name,
+    file: pkg.main,
     format: 'iife',
     globals: ['React', 'PropTypes']
   },

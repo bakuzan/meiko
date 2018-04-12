@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "Component Library",
-  "main": "dist/bundle.js",
+  "main": "dist/bundle.min.js",
   "module": "dist/bundle.esm.js",
   "browser": "dist/bundle.umd.js",
   "style": "dist/bundle.css",
