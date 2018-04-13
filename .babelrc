@@ -2,11 +2,12 @@
   "presets": [
     "stage-1",
     "react",
-    ["env",
-      {
+    ["env", {
+        "targets": {
+          "browsers": ["last 2 Chrome versions"]
+        },
         "modules": false
       }
     ]
-  ],
-  "plugins": ["external-helpers"]
+  ]
 }

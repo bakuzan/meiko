@@ -20,6 +20,7 @@
     "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
+    "watch-css": "rollup -c --watch",
     "storybook": "start-storybook -p 7200 -c .storybook"
   },
   "keywords": [
@@ -52,6 +53,7 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-scss": "^0.4.0",
     "rollup-plugin-uglify": "^3.0.0",
+    "rollup-watch": "^4.3.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3"
   },
