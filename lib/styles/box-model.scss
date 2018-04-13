@@ -14,61 +14,61 @@
 }
 
 @each $place in $positions {
-    .#{$place} {
-        position: #{$place};
-    }
+  .#{$place} {
+    position: #{$place};
+  }
 }
 
 .position-top {
-    top: 0;
+  top: 0;
 }
 .position-left {
-    left: 0;
+  left: 0;
 }
 .position-right {
-    right: 0;
+  right: 0;
 }
 .position-bottom {
-    bottom: 0;
+  bottom: 0;
 }
 
 @each $box in $boxing {
-    .padding-#{$box} {
-        padding: #{$box}#{$pixel};
-    }
-    .padding-top-#{$box} {
-        padding-top: #{$box}#{$pixel};
-    }
-    .padding-right-#{$box} {
-        padding-right: #{$box}#{$pixel};
-    }
-    .padding-bottom-#{$box} {
-        padding-bottom: #{$box}#{$pixel};
-    }
-    .padding-left-#{$box} {
-        padding-left: #{$box}#{$pixel};
-    }
-    .margin-#{$box} {
-        margin: #{$box}#{$pixel};
-    }
-    .margin-top-#{$box} {
-        margin-top: #{$box}#{$pixel};
-    }
-    .margin-right-#{$box} {
-        margin-right: #{$box}#{$pixel};
-    }
-    .margin-bottom-#{$box} {
-        margin-bottom: #{$box}#{$pixel};
-    }
-    .margin-left-#{$box} {
-        margin-left: #{$box}#{$pixel};
-    }
+  .padding-#{$box} {
+    padding: #{$box}#{$pixel};
+  }
+  .padding-top-#{$box} {
+    padding-top: #{$box}#{$pixel};
+  }
+  .padding-right-#{$box} {
+    padding-right: #{$box}#{$pixel};
+  }
+  .padding-bottom-#{$box} {
+    padding-bottom: #{$box}#{$pixel};
+  }
+  .padding-left-#{$box} {
+    padding-left: #{$box}#{$pixel};
+  }
+  .margin-#{$box} {
+    margin: #{$box}#{$pixel};
+  }
+  .margin-top-#{$box} {
+    margin-top: #{$box}#{$pixel};
+  }
+  .margin-right-#{$box} {
+    margin-right: #{$box}#{$pixel};
+  }
+  .margin-bottom-#{$box} {
+    margin-bottom: #{$box}#{$pixel};
+  }
+  .margin-left-#{$box} {
+    margin-left: #{$box}#{$pixel};
+  }
 }
 
 @each $display in $displays {
-    .display-#{$display} {
-        display: #{$display};
-    }
+  .display-#{$display} {
+    display: #{$display};
+  }
 }
 
 .no-margin {
@@ -78,7 +78,7 @@
   margin: 0 auto;
 }
 .margin-auto {
-    margin: auto;
+  margin: auto;
 }
 .margin-top-auto {
   margin-top: auto;
@@ -94,28 +94,28 @@
 }
 
 @each $flow in $overflow {
-    .overflow-#{$flow} {
-        overflow: #{$flow}
-    }
+  .overflow-#{$flow} {
+    overflow: #{$flow};
+  }
 }
 
 .overflow-auto-hover {
-    overflow: hidden;
-    &:hover {
-        overflow: auto;
-    }
+  overflow: hidden;
+  &:hover {
+    overflow: auto;
+  }
 }
 
 @each $float in $floats {
-    .float-#{$float} {
-        float: #{$float};
-    }
+  .float-#{$float} {
+    float: #{$float};
+  }
 }
 
 @each $display in $displays {
-    .display-#{$display} {
-        display: #{$display};
-    }
+  .display-#{$display} {
+    display: #{$display};
+  }
 }
 
 .flex-row {
@@ -138,7 +138,8 @@
 .flex-shrink {
   flex-shrink: 1;
 }
-.flex-all, .flex-spacer {
+.flex-all,
+.flex-spacer {
   flex: 1 1 0%;
 }
 
@@ -154,16 +155,16 @@
 }
 
 .center-in-parent {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    @include transform(translateX(-50%) translateY(-50%));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translateX(-50%) translateY(-50%));
 }
 
 .center-vertically {
-    position: relative;
-    top: 50%;
-    @include transform(translateY(-50%));
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
 }
 
 .row-container > * {

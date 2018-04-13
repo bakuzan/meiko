@@ -1,4 +1,4 @@
-@import "../../styles/partials/_colours";
+@import '../../styles/partials/_colours';
 
 #toaster {
   position: fixed;
@@ -17,7 +17,7 @@
   margin: 0 0 6px;
   padding: 10px {
     left: 40px;
-  };
+  }
   width: 300px;
   border-radius: 3px;
   box-shadow: 0 0 12px #999;
@@ -28,13 +28,13 @@
     name: cool-down;
     duration: 3s;
     iteration-count: 1;
-  };
-  
+  }
+
   .title {
     font-size: 1.2rem;
     font-weight: bold;
   }
-  
+
   &::before {
     position: absolute;
     top: 50%;
@@ -42,14 +42,13 @@
     transform: translateY(-50%);
     font-size: 1.6rem;
   }
-  
 }
 
 @each $type, $values in $toasts {
   $background: map-get($values, background);
   $colour: map-get($values, colour);
   $content: map-get($values, icon);
-  
+
   .toast.#{$type} {
     background-color: $background;
     color: $colour;
@@ -60,8 +59,16 @@
 }
 
 @keyframes cool-down {
-  0% { opacity: 0.8; }
-  50% { opacity: 0.8; }
-  75% { opacity: 0.4; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
 }

@@ -1,4 +1,4 @@
-@import "../../styles/partials/_variables";
+@import '../../styles/partials/_variables';
 
 .tickbox {
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
   padding: 2px;
   cursor: pointer;
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     appearance: none;
     transition: all 0.3s;
     position: relative;
@@ -28,17 +28,17 @@
 }
 
 .tickbox input:before {
-  content: "\2610";
+  content: '\2610';
   font-size: 2em;
 }
 
 .tickbox input:disabled:before {
-  content: "\274c";
+  content: '\274c';
   color: #666;
   cursor: default;
 }
 
 .tickbox input:checked:before {
-  content: "\2611";
+  content: '\2611';
   color: #0f0;
 }

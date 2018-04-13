@@ -3,21 +3,21 @@
   align-items: center;
   cursor: pointer;
 
-  input[type="radio"] {
+  input[type='radio'] {
     appearance: none;
     padding-right: 2px;
     margin: 0;
     pointer-events: none;
 
     &::after {
-      content: "\25ef";
+      content: '\25ef';
       color: #aaa;
       font-size: 1.2rem;
       vertical-align: middle;
     }
 
     &:checked::after {
-      content: "\25c9";
+      content: '\25c9';
       color: #000;
       font-size: 1.5rem;
     }
@@ -27,5 +27,4 @@
       color: #bbb !important;
     }
   }
-
 }

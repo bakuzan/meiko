@@ -1,4 +1,4 @@
-@import "../../styles/partials/_colours";
+@import '../../styles/partials/_colours';
 
 $rating-control-size: 20px;
 $rating-kpi: (
@@ -13,8 +13,7 @@ $rating-kpi: (
   display: flex;
   padding: 5px {
     top: 1em;
-  };
-
+  }
   .rating-control-label {
     position: absolute;
     top: 1px;
@@ -22,18 +21,18 @@ $rating-kpi: (
     font-size: 0.75em;
   }
 }
-
 .rating-control-option {
   height: $rating-control-size;
+
   width: $rating-control-size;
-  input[type="radio"] {
+  input[type='radio'] {
     position: relative;
     appearance: none;
     height: $rating-control-size;
     width: $rating-control-size;
     margin: 0;
     &::before {
-      content: "\2B50";
+      content: '\2B50';
       position: absolute;
       top: -5px;
       bottom: 0;
@@ -43,28 +42,24 @@ $rating-kpi: (
     }
   }
 }
-
 .rating-control:not(.read-only) .rating-control-option input {
   cursor: pointer;
 }
-
 .rating-control-option.past input::before,
 .rating-control-option.selected input::before {
-  content: "\2605";
+  content: '\2605';
 }
 
 @each $level, $colour in $rating-kpi {
-
   .rating-control-option.#{$level}:hover {
     input::before {
       color: $colour;
     }
   }
-
   .rating-control-option.#{$level} {
-    &.past input::before, &.selected input::before {
+    &.past input::before,
+    &.selected input::before {
       color: $colour;
     }
   }
-
 }

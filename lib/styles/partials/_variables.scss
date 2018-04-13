@@ -1,4 +1,4 @@
-@import "./_colours.scss";
+@import './_colours.scss';
 
 //for media queries.
 $break-small: 768px;
@@ -50,25 +50,21 @@ $sidebar-width-collapsed: 50px;
 $primary-background: $black;
 $primary-colour: $black;
 $primary-colour-contrast: $grey80;
-
 $secondary-background: $black;
+
 $secondary-colour: $black;
 $secondary-colour-contrast: $grey95;
-
 $spinner-colour-one: $red;
 $spinner-colour-two: $green;
 $spinner-colour-three: $blue;
 $spinner-colour-four: $red;
-
 $anchor-colour: $secondary-colour;
 $anchor-colour-hover: $secondary-colour-contrast;
-
 // UI Messaging settings
 $info-colour: $cyan;
 $success-colour: $green;
 $alert-colour: $orange;
 $danger-colour: $red;
-
 $ui-messaging: (
   success: (background: $success-colour, colour: #000, icon: '\2713'),
   error: (background: $danger-colour, colour: #fff, icon: '\0021'),

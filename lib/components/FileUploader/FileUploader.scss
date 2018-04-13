@@ -1,4 +1,4 @@
-@import "../../styles/partials/_colours";
+@import '../../styles/partials/_colours';
 
 .file-uploader {
   display: flex;
@@ -7,9 +7,9 @@
     style: solid;
     width: 2px;
     color: $primary-colour;
-  };
+  }
 
-  input[type="file"] {
+  input[type='file'] {
     display: none;
   }
 
