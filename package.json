@@ -11,7 +11,7 @@
     "dist"
   ],
   "lint-staged": {
-    "src/**/*.{js,jsx,json,scss}": [
+    "lib/**/*.{js,jsx,json,scss}": [
       "prettier --single-quote --write",
       "git add"
     ]
