@@ -1,3 +1,5 @@
+@import "./_colours.scss";
+
 //for media queries.
 $break-small: 768px;
 $break-medium: 992px;
@@ -11,11 +13,8 @@ $percent: '%';
 $font-sizes: 10 12 14 15 16 18 20 22 24 25 28 30 32 34 35 36 38 40 42;
 $font-weights: bold bolder normal lighter;
 $text-align: left right center start end;
-
 $cursors: default none pointer move help;
-
 $transformations: uppercase lowercase none capitalize full-width;
-
 $text-decorations: underline overline none line-through;
 
 //BOX MODEL:
@@ -42,6 +41,39 @@ $z-index: (
   alert: 1000
 );
 
+// Sizes
 $header-height: 50px;
 $sidebar-width-open: 200px;
 $sidebar-width-collapsed: 50px;
+
+// Colours
+$primary-background: $black;
+$primary-colour: $black;
+$primary-colour-contrast: $grey80;
+
+$secondary-background: $black;
+$secondary-colour: $black;
+$secondary-colour-contrast: $grey95;
+
+$spinner-colour-one: $red;
+$spinner-colour-two: $green;
+$spinner-colour-three: $blue;
+$spinner-colour-four: $red;
+
+$anchor-colour: $secondary-colour;
+$anchor-colour-hover: $secondary-colour-contrast;
+
+// UI Messaging settings
+$info-colour: $cyan;
+$success-colour: $green;
+$alert-colour: $orange;
+$danger-colour: $red;
+
+$ui-messaging: (
+  success: (background: $success-colour, colour: #000, icon: '\2713'),
+  error: (background: $danger-colour, colour: #fff, icon: '\0021'),
+  warning: (background: $alert-colour, colour: #000, icon: '\26a0'),
+  info: (background: $info-colour, colour: #000, icon: '\2139')
+);
+$toasts: $ui-messaging;
+$alerts: $ui-messaging;
