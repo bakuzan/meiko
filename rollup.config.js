@@ -6,6 +6,7 @@ import autoprefixer from 'autoprefixer'
 import postcss from 'rollup-plugin-postcss';
 import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
+import eslint from 'rollup-plugin-eslint';
 const pkg = require('./package.json');
 
 const externals = [
@@ -43,7 +44,8 @@ function rollupPlugins() {
     resolve({
       module: true,
       main: true,
-      browser: true
+      browser: true,
+      preferBuiltins: false
     }),
     postcss({
       preprocessor: (content, id) => new Promise((resolve, reject) => {
@@ -55,9 +57,6 @@ function rollupPlugins() {
       ],
       modules: true,
       minimize: false,
-      namedExports(name) {
-        return name.replace(/-/g, '_')
-      },
       extract: 'dist/bundle.css',
       extensions: ['.scss']
     }),
