@@ -6,8 +6,10 @@ import autoprefixer from 'autoprefixer'
 import postcss from 'rollup-plugin-postcss';
 import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
-const pkg = require('./package.json');
+import includePaths from 'rollup-plugin-includepaths';
+import pkg from './package.json';
 
+const entry = 'lib/index.js';
 const externals = [
   'react',
   'react-dom',
@@ -16,7 +18,7 @@ const externals = [
 
 export default [
   {
-    input: 'lib/index.js',
+    input: entry,
     output: {
       file: pkg.main,
       format: 'cjs'
@@ -25,7 +27,7 @@ export default [
     plugins: rollupPlugins()
   },
   {
-    input: 'lib/index.js',
+    input: entry,
     output: {
       file: pkg.module,
       format: 'es'
@@ -39,6 +41,12 @@ function rollupPlugins() {
   return [
     replace({
       ["process.env.NODE_ENV"]: JSON.stringify('production')
+    }),
+    includePaths({
+      include: {},
+      paths: ['lib'],
+      external: [],
+      extensions: ['.js', '.scss']
     }),
     resolve({
       module: true,
