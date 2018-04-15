@@ -6,7 +6,6 @@ import autoprefixer from 'autoprefixer'
 import postcss from 'rollup-plugin-postcss';
 import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
-import eslint from 'rollup-plugin-eslint';
 const pkg = require('./package.json');
 
 const externals = [

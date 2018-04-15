@@ -4,6 +4,11 @@ module.exports = {
   module: {
     rules: [
       {
+        tests: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      },
+      {
         test: /\.scss$/,
         use: [
           {
