@@ -1,6 +1,7 @@
 @import '../../styles/partials/_variables';
 
 .autocomplete {
+  position: relative;
   display: flex;
   flex: 1 1 100%;
 }
