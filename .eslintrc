@@ -1,5 +1,25 @@
 {
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false
+  },
+  "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+  },
   "rules": {
-    "include": "lib/**/*.js"
-  }
+    "include": "lib/**/*.js",
+    "no-console": "off",
+    "no-extra-boolean-cast": "off",
+    "no-inline-comments": "off"
+  },
+  "plugins": [
+    "react"
+  ]
 }

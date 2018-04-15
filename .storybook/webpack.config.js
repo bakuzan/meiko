@@ -4,7 +4,8 @@ module.exports = {
   module: {
     rules: [
       {
-        tests: /\.js$/,
+        enforce: "pre",
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: "eslint-loader"
       },
