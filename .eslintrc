@@ -1,7 +1,7 @@
 {
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
+    "react-app",
+    "plugin:jsx-a11y/recommended"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -9,17 +9,7 @@
     "allowImportExportEverywhere": false,
     "codeFrame": false
   },
-  "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
-  },
-  "rules": {
-    "include": "lib/**/*.js",
-    "no-console": "off",
-    "no-extra-boolean-cast": "off",
-    "no-inline-comments": "off"
-  },
   "plugins": [
-    "react"
+    "jsx-a11y"
   ]
 }
