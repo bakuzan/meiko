@@ -11,6 +11,7 @@ function loadStories() {
   require('../lib/stories/radio-button.js');
   require('../lib/stories/rating-control.js');
   require('../lib/stories/select-box.js');
+  require('../lib/stories/tabs.js');
   require('../lib/stories/tickbox.js');
 }
 

@@ -16,8 +16,10 @@
       "git add"
     ]
   },
+  "pre-commit": ["precommit-msg","lint"],
   "scripts": {
-    "precommit": "lint-staged",
+    "lint": "lint-staged",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "storybook": "start-storybook -p 7200 -c .storybook"
