@@ -23,7 +23,6 @@ $rating-kpi: (
 }
 .rating-control-option {
   height: $rating-control-size;
-
   width: $rating-control-size;
   input[type='radio'] {
     position: relative;
@@ -49,7 +48,6 @@ $rating-kpi: (
 .rating-control-option.selected input::before {
   content: '\2605';
 }
-
 @each $level, $colour in $rating-kpi {
   .rating-control-option.#{$level}:hover {
     input::before {

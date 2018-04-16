@@ -24,7 +24,6 @@
     opacity: 0;
     transition: transform 0.5s, opacity 1s;
   }
-
   &:active:after {
     transform: scale(0, 0);
     opacity: 0.2;
