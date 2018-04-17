@@ -57,13 +57,15 @@ function rollupPlugins() {
     postcss({
       preprocessor: (content, id) => new Promise((resolve, reject) => {
         const result = scss.renderSync({ file: id })
-        resolve({ code: result.css.toString() })
+        resolve({ code: result.css.toString() });
       }),
       plugins: [
         autoprefixer
       ],
-      modules: true,
-      minimize: false,
+      modules: {
+        generateScopedName: '[hash:base64:5]'//'[name]__[local]___[hash:base64:5]'
+      },
+      minimize: true,
       extract: 'dist/bundle.css',
       extensions: ['.scss']
     }),
