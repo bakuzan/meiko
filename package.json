@@ -25,7 +25,9 @@
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "storybook": "start-storybook -p 7200 -c .storybook"
+    "storybook": "start-storybook -p 7200 -c .storybook",
+    "build-storybook": "build-storybook -s public -o .out",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "keywords": [
     "reactjs",
@@ -35,6 +37,7 @@
   "license": "ISC",
   "devDependencies": {
     "@storybook/react": "^3.4.1",
+    "@storybook/storybook-deployer": "^2.3.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-plugin-external-helpers": "^6.22.0",
