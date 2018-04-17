@@ -4,5 +4,24 @@
   @import './list.scss';
   @import './float-label.scss';
   @import './form.scss';
-  @import './button.scss';
+
+  a.button-link.active {
+    text-decoration: none;
+    color: $primary-colour-contrast;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    margin: 5px 0;
+
+    &.centered {
+      justify-content: center;
+    }
+    &.right-aligned {
+      justify-content: flex-end;
+    }
+  }
+
 }

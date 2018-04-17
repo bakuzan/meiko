@@ -1,5 +1,5 @@
-@import './partials/_variables';
-@import './partials/_mixins';
+@import '../../styles/partials/_variables';
+@import '../../styles/partials/_mixins';
 
 .button,
 .button-link,
@@ -95,11 +95,6 @@
   }
 }
 
-a.button-link.active {
-  text-decoration: none;
-  color: $primary-colour-contrast;
-}
-
 .button.secondary {
   background-color: $secondary-background;
   color: $secondary-colour-contrast;
@@ -110,23 +105,4 @@ a.button-link.active {
       $darken-amount * 3
     );
   }
-}
-
-.button-group {
-  display: flex;
-  justify-content: space-around;
-  padding: 5px;
-  margin: 5px 0;
-
-  &.centered {
-    justify-content: center;
-  }
-  &.right-aligned {
-    justify-content: flex-end;
-  }
-}
-
-form .button-group {
-  width: 100%;
-  justify-content: flex-end;
 }

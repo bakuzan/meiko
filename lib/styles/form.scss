@@ -44,3 +44,8 @@ input {
   align-items: center;
   padding: 5px;
 }
+
+form .button-group {
+  width: 100%;
+  justify-content: flex-end;
+}
