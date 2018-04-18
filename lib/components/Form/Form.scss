@@ -1,3 +1,5 @@
-.form {
-  composes: form from global;
+@mixin formComponent {
+  :local(.form) {
+    @content;
+  }
 }

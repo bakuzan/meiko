@@ -63,7 +63,7 @@ function rollupPlugins() {
         autoprefixer
       ],
       modules: {
-        generateScopedName: '[hash:base64:5]'//'[name]__[local]___[hash:base64:5]'
+        generateScopedName: '[name]__[local]___[hash:base64:5]'//'[hash:base64:5]'
       },
       minimize: false,
       extract: 'dist/bundle.css',

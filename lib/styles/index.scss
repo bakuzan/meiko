@@ -1,3 +1,4 @@
+@import './partials/variables.scss';
 $app-font-family: 'Roboto mono', 'Lucida Console', 'Courier New', monospace;
 
 body {
@@ -17,11 +18,6 @@ button {
   @import './float-label.scss';
   @import './input-controls.scss';
 
-  a.button-link.active {
-    text-decoration: none;
-    color: $primary-colour-contrast;
-  }
-
   .button-group {
     display: flex;
     justify-content: space-around;
@@ -34,5 +30,13 @@ button {
     &.right-aligned {
       justify-content: flex-end;
     }
+  }
+}
+
+// what to do with this?
+a.button-link {
+  :global(.active) {
+    text-decoration: none;
+    color: $primary-colour-contrast;
   }
 }
