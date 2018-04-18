@@ -1,7 +1,5 @@
 @import './partials/_variables';
 @import './partials/_mixins';
-@import './partials/_extendables';
-@import '../components/Form/Form.scss';
 
 input {
   background-color: inherit;
@@ -18,11 +16,6 @@ input {
   select {
     width: 100%;
   }
-}
-
-// This doesnt work the way I want....
-@include formComponent {
-  @extend %form-specific;
 }
 
 .radio-group {

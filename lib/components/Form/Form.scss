@@ -1,5 +1,5 @@
-@mixin formComponent {
-  :local(.form) {
-    @content;
-  }
+@import '../../styles/partials/_extendables';
+
+.form {
+  @extend %form-specific;
 }
