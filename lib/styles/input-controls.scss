@@ -1,14 +1,6 @@
 @import './partials/_variables';
 @import './partials/_mixins';
 
-// Input
-form {
-  .input-container,
-  .select-container {
-    width: 100%;
-  }
-}
-
 input {
   background-color: inherit;
 }
@@ -26,26 +18,21 @@ input {
   }
 }
 
-// Select
-.select-box {
-  display: flex;
-  justify-content: center;
-  min-width: 100px;
-  min-height: 25px;
-  padding: 5px;
-  border: none;
-  cursor: pointer;
+.form {
+  .input-container,
+  .select-container {
+    width: 100%;
+  }
+
+  .button-group {
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
 
-// Containers
 .radio-group {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 5px;
-}
-
-form .button-group {
-  width: 100%;
-  justify-content: flex-end;
 }

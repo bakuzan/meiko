@@ -1,0 +1,36 @@
+.button.primary,
+.button-icon.primary {
+  background-color: $primary-background;
+  color: $primary-colour-contrast;
+  &:hover,
+  &.active {
+    @include lightenOrDarken(
+      'background-color',
+      $primary-background,
+      $darken-amount * 3
+    );
+  }
+}
+
+.button-link.primary {
+  color: $primary-colour;
+  &:focus,
+  &:active {
+    color: $primary-colour;
+  }
+  &:hover {
+    color: darken($primary-colour, $darken-amount);
+  }
+}
+
+.button.secondary {
+  background-color: $secondary-background;
+  color: $secondary-colour-contrast;
+  &:hover {
+    @include lightenOrDarken(
+      'background-color',
+      $secondary-background,
+      $darken-amount * 3
+    );
+  }
+}
