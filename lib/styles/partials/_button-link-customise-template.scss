@@ -1,0 +1,56 @@
+@mixin buttonStyles {
+  .button.primary,
+  .button-icon.primary {
+    background-color: $primary-background;
+    color: $primary-colour-contrast;
+    &:hover,
+    &.active {
+      @include lightenOrDarken(
+        'background-color',
+        $primary-background,
+        $darken-amount * 3
+      );
+    }
+  }
+
+  .button-link.primary {
+    color: $primary-colour;
+    &:focus,
+    &:active {
+      color: $primary-colour;
+    }
+    &:hover {
+      color: darken($primary-colour, $darken-amount);
+    }
+  }
+
+  .button.accent {
+    background-color: $accent-background;
+    color: $accent-colour-contrast;
+    &:hover {
+      @include lightenOrDarken(
+        'background-color',
+        $accent-background,
+        $darken-amount * 3
+      );
+    }
+  }
+}
+
+@mixin applicationHeaderLinks {
+  a {
+    background-color: $primary-background;
+    color: $primary-colour-contrast;
+
+    &:hover {
+      background-color: darken($primary-background, $darken-amount);
+    }
+    &.active {
+      background-color: $accent-background;
+      color: $accent-colour-contrast;
+      &:hover {
+        background-color: darken($accent-background, $darken-amount);
+      }
+    }
+  }
+}
