@@ -24,13 +24,29 @@
 }
 
 .button.secondary {
-  background-color: $secondary-background;
-  color: $secondary-colour-contrast;
+  background-color: $accent-background;
+  color: $accent-colour-contrast;
   &:hover {
     @include lightenOrDarken(
       'background-color',
-      $secondary-background,
+      $accent-background,
       $darken-amount * 3
     );
+  }
+}
+
+a {
+  background-color: $primary-background;
+  color: $primary-colour-contrast;
+
+  &:hover {
+    background-color: darken($primary-background, $darken-amount);
+  }
+  &.active {
+    background-color: $accent-background;
+    color: $accent-colour-contrast;
+    &:hover {
+      background-color: darken($accent-background, $darken-amount);
+    }
   }
 }
