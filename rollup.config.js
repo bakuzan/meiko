@@ -65,7 +65,7 @@ function rollupPlugins() {
       modules: {
         generateScopedName: '[hash:base64:5]'//'[name]__[local]___[hash:base64:5]'
       },
-      minimize: true,
+      minimize: false,
       extract: 'dist/bundle.css',
       extensions: ['.scss']
     }),

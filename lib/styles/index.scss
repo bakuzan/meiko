@@ -1,3 +1,15 @@
+$app-font-family: 'Roboto mono', 'Lucida Console', 'Courier New', monospace;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $app-font-family;
+}
+button {
+  font-family: $app-font-family;
+  font-size: 16px;
+}
+
 :global {
   @import './box-model.scss';
   @import './ripple.scss';
