@@ -24,6 +24,7 @@
     "lint": "lint-staged",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prep-templates": "node copy-templates.js",
     "build": "rollup -c",
     "storybook": "start-storybook -p 7200 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o .out",
