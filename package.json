@@ -26,6 +26,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prep-templates": "node copy-templates.js",
     "build": "rollup -c",
+    "build-and-prep": "npm run build && npm run prep-templates",
     "storybook": "start-storybook -p 7200 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "deploy-storybook": "storybook-to-ghpages"
