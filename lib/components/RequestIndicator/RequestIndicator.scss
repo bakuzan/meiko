@@ -1,4 +1,4 @@
-#request-indicator-container {
+:global(#request-indicator-container) {
   position: absolute;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@
   z-index: 10000;
 }
 
-#request-indicator-loader {
+:global(#request-indicator-loader) {
   position: absolute;
   width: 200px;
   height: 100%;
