@@ -3,6 +3,7 @@
 .mal-search-container {
   position: relative;
 
+  // BROKEN
   &.fetching .clear-input,
   &.selected .autocomplete-menu,
   &.fresh .autocomplete-menu {
