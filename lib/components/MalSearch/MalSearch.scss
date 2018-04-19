@@ -3,10 +3,9 @@
 .mal-search-container {
   position: relative;
 
-  // BROKEN
-  &.fetching .clear-input,
-  &.selected .autocomplete-menu,
-  &.fresh .autocomplete-menu {
+  &.fetching .mal-clear-input,
+  &.selected .mal-results,
+  &.fresh .mal-results {
     visibility: hidden;
     pointer-events: none;
   }
