@@ -1,27 +1,35 @@
 const fs = require('fs');
 const path = require('path');
 
-const jsonDir = "./dist/json";
 const scssDir = "./lib/styles/templates";
 const targetDir = "./dist/templates";
-const jsonFiles = fs.readdirSync(jsonDir);
+const jsonDir = "./dist/json";
 const scssFiles = fs.readdirSync(scssDir);
+const RequiredJsonFiles = [
+  "AutocompleteInput", "Button", "ChipListInput", "Header", "LoadingBouncer", "RadioButton", "RatingControl", "TabContainer", "Tickbox"
+];
+const jsonFiles = fs.readdirSync(jsonDir)
+.filter(file => RequiredJsonFiles.includes(file.split(".")[0]))
+.map(file => require(path.join(__dirname, jsonDir, file)));
+
+
 
 function copyFile(source, target, cb) {
-  let cbCalled = false;
-  const rd = fs.createReadStream(source);
-  rd.on("error", (err) => done(err));
-  const wr = fs.createWriteStream(target);
-  wr.on("error", (err) => done(err));
-  wr.on("close", (err) => done());
-  rd.pipe(wr);
+  let cbCalled = false, scssOutput = '';
 
-  function done(err) {
-    if (!cbCalled) {
-      cb(err);
-      cbCalled = true;
-    }
-  }
+  const rd = fs.createReadStream(source);
+  rd.on("data", function replaceSCSSClassesWithJsonClasses(chunk) {
+    scssOutput = chunk.toString();
+    jsonFiles.forEach(file => {
+      Object.keys(file).forEach(k => {
+        const pattern = `\\.${k}(?=\\..*,| |:| .*{|\\..*{)`;
+        const REPLACE_REGEX = new RegExp(pattern, "g");
+        scssOutput = scssOutput.replace(REPLACE_REGEX, `.${file[k]}`)
+      });
+    });
+  });
+  rd.on("error", (err) => done(err));
+  rd.on("end", () => fs.writeFile(target, scssOutput, cb));
 }
 
 const moveFile = file => {

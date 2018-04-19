@@ -33,7 +33,7 @@ $tab-controls-height: 31px;
     }
     z-index: map-get($z-index, above-siblings);
   }
-  li.active {
+  li:global(.active) {
     border: {
       color: $primary-colour;
       bottom-color: $white;

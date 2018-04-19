@@ -12,7 +12,7 @@
   opacity: 0;
   transition: all 1s ease-in-out;
   pointer-events: none;
-  &.active {
+  &:global(.active) {
     position: relative;
     opacity: 1;
     z-index: map-get($z-index, above-siblings);

@@ -42,8 +42,8 @@
   margin: 1px 0;
   font-size: 0;
   white-space: nowrap;
-  &.active,
-  &.active .input-chip-delete {
+  &:global(.active),
+  &:global(.active) .input-chip-delete {
     background-color: $primary-background;
     color: $primary-colour-contrast;
   }
