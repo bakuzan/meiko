@@ -12,21 +12,30 @@
   padding: 2px;
   margin: 0;
   list-style-type: none;
-  transform: translateY(70px);
+  transform: translateY(50%);
   transition: visibility 0.5s;
   transition-delay: 1s !important;
   z-index: map-get($z-index, above-siblings);
 
   .dropdown-arrow {
     position: absolute;
-    top: -18px;
-    right: 5px;
+    top: -20px;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-bottom: 20px solid $white;
     width: 0;
     height: 0;
-    -webkit-filter: drop-shadow(0 -2px 2px #aaa);
+    filter: drop-shadow(0 -2px 2px #aaa);
+  }
+  &.left .dropdown-arrow {
+    left: 0;
+  }
+  &.center .dropdown-arrow {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &.right .dropdown-arrow {
+    right: 0;
   }
 }
 
