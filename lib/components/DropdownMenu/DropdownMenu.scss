@@ -30,9 +30,13 @@
   &.left .dropdown-arrow {
     left: 0;
   }
-  &.center .dropdown-arrow {
+  &.center {
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateY(50%) translateX(-50%);
+    .dropdown-arrow {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   &.right .dropdown-arrow {
     right: 0;
