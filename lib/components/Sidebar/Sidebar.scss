@@ -1,0 +1,72 @@
+@import '../../styles/partials/_variables.scss';
+
+:global(#sidebar) {
+  position: fixed;
+  top: 50px;
+  height: 100%;
+  width: $sidebar-width-open;
+  background-color: $primary-background;
+  color: $primary-colour-contrast;
+  z-index: map-get($z-index, header);
+
+  :global(#sidebar-toggler) {
+    justify-content: flex-end;
+    min-width: 40px;
+    width: 100%;
+    padding: 5px 20px;
+    margin: 0;
+  }
+
+  &.collapsed {
+    width: $sidebar-width-collapsed;
+
+    :global(#sidebar-toggler) {
+      justify-content: center;
+    }
+
+    .sidebar-item {
+      &-text {
+        display: none;
+      }
+
+      &-icon {
+        display: flex;
+        flex: 1 1 20%;
+      }
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+:global(#sidebar-menu) {
+  padding: 0;
+  margin: 0;
+
+  > li {
+    width: 100%;
+    height: 50px;
+
+    > a {
+      min-width: 100%;
+      width: 100%;
+      height: 100%;
+    }
+
+    .sidebar-item {
+      &-text {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1 1 80%;
+        margin-left: 5px;
+      }
+
+      &-icon {
+        display: none;
+      }
+    }
+  }
+}
