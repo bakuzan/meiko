@@ -41,11 +41,13 @@ $z-index: (
   alert: 1000
 );
 
-// Sizes
-$header-height: 50px;
-$sidebar-width-open: 200px;
-$sidebar-width-collapsed: 50px;
+// Component Variables
+$date-selector--min-width: 227px;
+$date-selector--selected-border-colour: $grey80;
 
+$header--height: 50px;
+$sidebar--width-open: 200px;
+$sidebar--width-collapsed: 50px;
 // Colours
 $primary-background: $black;
 $primary-colour: $black;

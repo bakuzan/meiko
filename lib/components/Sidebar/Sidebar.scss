@@ -4,7 +4,7 @@
   position: fixed;
   top: 50px;
   height: 100%;
-  width: $sidebar-width-open;
+  width: $sidebar--width-open;
   background-color: $primary-background;
   color: $primary-colour-contrast;
   z-index: map-get($z-index, header);
@@ -18,7 +18,7 @@
   }
 
   &.collapsed {
-    width: $sidebar-width-collapsed;
+    width: $sidebar--width-collapsed;
 
     :global(#sidebar-toggler) {
       justify-content: center;

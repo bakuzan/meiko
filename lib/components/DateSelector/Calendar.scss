@@ -1,0 +1,52 @@
+@import '../../styles/partials/_variables.scss';
+
+$button-padding: 10px;
+
+.calendar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: $date-selector--min-width;
+  max-width: 100%;
+  padding: 5px;
+  transform: translateY(100%);
+}
+
+.calendar-view-controls {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-view {
+  display: flex;
+  flex-flow: wrap;
+
+  .calendar-view-option {
+    text-align: center;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+
+    &.day {
+      width: calc(100% / 7);
+    }
+    &.month {
+      width: calc(100% / 3);
+    }
+    &:global(.selected) {
+      border-color: $date-selector--selected-border-colour;
+    }
+
+    > button {
+      height: 100%;
+      min-width: 100%;
+      padding: {
+        top: $button-padding;
+        bottom: $button-padding;
+      }
+    }
+  }
+}
