@@ -11,7 +11,7 @@
 //     )
 // );
 
-@mixin lightenOrDarken($key, $colour, $percentage) {
+@mixin lighten-or-darken($key, $colour, $percentage) {
   @if lightness($colour) < 50% {
     #{$key}: lighten($colour, $percentage);
   } @else {
@@ -20,7 +20,7 @@
 }
 
 @mixin shiftColourLightness($colour, $percentage) {
-  @include lightenOrDarken('background-color', $colour, $percentage);
+  @include lighten-or-darken('background-color', $colour, $percentage);
 }
 
 @mixin applicationTheme {

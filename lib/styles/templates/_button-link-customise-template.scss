@@ -5,7 +5,7 @@
     color: $primary-colour-contrast;
     &:hover,
     &.active {
-      @include lightenOrDarken(
+      @include lighten-or-darken(
         'background-color',
         $primary-background,
         $darken-amount * 3
@@ -28,7 +28,7 @@
     background-color: $accent-background;
     color: $accent-colour-contrast;
     &:hover {
-      @include lightenOrDarken(
+      @include lighten-or-darken(
         'background-color',
         $accent-background,
         $darken-amount * 3

@@ -1,3 +1,4 @@
+@import '../../styles/partials/_mixins.scss';
 @import '../../styles/partials/_variables.scss';
 
 .dropdown-menu {
@@ -6,7 +7,6 @@
   min-height: 100px;
   background-color: $white;
   border-radius: 4px;
-  box-shadow: 2px 2px 10px #aaa;
   top: 0;
   right: 0;
   padding: 2px;
@@ -16,6 +16,7 @@
   transition: visibility 0.5s;
   transition-delay: 1s !important;
   z-index: map-get($z-index, above-siblings);
+  @inlcude standard-shadow;
 
   .dropdown-arrow {
     position: absolute;

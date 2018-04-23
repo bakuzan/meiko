@@ -1,17 +1,22 @@
+@import '../../styles/partials/_mixins.scss';
 @import '../../styles/partials/_variables.scss';
 
 $button-padding: 10px;
 
 .calendar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   min-width: $date-selector--min-width;
   max-width: 100%;
   padding: 5px;
-  transform: translateY(100%);
+
+  &:not(:global(.flat)) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    @inlcude standard-shadow;
+  }
 }
 
 .calendar-view-controls {
