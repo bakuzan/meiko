@@ -1,5 +1,5 @@
-@import '../../styles/partials/_mixins.scss';
-@import '../../styles/partials/_variables.scss';
+@import '../../styles/partials/_extendables';
+@import '../../styles/partials/_variables';
 
 $button-padding: 10px;
 
@@ -15,7 +15,7 @@ $button-padding: 10px;
     bottom: 0;
     left: 0;
     transform: translateY(100%);
-    @inlcude standard-shadow;
+    @extend %standard-shadow;
   }
 }
 

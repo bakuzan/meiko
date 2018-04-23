@@ -1,5 +1,5 @@
-@import '../../styles/partials/_mixins.scss';
-@import '../../styles/partials/_variables.scss';
+@import '../../styles/partials/_extendables';
+@import '../../styles/partials/_variables';
 
 .dropdown-menu {
   position: fixed;
@@ -16,7 +16,7 @@
   transition: visibility 0.5s;
   transition-delay: 1s !important;
   z-index: map-get($z-index, above-siblings);
-  @inlcude standard-shadow;
+  @extend %standard-shadow;
 
   .dropdown-arrow {
     position: absolute;
