@@ -42,9 +42,11 @@ $z-index: (
 );
 
 // Component Variables
+$button-icon--hover-darken-percentage: $darken-amount;
 $calendar--button-border-colour: $grey94;
 $calendar--selected-day-background-colour: $dark-violet;
 $calendar--selected-day-font-colour: $white;
+$calendar--view-shift-button-colour: $white;
 $header--height: 50px;
 $sidebar--width-open: 200px;
 $sidebar--width-collapsed: 50px;

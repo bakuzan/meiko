@@ -30,6 +30,16 @@ $button-padding: 10px;
   align-items: center;
 }
 
+.view-shift-button {
+  padding: 3px 15px;
+  &:hover {
+    background-color: darken(
+      $calendar--view-shift-button-colour,
+      $button-icon--hover-darken-percentage
+    );
+  }
+}
+
 .calendar-view {
   display: flex;
   flex-flow: wrap;
@@ -39,7 +49,7 @@ $button-padding: 10px;
     border: 1px solid transparent;
     box-sizing: border-box;
 
-    &:not(.dummy-day) {
+    &:not(.dummy-day):not(.header) {
       border-color: $calendar--button-border-colour;
     }
 
@@ -55,6 +65,10 @@ $button-padding: 10px;
       & > button:hover {
         background-color: inherit;
       }
+    }
+
+    &.header {
+      padding: 5px 0;
     }
 
     &.dummy-day {
