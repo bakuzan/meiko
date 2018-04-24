@@ -9,6 +9,7 @@ $button-padding: 10px;
   width: 100%;
   padding: 5px;
   z-index: map-get($z-index, above-siblings);
+  box-sizing: border-box;
 
   &:not(:global(.flat)) {
     position: absolute;
@@ -38,6 +39,10 @@ $button-padding: 10px;
     border: 1px solid transparent;
     box-sizing: border-box;
 
+    &:not(.dummy-day) {
+      border-color: $calendar--button-border-colour;
+    }
+
     &.day {
       width: calc(100% / 7);
     }
@@ -45,7 +50,18 @@ $button-padding: 10px;
       width: calc(100% / 3);
     }
     &:global(.selected) {
-      border-color: $date-selector--selected-border-colour;
+      background-color: $calendar--selected-day-background-colour;
+      color: $calendar--selected-day-font-colour;
+      & > button:hover {
+        background-color: inherit;
+      }
+    }
+
+    &.dummy-day {
+      z-index: -1;
+      > button {
+        background-color: inherit !important;
+      }
     }
 
     > button {

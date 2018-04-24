@@ -42,7 +42,9 @@ $z-index: (
 );
 
 // Component Variables
-$date-selector--selected-border-colour: $grey80;
+$calendar--button-border-colour: $grey94;
+$calendar--selected-day-background-colour: $dark-violet;
+$calendar--selected-day-font-colour: $white;
 $header--height: 50px;
 $sidebar--width-open: 200px;
 $sidebar--width-collapsed: 50px;
