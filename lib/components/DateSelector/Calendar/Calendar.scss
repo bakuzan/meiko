@@ -1,14 +1,14 @@
-@import '../../styles/partials/_extendables';
-@import '../../styles/partials/_variables';
+@import '../../../styles/partials/_extendables';
+@import '../../../styles/partials/_variables';
 
 $button-padding: 10px;
 
 .calendar {
   display: flex;
   flex-direction: column;
-  min-width: $date-selector--min-width;
-  max-width: 100%;
+  width: 100%;
   padding: 5px;
+  z-index: map-get($z-index, above-siblings);
 
   &:not(:global(.flat)) {
     position: absolute;
@@ -16,6 +16,9 @@ $button-padding: 10px;
     left: 0;
     transform: translateY(100%);
     @extend %standard-shadow;
+  }
+  &.read-only button {
+    cursor: default;
   }
 }
 
