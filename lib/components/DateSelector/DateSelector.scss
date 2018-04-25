@@ -3,10 +3,11 @@
 .date-selector-container {
   position: relative;
   display: flex;
+  flex-flow: wrap;
 
   > :global(.input-container) {
     display: flex;
-    flex: 1;
+    flex: 1 1 90%;
   }
 
   .date-selector-button {
@@ -26,4 +27,13 @@
   left: 0;
   right: 0;
   z-index: map-get($z-index, above-siblings);
+}
+
+.error-message {
+  display: flex;
+  flex: 1;
+  padding-left: 10px;
+  color: $date-selector--error-message-colour;
+  font-size: 0.8em;
+  white-space: nowrap;
 }
