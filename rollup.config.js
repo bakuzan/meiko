@@ -75,8 +75,9 @@ function rollupPlugins() {
           },
         })
       ],
-      minimize: false,
+      minimize: true,
       sourceMaps: false,
+      modules: true,
       extract: 'dist/bundle.css',
       extensions: ['.scss']
     }),

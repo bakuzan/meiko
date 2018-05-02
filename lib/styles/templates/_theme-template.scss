@@ -123,7 +123,7 @@
         box-shadow: 2px 2px 10px $contrast;
         .dropdown-arrow {
           border-bottom-color: $base-background; //20px solid $base-background;
-          -webkit-filter: drop-shadow(0 -2px 2px $contrast);
+          filter: drop-shadow(0 -2px 2px $contrast);
         }
       }
 
