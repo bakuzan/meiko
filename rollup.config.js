@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import fs from 'fs';
 import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
@@ -6,10 +7,13 @@ import commonjs from 'rollup-plugin-commonjs';
 import uglify from 'rollup-plugin-uglify';
 import includePaths from 'rollup-plugin-includepaths';
 import autoprefixer from 'autoprefixer'
+import postcssModules from 'postcss-modules';
 import postcss from 'rollup-plugin-postcss';
 import CssModulesSassLoader from './css-modules-loader';
 import pkg from './package.json';
 
+dotenv.config();
+const isProduction = process.env.NODE_ENV === 'production';
 const entry = 'lib/index.js';
 const externals = [
   'react',
@@ -57,26 +61,30 @@ function rollupPlugins() {
     }),
     postcss({
       extensions: ['.scss'],
-      loaders: [CssModulesSassLoader],
-      plugins: [autoprefixer],
-      extract: true,
-      minimize: true,
-      sourceMaps: true,
-      modules: {
-        generateScopedName: '[name]__[local]___[hash:base64:5]',//'[hash:base64:5]',
-        getJSON: function(cssFileName, json, outputFileName) {
-          const path          = require('path');
-          const cssName       = path.basename(cssFileName, '.css');
-          const jsonFileName  = path.resolve('./dist/json/' + cssName + '.json');
-          fs.writeFileSync(jsonFileName, JSON.stringify(json));
-        }
-      }
+      plugins: [
+        autoprefixer,
+        postcssModules({
+          Loader: CssModulesSassLoader,
+          globalModulePaths: [/styles/],
+          generateScopedName: isProduction ? '[hash:base64:5]':'[name]__[local]___[hash:base64:5]',
+          getJSON: function(cssFileName, json, outputFileName) {
+            const path          = require('path');
+            const cssName       = path.basename(cssFileName, '.css');
+            const jsonFileName  = path.resolve('./dist/json/' + cssName + '.json');
+            fs.writeFileSync(jsonFileName, JSON.stringify(json));
+          }
+        })
+      ],
+      extract: 'dist/bundle.min.css',
+      minimize: isProduction,
+      sourceMap: false,
+      modules: true
     }),
     babel({
       exclude: 'node_modules/**',
       plugins: ["external-helpers"]
     }),
     commonjs(),
-    uglify()
+    isProduction && uglify()
   ]
 }
