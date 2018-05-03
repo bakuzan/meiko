@@ -6,7 +6,7 @@ $alert-icon-padding: 10px;
 $alert-icon-width: $alert-container-height;
 $font-size: 16px;
 
-:global(#alert-container) {
+.alert-container {
   position: fixed;
   top: 50px;
   left: 50%;
@@ -32,17 +32,20 @@ $font-size: 16px;
       font-size: $font-size;
     }
 
-    :global(.button-group) {
-      padding: 2px;
-      margin: 0;
-      button {
-        min-width: auto;
-      }
-      .button-icon::before {
-        font-size: 1rem;
+    :global {
+      .button-group {
+        padding: 2px;
+        margin: 0;
+        button {
+          min-width: auto;
+        }
       }
     }
   }
+}
+
+.close::before {
+  font-size: 1rem;
 }
 
 .alert-content {

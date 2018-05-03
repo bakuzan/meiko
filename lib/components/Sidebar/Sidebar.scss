@@ -1,6 +1,6 @@
 @import '../../styles/partials/_variables.scss';
 
-:global(#sidebar) {
+.sidebar {
   position: fixed;
   top: 50px;
   height: 100%;
@@ -9,7 +9,7 @@
   color: $primary-colour-contrast;
   z-index: map-get($z-index, header);
 
-  :global(#sidebar-toggler) {
+  .sidebar-toggler {
     justify-content: flex-end;
     min-width: 40px;
     width: 100%;
@@ -20,7 +20,7 @@
   &.collapsed {
     width: $sidebar--width-collapsed;
 
-    :global(#sidebar-toggler) {
+    .sidebar-toggler {
       justify-content: center;
     }
 
@@ -41,7 +41,7 @@
   }
 }
 
-:global(#sidebar-menu) {
+.sidebar-menu {
   padding: 0;
   margin: 0;
 
