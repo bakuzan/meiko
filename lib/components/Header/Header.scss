@@ -12,14 +12,8 @@
   z-index: map-get($z-index, header);
 }
 
-#logo-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-}
-#navigation-links-right,
-#navigation-links-left {
+:global(#header-links-right),
+:global(#header-links-left) {
   position: relative;
   height: 100%;
   div {

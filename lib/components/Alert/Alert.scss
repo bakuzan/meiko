@@ -6,7 +6,7 @@ $alert-icon-padding: 10px;
 $alert-icon-width: $alert-container-height;
 $font-size: 16px;
 
-#alert-container {
+:global(#alert-container) {
   position: fixed;
   top: 50px;
   left: 50%;

@@ -31,7 +31,7 @@
   }
 }
 
-#no-suggestions-item {
+:global(#autocomplete-no-suggestions-item) {
   font-size: 13.33px;
   text-align: center;
 }
