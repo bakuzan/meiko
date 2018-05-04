@@ -7,19 +7,14 @@
   "module": "dist/bundle.esm.js",
   "browser": "dist/bundle.umd.js",
   "style": "dist/bundle.css",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "lint-staged": {
-    "{!(dist|.git|node_modules)/**/}*.{js,jsx,json,scss}": [
+    "{,!(dist|.git|node_modules)/**/}*.{js,jsx,json,scss}": [
       "prettier --single-quote --write",
       "git add"
     ]
   },
-  "pre-commit": [
-    "precommit-msg",
-    "lint"
-  ],
+  "pre-commit": ["precommit-msg", "lint"],
   "scripts": {
     "lint": "lint-staged",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
@@ -31,10 +26,7 @@
     "build-storybook": "build-storybook -c .storybook -o .out",
     "deploy-storybook": "storybook-to-ghpages"
   },
-  "keywords": [
-    "reactjs",
-    "component-library"
-  ],
+  "keywords": ["reactjs", "component-library"],
   "author": "bakuzan",
   "license": "ISC",
   "devDependencies": {
