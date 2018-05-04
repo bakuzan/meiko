@@ -11,7 +11,7 @@
     "dist"
   ],
   "lint-staged": {
-    "lib/**/*.{js,jsx,json,scss}": [
+    "{!(dist|.git|node_modules)/**/}*.{js,jsx,json,scss}": [
       "prettier --single-quote --write",
       "git add"
     ]
@@ -61,7 +61,6 @@
     "lint-staged": "^7.0.4",
     "node-sass-chokidar": "^1.2.2",
     "postcss-loader": "^2.1.3",
-    "postcss-modules": "^1.1.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.11.1",
     "prop-types": "^15.6.1",

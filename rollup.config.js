@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import fs from 'fs';
+import sass from 'node-sass';
 import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
@@ -7,7 +8,6 @@ import commonjs from 'rollup-plugin-commonjs';
 import uglify from 'rollup-plugin-uglify';
 import includePaths from 'rollup-plugin-includepaths';
 import autoprefixer from 'autoprefixer'
-import postcssModules from 'postcss-modules';
 import postcss from 'rollup-plugin-postcss';
 import CssModulesSassLoader from './css-modules-loader';
 import pkg from './package.json';
@@ -20,17 +20,18 @@ const externals = [
   'react-dom',
   'prop-types'
 ]
+const globals = {
+  'react': "React",
+  'react-dom': "ReactDOM",
+  'prop-types': "PropTypes"
+}
+
+const sassPreprocessor = (content, id) => new Promise((resolve) => {
+  const result = sass.renderSync({ file: id })
+  resolve({ code: result.css.toString() })
+})
 
 export default [
-  {
-    input: entry,
-    output: {
-      file: pkg.main,
-      format: 'cjs'
-    },
-    external: externals,
-    plugins: rollupPlugins()
-  },
   {
     input: entry,
     output: {
@@ -39,7 +40,19 @@ export default [
     },
     external: externals,
     plugins: rollupPlugins()
-  }
+  },
+  {
+    input: entry,
+    output: {
+      name: 'bundle',
+      file: pkg.main,
+      format: 'iife',
+      globals: globals,
+      sourceMap: isProduction
+    },
+    external: externals,
+    plugins: rollupPlugins()
+  },
 ]
 
 function rollupPlugins() {
@@ -60,25 +73,26 @@ function rollupPlugins() {
       preferBuiltins: false
     }),
     postcss({
-      extensions: ['.scss'],
-      plugins: [
-        autoprefixer,
-        postcssModules({
-          Loader: CssModulesSassLoader,
-          globalModulePaths: [/styles/],
-          generateScopedName: isProduction ? '[hash:base64:5]':'[name]__[local]___[hash:base64:5]',
-          getJSON: function(cssFileName, json, outputFileName) {
-            const path          = require('path');
-            const cssName       = path.basename(cssFileName, '.css');
-            const jsonFileName  = path.resolve('./dist/json/' + cssName + '.json');
-            fs.writeFileSync(jsonFileName, JSON.stringify(json));
-          }
-        })
-      ],
       extract: 'dist/bundle.min.css',
+      sourceMap: true,
       minimize: isProduction,
-      sourceMap: false,
-      modules: true
+      extensions: ['.scss'],
+      preprocessor: sassPreprocessor,
+      modules: {
+        Loader: CssModulesSassLoader,
+        globalModulePaths: [/styles/],
+        generateScopedName: isProduction ? '[hash:base64:5]':'[name]__[local]___[hash:base64:5]',
+        getJSON: function(cssFileName, json, outputFileName) {
+          const path          = require('path');
+          const cssName       = path.basename(cssFileName, '.css');
+          const jsonFileName  = path.resolve('./dist/json/' + cssName + '.json');
+          console.log(`Writing: ${jsonFileName}`);
+          fs.writeFileSync(jsonFileName, JSON.stringify(json));
+        }
+      },
+      plugins: [
+        autoprefixer
+      ]
     }),
     babel({
       exclude: 'node_modules/**',
