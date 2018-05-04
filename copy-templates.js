@@ -6,7 +6,7 @@ const targetDir = "./dist/templates";
 const jsonDir = "./dist/json";
 const scssFiles = fs.readdirSync(scssDir);
 const RequiredJsonFiles = [
-  "AutocompleteInput", "Button", "ChipListInput", "Header", "LoadingBouncer", "RadioButton", "RatingControl", "TabContainer", "Tickbox"
+  "AutocompleteInput", "Button", "ChipListInput", "DropdownMenu" "Header", "LoadingBouncer", "RadioButton", "RequestIndicator" "RatingControl", "TabContainer", "Tickbox"
 ];
 const jsonFiles = fs.readdirSync(jsonDir)
 .filter(file => RequiredJsonFiles.includes(file.split(".")[0]))
