@@ -10,11 +10,14 @@ input {
   flex: 1;
   padding: 5px;
 
+  select {
+    width: 100%;
+  }
+
   input[type='text'],
   input[type='number'],
   input[type='date'],
-  input[type='url'],
-  select {
+  input[type='url'] {
     width: 100%;
     box-sizing: border-box;
   }
