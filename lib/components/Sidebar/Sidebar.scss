@@ -25,11 +25,11 @@
     }
 
     .sidebar-item {
-      &-text {
+      .item-text {
         display: none;
       }
 
-      &-icon {
+      .item-icon {
         display: flex;
         flex: 1 1 20%;
       }
@@ -55,7 +55,7 @@
       height: 100%;
     }
 
-    &-text {
+    .item-text {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -63,7 +63,7 @@
       margin-left: 5px;
     }
 
-    &-icon {
+    .item-icon {
       display: none;
     }
   }
