@@ -24,148 +24,135 @@
 }
 
 @mixin applicationTheme {
-  @each $name, $values in $theme-maps {
-    $base-background: map-get($values, base-background);
-    $base-colour: map-get($values, base-colour);
-    $colour: map-get($values, colour);
-    $contrast: map-get($values, contrast);
-    $anchor-colour: map-get($values, anchor-colour);
-    $anchor-colour-hover: map-get($values, anchor-colour-hover);
+  background: $base-background;
+  color: $base-colour;
 
-    .#{$name} {
-      background: $base-background;
+  .themed-background {
+    background: $base-background;
+  }
+
+  // Generic components
+  .input-container,
+  .select-container {
+    input,
+    select {
+      background-color: $base-background;
       color: $base-colour;
+      &:focus,
+      &:focus ~ .list {
+        border-bottom-color: $colour;
+      }
+    }
 
-      .themed-background {
-        background: $base-background;
-      }
+    .tickbox input::before {
+      color: $contrast;
+    }
+    .tickbox input:checked::before {
+      color: $colour;
+    }
+  }
 
-      // Generic components
-      .input-container,
-      .select-container {
-        input,
-        select {
-          background-color: $base-background;
-          color: $base-colour;
-          &:focus,
-          &:focus ~ .list {
-            border-bottom-color: $colour;
-          }
-        }
+  .input-chip-delete {
+    &:hover::before {
+      color: $colour;
+    }
+    &:not(.active):hover::before {
+      color: $contrast;
+    }
+  }
 
-        .tickbox input::before {
-          color: $contrast;
-        }
-        .tickbox input:checked::before {
-          color: $colour;
-        }
-      }
-
-      .input-chip-delete {
-        &:hover::before {
-          color: $colour;
-        }
-        &:not(.active):hover::before {
-          color: $contrast;
-        }
-      }
-
-      .autocomplete-menu {
-        background-color: $base-background;
-      }
-      .autocomplete-suggestion {
-        border: 1px solid $base-background;
-        &.active {
-          border-color: $colour;
-          .button {
-            color: $colour;
-          }
-        }
-      }
-
-      .rating-control {
-        .rating-control-option input[type='radio'] {
-          color: $contrast;
-        }
-      }
-
-      .button:not(.primary) {
-        background-color: $base-background;
-        color: $base-colour;
-        &:hover {
-          @include shiftColourLightness($base-background, $darken-amount);
-        }
-      }
-      .button-link:not(.active) {
-        color: $anchor-colour;
-        &:focus,
-        &:active,
-        &:visited {
-          color: $anchor-colour;
-        }
-        &:hover {
-          color: $anchor-colour-hover;
-        }
-      }
-      .button-icon.bold {
-        font-weight: bold;
-      }
-
-      .radio input[type='radio']:checked::after {
+  .autocomplete-menu {
+    background-color: $base-background;
+  }
+  .autocomplete-suggestion {
+    border: 1px solid $base-background;
+    &.active {
+      border-color: $colour;
+      .button {
         color: $colour;
       }
-      .radio input[type='radio']::after {
-        color: $contrast;
-      }
+    }
+  }
 
-      .dropdown-menu {
-        background-color: $base-background;
-        box-shadow: 2px 2px 10px $contrast;
-        .dropdown-arrow {
-          border-bottom-color: $base-background; //20px solid $base-background;
-          filter: drop-shadow(0 -2px 2px $contrast);
-        }
-      }
+  .rating-control {
+    .rating-control-option input[type='radio'] {
+      color: $contrast;
+    }
+  }
 
-      //dialogs
-      dialog {
-        background-color: $base-background;
-        color: $base-colour;
+  .button:not(.primary) {
+    background-color: $base-background;
+    color: $base-colour;
+    &:hover {
+      @include shiftColourLightness($base-background, $darken-amount);
+    }
+  }
+  .button-link:not(.active) {
+    color: $anchor-colour;
+    &:focus,
+    &:active,
+    &:visited {
+      color: $anchor-colour;
+    }
+    &:hover {
+      color: $anchor-colour-hover;
+    }
+  }
+  .button-icon.bold {
+    font-weight: bold;
+  }
 
-        &.backdrop::backdrop {
-          background-color: $contrast;
-        }
-      }
+  .radio input[type='radio']:checked::after {
+    color: $colour;
+  }
+  .radio input[type='radio']::after {
+    color: $contrast;
+  }
 
-      .tab-controls li {
-        border-color: $contrast;
-        border-bottom-color: $base-background;
-        &.active {
-          border-color: $colour;
-          border-bottom-color: $base-background;
-        }
-      }
+  .dropdown-menu {
+    background-color: $base-background;
+    box-shadow: 2px 2px 10px $contrast;
+    .dropdown-arrow {
+      border-bottom-color: $base-background; //20px solid $base-background;
+      filter: drop-shadow(0 -2px 2px $contrast);
+    }
+  }
 
-      // Unique UI elements
-      .application-header {
-        li:not(.dropdown-arrow) {
-          border-bottom: 1px solid $base-background;
-        }
-        .group-title {
-          background-color: $colour;
-          color: $contrast;
-        }
-      }
+  //dialogs
+  dialog {
+    background-color: $base-background;
+    color: $base-colour;
 
-      .request-indicator-loader {
-        @include shiftColourLightness($colour, $darken-amount * 3);
-      }
+    &.backdrop::backdrop {
+      background-color: $contrast;
+    }
+  }
 
-      .loading-bouncer > div {
-        background: $colour;
-      }
+  .tab-controls li {
+    border-color: $contrast;
+    border-bottom-color: $base-background;
+    &.active {
+      border-color: $colour;
+      border-bottom-color: $base-background;
+    }
+  }
 
-      @content;
-    } // End of Theme block
-  } // End of @each
+  // Unique UI elements
+  .application-header {
+    li:not(.dropdown-arrow) {
+      border-bottom: 1px solid $base-background;
+    }
+    .group-title {
+      background-color: $colour;
+      color: $contrast;
+    }
+  }
+
+  .request-indicator-loader {
+    @include shiftColourLightness($colour, $darken-amount * 3);
+  }
+
+  .loading-bouncer > div {
+    background: $colour;
+  }
 }
