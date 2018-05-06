@@ -9,6 +9,7 @@ input {
 .select-container {
   flex: 1;
   padding: 5px;
+  min-height: 35px;
 
   select {
     width: 100%;
