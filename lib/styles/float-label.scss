@@ -68,6 +68,9 @@
       border-color: rgba(0, 0, 0, 0.5);
     }
   }
+  select {
+    margin-bottom: 0;
+  }
 
   &.input-list-container input {
     padding-bottom: 0.3em;
