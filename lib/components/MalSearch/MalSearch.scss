@@ -28,13 +28,13 @@ $base-img-height: 100px;
   span + span {
     margin-left: 2px;
   }
-  > .button {
+  > button {
     height: 25px;
     justify-content: flex-start;
     align-items: flex-start;
     overflow: hidden;
   }
-  &.active > button,
+  &:global(.active) > button,
   &:hover > button {
     height: #{$base-img-height + 10px};
     align-items: center;
