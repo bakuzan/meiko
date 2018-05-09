@@ -25,7 +25,11 @@ input {
   }
 
   > button {
-    height: 32px;
+    max-height: 32px;
+    margin: {
+      top: auto;
+      bottom: auto;
+    }
   }
 }
 
