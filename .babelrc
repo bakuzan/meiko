@@ -1,14 +1,20 @@
 {
   "presets": [
-    "stage-1",
-    "react",
-    ["env", {
+    ["@babel/preset-env", {
         "targets": {
-          "browsers": ["last 2 Chrome versions", "ie 10"]
+          "browsers": ["last 2 versions", "not ie <= 9"]
         },
-        "modules": false,
-        "useBuiltIns": true
+        "modules": false
       }
-    ]
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-export-namespace-from",
+    ["@babel/plugin-transform-runtime", {
+        "useESModules": false
+      }
+    ],
   ]
 }
