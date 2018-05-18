@@ -15,7 +15,7 @@
   transform: translateY(50%);
   transition: visibility 0.5s;
   transition-delay: 1s !important;
-  z-index: map-get($z-index, above-siblings);
+  z-index: map-get($z-index, popover);
   @extend %standard-shadow;
 
   .dropdown-arrow {
@@ -42,15 +42,6 @@
   &.right .dropdown-arrow {
     right: 0;
   }
-}
-
-.dropdown-backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: map-get($z-index, above-siblings);
 }
 
 .dropdown-container {

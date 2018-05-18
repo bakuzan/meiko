@@ -33,7 +33,7 @@ $full-size-minus-padding: calc(100% - 10px);
 
 .multi-select-list {
   width: 100%;
-  z-index: map-get($z-index, above-siblings);
+  z-index: map-get($z-index, popover);
 }
 
 .separator {
