@@ -1,7 +1,6 @@
 import '@babel/register';
 import dotenv from 'dotenv';
 import fs from 'fs';
-import sass from 'node-sass';
 import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
@@ -22,12 +21,6 @@ const globals = {
   'react-dom': 'ReactDOM',
   'prop-types': 'PropTypes'
 };
-
-const sassPreprocessor = (content, id) =>
-  new Promise(resolve => {
-    const result = sass.renderSync({ file: id });
-    resolve({ code: result.css.toString() });
-  });
 
 export default [
   {
@@ -73,22 +66,22 @@ function rollupPlugins() {
     postcss({
       extract: 'dist/bundle.min.css',
       sourceMap: true,
-      minimize: isProduction,
+      minimize: isProduction ? { safe: true } : false,
       extensions: ['.scss'],
-      preprocessor: sassPreprocessor,
+      use: ['sass'],
       modules: {
         Loader: CssModulesSassLoader,
         globalModulePaths: [/styles/],
         generateScopedName: isProduction
           ? '[hash:base64:5]'
-          : '[name]__[local]___[hash:base64:5]',
-        getJSON: function(cssFileName, json, outputFileName) {
-          const path = require('path');
-          const cssName = path.basename(cssFileName, '.css');
-          const jsonFileName = path.resolve('./dist/json/' + cssName + '.json');
-          console.log(`Writing: ${jsonFileName}`);
-          fs.writeFileSync(jsonFileName, JSON.stringify(json));
-        }
+          : '[name]__[local]___[hash:base64:5]'
+        // getJSON: function(cssFileName, json, outputFileName) {
+        //   const path = require('path');
+        //   const cssName = path.basename(cssFileName, '.css');
+        //   const jsonFileName = path.resolve('./dist/json/' + cssName + '.json');
+        //   console.log(`Writing: ${jsonFileName}`);
+        //   fs.writeFileSync(jsonFileName, JSON.stringify(json));
+        // }
       },
       plugins: [autoprefixer]
     }),
