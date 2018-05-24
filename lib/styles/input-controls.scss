@@ -1,7 +1,8 @@
 @import './partials/_variables';
 @import './partials/_mixins';
 
-input {
+input,
+select {
   background-color: inherit;
 }
 
