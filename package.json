@@ -1,6 +1,6 @@
 {
   "name": "meiko",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "private": true,
   "description": "Component Library",
   "main": "dist/bundle.min.js",
