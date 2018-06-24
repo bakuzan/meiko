@@ -58,9 +58,6 @@ $button-padding: 10px;
     :global(.selected) {
       background-color: $calendar--selected-day-background-colour;
       color: $calendar--selected-day-font-colour;
-      &:hover {
-        background-color: inherit;
-      }
     }
     &.header {
       padding: 5px 0;
