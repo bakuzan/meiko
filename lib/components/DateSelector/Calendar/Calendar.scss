@@ -39,45 +39,35 @@ $button-padding: 10px;
     );
   }
 }
-
 .calendar-view {
   display: flex;
   flex-flow: wrap;
-
   .calendar-view-option {
     text-align: center;
     border: 1px solid transparent;
     box-sizing: border-box;
-
     &:not(.dummy-day):not(.header) {
       border-color: $calendar--button-border-colour;
     }
-
     &.day {
       width: calc(100% / 7);
     }
     &.month {
       width: calc(100% / 3);
     }
-    &:global(.selected) {
+    :global(.selected) {
       background-color: $calendar--selected-day-background-colour;
       color: $calendar--selected-day-font-colour;
-      & > button:hover {
-        background-color: inherit;
-      }
     }
-
     &.header {
       padding: 5px 0;
     }
-
     &.dummy-day {
       z-index: -1;
       > button {
         background-color: inherit !important;
       }
     }
-
     > button {
       height: 100%;
       min-width: 100%;
