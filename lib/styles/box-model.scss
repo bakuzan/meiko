@@ -118,6 +118,19 @@
   }
 }
 
+.flex {
+  display: flex;
+  &.right {
+    justify-content: flex-end;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
