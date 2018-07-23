@@ -10,8 +10,8 @@
   display: inline-block;
   color: rgba(0, 0, 0, 0.87);
   margin: 1px 0;
-  font-size: 0;
   white-space: nowrap;
+
   &:global(.active),
   &:global(.active) .input-chip-delete {
     background-color: $primary-background;
@@ -42,11 +42,10 @@
 }
 
 .input-chip-text {
-  font-size: 13px;
-  vertical-align: middle;
   display: inline-block;
+  vertical-align: middle;
+  font-size: $tag-chip--font-size--default;
 }
-
 .input-chip-clickable {
   cursor: pointer;
 }
