@@ -30,19 +30,19 @@
   "author": "bakuzan",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.46",
-    "@babel/plugin-proposal-export-default-from": "^7.0.0-beta.46",
-    "@babel/plugin-proposal-export-namespace-from": "^7.0.0-beta.46",
-    "@babel/plugin-transform-runtime": "^7.0.0-beta.46",
-    "@babel/preset-env": "^7.0.0-beta.46",
-    "@babel/preset-react": "^7.0.0-beta.46",
-    "@babel/register": "^7.0.0-beta.46",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "@dump247/storybook-state": "^1.5.0",
     "@storybook/react": "^3.4.11",
     "@storybook/storybook-deployer": "^2.3.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^7.2.3",
-    "babel-plugin-external-helpers": "^6.22.0",
     "chalk": "^2.4.1",
     "css-loader": "^0.28.11",
     "dotenv": "^5.0.1",
@@ -77,7 +77,7 @@
     "style-loader": "^0.20.3"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0-beta.46",
+    "@babel/runtime": "^7.0.0",
     "classnames": "^2.2.5"
   },
   "peerDependencies": {
