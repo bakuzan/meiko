@@ -62,8 +62,7 @@ function rollupPlugins() {
     }),
     babel({
       exclude: 'node_modules/**',
-      runtimeHelpers: true,
-      plugins: ['external-helpers']
+      runtimeHelpers: true
     }),
     commonjs(),
     isProduction &&
