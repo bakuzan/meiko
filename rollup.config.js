@@ -9,6 +9,7 @@ import uglify from 'rollup-plugin-uglify';
 import includePaths from 'rollup-plugin-includepaths';
 import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
+import typescript from 'rollup-plugin-typescript';
 
 import pkg from './package.json';
 
@@ -46,7 +47,7 @@ function rollupPlugins() {
       include: {},
       paths: ['lib'],
       external: [],
-      extensions: ['.js', '.scss']
+      extensions: ['.js', '.ts', '.scss']
     }),
     resolve({
       main: true,
@@ -60,8 +61,10 @@ function rollupPlugins() {
       use: ['sass'],
       plugins: [autoprefixer]
     }),
+    typescript(),
     babel({
       exclude: 'node_modules/**',
+      extensions: ['.js', '.ts'],
       runtimeHelpers: true
     }),
     commonjs(),
