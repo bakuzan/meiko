@@ -7,13 +7,15 @@
   "style": "dist/bundle.css",
   "files": ["dist"],
   "lint-staged": {
-    "{,!(dist|.git|node_modules)/**/}*.{js,jsx,json,scss}": [
+    "{,!(dist|.git|node_modules)/**/}*.{ts,tsx,js,jsx,json,scss}": [
       "prettier --single-quote --write",
       "git add"
     ]
   },
-  "pre-commit": ["precommit-msg", "lint"],
+  "pre-commit": ["precommit-msg", "lint-ts", "lint"],
   "scripts": {
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "lint-ts": "tslint -c tslint.json 'lib/**/*.{ts,tsx}'",
     "lint": "lint-staged",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -42,6 +44,7 @@
     "@dump247/storybook-state": "^1.5.0",
     "@storybook/react": "^3.4.11",
     "@storybook/storybook-deployer": "^2.3.0",
+    "@types/storybook__react": "^4.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^7.2.3",
     "chalk": "^2.4.1",
@@ -77,7 +80,10 @@
     "rollup-plugin-uglify": "^3.0.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
+    "ts-loader": "^5.3.1",
     "tslib": "^1.9.3",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.2"
   },
   "dependencies": {

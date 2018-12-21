@@ -44,7 +44,7 @@ export default {
     'Friday',
     'Saturday'
   ],
-  //positions
+  // positions
   left: 'left',
   right: 'right',
   center: 'center',

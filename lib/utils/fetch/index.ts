@@ -9,8 +9,8 @@ export const handleErrorResponse = (error: any) => {
   console.error(error);
 };
 
-const setOptions = (method: string, body: Object) => ({
-  method: method,
+const setOptions = (method: string, body: object) => ({
+  method,
   body: !!body ? JSON.stringify(body) : null,
   headers: {
     Accept: 'application/json',

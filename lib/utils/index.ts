@@ -66,8 +66,8 @@ export {
   isString,
   // Special Utils
   Date,
-  Toaster,
-  MeikoFetch,
   handleErrorResponse,
-  GraphqlProcessing
+  GraphqlProcessing,
+  MeikoFetch,
+  Toaster
 };

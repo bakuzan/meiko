@@ -1,6 +1,6 @@
 import { isObject, isArray } from './typeof';
 
-export default function objectsAreEqual(o1: Object, o2: Object): boolean {
+export default function objectsAreEqual(o1: object, o2: object): boolean {
   if (!isObject(o1) || !isObject(o2)) {
     return o1 === o2;
   }

@@ -42,7 +42,7 @@ export const constructRecordForPost = (NonPostableProperties = []) => (
     }, '{');
 };
 
-export const constructFilterString = (filters: Object) => {
+export const constructFilterString = (filters: object) => {
   const properties = Object.keys(filters).reduce((acc, curr, i, arr) => {
     const value = processType(filters[curr]);
     const nextArg = value || `${value}` === 'false' ? `${curr}: ${value}` : '';

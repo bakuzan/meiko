@@ -20,7 +20,7 @@ const step = (name, fn) => async () => {
 
 const buildLib = step('commonjs modules', () =>
   execa.shell(
-    `npx babel ${libRoot} --out-dir ${outputRoot} --copy-files --env-name "lib"`,
+    `npx babel ${libRoot} --out-dir ${outputRoot} --extensions=.ts,.js --presets @babel/preset-typescript --copy-files --env-name "lib"`,
     {
       stdio
     }

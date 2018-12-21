@@ -1,4 +1,4 @@
-interface ElementCoordinates {
+interface IElementCoordinates {
   top: number;
   left: number;
   right: number;
@@ -7,7 +7,7 @@ interface ElementCoordinates {
 
 export default function getElementCoordinates(
   elem: HTMLElement
-): ElementCoordinates {
+): IElementCoordinates {
   const box = elem.getBoundingClientRect();
   const body = document.body;
   const docEl = document.documentElement;

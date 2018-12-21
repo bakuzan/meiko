@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
@@ -6,12 +6,15 @@ import Dialog from 'components/Dialog';
 import { Button } from 'components/Button';
 
 class PageWrapper extends React.Component {
+  dialog = null;
+
   constructor(props) {
     super(props);
 
     this.getRef = this.getRef.bind(this);
     this.openDialog = this.openDialog.bind(this);
   }
+
   getRef(el) {
     this.dialog = el;
   }

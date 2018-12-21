@@ -1,4 +1,4 @@
-const updateSameAsObject = (o: Object, u: Object) =>
+const updateSameAsObject = (o: object, u: object) =>
   u &&
   Object.keys(u)
     .map((k) => o[k] === u[k])

@@ -3,7 +3,7 @@ const SUCCESS = 'SUCCESS';
 const ERROR = 'ERROR';
 const WARNING = 'WARNING';
 
-interface Toast {
+interface IToast {
   time?: number;
   type: string;
   title: string;
@@ -11,33 +11,28 @@ interface Toast {
 }
 
 interface IToaster {
-  popToast(toast: Toast): void;
+  popToast(toast: IToast): void;
 }
 
 class ToasterService {
   private toaster: IToaster;
 
-  register(toaster: IToaster) {
-    this.toaster = toaster;
+  register(instance: IToaster) {
+    this.toaster = instance;
   }
 
-  popToast(newToast: Toast) {
+  popToast(newToast: IToast) {
     if (!this.toaster) {
       return;
     }
 
-    this.toaster.popToast(
-      Object.assign(
-        {},
-        {
-          time: Date.now(),
-          type: INFO,
-          title: 'Just so your aware',
-          message: 'This is the default toast text!'
-        },
-        newToast
-      )
-    );
+    this.toaster.popToast({
+      time: Date.now(),
+      type: INFO,
+      title: 'Just so your aware',
+      message: 'This is the default toast text!',
+      ...newToast
+    });
   }
 
   info(title: string, message: string) {
