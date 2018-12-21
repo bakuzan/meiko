@@ -9,19 +9,21 @@ import uglify from 'rollup-plugin-uglify';
 import includePaths from 'rollup-plugin-includepaths';
 import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
-import typescript from 'rollup-plugin-typescript';
+import ts from 'rollup-plugin-typescript';
+import typescript from 'typescript';
 
 import pkg from './package.json';
 
 dotenv.config();
 const isProduction = process.env.NODE_ENV === 'production';
-const entry = 'lib/index.js';
+const entry = 'lib/index.ts';
 const externals = ['react', 'react-dom', 'prop-types'];
 const globals = {
   react: 'React',
   'react-dom': 'ReactDOM',
   'prop-types': 'PropTypes'
 };
+const extensions = ['.js', '.ts', '.scss'];
 
 export default [
   {
@@ -47,7 +49,7 @@ function rollupPlugins() {
       include: {},
       paths: ['lib'],
       external: [],
-      extensions: ['.js', '.ts', '.scss']
+      extensions
     }),
     resolve({
       main: true,
@@ -61,11 +63,13 @@ function rollupPlugins() {
       use: ['sass'],
       plugins: [autoprefixer]
     }),
-    typescript(),
+    ts({
+      typescript
+    }),
     babel({
       exclude: 'node_modules/**',
-      extensions: ['.js', '.ts'],
-      runtimeHelpers: true
+      runtimeHelpers: true,
+      extensions
     }),
     commonjs(),
     isProduction &&

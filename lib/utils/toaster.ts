@@ -3,17 +3,6 @@ const SUCCESS = 'SUCCESS';
 const ERROR = 'ERROR';
 const WARNING = 'WARNING';
 
-interface IToast {
-  time?: number;
-  type: string;
-  title: string;
-  message: string;
-}
-
-interface IToaster {
-  popToast(toast: IToast): void;
-}
-
 class ToasterService {
   private toaster: IToaster;
 
