@@ -3,7 +3,14 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import './RadioButton.scss';
 
-const RadioButton = ({ id, name, label, value, checked, onSelect }) => (
+const RadioButton = ({
+  id,
+  name,
+  label,
+  value,
+  checked,
+  onSelect
+}: IRadioButtonProps) => (
   <label className={classNames('radio')} htmlFor={id} aria-checked={checked}>
     <input
       type="radio"

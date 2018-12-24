@@ -1,13 +1,27 @@
 import classNames from 'classnames';
-import React, { Component } from 'react';
+import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 import { Button } from '../Button';
 import './FileUploader.scss';
 
-const displayFileName = (str) => str.slice(0).replace(/^.*\\/g, '');
+const displayFileName = (str: string) => str.slice(0).replace(/^.*\\/g, '');
 
-class FileUploader extends Component {
+class FileUploader extends React.Component<IFileUploaderProps, any> {
+  static defaultProps = {
+    placeholder: 'upload'
+  };
+
+  static propTypes = {
+    className: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    value: PropTypes.string,
+    placeholder: PropTypes.string,
+    onFileSelect: PropTypes.func.isRequired
+  };
+
+  private fileInput = null;
+
   handleUserInput(event) {
     event.stopPropagation();
     this.props.onFileSelect(event);
@@ -44,17 +58,5 @@ class FileUploader extends Component {
     );
   }
 }
-
-FileUploader.defaultProps = {
-  placeholder: 'upload'
-};
-
-FileUploader.propTypes = {
-  className: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  value: PropTypes.string,
-  placeholder: PropTypes.string,
-  onFileSelect: PropTypes.func.isRequired
-};
 
 export default FileUploader;

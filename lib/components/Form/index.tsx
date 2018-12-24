@@ -1,14 +1,25 @@
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
-import React, { Component } from 'react';
+import * as React from 'react';
 
 import { Button } from '../Button';
 import Strings from '../../constants/strings';
 
 import './Form.scss';
 
-class Form extends Component {
-  constructor(props) {
+class Form extends React.Component<IFormProps, any> {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
+    ]).isRequired,
+    submitOptions: PropTypes.object,
+    cancelOptions: PropTypes.object
+  };
+
+  constructor(props: IFormProps) {
     super(props);
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,7 +53,7 @@ class Form extends Component {
         <form
           name={name}
           className={classNames('form')}
-          noValidate=""
+          noValidate
           autoComplete="off"
           onSubmit={this.handleSubmit}
         >
@@ -62,16 +73,5 @@ class Form extends Component {
     );
   }
 }
-
-Form.propTypes = {
-  name: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]).isRequired,
-  submitOptions: PropTypes.object,
-  cancelOptions: PropTypes.object
-};
 
 export default Form;

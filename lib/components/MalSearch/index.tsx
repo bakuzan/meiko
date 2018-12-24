@@ -1,5 +1,5 @@
 import * as PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
 
 import AutocompleteInput from '../AutocompleteInput';
@@ -17,7 +17,7 @@ import {
 import Urls from '../../constants/urls';
 import './MalSearch.scss';
 
-const getFilters = (props) => ({
+const getFilters = (props: IMalSearchProps) => ({
   title: props.search,
   id: props.itemId,
   malId: props.id
@@ -25,10 +25,12 @@ const getFilters = (props) => ({
 
 const hasMalError = (data) => !data || !data.success || !isArray(data);
 
-const checkIfItemExistsAlready = (query) => (props) =>
+const checkIfItemExistsAlready = (
+  query: (filters: IMalSearchFilters) => string
+) => (props: IMalSearchProps) =>
   MeikoFetch(`${Urls.graphql.base}${query(getFilters(props))}`);
 
-const searchMyAnimeList = (type) => (search) =>
+const searchMyAnimeList = (type: string) => (search: string) =>
   MeikoFetch(Urls.build(Urls.malSearch, { type, search }));
 
 const Errors = {
@@ -37,7 +39,7 @@ const Errors = {
   exists: (type) => `${capitalise(type)} already exists.`
 };
 
-const initialState = {
+const initialState: IMalSearchState = {
   results: [],
   isFirstQuery: true,
   isFetching: false,
@@ -45,8 +47,23 @@ const initialState = {
   error: null
 };
 
-class MalSearch extends Component {
-  constructor(props) {
+class MalSearch extends React.Component<IMalSearchProps, IMalSearchState> {
+  static propTypes = {
+    id: PropTypes.number,
+    itemId: PropTypes.string,
+    type: PropTypes.string.isRequired,
+    search: PropTypes.string,
+    onUserInput: PropTypes.func.isRequired,
+    selectMalItem: PropTypes.func.isRequired,
+    asyncCheckIfExists: PropTypes.func,
+    menuClassName: PropTypes.string
+  };
+
+  private timer = null;
+  private queryMal = null;
+  private checkIfExists = null;
+
+  constructor(props: IMalSearchProps) {
     super(props);
     this.state = {
       ...initialState
@@ -65,17 +82,24 @@ class MalSearch extends Component {
   }
 
   componentDidMount() {
-    if (!this.props.id) return;
+    if (!this.props.id) {
+      return;
+    }
+
     this.handleQueries();
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (
-      prevState.hasSelected !== this.state.hasSelected ||
-      this.props.search !== prevProps.search
-    ) {
-      if (!!this.props.search) this.fetchMalResults();
-      if (!this.props.search) this.setState(initialState);
+    const hasSelectedChanged = prevState.hasSelected !== this.state.hasSelected;
+    const hasSearchChanged = this.props.search !== prevProps.search;
+    if (!hasSearchChanged && !hasSelectedChanged) {
+      return;
+    }
+
+    if (this.props.search) {
+      this.fetchMalResults();
+    } else {
+      this.setState(initialState);
     }
   }
 
@@ -167,16 +191,5 @@ class MalSearch extends Component {
     );
   }
 }
-
-MalSearch.propTypes = {
-  id: PropTypes.number,
-  itemId: PropTypes.string,
-  type: PropTypes.string.isRequired,
-  search: PropTypes.string,
-  onUserInput: PropTypes.func.isRequired,
-  selectMalItem: PropTypes.func.isRequired,
-  asyncCheckIfExists: PropTypes.func,
-  menuClassName: PropTypes.string
-};
 
 export default MalSearch;

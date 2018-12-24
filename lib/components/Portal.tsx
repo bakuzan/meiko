@@ -2,7 +2,7 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 
-class Portal extends React.Component {
+class Portal extends React.Component<IPortalProps, any> {
   static propTypes = {
     parentTag: PropTypes.string,
     querySelector: PropTypes.string.isRequired
@@ -14,7 +14,7 @@ class Portal extends React.Component {
   el = null;
   targetNode = null;
 
-  constructor(props) {
+  constructor(props: IPortalProps) {
     super(props);
 
     this.el = document.createElement(props.parentTag);

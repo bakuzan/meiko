@@ -173,6 +173,28 @@ interface IElementCoordinates {
   bottom: number;
 }
 
+interface IFileUploaderProps {
+  className: string;
+  name: string;
+  value: string;
+  placeholder: string;
+  onFileSelect(e: Event): void;
+}
+
+interface IFormProps {
+  name: string;
+  title: string;
+  children: JSX.Element;
+  submitOptions: {
+    text: string;
+    onSubmit(): void;
+  };
+  cancelOptions: {
+    hide: boolean;
+    onCancel(): void;
+  };
+}
+
 interface IHeaderProps {
   id: string;
   title: string;
@@ -210,6 +232,63 @@ interface ILoadableContentState {
 
 interface ILoadingSpinnerProps {
   size: string;
+}
+
+interface IMalSearchFilters {
+  title: string;
+  id: number;
+  malId: number;
+}
+interface IMalSearchProps {
+  id: number;
+  itemId: string;
+  type: string;
+  search: string;
+  menuClassName: string;
+  onUserInput(e: Event): void;
+  selectMalItem(): void;
+  asyncCheckIfExists(filters: IMalSearchFilters): void;
+}
+interface IMalSearchState {
+  results: IAutocompleteOption[];
+  isFirstQuery: boolean;
+  isFetching: boolean;
+  hasSelected: boolean;
+  error: string;
+}
+
+interface IMultiSelectProps {
+  listClassName: string;
+  name: string;
+  id: string;
+  placeholder: string;
+  label: string;
+  values: Array<string | number>;
+  options: ISelectBoxOption[];
+  onUpdate(): void;
+}
+interface IMultiSelectState {
+  isOpen: boolean;
+}
+
+interface IPortalProps {
+  parentTag: string;
+  querySelector: string;
+}
+
+interface IRadioButtonProps {
+  name: string;
+  label: string;
+  value: string | number | boolean;
+  checked: boolean;
+  onSelect(e: Event): void;
+}
+
+interface IRatingControlProps {
+  name: string;
+  label: string;
+  value: string | number | boolean;
+  onChange(e: Event): void;
 }
 
 interface IRequestIndicatorProps {

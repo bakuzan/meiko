@@ -1,3 +1,18 @@
+interface IIcons {
+  tick: string;
+  cross: string;
+  pause: string;
+  clockwise: string;
+  link: string;
+  editable: string;
+  save: string;
+  left: string;
+  right: string;
+  settings: string;
+  calendar: string;
+  info: string;
+}
+
 export default {
   tick: '\u2713', // 10003, // '\u2713',
   cross: '\u2573', // '\u274C',
@@ -11,4 +26,4 @@ export default {
   settings: '\u2699',
   calendar: '\uD83D\uDCC5',
   info: '\uD83D\uDEC8'
-};
+} as IIcons;

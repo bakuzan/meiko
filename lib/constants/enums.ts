@@ -1,4 +1,14 @@
-const keyCodes = {
+interface IKeyCodes {
+  q: number;
+  backspace: number;
+  enter: number;
+  escape: number;
+  up: number;
+  down: number;
+  space: number;
+}
+
+const keyCodes: IKeyCodes = {
   q: 81,
   backspace: 8,
   enter: 13,

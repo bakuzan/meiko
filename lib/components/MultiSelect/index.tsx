@@ -11,8 +11,34 @@ const EXTRACT_OPTION_INDEX = /^.*-/g;
 const OPTION_PREFIX = 'option-';
 const ALL_SELECTED_TEXT = 'All Selected';
 
-class MultiSelect extends React.Component {
-  constructor(props) {
+class MultiSelect extends React.Component<
+  IMultiSelectProps,
+  IMultiSelectState
+> {
+  static defaultProps = {
+    label: 'MultiSelect',
+    placeholder: 'None selected'
+  };
+
+  static propTypes = {
+    listClassName: PropTypes.string,
+    name: PropTypes.string,
+    id: PropTypes.string.isRequired,
+    placeholder: PropTypes.string,
+    label: PropTypes.string,
+    values: PropTypes.arrayOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    ).isRequired,
+    options: PropTypes.arrayOf(
+      PropTypes.shape({
+        value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        text: PropTypes.string
+      })
+    ).isRequired,
+    onUpdate: PropTypes.func
+  };
+
+  constructor(props: IMultiSelectProps) {
     super(props);
     this.state = {
       isOpen: false
@@ -25,8 +51,13 @@ class MultiSelect extends React.Component {
   }
 
   handleToggleOpen(e) {
-    if (e.type !== Strings.events.click && !Enums.OPEN_KEYS.includes(e.keyCode))
+    if (
+      e.type !== Strings.events.click &&
+      !Enums.OPEN_KEYS.includes(e.keyCode)
+    ) {
       return;
+    }
+
     e.stopPropagation();
     this.setState({ isOpen: true });
   }
@@ -62,10 +93,15 @@ class MultiSelect extends React.Component {
   processValueForDisplay() {
     const { values, options } = this.props;
     const length = values.length;
-    if (!length) return '';
-    if (length === 1) return options.find((x) => values.includes(x.value)).text;
-    if (length === options.length) return ALL_SELECTED_TEXT;
-    return `${length} selected`;
+    if (!length) {
+      return '';
+    } else if (length === 1) {
+      return options.find((x) => values.includes(x.value)).text;
+    } else if (length === options.length) {
+      return ALL_SELECTED_TEXT;
+    } else {
+      return `${length} selected`;
+    }
   }
 
   render() {
@@ -99,7 +135,7 @@ class MultiSelect extends React.Component {
             name={name}
             placeholder={placeholder}
             value={displayValue}
-            tabIndex="0"
+            tabIndex={0}
             readOnly
             onClick={this.handleToggleOpen}
             onKeyDown={this.handleToggleOpen}
@@ -146,28 +182,5 @@ class MultiSelect extends React.Component {
     );
   }
 }
-
-MultiSelect.defaultProps = {
-  label: 'MultiSelect',
-  placeholder: 'None selected'
-};
-
-MultiSelect.propTypes = {
-  listClassName: PropTypes.string,
-  name: PropTypes.string,
-  id: PropTypes.string.isRequired,
-  placeholder: PropTypes.string,
-  label: PropTypes.string,
-  values: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-  ).isRequired,
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      text: PropTypes.string
-    })
-  ).isRequired,
-  onUpdate: PropTypes.func
-};
 
 export default MultiSelect;

@@ -1,10 +1,25 @@
 import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import * as React from 'react';
 import './RatingControl.scss';
 
-class RatingControl extends Component {
-  constructor(props) {
+class RatingControl extends React.Component<IRatingControlProps, any> {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    value: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.string,
+      PropTypes.number
+    ]).isRequired,
+    onChange: PropTypes.func
+  };
+
+  private maximum = 10;
+  private iterator = [];
+  private isReadOnly = true;
+
+  constructor(props: IRatingControlProps) {
     super(props);
 
     this.maximum = 10;
@@ -12,12 +27,15 @@ class RatingControl extends Component {
     this.isReadOnly = !props.onChange;
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
     this.isReadOnly = !this.props.onChange;
   }
 
   handleChange(event) {
-    if (this.isReadOnly) return;
+    if (this.isReadOnly) {
+      return;
+    }
+
     const { value: valueString, type } = event.target;
     const value = Number(valueString);
     this.props.onChange({
@@ -30,10 +48,15 @@ class RatingControl extends Component {
   }
 
   ratingColouriser(value) {
-    if (value < 4) return 'low';
-    if (value < 7) return 'average';
-    if (value < 9) return 'good';
-    return 'great';
+    if (value < 4) {
+      return 'low';
+    } else if (value < 7) {
+      return 'average';
+    } else if (value < 9) {
+      return 'good';
+    } else {
+      return 'great';
+    }
   }
 
   renderSelectors() {
@@ -86,16 +109,5 @@ class RatingControl extends Component {
     );
   }
 }
-
-RatingControl.propTypes = {
-  name: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  value: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.string,
-    PropTypes.number
-  ]).isRequired,
-  onChange: PropTypes.func
-};
 
 export default RatingControl;
