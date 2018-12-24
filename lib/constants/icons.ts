@@ -13,7 +13,7 @@ interface IIcons {
   info: string;
 }
 
-export default {
+const Icons: IIcons = {
   tick: '\u2713', // 10003, // '\u2713',
   cross: '\u2573', // '\u274C',
   pause: '\u2223\u2223', // '\u23F8', // 9208, // '\u23F8',
@@ -26,4 +26,6 @@ export default {
   settings: '\u2699',
   calendar: '\uD83D\uDCC5',
   info: '\uD83D\uDEC8'
-} as IIcons;
+};
+
+export default Icons;

@@ -154,7 +154,9 @@ class MalSearch extends React.Component<IMalSearchProps, IMalSearchState> {
   handleMalSearch(event) {
     const search = getEventValue(event.target);
     this.props.onUserInput(event);
-    if (!search) return this.selectAutocompleteSuggestion(null, true);
+    if (!search) {
+      return this.selectAutocompleteSuggestion(null, true);
+    }
   }
 
   render() {

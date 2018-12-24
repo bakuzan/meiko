@@ -1,16 +1,16 @@
-const path = require('path');
+// const path = require('path');
 
-const SRC_PATH = path.join(__dirname, '../lib');
+// const SRC_PATH = path.join(__dirname, '../lib');
 
-module.exports = (baseConfig, env, config) => {
+module.exports = (_, __, config) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
     loader: require.resolve('babel-loader'),
     options: {
-      presets: [['react-app', { flow: false, typescript: true }]]
+      presets: [['react', { flow: false, typescript: true }]]
     }
   });
-  config.resolve.extensions.push('.ts', '.tsx');
+  config.resolve.extensions.push(...['.ts', '.tsx']);
   return config;
 };
 // module.exports = {

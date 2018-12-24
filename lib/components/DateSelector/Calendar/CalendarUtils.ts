@@ -1,11 +1,6 @@
 import Strings from '../../../constants/strings';
 import { generateUniqueId, Date as DateUtils } from '../../../utils';
 
-export enum ViewOptionEnum {
-  DUMMY_DAY = 1,
-  DAY = 2,
-  MONTH = 3
-}
 export const mapToViewOption = (optionType: ViewOptionEnum) => (
   text: string | number
 ) => ({
