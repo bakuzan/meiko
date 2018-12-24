@@ -257,6 +257,15 @@ interface IMalSearchState {
   error: string;
 }
 
+interface IMalSearchSuggestionProps {
+  activeSuggestion: number;
+  index: number;
+  attr: string;
+  item: object;
+  highlightMatch(text: string): JSX.Element;
+  selectAutocompleteSuggestion(id: string | number): void;
+}
+
 interface IMultiSelectProps {
   listClassName: string;
   name: string;

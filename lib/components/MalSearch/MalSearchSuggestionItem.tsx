@@ -14,7 +14,7 @@ const MalSearchSuggestionItem = ({
   item,
   highlightMatch,
   selectAutocompleteSuggestion
-}) => {
+}: IMalSearchSuggestionProps) => {
   const itemId = isNumber(item.id) ? item.id : item._id;
   const itemText = item[attr];
   const isActiveSuggestion = activeSuggestion === index;
