@@ -3,18 +3,34 @@ import * as React from 'react';
 
 import LoadingSpinner from './LoadingSpinner';
 
-class LoadableContent extends React.Component {
-  constructor(props) {
+class LoadableContent extends React.Component<
+  ILoadableContentProps,
+  ILoadableContentState
+> {
+  static defaultProps = {
+    spinnerSize: 'fullscreen',
+    spinnerDelay: 1100
+  };
+
+  static propTypes = {
+    isFetching: PropTypes.bool.isRequired,
+    spinnerSize: PropTypes.string,
+    spinnerDelay: PropTypes.number
+  };
+
+  private timer = null;
+
+  constructor(props: ILoadableContentProps) {
     super(props);
     this.state = {
       pastDelay: false
     };
-    this.timer = null;
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.isFetching && !prevProps.isFetching)
+    if (this.props.isFetching && !prevProps.isFetching) {
       return this.handleDelayTimer();
+    }
 
     if (!this.props.isFetching && prevProps.isFetching) {
       clearTimeout(this.timer);
@@ -31,22 +47,12 @@ class LoadableContent extends React.Component {
   }
 
   render() {
-    if (this.props.isFetching && this.state.pastDelay)
+    if (this.props.isFetching && this.state.pastDelay) {
       return <LoadingSpinner size={this.props.spinnerSize} />;
+    }
 
     return this.props.children;
   }
 }
-
-LoadableContent.defaultProps = {
-  spinnerSize: 'fullscreen',
-  spinnerDelay: 1100
-};
-
-LoadableContent.propTypes = {
-  isFetching: PropTypes.bool.isRequired,
-  spinnerSize: PropTypes.string,
-  spinnerDelay: PropTypes.number
-};
 
 export default LoadableContent;

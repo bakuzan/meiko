@@ -1,39 +1,33 @@
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
-import React, { Component } from 'react';
+import * as React from 'react';
 import './Header.scss';
 
-class Header extends Component {
-  render() {
-    const {
-      id,
-      className,
-      title,
-      navLeft,
-      navRight,
-      leftAlignTitle,
-      ...props
-    } = this.props;
-
-    return (
-      <nav
-        id={id}
-        className={classNames('application-header', className)}
-        {...props}
-      >
-        {!!navLeft && (
-          <div className={classNames('links-block')}>{navLeft}</div>
-        )}
-        {!leftAlignTitle && <div className="flex-spacer" />}
-        {!!title && <h1>{title}</h1>}
-        <div className="flex-spacer" />
-        {!!navRight && (
-          <div className={classNames('links-block')}>{navRight}</div>
-        )}
-      </nav>
-    );
-  }
-}
+const Header = ({
+  id,
+  className,
+  title,
+  navLeft,
+  navRight,
+  leftAlignTitle,
+  ...props
+}: IHeaderProps) => {
+  return (
+    <nav
+      id={id}
+      className={classNames('application-header', className)}
+      {...props}
+    >
+      {!!navLeft && <div className={classNames('links-block')}>{navLeft}</div>}
+      {!leftAlignTitle && <div className="flex-spacer" />}
+      {!!title && <h1>{title}</h1>}
+      <div className="flex-spacer" />
+      {!!navRight && (
+        <div className={classNames('links-block')}>{navRight}</div>
+      )}
+    </nav>
+  );
+};
 
 Header.propTypes = {
   id: PropTypes.string,

@@ -1,25 +1,28 @@
 import Strings from '../../../constants/strings';
 import { generateUniqueId, Date as DateUtils } from '../../../utils';
 
-export const ViewOptionEnum = {
-  DUMMY_DAY: 1,
-  DAY: 2,
-  MONTH: 3
-};
-export const mapToViewOption = (optionType) => (text) => ({
+export enum ViewOptionEnum {
+  DUMMY_DAY = 1,
+  DAY = 2,
+  MONTH = 3
+}
+export const mapToViewOption = (optionType: ViewOptionEnum) => (
+  text: string | number
+) => ({
   key: generateUniqueId(),
   text,
   optionType
 });
 
-export const displayYearOnly = (d) => new Date(d).getFullYear();
-export const displayMonthAndYear = (d) =>
+export const displayYearOnly = (d: string | number | Date) =>
+  new Date(d).getFullYear();
+export const displayMonthAndYear = (d: string | number | Date) =>
   `${DateUtils.getMonthName(d)} ${displayYearOnly(d)}`;
 
 export const getMonthsForDate = () =>
   Strings.monthNames.map(mapToViewOption(ViewOptionEnum.MONTH));
 
-export const getDaysForDate = (date) => {
+export const getDaysForDate = (date: string | number | Date) => {
   const d = new Date(date);
   const monthLength = DateUtils.getDaysInMonthForDate(d);
   const firstOfMonth = DateUtils.getFirstDateOfMonth(d);
@@ -40,7 +43,7 @@ export const getDaysForDate = (date) => {
   ];
 };
 
-export const checkIfSelectedForView = (state) => (option) => {
+export const checkIfSelectedForView = (state: ICalendarState) => (option) => {
   const selectedDate = new Date(state.selectedDate);
   const matches = DateUtils.checkIfDatePartsMatch(
     state.viewDate,
@@ -73,7 +76,10 @@ export const checkDatesAgainstRange = (
 export const dateIsOutOfRange = (state, option, { afterDate, beforeDate }) => {
   const { isMonthView, viewDate } = state;
   const { text: value } = option;
-  if ((!afterDate && !beforeDate) || !value) return false;
+
+  if ((!afterDate && !beforeDate) || !value) {
+    return false;
+  }
 
   if (isMonthView) {
     const date = new Date(viewDate);

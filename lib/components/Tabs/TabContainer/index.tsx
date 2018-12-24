@@ -1,37 +1,66 @@
 import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import * as React from 'react';
 
 import { Button } from '../../Button';
 import TabView from '../TabView';
 import './TabContainer.scss';
 
-class TabContainer extends Component {
-  constructor() {
-    super();
+function ValidateChildPropType(
+  propValue,
+  key,
+  componentName,
+  location,
+  propFullName
+) {
+  propValue.forEach((item) => {
+    if (!item.type || !item.type.name || item.type.name !== 'TabView') {
+      return new Error(
+        `TabContainer propTypes: Invalid prop '${propFullName}' supplied to ${componentName}. Validation failed.`
+      );
+    }
+  });
+}
+
+class TabContainer extends React.Component<
+  ITabContainerProps,
+  ITabContainerState
+> {
+  static propTypes = {
+    className: PropTypes.string,
+    tabsClassName: PropTypes.string,
+    children: PropTypes.arrayOf(ValidateChildPropType as any).isRequired
+  };
+
+  constructor(props: ITabContainerProps) {
+    super(props);
     this.state = {
       activeTab: null
     };
   }
+
   componentDidMount() {
-    if (this.state.activeTab || !this.props.children) return;
+    if (this.state.activeTab || !this.props.children) {
+      return;
+    }
+
     const child = this.props.children[0].props || { name: 'NONE' };
     this.setState({ activeTab: child.name });
   }
+
   handleTabChange(tabName) {
     this.setState({ activeTab: tabName });
   }
+
   renderViews(tabs) {
     return tabs.filter((t) => !!t).map((item) => {
       const { name } = item.props;
-      const props = Object.assign(
-        {},
-        { ...item.props, isActive: name === this.state.activeTab }
-      );
+      const props = { ...item.props, isActive: name === this.state.activeTab };
 
       return <TabView key={name} {...props} />;
     });
   }
+
   renderControls(tabs) {
     return tabs.filter((t) => !!t).map((item) => {
       const { name, displayName } = item.props;
@@ -45,6 +74,7 @@ class TabContainer extends Component {
       );
     });
   }
+
   render() {
     const children = this.props.children;
     const tabControls = this.renderControls(children);
@@ -62,25 +92,5 @@ class TabContainer extends Component {
     );
   }
 }
-
-TabContainer.propTypes = {
-  className: PropTypes.string,
-  tabsClassName: PropTypes.string,
-  children: PropTypes.arrayOf(function(
-    propValue,
-    key,
-    componentName,
-    location,
-    propFullName
-  ) {
-    propValue.forEach((item) => {
-      if (!item.type || !item.type.name || item.type.name !== 'TabView') {
-        return new Error(
-          `TabContainer propTypes: Invalid prop '${propFullName}' supplied to ${componentName}. Validation failed.`
-        );
-      }
-    });
-  }).isRequired
-};
 
 export default TabContainer;

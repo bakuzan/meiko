@@ -1,10 +1,3 @@
-interface IElementCoordinates {
-  top: number;
-  left: number;
-  right: number;
-  bottom: number;
-}
-
 export default function getElementCoordinates(
   elem: HTMLElement
 ): IElementCoordinates {

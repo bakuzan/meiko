@@ -7,14 +7,25 @@ import './AppInformation.scss';
 const resolveENVVariable = (str) => (str || '').trim();
 const resolveLabel = (b, v) => {
   let label = '';
-  if (b) label += `Branch ${b}`;
-  if (b && v) label += ', ';
-  if (v) label += `Version ${v}`;
+  if (b) {
+    label += `Branch ${b}`;
+  }
+
+  if (b && v) {
+    label += ', ';
+  }
+
+  if (v) {
+    label += `Version ${v}`;
+  }
 
   return label;
 };
 
-class AppInformation extends React.PureComponent {
+class AppInformation extends React.PureComponent<
+  IAppInformationProps,
+  IAppInformationState
+> {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,7 +42,9 @@ class AppInformation extends React.PureComponent {
   render() {
     const { branch, version } = this.props;
 
-    if (!branch && !version) return null;
+    if (!branch && !version) {
+      return null;
+    }
 
     const codeBranch = resolveENVVariable(branch);
     const appVersion = resolveENVVariable(version);
@@ -40,7 +53,7 @@ class AppInformation extends React.PureComponent {
     return (
       <div
         className={classNames('app-information')}
-        icon={Icons.info}
+        data-icon={Icons.info}
         onMouseEnter={this.handleHovered(true)}
         onMouseLeave={this.handleHovered(false)}
         aria-label={ariaLabel}

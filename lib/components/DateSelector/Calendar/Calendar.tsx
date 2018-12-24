@@ -18,9 +18,19 @@ const viewHeaders = [
   ...Strings.dayNames.slice(0, 1)
 ].map((str) => str.slice(0, 3));
 
-class Calendar extends React.Component {
-  constructor(props) {
+class Calendar extends React.Component<ICalendarProps, ICalendarState> {
+  static propTypes = {
+    id: PropTypes.string.isRequired,
+    selected: PropTypes.string,
+    afterDate: PropTypes.string,
+    beforeDate: PropTypes.string,
+    disabled: PropTypes.bool,
+    onSelect: PropTypes.func
+  };
+
+  constructor(props: ICalendarProps) {
     super(props);
+
     const date = DateFormat.formatDateForInput(props.selected || new Date());
     this.state = {
       viewDate: date,
@@ -44,13 +54,19 @@ class Calendar extends React.Component {
   }
 
   toggleViewMode() {
-    if (this.props.disabled) return;
+    if (this.props.disabled) {
+      return;
+    }
+
     this.setState((prev) => ({ isMonthView: !prev.isMonthView }));
   }
 
   handleViewShift(direction) {
     return () => {
-      if (this.props.disabled) return;
+      if (this.props.disabled) {
+        return;
+      }
+
       const { isMonthView, viewDate: oldViewDate } = this.state;
       const viewDate = isMonthView
         ? DateUtils.adjustDateMonth(oldViewDate, direction)
@@ -60,7 +76,9 @@ class Calendar extends React.Component {
   }
 
   handleViewOptionSelect(option) {
-    if (this.props.disabled) return;
+    if (this.props.disabled) {
+      return;
+    }
 
     const oldViewStr = this.state.viewDate;
     const oldViewDate = new Date(oldViewStr);
@@ -89,7 +107,7 @@ class Calendar extends React.Component {
     );
     const viewOptions = isMonthView
       ? CalendarUtils.getDaysForDate(viewDate)
-      : CalendarUtils.getMonthsForDate(viewDate);
+      : CalendarUtils.getMonthsForDate();
 
     return (
       <div
@@ -165,14 +183,5 @@ class Calendar extends React.Component {
     );
   }
 }
-
-Calendar.propTypes = {
-  id: PropTypes.string.isRequired,
-  selected: PropTypes.string,
-  afterDate: PropTypes.string,
-  beforeDate: PropTypes.string,
-  disabled: PropTypes.bool,
-  onSelect: PropTypes.func
-};
 
 export default Calendar;

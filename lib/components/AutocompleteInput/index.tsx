@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { Component } from 'react';
+import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 import ClearableInput from '../ClearableInput';
@@ -9,9 +9,39 @@ import Enums from '../../constants/enums';
 import { isNumber, getTimeoutSeconds } from '../../utils';
 import './AutocompleteInput.scss';
 
-class AutocompleteInput extends Component {
-  constructor() {
-    super();
+class AutocompleteInput extends React.Component<
+  IAutocompleteInputProps,
+  IAutocompleteInputState
+> {
+  static defaultProps = {
+    disableLocalFilter: false,
+    noSuggestionsItem: null,
+    suggestionTemplate: AutocompleteSuggestionItem,
+    clearableInputProps: {}
+  };
+
+  static propTypes = {
+    label: PropTypes.string,
+    attr: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(PropTypes.object).isRequired,
+    filter: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onSelect: PropTypes.func.isRequired,
+    onKeyDown: PropTypes.func,
+    disableLocalFilter: PropTypes.bool,
+    suggestionTemplate: PropTypes.func,
+    menuClassName: PropTypes.string,
+    clearableInputProps: PropTypes.shape({
+      className: PropTypes.string,
+      clearInputButtonClass: PropTypes.string
+    }),
+    noSuggestionsItem: PropTypes.bool
+  };
+
+  private timer = null;
+
+  constructor(props: IAutocompleteInputProps) {
+    super(props);
     this.state = {
       inUse: false,
       activeSuggestion: 0
@@ -34,7 +64,10 @@ class AutocompleteInput extends Component {
   }
 
   selectAutocompleteSuggestion(id) {
-    if (!id && id !== 0 && !this.props.noSuggestionsItem) return;
+    if (!id && id !== 0 && !this.props.noSuggestionsItem) {
+      return;
+    }
+
     this.props.onSelect(id);
   }
 
@@ -46,8 +79,13 @@ class AutocompleteInput extends Component {
 
   filterAutoComplete() {
     const { items, attr, filter, disableLocalFilter } = this.props;
-    if (!(items && filter)) return [];
-    if (disableLocalFilter) return items;
+    if (!(items && filter)) {
+      return [];
+    }
+
+    if (disableLocalFilter) {
+      return items;
+    }
 
     const filterLowerCase = filter.toLowerCase();
     return items.filter(
@@ -58,14 +96,20 @@ class AutocompleteInput extends Component {
   updateActiveSuggestion(value) {
     const maxIndex = this.filterAutoComplete().length - 1;
     let newValue = this.state.activeSuggestion + value;
-    if (newValue > maxIndex) newValue = 0;
-    if (newValue < 0) newValue = maxIndex;
+    if (newValue > maxIndex) {
+      newValue = 0;
+    }
+    if (newValue < 0) {
+      newValue = maxIndex;
+    }
     this.setState({ activeSuggestion: newValue });
   }
 
   highlightMatch(value) {
     const match = value.match(new RegExp(this.props.filter, 'i'));
-    if (!match) return value;
+    if (!match) {
+      return value;
+    }
 
     const length = this.props.filter.length;
     return (
@@ -106,7 +150,10 @@ class AutocompleteInput extends Component {
   handleBlur(e) {
     clearTimeout(this.timer);
     this.timer = setTimeout(() => {
-      if (!this.timer) return;
+      if (!this.timer) {
+        return;
+      }
+
       this.setState({ inUse: false });
     }, getTimeoutSeconds(1));
   }
@@ -184,29 +231,5 @@ class AutocompleteInput extends Component {
     );
   }
 }
-
-AutocompleteInput.defaultProps = {
-  disableLocalFilter: false,
-  noSuggestionsItem: null,
-  suggestionTemplate: AutocompleteSuggestionItem,
-  clearableInputProps: {}
-};
-
-AutocompleteInput.propTypes = {
-  label: PropTypes.string,
-  attr: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
-  filter: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  onSelect: PropTypes.func.isRequired,
-  onKeyDown: PropTypes.func,
-  disableLocalFilter: PropTypes.bool,
-  suggestionTemplate: PropTypes.func,
-  menuClassName: PropTypes.string,
-  clearableInputProps: PropTypes.shape({
-    className: PropTypes.string,
-    clearInputButtonClass: PropTypes.string
-  })
-};
 
 export default AutocompleteInput;

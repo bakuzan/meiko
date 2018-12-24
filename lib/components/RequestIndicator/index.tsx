@@ -3,7 +3,10 @@ import classNames from 'classnames';
 
 import './RequestIndicator.scss';
 
-const RequestIndicator = ({ hide, requestInFlight }) => (
+const RequestIndicator = ({
+  hide,
+  requestInFlight
+}: IRequestIndicatorProps) => (
   <div
     className={classNames(
       'request-indicator-container',

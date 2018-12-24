@@ -6,8 +6,14 @@ import { Button } from '../Button';
 import Icons from '../../constants/icons';
 import './TagChip.scss';
 
-const getPropsForClickabilityState = (func, data) => {
-  if (!func) return {};
+const getPropsForClickabilityState = (
+  func: (data: ITagOption) => void,
+  data: ITagOption
+) => {
+  if (!func) {
+    return {};
+  }
+
   return {
     role: 'button',
     tabIndex: '0',
@@ -15,10 +21,8 @@ const getPropsForClickabilityState = (func, data) => {
   };
 };
 
-const getChipStyle = (size) => {
-  if (!size) return {};
-  return { fontSize: `${size}em` };
-};
+const getChipStyle = (size: string | number) =>
+  !size ? {} : { fontSize: `${size}em` };
 
 const TagChip = ({
   className,
@@ -26,15 +30,15 @@ const TagChip = ({
   data,
   onRemove,
   onClick,
-  ...props
-}) => {
+  chipSize
+}: ITagChipProps) => {
   const hasRemoveFunc = !!onRemove;
   const hasClick = !!onClick;
   const tagAccessiblityIfClickable = getPropsForClickabilityState(
     onClick,
     data
   );
-  const chipTextStyle = getChipStyle(props.chipSize);
+  const chipTextStyle = getChipStyle(chipSize);
 
   return (
     <span

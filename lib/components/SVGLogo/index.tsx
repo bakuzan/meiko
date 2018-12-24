@@ -1,22 +1,27 @@
 import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import * as React from 'react';
 import { findDOMNode } from 'react-dom';
 import './SVGLogo.scss';
 
-class SvgLogo extends Component {
-  constructor() {
-    super();
+class SvgLogo extends React.Component<ISvgLogoProps, any> {
+  static propTypes = {
+    id: PropTypes.string,
+    text: PropTypes.string.isRequired
+  };
 
-    this.letterClass = classNames('letter');
-    this.animate = classNames('hideshow');
-    this.sideLength = 50;
-  }
+  private letterClass = classNames('letter');
+  private animate = classNames('hideshow');
+  private sideLength = 50;
+  private characters: NodeListOf<Element> = null;
+  private interval = null;
+
   componentDidMount() {
     const container = findDOMNode(this);
     this.characters = container.querySelectorAll(`text.${this.letterClass}`);
     this.cycleCharacters();
   }
+
   cycleCharacters() {
     clearInterval(this.interval);
     this.interval = setInterval(() => {
@@ -32,7 +37,10 @@ class SvgLogo extends Component {
       }
 
       const nextLetter = this.characters[nextLetterIndex];
-      if (!nextLetter) return;
+      if (!nextLetter) {
+        return;
+      }
+
       nextLetter.setAttribute('class', `${this.letterClass} ${this.animate}`);
     }, 3000);
   }
@@ -80,10 +88,5 @@ class SvgLogo extends Component {
     );
   }
 }
-
-SvgLogo.propTypes = {
-  id: PropTypes.string,
-  text: PropTypes.string.isRequired
-};
 
 export default SvgLogo;

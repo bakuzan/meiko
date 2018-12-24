@@ -15,7 +15,7 @@ const Sidebar = ({
   toggleCollapse,
   close,
   ...props
-}) => {
+}: ISidebarProps) => {
   const sidebarClasses = classNames('sidebar', className, {
     collapsed: isCollapsed,
     hidden: isHidden

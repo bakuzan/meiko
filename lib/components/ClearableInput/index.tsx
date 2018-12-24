@@ -7,11 +7,28 @@ import Icons from '../../constants/icons';
 import { debounce } from '../../utils';
 import './ClearableInput.scss';
 
-class ClearableInput extends React.Component {
-  constructor(props) {
+class ClearableInput extends React.Component<IClearableInputProps, any> {
+  static defaultProps = {
+    name: 'search',
+    label: 'search',
+    type: 'text'
+  };
+
+  static propTypes = {
+    clearInputButtonClass: PropTypes.string,
+    name: PropTypes.string,
+    label: PropTypes.string,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    maxLength: PropTypes.number,
+    onChange: PropTypes.func.isRequired,
+    onKeyDown: PropTypes.func
+  };
+
+  private inputField = null;
+
+  constructor(props: IClearableInputProps) {
     super(props);
 
-    this.inputField = null;
     this.clearAndFocusInput = this.clearAndFocusInput.bind(this);
   }
 
@@ -53,7 +70,7 @@ class ClearableInput extends React.Component {
           placeholder=" "
           autoComplete="off"
           type={type}
-          label={label}
+          aria-label={label}
           name={name}
           value={value}
           maxLength={maxLength}
@@ -80,21 +97,5 @@ class ClearableInput extends React.Component {
     );
   }
 }
-
-ClearableInput.defaultProps = {
-  name: 'search',
-  label: 'search',
-  type: 'text'
-};
-
-ClearableInput.propTypes = {
-  clearInputButtonClass: PropTypes.string,
-  name: PropTypes.string,
-  label: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  maxLength: PropTypes.number,
-  onChange: PropTypes.func.isRequired,
-  onKeyDown: PropTypes.func
-};
 
 export default ClearableInput;

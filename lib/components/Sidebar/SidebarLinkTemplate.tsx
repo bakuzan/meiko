@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import './Sidebar.scss';
 
-const SidebarLinkTemplate = ({ data, onClick }) => {
+const SidebarLinkTemplate = ({ data, onClick }: ISidebarLinkProps) => {
   return (
     <a className="primary" href={data.link} onClick={onClick}>
       <div className={classNames('item-icon', 'center-contents')}>

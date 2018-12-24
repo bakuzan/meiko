@@ -91,8 +91,8 @@ class ImageSelector extends React.Component<
 
     return convertToBase64(
       data as File,
-      (function(selector) {
-        return function() {
+      (function affixSelector(selector) {
+        return function queryCallback() {
           requestImgur(this.result).then(selector.handleImgurResponse);
         };
       })(this)

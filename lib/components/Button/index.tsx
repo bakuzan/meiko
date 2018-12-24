@@ -22,8 +22,8 @@ function getButtonClasses({
     'button-icon': hasIcon,
     [btnStyle]: hasBtnStyle,
     [btnSize]: hasBtnSize,
-    rounded: rounded,
-    depress: depress
+    rounded,
+    depress
   });
 }
 
@@ -36,7 +36,7 @@ export const Button = ({
   depress,
   children,
   ...props
-}) => {
+}: IButtonProps) => {
   const buttonClasses = getButtonClasses({
     className,
     btnStyle,
@@ -69,35 +69,29 @@ Button.propTypes = {
 };
 
 export function withButtonisation(WrappedComponent) {
-  return class extends React.Component {
-    render() {
-      const {
-        className,
-        btnStyle,
-        btnSize,
-        link,
-        rounded,
-        depress,
-        icon,
-        ...passProps
-      } = this.props;
-      const buttonClasses = getButtonClasses({
-        className,
-        btnStyle,
-        btnSize,
-        link,
-        rounded,
-        depress,
-        icon
-      });
-      return (
-        <WrappedComponent
-          {...passProps}
-          icon={icon}
-          className={buttonClasses}
-        />
-      );
-    }
+  return ({
+    className,
+    btnStyle,
+    btnSize,
+    link,
+    rounded,
+    depress,
+    icon,
+    ...passProps
+  }: IButtonProps) => {
+    const buttonClasses = getButtonClasses({
+      className,
+      btnStyle,
+      btnSize,
+      link,
+      rounded,
+      depress,
+      icon
+    });
+
+    return (
+      <WrappedComponent {...passProps} icon={icon} className={buttonClasses} />
+    );
   };
 }
 
@@ -105,7 +99,7 @@ export function withCustomButtonWrapper(
   WrappedComponent,
   { className: customClass, ...customProps }
 ) {
-  return function({ className, ...props }) {
+  return ({ className, ...props }: IButtonProps) => {
     return (
       <WrappedComponent
         {...props}

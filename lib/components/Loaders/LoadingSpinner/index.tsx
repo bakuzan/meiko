@@ -1,9 +1,13 @@
 import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import * as React from 'react';
 import './LoadingSpinner.scss';
 
-class LoadingSpinner extends Component {
+class LoadingSpinner extends React.Component<ILoadingSpinnerProps, any> {
+  static propTypes = {
+    size: PropTypes.string
+  };
+
   render() {
     return (
       <div className={classNames('loader', 'meiko-spinner', this.props.size)}>
@@ -22,9 +26,5 @@ class LoadingSpinner extends Component {
     );
   }
 }
-
-LoadingSpinner.propTypes = {
-  size: PropTypes.string
-};
 
 export default LoadingSpinner;

@@ -6,14 +6,15 @@ import { Button } from '../Button';
 import { isNumber } from '../../utils';
 import './AutocompleteInput.scss';
 
-const AutocompleteSuggestionItem = ({
-  activeSuggestion,
-  index,
-  attr,
-  item,
-  highlightMatch,
-  selectAutocompleteSuggestion
-}) => {
+const AutocompleteSuggestionItem = (props: IAutocompleteSuggestionProps) => {
+  const {
+    activeSuggestion,
+    index,
+    attr,
+    item,
+    highlightMatch,
+    selectAutocompleteSuggestion
+  } = props;
   const itemId = isNumber(item.id) ? item.id : item._id;
   const itemText = item[attr];
   const isActiveSuggestion = activeSuggestion === index;

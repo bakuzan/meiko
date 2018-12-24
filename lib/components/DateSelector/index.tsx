@@ -15,8 +15,27 @@ const ErrorMessages = {
   isRequired: 'Date is required'
 };
 
-class DateSelector extends React.Component {
-  constructor(props) {
+class DateSelector extends React.Component<
+  IDateSelectorProps,
+  IDateSelectorState
+> {
+  static defaultProps = {
+    label: 'Date'
+  };
+
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    required: PropTypes.bool,
+    disabled: PropTypes.bool,
+    afterDate: PropTypes.string,
+    beforeDate: PropTypes.string,
+    onChange: PropTypes.func,
+    isFlat: PropTypes.bool
+  };
+
+  constructor(props: IDateSelectorProps) {
     super(props);
     this.state = {
       displayCalendar: false,
@@ -41,8 +60,10 @@ class DateSelector extends React.Component {
     if (
       e.type !== Strings.events.click &&
       !Enums.CLOSE_KEYS.includes(e.keyCode)
-    )
+    ) {
       return;
+    }
+
     this.setState({ displayCalendar: false });
   }
 
@@ -143,7 +164,7 @@ class DateSelector extends React.Component {
             <div
               className={classNames('date-selector-calendar-backdrop')}
               role="button"
-              tabIndex="0"
+              tabIndex={0}
               onClick={this.handleCloseCalendar}
               onKeyDown={this.handleCloseCalendar}
             />
@@ -163,21 +184,5 @@ class DateSelector extends React.Component {
     );
   }
 }
-
-DateSelector.defaultProps = {
-  label: 'Date'
-};
-
-DateSelector.propTypes = {
-  name: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  required: PropTypes.bool,
-  disabled: PropTypes.bool,
-  afterDate: PropTypes.string,
-  beforeDate: PropTypes.string,
-  onChange: PropTypes.func,
-  isFlat: PropTypes.bool
-};
 
 export default DateSelector;

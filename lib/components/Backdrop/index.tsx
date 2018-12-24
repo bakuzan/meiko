@@ -21,8 +21,9 @@ class Backdrop extends React.Component<IBackdropProps, any> {
     if (
       e.type !== Strings.events.click &&
       !Enums.CLOSE_KEYS.includes(e.keyCode)
-    )
+    ) {
       return;
+    }
 
     this.props.onClickOrKey();
   }

@@ -10,8 +10,29 @@ import { getElementCoordinates } from '../../utils';
 
 import './DropdownMenu.scss';
 
-class DropdownMenu extends React.Component {
-  constructor(props) {
+class DropdownMenu extends React.Component<
+  IDropdownMenuProps,
+  IDropdownMenuState
+> {
+  static defaultProps = {
+    icon: Icons.settings,
+    portalTarget: 'main',
+    align: Strings.center
+  };
+
+  static propTypes = {
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    icon: PropTypes.string,
+    portalTarget: PropTypes.string,
+    align: PropTypes.oneOf([Strings.left, Strings.center, Strings.right]),
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
+    ])
+  };
+
+  constructor(props: IDropdownMenuProps) {
     super(props);
     this.state = {
       isDropdownOpen: false,
@@ -78,23 +99,5 @@ class DropdownMenu extends React.Component {
     );
   }
 }
-
-DropdownMenu.defaultProps = {
-  icon: Icons.settings,
-  portalTarget: 'main',
-  align: Strings.center
-};
-
-DropdownMenu.propTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  icon: PropTypes.string,
-  portalTarget: PropTypes.string,
-  align: PropTypes.oneOf([Strings.left, Strings.center, Strings.right]),
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ])
-};
 
 export default DropdownMenu;

@@ -46,8 +46,8 @@ class TagCloudSelector extends React.PureComponent<
 
     const activeTags = new Set(this.props.selectedTags);
 
-    if (!activeTags.delete(tagData.id)) {
-      activeTags.add(tagData.id);
+    if (!activeTags.delete(tagData.id as any)) {
+      activeTags.add(tagData.id as any);
     }
 
     const selectedTagArray = [...activeTags.values()];
@@ -90,7 +90,7 @@ class TagCloudSelector extends React.PureComponent<
               <TagChip
                 key={chip.id}
                 className={tagClass}
-                isActive={activeTags.has(chip.id)}
+                isActive={activeTags.has(chip.id as any)}
                 data={chip}
                 onClick={this.handleTagSelect}
                 chipSize={size}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -15,7 +15,7 @@ const DialogContent = ({ name, isForm, children }) => {
 
   if (isForm) {
     return (
-      <form name={name} noValidate="" autoComplete="off">
+      <form name={name} noValidate autoComplete="off">
         {children}
       </form>
     );
@@ -30,13 +30,41 @@ const handleDialogClick = (dialog) => (event) => {
     rect.left <= event.clientX &&
     event.clientX <= rect.left + rect.width;
 
-  if (isInDialog || !event.isTrusted) return;
+  if (isInDialog || !event.isTrusted) {
+    return;
+  }
+
   dialog.self.close();
 };
 
-class Dialog extends Component {
-  constructor() {
-    super();
+class MeikoDialog extends React.Component<IDialogProps, any> {
+  static defaultProps = {
+    isForm: true,
+    hasBackdrop: true,
+    hideCancel: false
+  };
+
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    getDialogRef: PropTypes.func.isRequired,
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
+    ]).isRequired,
+    actionText: PropTypes.string,
+    action: PropTypes.func,
+    onClose: PropTypes.func,
+    isForm: PropTypes.bool,
+    hasBackdrop: PropTypes.bool,
+    hideCancel: PropTypes.bool
+  };
+
+  private listeners = null;
+  private self = null;
+
+  constructor(props: IDialogProps) {
+    super(props);
 
     this.handleRef = this.handleRef.bind(this);
     this.handleAction = this.handleAction.bind(this);
@@ -48,7 +76,9 @@ class Dialog extends Component {
   }
 
   handleRef(element) {
-    if (!element) return;
+    if (!element) {
+      return;
+    }
 
     this.self = element;
     this.props.getDialogRef(element);
@@ -60,12 +90,16 @@ class Dialog extends Component {
 
   handleClose() {
     this.self.close();
-    if (this.props.onClose) this.props.onClose();
+    if (this.props.onClose) {
+      this.props.onClose();
+    }
   }
 
   handleAction(event) {
     event.preventDefault();
-    if (this.props.action) this.props.action(event);
+    if (this.props.action) {
+      this.props.action(event);
+    }
   }
 
   render() {
@@ -113,26 +147,4 @@ class Dialog extends Component {
   }
 }
 
-Dialog.defaultProps = {
-  isForm: true,
-  hasBackdrop: true,
-  hideCancel: false
-};
-
-Dialog.propTypes = {
-  name: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  getDialogRef: PropTypes.func.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]).isRequired,
-  actionText: PropTypes.string,
-  action: PropTypes.func,
-  onClose: PropTypes.func,
-  isForm: PropTypes.bool,
-  hasBackdrop: PropTypes.bool,
-  hideCancel: PropTypes.bool
-};
-
-export default Dialog;
+export default MeikoDialog;

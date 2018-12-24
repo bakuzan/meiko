@@ -37,7 +37,7 @@ const AlertMessage = ({
   </div>
 );
 
-class Alert extends React.Component {
+class Alert extends React.Component<IAlertProps, IAlertState> {
   constructor(props) {
     super(props);
     this.state = {
@@ -53,7 +53,11 @@ class Alert extends React.Component {
 
   render() {
     const { id, alerts, actions, messageClassName } = this.props;
-    if (!alerts.length) return null;
+
+    if (!alerts.length) {
+      return null;
+    }
+
     return (
       <div id={id} className={classNames('alert-container')}>
         {alerts

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { Component } from 'react';
+import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 import { Button } from '../Button';
@@ -10,8 +10,29 @@ import './ChipListInput.scss';
 
 const resolveId = (o) => o._id || o.id;
 
-class ChipListInput extends Component {
-  constructor(props) {
+class ChipListInput extends React.Component<
+  IChipListInputProps,
+  IChipListInputState
+> {
+  static defaultProps = {
+    label: 'tags',
+    createNewMessage: 'Create New Tag'
+  };
+
+  static propTypes = {
+    label: PropTypes.string,
+    attr: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    chipsSelected: PropTypes.arrayOf(PropTypes.object).isRequired,
+    chipOptions: PropTypes.arrayOf(PropTypes.object).isRequired,
+    updateChipList: PropTypes.func.isRequired,
+    createNew: PropTypes.func,
+    createNewMessage: PropTypes.string,
+    menuClassName: PropTypes.string,
+    tagClassName: PropTypes.string
+  };
+
+  constructor(props: IChipListInputProps) {
     super(props);
     this.state = {
       [props.attr]: '',
@@ -28,7 +49,10 @@ class ChipListInput extends Component {
   }
 
   handleCreateNew() {
-    if (!this.props.createNew) return;
+    if (!this.props.createNew) {
+      return;
+    }
+
     const { attr, createNew } = this.props;
     createNew({ [attr]: this.state[attr] }, this.props.name);
     this.setState({ [attr]: '' });
@@ -36,12 +60,17 @@ class ChipListInput extends Component {
 
   selectAutocompleteSuggestion(id) {
     const item = this.props.chipOptions.find((x) => resolveId(x) === id);
-    if (!item) return this.handleCreateNew();
+    if (!item) {
+      return this.handleCreateNew();
+    }
 
     const alreadyExists = this.props.chipsSelected.find(
       (x) => resolveId(x) === resolveId(item)
     );
-    if (alreadyExists) return;
+
+    if (alreadyExists) {
+      return;
+    }
 
     this.updateList(item);
     this.setState({ [this.props.attr]: '' });
@@ -89,8 +118,12 @@ class ChipListInput extends Component {
     const { keyCode } = event;
     if (keyCode === Enums.keyCodes.backspace && !this.state[this.props.attr]) {
       event.preventDefault();
-      if (!this.state.readyRemoval) return this.setStateRemoval(true);
-      if (this.state.readyRemoval) return this.removeLastInputItem();
+
+      if (!this.state.readyRemoval) {
+        this.setStateRemoval(true);
+      } else {
+        this.removeLastInputItem();
+      }
     }
   }
 
@@ -154,23 +187,5 @@ class ChipListInput extends Component {
     );
   }
 }
-
-ChipListInput.defaultProps = {
-  label: 'tags',
-  createNewMessage: 'Create New Tag'
-};
-
-ChipListInput.propTypes = {
-  label: PropTypes.string,
-  attr: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  chipsSelected: PropTypes.arrayOf(PropTypes.object).isRequired,
-  chipOptions: PropTypes.arrayOf(PropTypes.object).isRequired,
-  updateChipList: PropTypes.func.isRequired,
-  createNew: PropTypes.func,
-  createNewMessage: PropTypes.string,
-  menuClassName: PropTypes.string,
-  tagClassName: PropTypes.string
-};
 
 export default ChipListInput;

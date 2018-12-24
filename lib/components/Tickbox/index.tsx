@@ -3,7 +3,14 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import './Tickbox.scss';
 
-const Tickbox = ({ className, name, checked, disabled, onChange, text }) => (
+const Tickbox = ({
+  className,
+  name,
+  checked,
+  disabled,
+  onChange,
+  text
+}: ITickboxProps) => (
   <div className={classNames('input-container', className)}>
     <label className={classNames('tickbox')} htmlFor={name}>
       <input

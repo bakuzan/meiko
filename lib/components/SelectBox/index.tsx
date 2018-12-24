@@ -5,7 +5,14 @@ import * as React from 'react';
 
 import './SelectBox.scss';
 
-const SelectBox = ({ name, value, disabled, onSelect, text, options }) => (
+const SelectBox = ({
+  name,
+  value,
+  disabled,
+  onSelect,
+  text,
+  options
+}: ISelectBoxProps) => (
   <div className={classNames('has-float-label', 'select-container')}>
     <select
       className={classNames('select-box')}
