@@ -1,6 +1,6 @@
 import Strings from '../../../constants/strings';
 import { generateUniqueId, Date as DateUtils } from '../../../utils';
-import { ViewOptionEnum } from 'enums';
+import { ViewOptionEnum } from 'enums.d.ts';
 
 export interface ICalendarState {
   viewDate: string | Date;

@@ -23,7 +23,7 @@ const globals = {
   'react-dom': 'ReactDOM',
   'prop-types': 'PropTypes'
 };
-const extensions = ['.js', '.ts', '.scss'];
+const extensions = ['.js', '.ts', '.tsx', '.scss'];
 
 export default [
   {

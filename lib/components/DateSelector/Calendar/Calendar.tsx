@@ -7,7 +7,7 @@ import Icons from '../../../constants/icons';
 import Strings from '../../../constants/strings';
 import * as DateUtils from '../../../utils/date';
 import * as CalendarUtils from './CalendarUtils';
-import { ViewOptionEnum } from 'enums';
+import { ViewOptionEnum } from 'enums.d.ts';
 import './Calendar.scss';
 
 const { DateFormat } = DateUtils;

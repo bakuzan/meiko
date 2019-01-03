@@ -4,34 +4,27 @@ import { storiesOf } from '@storybook/react';
 import DropdownMenu from 'components/DropdownMenu';
 import { PositionEnum } from 'enums';
 
+const styles = { display: 'flex', justifyContent: 'center', marginTop: '30px' };
+
+const CenterDecorator = (storyFn) => <div style={styles}>{storyFn()}</div>;
+
 storiesOf('DropdownMenu', module)
+  .addDecorator(CenterDecorator)
   .add('basic - left', () => (
-    <div
-      style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}
-    >
-      <DropdownMenu id="story" portalTarget="#root" align={PositionEnum.Left}>
-        <li>Test item</li>
-        <li>And another one!</li>
-      </DropdownMenu>
-    </div>
+    <DropdownMenu id="story" portalTarget="#root" align={PositionEnum.Left}>
+      <li>Test item</li>
+      <li>And another one!</li>
+    </DropdownMenu>
   ))
   .add('basic - center', () => (
-    <div
-      style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}
-    >
-      <DropdownMenu id="story" portalTarget="#root" align={PositionEnum.Center}>
-        <li>Test item</li>
-        <li>And another one!</li>
-      </DropdownMenu>
-    </div>
+    <DropdownMenu id="story" portalTarget="#root" align={PositionEnum.Center}>
+      <li>Test item</li>
+      <li>And another one!</li>
+    </DropdownMenu>
   ))
   .add('basic - right', () => (
-    <div
-      style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}
-    >
-      <DropdownMenu id="story" portalTarget="#root" align={PositionEnum.Right}>
-        <li>Test item</li>
-        <li>And another one!</li>
-      </DropdownMenu>
-    </div>
+    <DropdownMenu id="story" portalTarget="#root" align={PositionEnum.Right}>
+      <li>Test item</li>
+      <li>And another one!</li>
+    </DropdownMenu>
   ));
