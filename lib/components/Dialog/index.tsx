@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { Button } from '../Button';
 import Strings from '../../constants/strings';
 import { createListeners } from '../../utils';
-import { IJSXChildren } from 'interfaces';
+import { IJSXChildren } from 'types';
 import './Dialog.scss';
 
 interface IDialogProps {

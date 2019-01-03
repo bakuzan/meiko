@@ -22,8 +22,8 @@ storiesOf('Button', module)
       Click me!
     </Button>
   ))
-  .add('secondary', () => (
-    <Button {...actions} btnStyle="secondary">
+  .add('accent', () => (
+    <Button {...actions} btnStyle="accent">
       Click me!
     </Button>
   ))

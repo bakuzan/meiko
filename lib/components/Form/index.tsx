@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { Button } from '../Button';
 import Strings from '../../constants/strings';
-import { IJSXChildren } from 'interfaces';
+import { IJSXChildren } from 'types';
 import './Form.scss';
 
 interface IFormProps {

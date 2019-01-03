@@ -7,9 +7,9 @@ import AutocompleteSuggestionItem, {
   IAutocompleteSuggestionProps
 } from './AutocompleteInputSuggestionItem';
 
-import Enums from '../../constants/enums';
+import { KeyCodes } from '../../constants/enums';
 import { isNumber, getTimeoutSeconds } from '../../utils';
-import { IAutocompleteOption } from 'interfaces';
+import { IAutocompleteOption } from 'types';
 import './AutocompleteInput.scss';
 
 interface IAutocompleteInputProps {
@@ -155,12 +155,12 @@ class AutocompleteInput extends React.Component<
 
   handleKeyDown(event) {
     const { keyCode } = event;
-    if (keyCode === Enums.keyCodes.enter && this.props.filter) {
+    if (keyCode === KeyCodes.enter && this.props.filter) {
       event.preventDefault();
       this.selectActiveSuggestion();
-    } else if (keyCode === Enums.keyCodes.down) {
+    } else if (keyCode === KeyCodes.down) {
       this.updateActiveSuggestion(1);
-    } else if (keyCode === Enums.keyCodes.up) {
+    } else if (keyCode === KeyCodes.up) {
       this.updateActiveSuggestion(-1);
     } else if (this.props.onKeyDown) {
       this.props.onKeyDown(event);

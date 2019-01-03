@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { Button } from '../Button';
 import { isNumber } from '../../utils';
-import { IAutocompleteOption } from 'interfaces';
+import { IAutocompleteOption } from 'types';
 import '../AutocompleteInput/AutocompleteInput.scss';
 import './MalSearch.scss';
 

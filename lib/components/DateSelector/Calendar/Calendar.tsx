@@ -5,9 +5,10 @@ import * as React from 'react';
 import { Button } from '../../Button';
 import Icons from '../../../constants/icons';
 import Strings from '../../../constants/strings';
+import { ViewOptionEnum } from '../../../constants/enums';
 import * as DateUtils from '../../../utils/date';
 import * as CalendarUtils from './CalendarUtils';
-import { ViewOptionEnum } from 'enums.d.ts';
+
 import './Calendar.scss';
 
 const { DateFormat } = DateUtils;

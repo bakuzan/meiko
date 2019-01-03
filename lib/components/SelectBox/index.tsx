@@ -2,7 +2,7 @@
 import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { ISelectBoxOption } from 'interfaces';
+import { ISelectBoxOption } from 'types';
 import './SelectBox.scss';
 
 interface ISelectBoxProps {

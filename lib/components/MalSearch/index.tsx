@@ -15,7 +15,7 @@ import {
   MeikoFetch
 } from '../../utils';
 import Urls from '../../constants/urls';
-import { IAutocompleteOption } from 'interfaces';
+import { IAutocompleteOption } from 'types';
 import './MalSearch.scss';
 
 interface IMalSearchFilters {

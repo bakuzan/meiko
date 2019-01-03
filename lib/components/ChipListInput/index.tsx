@@ -5,9 +5,8 @@ import * as PropTypes from 'prop-types';
 import { Button } from '../Button';
 import AutocompleteInput from '../AutocompleteInput';
 import TagChip from '../TagChip';
-import Enums from '../../constants/enums';
+import { KeyCodes } from '../../constants/enums';
 import './ChipListInput.scss';
-import { generateUniqueId } from 'utils';
 
 const resolveId = (o) => o._id || o.id;
 
@@ -137,7 +136,7 @@ class ChipListInput extends React.Component<
 
   handleKeyDown(event) {
     const { keyCode } = event;
-    if (keyCode === Enums.keyCodes.backspace && !this.state[this.props.attr]) {
+    if (keyCode === KeyCodes.backspace && !this.state[this.props.attr]) {
       event.preventDefault();
 
       if (!this.state.readyRemoval) {

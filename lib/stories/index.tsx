@@ -16,3 +16,8 @@ export const storyStyle = {
   margin: 'auto',
   marginTop: '20px'
 };
+
+const styles = { display: 'flex', justifyContent: 'center', marginTop: '30px' };
+export const CenterDecorator = (storyFn) => (
+  <div style={styles}>{storyFn()}</div>
+);

@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 
+import { CenterDecorator } from './index';
 import DropdownMenu from 'components/DropdownMenu';
-import { PositionEnum } from 'enums';
-
-const styles = { display: 'flex', justifyContent: 'center', marginTop: '30px' };
-
-const CenterDecorator = (storyFn) => <div style={styles}>{storyFn()}</div>;
+import { PositionEnum } from 'constants/enums';
 
 storiesOf('DropdownMenu', module)
   .addDecorator(CenterDecorator)

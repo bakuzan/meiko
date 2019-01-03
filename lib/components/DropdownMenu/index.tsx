@@ -6,9 +6,10 @@ import { Button } from '../Button';
 import Portal from '../Portal';
 import Backdrop from '../Backdrop';
 import { Strings, Icons } from '../../constants/index';
+import { PositionEnum } from 'constants/enums';
 import { getElementCoordinates } from '../../utils';
-import { IElementCoordinates, IJSXChildren } from 'interfaces';
-import { PositionEnum } from 'enums';
+import { IElementCoordinates, IJSXChildren } from 'types';
+
 import './DropdownMenu.scss';
 
 interface IDropdownMenuProps {

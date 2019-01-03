@@ -5,7 +5,7 @@ import * as React from 'react';
 import { Enums, Strings } from '../../constants/index';
 import Tickbox from '../Tickbox';
 import Backdrop from '../Backdrop';
-import { ISelectBoxOption } from 'interfaces';
+import { ISelectBoxOption } from 'types';
 import './MultiSelect.scss';
 
 const EXTRACT_OPTION_INDEX = /^.*-/g;
