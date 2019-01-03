@@ -4,8 +4,22 @@ import * as React from 'react';
 
 import Icons from '../../constants/icons';
 import { Button } from '../Button';
-import SidebarLinkTemplate from './SidebarLinkTemplate';
+import SidebarLinkTemplate, {
+  ISidebarLink,
+  ISidebarLinkProps
+} from './SidebarLinkTemplate';
 import './Sidebar.scss';
+
+interface ISidebarProps {
+  id?: string;
+  className?: string;
+  isHidden: boolean;
+  isCollapsed: boolean;
+  items: ISidebarLink[];
+  customLinkTemplate?(props: ISidebarLinkProps): JSX.Element;
+  toggleCollapse(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void;
+  close(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void;
+}
 
 const Sidebar = ({
   id,

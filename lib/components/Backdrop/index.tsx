@@ -5,6 +5,11 @@ import * as React from 'react';
 import { Enums, Strings } from '../../constants';
 import './Backdrop.scss';
 
+interface IBackdropProps {
+  id?: string;
+  onClickOrKey(): void;
+}
+
 class Backdrop extends React.Component<IBackdropProps, any> {
   static propTypes = {
     id: PropTypes.string,

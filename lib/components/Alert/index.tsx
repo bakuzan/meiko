@@ -5,6 +5,24 @@ import { Button } from '../Button';
 import Icons from '../../constants/icons';
 import './Alert.scss';
 
+interface IAlert {
+  id: string;
+  type: string;
+  message: string;
+  detail: string;
+}
+interface IAlertProps {
+  id?: string;
+  alerts: IAlert[];
+  actions: {
+    dismissAlertMessage(): void;
+  };
+  messageClassName?: string;
+}
+interface IAlertState {
+  expandedAlerts: Array<string | number>;
+}
+
 const AlertMessage = ({
   id,
   type,
@@ -21,10 +39,9 @@ const AlertMessage = ({
         <div className={classNames('alert-icon')} />
         <div className={classNames('alert-title')}>{message}</div>
         <div className="button-group">
-          {detail &&
-            !isExpanded && (
-              <Button onClick={() => expandDetail(id)}>Details</Button>
-            )}
+          {detail && !isExpanded && (
+            <Button onClick={() => expandDetail(id)}>Details</Button>
+          )}
           <Button
             className={classNames('close')}
             icon={Icons.cross}
@@ -60,18 +77,16 @@ class Alert extends React.Component<IAlertProps, IAlertState> {
 
     return (
       <div id={id} className={classNames('alert-container')}>
-        {alerts
-          .slice(0, 1)
-          .map((a) => (
-            <AlertMessage
-              key={a.id}
-              {...a}
-              className={messageClassName}
-              isExpanded={this.state.expandedAlerts.includes(a.id)}
-              expandDetail={this.handleShowDetail}
-              remove={actions.dismissAlertMessage}
-            />
-          ))}
+        {alerts.slice(0, 1).map((a) => (
+          <AlertMessage
+            key={a.id}
+            {...a}
+            className={messageClassName}
+            isExpanded={this.state.expandedAlerts.includes(a.id)}
+            expandDetail={this.handleShowDetail}
+            remove={actions.dismissAlertMessage}
+          />
+        ))}
       </div>
     );
   }

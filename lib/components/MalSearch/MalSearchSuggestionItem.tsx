@@ -4,8 +4,22 @@ import * as React from 'react';
 
 import { Button } from '../Button';
 import { isNumber } from '../../utils';
+import { IAutocompleteOption } from 'interfaces';
 import '../AutocompleteInput/AutocompleteInput.scss';
 import './MalSearch.scss';
+
+interface IMalAutocompleteOption extends IAutocompleteOption {
+  image?: string;
+  type: string;
+}
+interface IMalSearchSuggestionProps {
+  activeSuggestion: number;
+  index: number;
+  attr: string;
+  item: IMalAutocompleteOption;
+  highlightMatch(text: string): JSX.Element;
+  selectAutocompleteSuggestion(id: string | number): void;
+}
 
 const MalSearchSuggestionItem = ({
   activeSuggestion,

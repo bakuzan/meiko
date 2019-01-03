@@ -3,6 +3,15 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import './Tickbox.scss';
 
+interface ITickboxProps {
+  className?: string;
+  name: string;
+  checked: boolean;
+  disabled?: boolean;
+  text?: string;
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void;
+}
+
 const Tickbox = ({
   className,
   name,
@@ -21,7 +30,7 @@ const Tickbox = ({
         disabled={disabled}
         onChange={onChange}
       />
-      {text}
+      {text || ''}
     </label>
   </div>
 );

@@ -3,6 +3,11 @@ import classNames from 'classnames';
 
 import './RequestIndicator.scss';
 
+interface IRequestIndicatorProps {
+  hide: boolean;
+  requestInFlight: boolean;
+}
+
 const RequestIndicator = ({
   hide,
   requestInFlight

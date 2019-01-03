@@ -1,3 +1,5 @@
+import { IElementCoordinates } from 'interfaces';
+
 export default function getElementCoordinates(
   elem: HTMLElement
 ): IElementCoordinates {

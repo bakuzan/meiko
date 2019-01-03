@@ -5,6 +5,14 @@ import * as PropTypes from 'prop-types';
 import { Button } from '../Button';
 import './FileUploader.scss';
 
+interface IFileUploaderProps {
+  className?: string;
+  name: string;
+  value?: string;
+  placeholder?: string;
+  onFileSelect(e: Event): void;
+}
+
 const displayFileName = (str: string) => str.slice(0).replace(/^.*\\/g, '');
 
 class FileUploader extends React.Component<IFileUploaderProps, any> {

@@ -15,6 +15,24 @@ const ErrorMessages = {
   isRequired: 'Date is required'
 };
 
+interface IDateSelectorProps {
+  className?: string;
+  calendarClassName?: string;
+  name: string;
+  value: string;
+  label: string;
+  required: boolean;
+  disabled: boolean;
+  afterDate: string;
+  beforeDate: string;
+  isFlat: boolean;
+  onChange(date: string, name: string, hasError: boolean): void;
+}
+interface IDateSelectorState {
+  displayCalendar: boolean;
+  errorMessage: string;
+}
+
 class DateSelector extends React.Component<
   IDateSelectorProps,
   IDateSelectorState
@@ -85,7 +103,9 @@ class DateSelector extends React.Component<
 
     const error = dateIsOutOfRange
       ? ErrorMessages.dateIsOutOfRange
-      : !date && required ? ErrorMessages.isRequired : null;
+      : !date && required
+      ? ErrorMessages.isRequired
+      : null;
 
     this.setErrorState(error);
     if (this.props.onChange) {
@@ -159,16 +179,15 @@ class DateSelector extends React.Component<
             )}
           </React.Fragment>
         )}
-        {!isFlat &&
-          this.state.displayCalendar && (
-            <div
-              className={classNames('date-selector-calendar-backdrop')}
-              role="button"
-              tabIndex={0}
-              onClick={this.handleCloseCalendar}
-              onKeyDown={this.handleCloseCalendar}
-            />
-          )}
+        {!isFlat && this.state.displayCalendar && (
+          <div
+            className={classNames('date-selector-calendar-backdrop')}
+            role="button"
+            tabIndex={0}
+            onClick={this.handleCloseCalendar}
+            onKeyDown={this.handleCloseCalendar}
+          />
+        )}
         {(isFlat || this.state.displayCalendar) && (
           <Calendar
             id={name}

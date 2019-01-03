@@ -16,5 +16,7 @@
     "jsx": "preserve",
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2017", "dom"]
-  }
+  },
+  "include": ["lib/**/*"],
+  "exclude": ["node_modules", "dist", "modules", "tools"]
 }

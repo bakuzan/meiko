@@ -5,11 +5,11 @@ import { action } from '@storybook/addon-actions';
 import ChipListInput from 'components/ChipListInput';
 
 const options = [
-  { text: 'Bat' },
-  { text: 'Cat' },
-  { text: 'Dingo' },
-  { text: 'Earwig' },
-  { text: 'Frog' }
+  { id: 1, text: 'Bat' },
+  { id: 2, text: 'Cat' },
+  { id: 3, text: 'Dingo' },
+  { id: 4, text: 'Earwig' },
+  { id: 5, text: 'Frog' }
 ];
 
 const selected = options.slice(0, 2);

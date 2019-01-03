@@ -3,6 +3,15 @@ import * as React from 'react';
 
 import LoadingSpinner from './LoadingSpinner';
 
+interface ILoadableContentProps {
+  isFetching: boolean;
+  spinnerSize: string;
+  spinnerDelay: number;
+}
+interface ILoadableContentState {
+  pastDelay: boolean;
+}
+
 class LoadableContent extends React.Component<
   ILoadableContentProps,
   ILoadableContentState

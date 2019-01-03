@@ -5,8 +5,22 @@ import classNames from 'classnames';
 import { Button } from '../Button';
 import Strings from '../../constants/strings';
 import { createListeners } from '../../utils';
-
+import { IJSXChildren } from 'interfaces';
 import './Dialog.scss';
+
+interface IDialogProps {
+  name?: string;
+  title?: string;
+  children: IJSXChildren;
+  actionText?: string;
+  isForm?: boolean;
+  hasBackdrop?: boolean;
+  hideCancel?: boolean;
+  localised?: boolean;
+  getDialogRef(element: React.LegacyRef<HTMLDialogElement>): void;
+  action?(e: Event): void;
+  onClose?(): void;
+}
 
 const DialogContent = ({ name, isForm, children }) => {
   if (!isForm) {

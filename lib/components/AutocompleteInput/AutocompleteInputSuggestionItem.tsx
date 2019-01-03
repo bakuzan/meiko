@@ -4,9 +4,21 @@ import * as React from 'react';
 
 import { Button } from '../Button';
 import { isNumber } from '../../utils';
+import { IAutocompleteOption } from 'interfaces';
 import './AutocompleteInput.scss';
 
-const AutocompleteSuggestionItem = (props: IAutocompleteSuggestionProps) => {
+export interface IAutocompleteSuggestionProps {
+  activeSuggestion: number;
+  index: number;
+  attr: string;
+  item: IAutocompleteOption;
+  highlightMatch(text: string): JSX.Element;
+  selectAutocompleteSuggestion(id: string | number): void;
+}
+
+const AutocompleteSuggestionItem = (
+  props: IAutocompleteSuggestionProps
+): JSX.Element => {
   const {
     activeSuggestion,
     index,

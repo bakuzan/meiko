@@ -4,15 +4,19 @@ import * as React from 'react';
 
 import { Button } from '../../Button';
 import TabView from '../TabView';
+import { IJSXChildren } from 'interfaces';
 import './TabContainer.scss';
 
-function ValidateChildPropType(
-  propValue,
-  key,
-  componentName,
-  location,
-  propFullName
-) {
+interface ITabContainerProps {
+  className?: string;
+  tabsClassName?: string;
+  children: IJSXChildren;
+}
+interface ITabContainerState {
+  activeTab: string;
+}
+
+function ValidateChildPropType(propValue, _, componentName, __, propFullName) {
   propValue.forEach((item) => {
     if (!item.type || !item.type.name || item.type.name !== 'TabView') {
       return new Error(
@@ -53,26 +57,37 @@ class TabContainer extends React.Component<
   }
 
   renderViews(tabs) {
-    return tabs.filter((t) => !!t).map((item) => {
-      const { name } = item.props;
-      const props = { ...item.props, isActive: name === this.state.activeTab };
+    return tabs
+      .filter((t) => !!t)
+      .map((item) => {
+        const { name } = item.props;
+        const props = {
+          ...item.props,
+          isActive: name === this.state.activeTab
+        };
 
-      return <TabView key={name} {...props} />;
-    });
+        return <TabView key={name} {...props} />;
+      });
   }
 
   renderControls(tabs) {
-    return tabs.filter((t) => !!t).map((item) => {
-      const { name, displayName } = item.props;
-      const isActive = name === this.state.activeTab;
-      return (
-        <li key={name} className={classNames({ active: isActive })} role="tab">
-          <Button onClick={() => this.handleTabChange(name)}>
-            {displayName || name}
-          </Button>
-        </li>
-      );
-    });
+    return tabs
+      .filter((t) => !!t)
+      .map((item) => {
+        const { name, displayName } = item.props;
+        const isActive = name === this.state.activeTab;
+        return (
+          <li
+            key={name}
+            className={classNames({ active: isActive })}
+            role="tab"
+          >
+            <Button onClick={() => this.handleTabChange(name)}>
+              {displayName || name}
+            </Button>
+          </li>
+        );
+      });
   }
 
   render() {

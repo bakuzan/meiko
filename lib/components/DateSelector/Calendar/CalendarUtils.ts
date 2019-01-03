@@ -1,5 +1,12 @@
 import Strings from '../../../constants/strings';
 import { generateUniqueId, Date as DateUtils } from '../../../utils';
+import { ViewOptionEnum } from 'enums';
+
+export interface ICalendarState {
+  viewDate: string | Date;
+  selectedDate: string;
+  isMonthView: boolean;
+}
 
 export const mapToViewOption = (optionType: ViewOptionEnum) => (
   text: string | number

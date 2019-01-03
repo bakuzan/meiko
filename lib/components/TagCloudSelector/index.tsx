@@ -3,9 +3,19 @@ import classNames from 'classnames';
 import * as React from 'react';
 
 import { Button } from '../Button';
-import TagChip from '../TagChip';
+import TagChip, { ITagOption } from '../TagChip';
 import * as TCU from './TagCloudUtils';
 import './TagCloudSelector.scss';
+
+interface ITagCloudSelectorProps {
+  name: string;
+  className: string;
+  tagClass: string;
+  tagOptions: ITagOption[];
+  selectedTags: number[];
+  sizeRelativeToCount: boolean;
+  onSelect(tags: any[], name: string): void;
+}
 
 class TagCloudSelector extends React.PureComponent<
   ITagCloudSelectorProps,

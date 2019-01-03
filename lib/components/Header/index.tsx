@@ -3,6 +3,15 @@ import classNames from 'classnames';
 import * as React from 'react';
 import './Header.scss';
 
+interface IHeaderProps {
+  id?: string;
+  className?: string;
+  title?: string;
+  leftAlignTitle?: boolean;
+  navLeft?: JSX.Element;
+  navRight?: JSX.Element;
+}
+
 const Header = ({
   id,
   className,

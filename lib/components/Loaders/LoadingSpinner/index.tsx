@@ -3,6 +3,10 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import './LoadingSpinner.scss';
 
+interface ILoadingSpinnerProps {
+  size?: string;
+}
+
 class LoadingSpinner extends React.Component<ILoadingSpinnerProps, any> {
   static propTypes = {
     size: PropTypes.string

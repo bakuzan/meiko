@@ -5,11 +5,27 @@ import * as React from 'react';
 import { Enums, Strings } from '../../constants/index';
 import Tickbox from '../Tickbox';
 import Backdrop from '../Backdrop';
+import { ISelectBoxOption } from 'interfaces';
 import './MultiSelect.scss';
 
 const EXTRACT_OPTION_INDEX = /^.*-/g;
 const OPTION_PREFIX = 'option-';
 const ALL_SELECTED_TEXT = 'All Selected';
+
+interface IMultiSelectProps {
+  className?: string;
+  listClassName?: string;
+  name: string;
+  id: string;
+  placeholder: string;
+  label: string;
+  values: Array<string | number>;
+  options: ISelectBoxOption[];
+  onUpdate(values: Array<string | number>, name: string): void;
+}
+interface IMultiSelectState {
+  isOpen: boolean;
+}
 
 class MultiSelect extends React.Component<
   IMultiSelectProps,

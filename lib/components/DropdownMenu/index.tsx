@@ -7,8 +7,22 @@ import Portal from '../Portal';
 import Backdrop from '../Backdrop';
 import { Strings, Icons } from '../../constants/index';
 import { getElementCoordinates } from '../../utils';
-
+import { IElementCoordinates, IJSXChildren } from 'interfaces';
+import { PositionEnum } from 'enums';
 import './DropdownMenu.scss';
+
+interface IDropdownMenuProps {
+  id?: string;
+  title?: string;
+  icon: string;
+  portalTarget: string;
+  align?: PositionEnum;
+  children: IJSXChildren;
+}
+interface IDropdownMenuState {
+  isDropdownOpen: boolean;
+  position: IElementCoordinates;
+}
 
 class DropdownMenu extends React.Component<
   IDropdownMenuProps,
@@ -43,7 +57,7 @@ class DropdownMenu extends React.Component<
     this.toggleDropdown = this.toggleDropdown.bind(this);
   }
 
-  handleClose(e) {
+  handleClose() {
     this.setState({ isDropdownOpen: false, position: null });
   }
 
@@ -62,15 +76,19 @@ class DropdownMenu extends React.Component<
   }
 
   render() {
-    const { top, left, right } = this.state.position || {};
+    const { top, left, right } = this.state.position || {
+      top: 0,
+      left: 0,
+      right: 0
+    };
     const { id, title, icon, portalTarget, align } = this.props;
     const togglerId = `${id}-toggler`;
     const menuStyle =
       align === Strings.left
         ? { top: `${top}px`, left: `${left}px` }
         : align === Strings.right
-          ? { top: `${top}px`, right: `${right}px` }
-          : { top: `${top}px` };
+        ? { top: `${top}px`, right: `${right}px` }
+        : { top: `${top}px` };
 
     return (
       <div id={id} className={classNames('dropdown-menu-container')}>

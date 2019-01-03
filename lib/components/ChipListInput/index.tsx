@@ -7,8 +7,29 @@ import AutocompleteInput from '../AutocompleteInput';
 import TagChip from '../TagChip';
 import Enums from '../../constants/enums';
 import './ChipListInput.scss';
+import { generateUniqueId } from 'utils';
 
 const resolveId = (o) => o._id || o.id;
+
+interface IChipListItem {
+  id: string | number;
+  name?: string;
+}
+interface IChipListInputProps {
+  label?: string;
+  attr: string;
+  name: string;
+  chipsSelected: IChipListItem[];
+  chipOptions: IChipListItem[];
+  createNewMessage?: string;
+  menuClassName?: string;
+  tagClassName?: string;
+  updateChipList(name: string, list: IChipListItem[]): void;
+  createNew?(data: any, name: string): void;
+}
+interface IChipListInputState {
+  readyRemoval?: boolean;
+}
 
 class ChipListInput extends React.Component<
   IChipListInputProps,
@@ -153,6 +174,7 @@ class ChipListInput extends React.Component<
           />
         );
       });
+
     const hasChips = chips.length > 0;
     const clearableInputClasses = {
       className: classNames('chip-list-clearable-input')

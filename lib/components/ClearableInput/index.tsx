@@ -7,6 +7,10 @@ import Icons from '../../constants/icons';
 import { debounce } from '../../utils';
 import './ClearableInput.scss';
 
+interface IClearableInputProps extends React.HTMLProps<HTMLInputElement> {
+  clearInputButtonClass?: string;
+}
+
 class ClearableInput extends React.Component<IClearableInputProps, any> {
   static defaultProps = {
     name: 'search',
@@ -33,7 +37,9 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
   }
 
   clearAndFocusInput() {
-    this.props.onChange({ target: { name: this.props.name, value: '' } });
+    this.props.onChange({
+      target: { name: this.props.name, value: '' }
+    } as any);
     debounce(() => this.inputField.focus(), 100);
   }
 
@@ -50,7 +56,7 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
       ...props
     } = this.props;
     const isTextInput = type === 'text';
-    const hasMaxNumber = type === 'number' && !isNaN(props.max);
+    const hasMaxNumber = type === 'number' && !isNaN(props.max as any);
     const notClearable = !isTextInput;
 
     return (
@@ -78,18 +84,17 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
           {...props}
         />
         <label htmlFor={name}>{label}</label>
-        {!!value &&
-          isTextInput && (
-            <Button
-              className={classNames('clear-input', clearInputButtonClass)}
-              btnSize="small"
-              icon={Icons.cross}
-              onClick={this.clearAndFocusInput}
-            />
-          )}
+        {!!value && isTextInput && (
+          <Button
+            className={classNames('clear-input', clearInputButtonClass)}
+            btnSize="small"
+            icon={Icons.cross}
+            onClick={this.clearAndFocusInput}
+          />
+        )}
         {(!!maxLength || hasMaxNumber) && (
           <span className={classNames('clearable-input-count')}>
-            {maxLength && `${value.length}/${maxLength}`}
+            {maxLength && `${(value as string).length}/${maxLength}`}
             {hasMaxNumber && `out of ${props.max || '?'}`}
           </span>
         )}

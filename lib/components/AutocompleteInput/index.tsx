@@ -3,11 +3,36 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 import ClearableInput from '../ClearableInput';
-import AutocompleteSuggestionItem from './AutocompleteInputSuggestionItem';
+import AutocompleteSuggestionItem, {
+  IAutocompleteSuggestionProps
+} from './AutocompleteInputSuggestionItem';
 
 import Enums from '../../constants/enums';
 import { isNumber, getTimeoutSeconds } from '../../utils';
+import { IAutocompleteOption } from 'interfaces';
 import './AutocompleteInput.scss';
+
+interface IAutocompleteInputProps {
+  label?: string;
+  attr: string;
+  items: IAutocompleteOption[];
+  filter: string;
+  disableLocalFilter: boolean;
+  menuClassName?: string;
+  clearableInputProps?: {
+    className?: string;
+    clearInputButtonClass?: string;
+  };
+  noSuggestionsItem?: JSX.Element;
+  onChange(e: Event): void;
+  onSelect(id: string | number): void;
+  onKeyDown?(e: Event): void;
+  suggestionTemplate?(props: IAutocompleteSuggestionProps): JSX.Element;
+}
+interface IAutocompleteInputState {
+  inUse: boolean;
+  activeSuggestion: number;
+}
 
 class AutocompleteInput extends React.Component<
   IAutocompleteInputProps,
@@ -185,48 +210,46 @@ class AutocompleteInput extends React.Component<
           onBlur={this.handleBlur}
           {...clearableInputProps}
         />
-        {!!filter &&
-          this.state.inUse && (
-            <ul
-              className={classNames(
-                menuClassName,
-                'autocomplete-menu',
-                'list column one'
-              )}
-            >
-              {hasSuggestions &&
-                autocomplete.map((item, index) => (
-                  <AutocompleteSuggestionTemplate
-                    key={item.id || item._id}
-                    activeSuggestion={this.state.activeSuggestion}
-                    index={index}
-                    attr={attr}
-                    item={item}
-                    selectAutocompleteSuggestion={
-                      this.selectAutocompleteSuggestion
-                    }
-                    highlightMatch={this.highlightMatch}
-                  />
-                ))}
-              {!hasSuggestions &&
-                (hasOptions || disableLocalFilter) && (
-                  <li
-                    key="NONE"
-                    className={classNames(
-                      'autocomplete-suggestion',
-                      'no-suggestions-item',
-                      'active'
-                    )}
-                  >
-                    {!!noSuggestionsItem ? (
-                      noSuggestionsItem
-                    ) : (
-                      <div>No suggestions available</div>
-                    )}
-                  </li>
+        {!!filter && this.state.inUse && (
+          <ul
+            className={classNames(
+              menuClassName,
+              'autocomplete-menu',
+              'list column one'
+            )}
+          >
+            {hasSuggestions &&
+              autocomplete.map((item, index) => (
+                <AutocompleteSuggestionTemplate
+                  key={item.id || item._id}
+                  activeSuggestion={this.state.activeSuggestion}
+                  index={index}
+                  attr={attr}
+                  item={item}
+                  selectAutocompleteSuggestion={
+                    this.selectAutocompleteSuggestion
+                  }
+                  highlightMatch={this.highlightMatch}
+                />
+              ))}
+            {!hasSuggestions && (hasOptions || disableLocalFilter) && (
+              <li
+                key="NONE"
+                className={classNames(
+                  'autocomplete-suggestion',
+                  'no-suggestions-item',
+                  'active'
                 )}
-            </ul>
-          )}
+              >
+                {!!noSuggestionsItem ? (
+                  noSuggestionsItem
+                ) : (
+                  <div>No suggestions available</div>
+                )}
+              </li>
+            )}
+          </ul>
+        )}
       </div>
     );
   }

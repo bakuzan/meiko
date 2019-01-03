@@ -6,6 +6,20 @@ import { Button } from '../Button';
 import Icons from '../../constants/icons';
 import './TagChip.scss';
 
+export interface ITagOption {
+  id?: string | number;
+  name: string;
+  count?: number;
+}
+interface ITagChipProps {
+  className: string;
+  isActive: boolean;
+  data: ITagOption;
+  chipSize?: string | number;
+  onRemove?(tag: ITagOption): void;
+  onClick?(tag: ITagOption): void;
+}
+
 const getPropsForClickabilityState = (
   func: (data: ITagOption) => void,
   data: ITagOption
@@ -47,7 +61,7 @@ const TagChip = ({
         'input-chip-deletable': hasRemoveFunc,
         active: isActive
       })}
-      {...tagAccessiblityIfClickable}
+      {...tagAccessiblityIfClickable as any}
     >
       <span className={classNames('input-chip-text')} style={chipTextStyle}>
         {data.name}

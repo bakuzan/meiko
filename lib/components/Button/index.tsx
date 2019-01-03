@@ -1,7 +1,17 @@
 import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
+
 import './Button.scss';
+
+interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
+  btnStyle?: string;
+  btnSize?: string;
+  link?: boolean;
+  rounded?: boolean;
+  depress?: boolean;
+  icon?: string;
+}
 
 function getButtonClasses({
   className,

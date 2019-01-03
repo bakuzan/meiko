@@ -2,8 +2,17 @@
 import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-
+import { ISelectBoxOption } from 'interfaces';
 import './SelectBox.scss';
+
+interface ISelectBoxProps {
+  name: string;
+  value: string | number | string[];
+  disabled: boolean;
+  text: string;
+  options: ISelectBoxOption[];
+  onSelect(e: React.ChangeEvent<HTMLSelectElement>): void;
+}
 
 const SelectBox = ({
   name,

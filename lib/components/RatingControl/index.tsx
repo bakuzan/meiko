@@ -3,6 +3,13 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import './RatingControl.scss';
 
+interface IRatingControlProps {
+  name: string;
+  label?: string;
+  value: string | number | boolean;
+  onChange?(e: Event): void;
+}
+
 class RatingControl extends React.Component<IRatingControlProps, any> {
   static propTypes = {
     name: PropTypes.string.isRequired,
@@ -44,7 +51,7 @@ class RatingControl extends React.Component<IRatingControlProps, any> {
         type,
         name: this.props.name
       }
-    });
+    } as any);
   }
 
   ratingColouriser(value) {

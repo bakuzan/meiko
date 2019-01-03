@@ -6,14 +6,24 @@ import { storyStyle } from '.';
 
 import MalSearch from 'components/MalSearch';
 
+interface IMalStoryState {
+  search: string;
+  id: React.ReactText;
+}
+
+const initialState: IMalStoryState = {
+  search: '',
+  id: 0
+};
+
 function MalSearchStory(props) {
   return (
     <div style={storyStyle}>
-      {withState({ search: '', id: 0 })(({ store }) => (
+      {withState(initialState)(({ store }) => (
         <MalSearch
           {...props}
           {...store.state}
-          onUserInput={(e) => store.set({ search: e.target.value })}
+          onUserInput={(e: any) => store.set({ search: e.target.value })}
           selectMalItem={(item) => store.set({ id: item.id })}
         />
       ))()}

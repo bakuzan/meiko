@@ -1,8 +1,12 @@
 import classNames from 'classnames';
 import * as React from 'react';
 import { debounce, getTimeoutSeconds } from '../../utils';
-import toaster from '../../utils/toaster';
+import toaster, { IToast } from '../../utils/toaster';
 import './Toaster.scss';
+
+interface IToasterState {
+  stack: IToast[];
+}
 
 class Toaster extends React.Component<any, IToasterState> {
   constructor(props: any) {

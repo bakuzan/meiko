@@ -4,8 +4,24 @@ import * as React from 'react';
 
 import { Button } from '../Button';
 import Strings from '../../constants/strings';
-
+import { IJSXChildren } from 'interfaces';
 import './Form.scss';
+
+interface IFormProps {
+  id?: string;
+  className?: string;
+  name: string;
+  title?: string;
+  children: IJSXChildren;
+  submitOptions?: {
+    text?: string;
+    onSubmit?(): void;
+  };
+  cancelOptions?: {
+    hide?: boolean;
+    onCancel?(): void;
+  };
+}
 
 class Form extends React.Component<IFormProps, any> {
   static propTypes = {

@@ -3,6 +3,15 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import './RadioButton.scss';
 
+interface IRadioButtonProps {
+  id?: string;
+  name: string;
+  label: string;
+  value: string | number;
+  checked: boolean;
+  onSelect(e: React.ChangeEvent<HTMLInputElement>): void;
+}
+
 const RadioButton = ({
   id,
   name,
@@ -18,7 +27,7 @@ const RadioButton = ({
       name={name}
       value={value}
       checked={checked}
-      onChange={(e) => onSelect(e)}
+      onChange={onSelect}
     />
     <span>{label}</span>
   </label>

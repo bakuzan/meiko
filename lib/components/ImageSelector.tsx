@@ -11,6 +11,24 @@ import Urls from '../constants/urls';
 
 import './FileUploader/FileUploader.scss';
 
+interface IImageSelectorProps {
+  className?: string;
+  uploaderClassName?: string;
+  name: string;
+  url: string;
+  onChange(e: any): void;
+  onError?(error: IImageUploadError): void;
+}
+interface IImageSelectorState {
+  imageFile: File;
+  imageUrl: string;
+  imageMessage: string;
+}
+interface IImageUploadError {
+  error: string;
+  message: string;
+}
+
 const defaults = {
   imageFile: null,
   imageUrl: '',

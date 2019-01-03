@@ -22,6 +22,14 @@ const resolveLabel = (b, v) => {
   return label;
 };
 
+interface IAppInformationProps {
+  branch?: string;
+  version?: string;
+}
+interface IAppInformationState {
+  hovered: boolean;
+}
+
 class AppInformation extends React.PureComponent<
   IAppInformationProps,
   IAppInformationState

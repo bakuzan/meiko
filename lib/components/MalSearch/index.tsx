@@ -15,9 +15,34 @@ import {
   MeikoFetch
 } from '../../utils';
 import Urls from '../../constants/urls';
+import { IAutocompleteOption } from 'interfaces';
 import './MalSearch.scss';
 
-const getFilters = (props: IMalSearchProps) => ({
+interface IMalSearchFilters {
+  id: number | string;
+  title: string;
+  malId: number;
+}
+interface IMalSearchProps {
+  id: number;
+  itemId: string;
+  type: string;
+  search: string;
+  menuClassName: string;
+  onUserInput(e: Event): void;
+  selectMalItem(item: IAutocompleteOption): void;
+  asyncCheckIfExists?(filters: IMalSearchFilters): string;
+}
+interface IMalSearchState {
+  results: IAutocompleteOption[];
+  isFirstQuery: boolean;
+  isFetching: boolean;
+  hasSelected: boolean;
+  alreadyExists: boolean;
+  error?(type?: string): string;
+}
+
+const getFilters = (props: IMalSearchProps): IMalSearchFilters => ({
   title: props.search,
   id: props.itemId,
   malId: props.id
@@ -27,8 +52,10 @@ const hasMalError = (data) => !data || !data.success || !isArray(data);
 
 const checkIfItemExistsAlready = (
   query: (filters: IMalSearchFilters) => string
-) => (props: IMalSearchProps) =>
-  MeikoFetch(`${Urls.graphql.base}${query(getFilters(props))}`);
+) => (props: IMalSearchProps) => {
+  const filters = getFilters(props);
+  return MeikoFetch(`${Urls.graphql.base}${query(filters)}`);
+};
 
 const searchMyAnimeList = (type: string) => (search: string) =>
   MeikoFetch(Urls.build(Urls.malSearch, { type, search }));
@@ -44,6 +71,7 @@ const initialState: IMalSearchState = {
   isFirstQuery: true,
   isFetching: false,
   hasSelected: false,
+  alreadyExists: false,
   error: null
 };
 
@@ -116,13 +144,15 @@ class MalSearch extends React.Component<IMalSearchProps, IMalSearchState> {
 
   async handleQueries() {
     const response = await this.checkIfExists(this.props);
-    const alreadyExists = response.data && response.data.alreadyExists;
+    const alreadyExists = !!(response.data && response.data.alreadyExists);
     const results = await this.queryMal(this.props.search);
 
     const malError = hasMalError(results);
     const error = alreadyExists
       ? Errors.exists
-      : malError ? Errors.failed : null;
+      : malError
+      ? Errors.failed
+      : null;
 
     this.setState(
       {

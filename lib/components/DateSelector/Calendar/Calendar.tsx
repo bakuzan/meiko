@@ -7,6 +7,7 @@ import Icons from '../../../constants/icons';
 import Strings from '../../../constants/strings';
 import * as DateUtils from '../../../utils/date';
 import * as CalendarUtils from './CalendarUtils';
+import { ViewOptionEnum } from 'enums';
 import './Calendar.scss';
 
 const { DateFormat } = DateUtils;
@@ -18,7 +19,20 @@ const viewHeaders = [
   ...Strings.dayNames.slice(0, 1)
 ].map((str) => str.slice(0, 3));
 
-class Calendar extends React.Component<ICalendarProps, ICalendarState> {
+interface ICalendarProps {
+  id?: string;
+  className?: string;
+  selected: string;
+  afterDate: string;
+  beforeDate: string;
+  disabled: boolean;
+  onSelect(date: string): void;
+}
+
+class Calendar extends React.Component<
+  ICalendarProps,
+  CalendarUtils.ICalendarState
+> {
   static propTypes = {
     id: PropTypes.string.isRequired,
     selected: PropTypes.string,
@@ -82,7 +96,7 @@ class Calendar extends React.Component<ICalendarProps, ICalendarState> {
 
     const oldViewStr = this.state.viewDate;
     const oldViewDate = new Date(oldViewStr);
-    if (option.optionType === CalendarUtils.ViewOptionEnum.DAY) {
+    if (option.optionType === ViewOptionEnum.DAY) {
       const viewDate = new Date(
         oldViewDate.getFullYear(),
         oldViewDate.getMonth(),
@@ -90,7 +104,7 @@ class Calendar extends React.Component<ICalendarProps, ICalendarState> {
       );
       this.setState({ viewDate });
       this.props.onSelect(DateFormat.formatDateForInput(viewDate));
-    } else if (option.optionType === CalendarUtils.ViewOptionEnum.MONTH) {
+    } else if (option.optionType === ViewOptionEnum.MONTH) {
       const monthIndex = Strings.monthNames.findIndex((x) => x === option.text);
       const viewDate = new Date(oldViewDate.getFullYear(), monthIndex, 1);
       this.setState({ isMonthView: true, viewDate });
@@ -147,8 +161,7 @@ class Calendar extends React.Component<ICalendarProps, ICalendarState> {
               </div>
             ))}
           {viewOptions.map((option) => {
-            const isDummyDay =
-              option.optionType === CalendarUtils.ViewOptionEnum.DUMMY_DAY;
+            const isDummyDay = option.optionType === ViewOptionEnum.DUMMY_DAY;
             const isOutOfRange = CalendarUtils.dateIsOutOfRange(
               this.state,
               option,

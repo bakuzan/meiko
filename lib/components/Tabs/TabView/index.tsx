@@ -3,6 +3,11 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import './TabView.scss';
 
+interface ITabViewProps {
+  isActive: boolean;
+  children: JSX.Element;
+}
+
 const TabView = ({ isActive, children }: ITabViewProps) => (
   <div className={classNames('tab-view', { active: isActive })} role="tabpanel">
     {children}

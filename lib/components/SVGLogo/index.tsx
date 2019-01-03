@@ -4,6 +4,11 @@ import * as React from 'react';
 import { findDOMNode } from 'react-dom';
 import './SVGLogo.scss';
 
+interface ISvgLogoProps {
+  id?: string;
+  text: string;
+}
+
 class SvgLogo extends React.Component<ISvgLogoProps, any> {
   static propTypes = {
     id: PropTypes.string,
