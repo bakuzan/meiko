@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import Strings from 'constants/strings';
 import './Grid.scss';
-import { isString } from 'utils';
+import { isString } from '../../utils';
 import { IJSXChildren } from 'types';
 
 interface IGridProps extends React.HTMLProps<HTMLUListElement> {
