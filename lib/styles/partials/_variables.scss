@@ -1,9 +1,16 @@
 @import './_colours.scss';
 
-//for media queries.
-$break-small: 768px;
-$break-medium: 992px;
-$break-large: 1200px;
+// Screen Variables
+
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+// Prevent overlapping
+$screen-xs-max: ($screen-sm - 1);
+$screen-sm-max: ($screen-md - 1);
+$screen-md-max: ($screen-lg - 1);
 
 //Unit helpers:
 $pixel: 'px';
@@ -71,10 +78,26 @@ $success-colour: $green;
 $alert-colour: $orange;
 $danger-colour: $red;
 $ui-messaging: (
-  success: (background: $success-colour, colour: #000, icon: '\2713'),
-  error: (background: $danger-colour, colour: #fff, icon: '\0021'),
-  warning: (background: $alert-colour, colour: #000, icon: '\26a0'),
-  info: (background: $info-colour, colour: #000, icon: '\2139')
+  success: (
+    background: $success-colour,
+    colour: #000,
+    icon: '\2713'
+  ),
+  error: (
+    background: $danger-colour,
+    colour: #fff,
+    icon: '\0021'
+  ),
+  warning: (
+    background: $alert-colour,
+    colour: #000,
+    icon: '\26a0'
+  ),
+  info: (
+    background: $info-colour,
+    colour: #000,
+    icon: '\2139'
+  )
 );
 $toasts: $ui-messaging;
 $alerts: $ui-messaging;

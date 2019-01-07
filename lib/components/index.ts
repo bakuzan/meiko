@@ -10,6 +10,7 @@ import DropdownMenu from './DropdownMenu';
 import Example from './Example';
 import FileUploader from './FileUploader';
 import Form from './Form';
+import Grid from './Grid';
 import Header from './Header';
 import Image from './Image';
 import ImageSelector from './ImageSelector';
@@ -45,6 +46,7 @@ export {
   Example,
   FileUploader,
   Form,
+  Grid,
   Header,
   Image,
   ImageSelector,
