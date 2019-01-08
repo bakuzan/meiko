@@ -1,13 +1,31 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { withState } from '@dump247/storybook-state';
 import { withInfo } from '@storybook/addon-info';
+import { withKnobs, number, text } from '@storybook/addon-knobs';
 
 import RatingControl from 'components/RatingControl';
 
 storiesOf('RatingControl', module)
   .addDecorator(withInfo)
-  .add('basic', () => <RatingControl name="rating" value={4} />)
-  .add('with action', () => (
-    <RatingControl name="rating" value={4} onChange={action('was selected')} />
-  ));
+  .addDecorator(withKnobs)
+  .add('basic', () => (
+    <RatingControl
+      name="rating"
+      value={number('Rating', 4)}
+      label={text('Label', '')}
+    />
+  ))
+  .add(
+    'with action',
+    withState({ value: 'Hello, World' })(
+      withInfo()(({ store }) => (
+        <RatingControl
+          name="rating"
+          value={store.state.value}
+          label={text('Label', '')}
+          onChange={(e: any) => store.set({ value: e.target.value })}
+        />
+      ))
+    )
+  );

@@ -2,26 +2,19 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
 import RadioButton from 'components/RadioButton';
 
 storiesOf('RadioButton', module)
   .addDecorator(withInfo)
-  .add('unchecked', () => (
+  .addDecorator(withKnobs)
+  .add('basic', () => (
     <RadioButton
       name="storyTest"
       value="YES"
-      label="unchecked"
-      checked={false}
-      onSelect={action('selected')}
-    />
-  ))
-  .add('checked', () => (
-    <RadioButton
-      name="storyTest"
-      value="YES"
-      label="checked"
-      checked={true}
+      label={text('Label', 'Radio Option')}
+      checked={boolean('Checked', true)}
       onSelect={action('selected')}
     />
   ));

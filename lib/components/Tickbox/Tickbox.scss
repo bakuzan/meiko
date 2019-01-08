@@ -17,6 +17,10 @@
     height: 20px;
     margin: 0 5px;
   }
+
+  &--disabled {
+    cursor: default;
+  }
 }
 
 .tickbox input:before,

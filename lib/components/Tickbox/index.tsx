@@ -21,7 +21,10 @@ const Tickbox = ({
   text
 }: ITickboxProps) => (
   <div className={classNames('input-container', className)}>
-    <label className={classNames('tickbox')} htmlFor={name}>
+    <label
+      className={classNames('tickbox', { 'tickbox--disabled': disabled })}
+      htmlFor={name}
+    >
       <input
         type="checkbox"
         id={name}
