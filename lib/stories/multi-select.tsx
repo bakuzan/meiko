@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withState } from '@dump247/storybook-state';
+import { withInfo } from '@storybook/addon-info';
 
 import { storyStyle } from '.';
 
@@ -21,22 +22,24 @@ function MultiSelectStory(props) {
           background: #eee;
         }
       `}</style>
-      {withState({ values: [] })(({ store }) => (
-        <MultiSelect
-          {...props}
-          {...store.state}
-          listClassName="story-list"
-          className="meiko-multiselect"
-          name="multiSelect"
-          placeholder="Select a gen"
-          options={options}
-          onUpdate={(values) => store.set({ values })}
-        />
-      ))()}
+      {withState({ values: [] })(
+        withInfo()(({ store }) => (
+          <MultiSelect
+            {...props}
+            {...store.state}
+            listClassName="story-list"
+            className="meiko-multiselect"
+            name="multiSelect"
+            placeholder="Select a gen"
+            options={options}
+            onUpdate={(values) => store.set({ values })}
+          />
+        ))
+      )()}
     </div>
   );
 }
 
 storiesOf('MultiSelect', module).add('basic', () => {
-  return <MultiSelectStory />;
+  return MultiSelectStory({});
 });

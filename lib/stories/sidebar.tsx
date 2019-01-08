@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withInfo } from '@storybook/addon-info';
 
 import Sidebar from 'components/Sidebar';
 
@@ -27,11 +28,13 @@ const menuOptions = [
   }
 ];
 
-storiesOf('Sidebar', module).add('basic', () => (
-  <Sidebar
-    isHidden={false}
-    isCollapsed={false}
-    items={menuOptions}
-    {...actions}
-  />
-));
+storiesOf('Sidebar', module)
+  .addDecorator(withInfo)
+  .add('basic', () => (
+    <Sidebar
+      isHidden={false}
+      isCollapsed={false}
+      items={menuOptions}
+      {...actions}
+    />
+  ));

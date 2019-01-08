@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 
 import Header from 'components/Header';
 
 storiesOf('Header', module)
+  .addDecorator(withInfo)
   .add('basic', () => <Header />)
   .add('with title', () => <Header title="This is a title, that is centered" />)
   .add('with nav left', () => <Header navLeft={<a>LOGO</a>} />)

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withInfo } from '@storybook/addon-info';
 
 import Icons from 'constants/icons';
 import { Button } from 'components/Button';
@@ -10,6 +11,7 @@ const actions = {
 };
 
 storiesOf('Button', module)
+  .addDecorator(withInfo)
   .add('basic', () => <Button {...actions}>Click me!</Button>)
   .add('link', () => (
     <Button {...actions} link>

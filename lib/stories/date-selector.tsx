@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withState } from '@dump247/storybook-state';
-
+import { withInfo } from '@storybook/addon-info';
 import { storyStyle } from '.';
 
 import DateSelector from 'components/DateSelector';
@@ -12,14 +12,16 @@ const TODAY = DateFormat.formatDateForInput(new Date());
 function DateSelectorStory(props) {
   return (
     <div style={storyStyle}>
-      {withState({ value: TODAY })(({ store }) => (
-        <DateSelector
-          name="story"
-          {...store.state}
-          {...props}
-          onChange={(value) => store.set({ value })}
-        />
-      ))()}
+      {withState({ value: TODAY })(
+        withInfo()(({ store }) => (
+          <DateSelector
+            name="story"
+            {...store.state}
+            {...props}
+            onChange={(value) => store.set({ value })}
+          />
+        ))
+      )()}
     </div>
   );
 }

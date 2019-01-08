@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 
 import Alert from 'components/Alert';
@@ -17,8 +18,8 @@ const actions = {
   dismissAlertMessage: action('dismiss message')
 };
 
-storiesOf('Alert', module).add(
-  'basic',
-  () => <Alert alerts={alerts} actions={actions} />,
-  { info: { inline: true } }
-);
+storiesOf('Alert', module)
+  .addDecorator(withInfo)
+  .add('basic', () => <Alert alerts={alerts} actions={actions} />, {
+    info: { inline: true }
+  });

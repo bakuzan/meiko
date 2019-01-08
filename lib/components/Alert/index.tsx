@@ -44,6 +44,7 @@ const AlertMessage = ({
           )}
           <Button
             className={classNames('close')}
+            aria-label="Close Alert"
             icon={Icons.cross}
             onClick={() => remove(id)}
           />

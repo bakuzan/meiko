@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 
 import Grid from 'components/Grid';
 import './grid-story.scss';
@@ -30,9 +31,10 @@ function GridStory(props) {
 }
 
 storiesOf('Grid', module)
-  .add('basic', () => <GridStory />)
-  .add('with no items', () => <GridStory items={[]} />)
-  .add('with no items and custom text', () => (
-    <GridStory items={[]} noItemsText="Nothing to see here, move along." />
-  ))
-  .add('with custom colums', () => <GridStory className="mko-grid--test" />);
+  .addDecorator(withInfo)
+  .add('basic', () => GridStory({}))
+  .add('with no items', () => GridStory({ items: [] }))
+  .add('with no items and custom text', () =>
+    GridStory({ items: [], noItemsText: 'Nothing to see here, move along.' })
+  )
+  .add('with custom colums', () => GridStory({ className: 'mko-grid--test' }));

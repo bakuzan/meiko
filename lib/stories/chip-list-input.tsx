@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { withState } from '@dump247/storybook-state';
+import { withInfo } from '@storybook/addon-info';
 
 import ChipListInput from 'components/ChipListInput';
 
@@ -14,27 +15,63 @@ const options = [
 
 const selected = options.slice(0, 2);
 
-const actions = {
-  updateChipList: action('update list')
-};
-
 storiesOf('ChipListInput', module)
-  .add('basic', () => (
-    <ChipListInput
-      attr="text"
-      name="tags"
-      chipsSelected={selected}
-      chipOptions={options}
-      {...actions}
-    />
-  ))
-  .add('with createNew', () => (
-    <ChipListInput
-      attr="text"
-      name="tags"
-      chipsSelected={selected}
-      chipOptions={options}
-      {...actions}
-      createNew={action('create new')}
-    />
-  ));
+  .add(
+    'basic',
+    withState({ list: selected })(
+      withInfo()(({ store }) => (
+        <ChipListInput
+          attr="text"
+          name="tags"
+          chipsSelected={store.state.list}
+          chipOptions={options}
+          updateChipList={(_, list) => store.set({ list })}
+        />
+      ))
+    )
+  )
+  .add(
+    'with createNew',
+    withState({ list: selected, options })(
+      withInfo()(({ store }) => (
+        <ChipListInput
+          attr="text"
+          name="tags"
+          chipsSelected={store.state.list}
+          chipOptions={store.state.options}
+          updateChipList={(_, list) => store.set({ list })}
+          createNew={(data) =>
+            store.set({
+              options: [
+                ...store.state.options,
+                { id: store.state.options.length + 1, ...data }
+              ]
+            })
+          }
+        />
+      ))
+    )
+  )
+  .add(
+    'with createNew custom message',
+    withState({ list: selected, options })(
+      withInfo()(({ store }) => (
+        <ChipListInput
+          attr="text"
+          name="tags"
+          chipsSelected={store.state.list}
+          chipOptions={store.state.options}
+          updateChipList={(_, list) => store.set({ list })}
+          createNew={(data) =>
+            store.set({
+              options: [
+                ...store.state.options,
+                { id: store.state.options.length + 1, ...data }
+              ]
+            })
+          }
+          createNewMessage="Are you sure you want to create a new tag?"
+        />
+      ))
+    )
+  );

@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 
-import { CenterDecorator } from './index';
 import DropdownMenu from 'components/DropdownMenu';
 import { PositionEnum } from 'constants/enums';
+import { CenterDecorator } from 'stories';
 
 storiesOf('DropdownMenu', module)
+  .addDecorator(withInfo)
   .addDecorator(CenterDecorator)
   .add('basic - left', () => (
     <DropdownMenu id="story" portalTarget="#root" align={PositionEnum.Left}>

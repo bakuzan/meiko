@@ -1,13 +1,23 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { withState } from '@dump247/storybook-state';
+import { withInfo } from '@storybook/addon-info';
 
 import ClearableInput from 'components/ClearableInput';
 
-const actions = {
-  onChange: action('on change')
-};
+function ClearableInputStory() {
+  return (
+    <div>
+      {withState({ value: 'Hello, World' })(
+        withInfo()(({ store }) => (
+          <ClearableInput
+            value={store.state.value}
+            onChange={(e: any) => store.set({ value: e.target.value })}
+          />
+        ))
+      )()}
+    </div>
+  );
+}
 
-storiesOf('ClearableInput', module).add('basic', () => (
-  <ClearableInput value="test value" {...actions} />
-));
+storiesOf('ClearableInput', module).add('basic', () => ClearableInputStory());

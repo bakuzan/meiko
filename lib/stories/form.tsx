@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withInfo } from '@storybook/addon-info';
 
 import Form from 'components/Form';
 import ClearableInput from 'components/ClearableInput';
@@ -23,19 +24,21 @@ const options = [
   { value: 3, text: 'three' }
 ];
 
-storiesOf('Form', module).add('basic', () => (
-  <Form
-    name="story-form"
-    submitOptions={submitOptions}
-    cancelOptions={cancelOptions}
-  >
-    <ClearableInput value="" {...actions} />
-    <SelectBox
-      name="storyTest"
-      value={2}
-      text="SelectBox story"
-      options={options}
-      onSelect={action('selected')}
-    />
-  </Form>
-));
+storiesOf('Form', module)
+  .addDecorator(withInfo)
+  .add('basic', () => (
+    <Form
+      name="story-form"
+      submitOptions={submitOptions}
+      cancelOptions={cancelOptions}
+    >
+      <ClearableInput value="" {...actions} />
+      <SelectBox
+        name="storyTest"
+        value={2}
+        text="SelectBox story"
+        options={options}
+        onSelect={action('selected')}
+      />
+    </Form>
+  ));

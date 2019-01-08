@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withState } from '@dump247/storybook-state';
+import { withInfo } from '@storybook/addon-info';
 
 import { storyStyle } from '.';
 
@@ -20,20 +21,22 @@ const OPTIONS = [
 function TagCloudStory(props) {
   return (
     <div style={storyStyle}>
-      {withState({ selectedTags: [] })(({ store }) => (
-        <TagCloudSelector
-          {...props}
-          {...store.state}
-          name="selectedTags"
-          className="meiko-multiselect"
-          tagOptions={OPTIONS}
-          onSelect={(values, name) => store.set({ [name]: values })}
-        />
-      ))()}
+      {withState({ selectedTags: [] })(
+        withInfo()(({ store }) => (
+          <TagCloudSelector
+            {...props}
+            {...store.state}
+            name="selectedTags"
+            className="meiko-multiselect"
+            tagOptions={OPTIONS}
+            onSelect={(values, name) => store.set({ [name]: values })}
+          />
+        ))
+      )()}
     </div>
   );
 }
 
 storiesOf('TagCloudSelector', module)
-  .add('basic', () => <TagCloudStory />)
-  .add('with counts', () => <TagCloudStory sizeRelativeToCount />);
+  .add('basic', () => TagCloudStory({}))
+  .add('with counts', () => TagCloudStory({ sizeRelativeToCount: true }));

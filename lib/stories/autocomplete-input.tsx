@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { withState } from '@dump247/storybook-state';
+import { withInfo } from '@storybook/addon-info';
 
 import AutocompleteInput from 'components/AutocompleteInput';
 
+const initialState = { value: '', selectedId: null };
 const list = [
   { id: 5, text: 'Bat' },
   { id: 6, text: 'Cat' },
@@ -12,11 +14,17 @@ const list = [
   { id: 9, text: 'Frog' }
 ];
 
-const actions = {
-  onChange: action('on change'),
-  onSelect: action('on select')
-};
-
-storiesOf('AutocompleteInput', module).add('basic', () => (
-  <AutocompleteInput attr="text" items={list} filter="" {...actions} />
-));
+storiesOf('AutocompleteInput', module).add(
+  'basic',
+  withState(initialState)(
+    withInfo()(({ store }) => (
+      <AutocompleteInput
+        attr="text"
+        items={list}
+        filter={store.state.value}
+        onChange={(e: any) => store.set({ value: e.target.value })}
+        onSelect={(selectedId) => store.set({ selectedId })}
+      />
+    ))
+  )
+);
