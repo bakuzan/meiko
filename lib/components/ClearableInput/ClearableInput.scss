@@ -21,9 +21,10 @@
     font-size: 0.5rem;
   }
 
-  input[type='date'] {
+  @at-root .date-selector-container input[type='date'] {
     &::-webkit-calendar-picker-indicator,
-    &::-webkit-inner-spin-button {
+    &::-webkit-inner-spin-button,
+    &::-webkit-clear-button {
       appearance: none;
       display: none;
     }

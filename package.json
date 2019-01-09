@@ -31,7 +31,7 @@
     "build": "node ./tools/build.js",
     "build-all": "npm run build-bundle && npm run build",
     "storybook": "start-storybook -p 7200 -c .storybook",
-    "build-storybook": "build-storybook -c .storybook -o .out",
+    "build-storybook": "build-storybook -c .storybook -o .out -s public",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "keywords": [

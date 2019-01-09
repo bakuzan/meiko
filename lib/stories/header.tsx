@@ -12,11 +12,11 @@ storiesOf('Header', module)
   .add('with nav right', () => (
     <Header
       navRight={
-        <React.Fragment>
+        <div>
           <a key="1">Some Link</a>
           <a key="2">another</a>
           <a key="3">three for good luck</a>
-        </React.Fragment>
+        </div>
       }
     />
   ))
@@ -25,11 +25,11 @@ storiesOf('Header', module)
       title="Header Story"
       navLeft={<div>HOME</div>}
       navRight={
-        <React.Fragment>
+        <div>
           <a key="1">Some Link</a>
           <a key="2">another</a>
           <a key="3">three for good luck</a>
-        </React.Fragment>
+        </div>
       }
     />
   ));

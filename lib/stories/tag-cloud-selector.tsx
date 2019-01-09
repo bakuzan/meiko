@@ -2,6 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withState } from '@dump247/storybook-state';
 import { withInfo } from '@storybook/addon-info';
+import { withKnobs, boolean, object } from '@storybook/addon-knobs';
 
 import { storyStyle } from '.';
 
@@ -24,12 +25,12 @@ function TagCloudStory(props) {
       {withState({ selectedTags: [] })(
         withInfo()(({ store }) => (
           <TagCloudSelector
-            {...props}
             {...store.state}
             name="selectedTags"
             className="meiko-multiselect"
             tagOptions={OPTIONS}
             onSelect={(values, name) => store.set({ [name]: values })}
+            {...props}
           />
         ))
       )()}
@@ -38,5 +39,12 @@ function TagCloudStory(props) {
 }
 
 storiesOf('TagCloudSelector', module)
+  .addDecorator(withKnobs)
   .add('basic', () => TagCloudStory({}))
-  .add('with counts', () => TagCloudStory({ sizeRelativeToCount: true }));
+  .add('with counts', () => TagCloudStory({ sizeRelativeToCount: true }))
+  .add('interactive', () =>
+    TagCloudStory({
+      sizeRelativeToCount: boolean('Size relative', false),
+      tagOptions: object('Tag Options', OPTIONS)
+    })
+  );

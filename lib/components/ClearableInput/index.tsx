@@ -56,7 +56,8 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
       ...props
     } = this.props;
     const isTextInput = type === 'text';
-    const hasMaxNumber = type === 'number' && !isNaN(props.max as any);
+    const isNumberInput = type === 'number';
+    const hasMaxNumber = !isNaN(props.max as any);
     const notClearable = !isTextInput;
 
     return (
@@ -94,8 +95,10 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
         )}
         {(!!maxLength || hasMaxNumber) && (
           <span className={classNames('clearable-input-count')}>
-            {maxLength && `${(value as string).length}/${maxLength}`}
-            {hasMaxNumber && `out of ${props.max || '?'}`}
+            {maxLength &&
+              isTextInput &&
+              `${(value as string).length}/${maxLength}`}
+            {hasMaxNumber && isNumberInput && `out of ${props.max || '?'}`}
           </span>
         )}
       </div>

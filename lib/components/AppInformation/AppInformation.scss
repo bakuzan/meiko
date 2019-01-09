@@ -6,8 +6,15 @@ $size: 1em;
   right: 0;
   width: $size;
   height: $size;
+  padding: 0.2em;
+
   &::before {
     content: attr(data-icon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $size;
+    height: $size;
   }
 
   &__detail {

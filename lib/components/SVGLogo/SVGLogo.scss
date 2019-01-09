@@ -16,7 +16,7 @@
       }
       .letter.hideshow {
         animation: {
-          duration: 3s;
+          duration: 1.6s;
           iteration-count: 1;
           timing-function: linear;
           name: hideshow;
@@ -44,14 +44,14 @@
 .word {
   text-anchor: end;
   font-size: 0.9em;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   opacity: 0;
 }
 
 .letter {
   text-anchor: middle;
   font-size: 3em;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .diagonal {

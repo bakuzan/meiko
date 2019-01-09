@@ -85,9 +85,9 @@ storiesOf('Button', module)
       disabled={boolean('Disabled', false, 'functional')}
       rounded={boolean('Rounded', false, 'style')}
       depress={boolean('Depress', false, 'style')}
-      icon={select('Icon', { ...iconOptions, None: null }, '', 'functional')}
+      icon={select('Icon', { ...iconOptions, None: null }, null, 'functional')}
     >
-      {text('Button Text', "I'm a Basic Button. Click me!", 'functional')}
+      {text('Button Text', 'I am a Basic Button. Click me!', 'functional')}
     </Button>
   ))
   .add('link', () => (

@@ -22,6 +22,16 @@ class SvgLogo extends React.Component<ISvgLogoProps, any> {
   private interval = null;
 
   componentDidMount() {
+    this.initLogo();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.text !== this.props.text) {
+      this.initLogo();
+    }
+  }
+
+  initLogo() {
     const container = findDOMNode(this);
     this.characters = container.querySelectorAll(`text.${this.letterClass}`);
     this.cycleCharacters();
@@ -47,7 +57,7 @@ class SvgLogo extends React.Component<ISvgLogoProps, any> {
       }
 
       nextLetter.setAttribute('class', `${this.letterClass} ${this.animate}`);
-    }, 3000);
+    }, 1500);
   }
   renderLetters(word) {
     const characters = word

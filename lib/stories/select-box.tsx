@@ -2,6 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
+import { withState } from '@dump247/storybook-state';
 
 import SelectBox from 'components/SelectBox';
 
@@ -13,12 +14,15 @@ const options = [
 
 storiesOf('SelectBox', module)
   .addDecorator(withInfo)
-  .add('basic', () => (
-    <SelectBox
-      name="storyTest"
-      value={2}
-      text="SelectBox story"
-      options={options}
-      onSelect={action('selected')}
-    />
-  ));
+  .add(
+    'basic',
+    withState({ value: 2 })(({ store }) => (
+      <SelectBox
+        name="storyTest"
+        value={store.state.value}
+        text="SelectBox story"
+        options={options}
+        onSelect={(e: any) => store.set({ value: e.target.value })}
+      />
+    ))
+  );
