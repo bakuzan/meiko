@@ -11,6 +11,7 @@ interface ITabContainerProps {
   className?: string;
   tabsClassName?: string;
   children: IJSXChildren;
+  onChange?(tabName: string): void;
 }
 interface ITabContainerState {
   activeTab: string;
@@ -33,7 +34,8 @@ class TabContainer extends React.Component<
   static propTypes = {
     className: PropTypes.string,
     tabsClassName: PropTypes.string,
-    children: PropTypes.arrayOf(ValidateChildPropType as any).isRequired
+    children: PropTypes.arrayOf(ValidateChildPropType as any).isRequired,
+    onChange: PropTypes.func
   };
 
   constructor(props: ITabContainerProps) {
@@ -49,11 +51,15 @@ class TabContainer extends React.Component<
     }
 
     const child = this.props.children[0].props || { name: 'NONE' };
-    this.setState({ activeTab: child.name });
+    this.handleTabChange(child.name);
   }
 
   handleTabChange(tabName) {
-    this.setState({ activeTab: tabName });
+    const { onChange } = this.props;
+    this.setState(
+      { activeTab: tabName },
+      () => onChange && onChange(this.state.activeTab)
+    );
   }
 
   renderViews(tabs) {

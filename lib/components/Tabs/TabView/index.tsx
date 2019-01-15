@@ -3,16 +3,31 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import './TabView.scss';
 
+type ChildrenRenderProps = (isActive: boolean) => JSX.Element;
+
 interface ITabViewProps {
+  name: string;
+  displayName?: string;
   isActive: boolean;
-  children: JSX.Element;
+  children: JSX.Element | ChildrenRenderProps;
 }
 
-const TabView = ({ isActive, children }: ITabViewProps) => (
-  <div className={classNames('tab-view', { active: isActive })} role="tabpanel">
-    {children}
-  </div>
-);
+const TabView = ({ isActive, children }: ITabViewProps) => {
+  const isFunctionChildren = typeof children === 'function';
+  let renderer: ChildrenRenderProps;
+  if (isFunctionChildren) {
+    renderer = children as ChildrenRenderProps;
+  }
+
+  return (
+    <div
+      className={classNames('tab-view', { active: isActive })}
+      role="tabpanel"
+    >
+      {isFunctionChildren ? renderer(isActive) : children}
+    </div>
+  );
+};
 
 TabView.defaultProps = {
   isActive: false
@@ -24,7 +39,8 @@ TabView.propTypes = {
   isActive: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element)
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.func
   ]).isRequired
 };
 
