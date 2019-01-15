@@ -60,7 +60,7 @@ class AutocompleteInput extends React.Component<
       className: PropTypes.string,
       clearInputButtonClass: PropTypes.string
     }),
-    noSuggestionsItem: PropTypes.bool
+    noSuggestionsItem: PropTypes.oneOfType([PropTypes.node, PropTypes.element])
   };
 
   private timer = null;
