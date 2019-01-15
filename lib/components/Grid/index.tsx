@@ -14,7 +14,8 @@ interface IGridProps extends React.HTMLProps<HTMLUListElement> {
 
 const Grid = (props: IGridProps): JSX.Element => {
   const { className, items, noItemsText, children, ...other } = props;
-  const hasItems = items.length > 0;
+  const passedNothing = !items;
+  const hasItems = !passedNothing && items.length > 0;
   const displayNoItemsText = !!noItemsText;
   const noItemsTextToRender = isString(noItemsText)
     ? noItemsText
@@ -22,7 +23,7 @@ const Grid = (props: IGridProps): JSX.Element => {
 
   return (
     <ul className={classNames('mko-grid', className)} {...other}>
-      {!hasItems && displayNoItemsText && (
+      {!passedNothing && !hasItems && displayNoItemsText && (
         <li key="NONE">{noItemsTextToRender}</li>
       )}
       {hasItems && props.items.map(children)}
