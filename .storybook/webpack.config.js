@@ -8,6 +8,12 @@ module.exports = (baseConfig, env, config) => {
     include: includePath,
     use: [
       {
+        loader: require.resolve('babel-loader'),
+        options: {
+          plugins: [require.resolve('babel-plugin-emotion')]
+        }
+      },
+      {
         loader: require.resolve('awesome-typescript-loader')
       },
       {

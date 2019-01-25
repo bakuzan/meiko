@@ -2,7 +2,9 @@ import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-import './Button.scss';
+// import './Button.scss';
+import css from 'styles';
+import { styles, bgStyles, theming } from './styles';
 
 interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
   btnStyle?: string;
@@ -21,20 +23,29 @@ function getButtonClasses({
   rounded,
   depress,
   icon
-}) {
+}: IButtonProps) {
   const hasBtnStyle = !!btnStyle;
   const hasBtnSize = !!btnSize;
   const hasLink = !!link;
   const hasIcon = !!icon;
-  return classNames(className, {
-    button: !hasLink && !hasIcon,
-    'button-link': hasLink,
-    'button-icon': hasIcon,
-    [btnStyle]: hasBtnStyle,
-    [btnSize]: hasBtnSize,
-    rounded,
-    depress
-  });
+
+  return classNames(
+    className,
+    {
+      // TODO - handle themes!
+      [btnStyle]: hasBtnStyle
+    },
+    css(
+      styles.ButtonBase,
+      !hasLink && !hasIcon && styles.Button,
+      hasLink && styles.ButtonLink,
+      hasIcon && styles.ButtonIcon,
+      hasBtnSize && styles.ButtonIconSmall,
+      rounded && styles.Rounded,
+      depress && styles.Depressed,
+      (theme) => !hasLink && theming(btnStyle, theme)
+    )
+  );
 }
 
 export const Button = ({
@@ -118,4 +129,25 @@ export function withCustomButtonWrapper(
       />
     );
   };
+}
+
+interface IButtonGroupProps {
+  className: string;
+  centered?: boolean;
+  right?: boolean;
+  children: React.ReactNode;
+}
+
+export function ButtonGroup(props: IButtonGroupProps) {
+  return (
+    <div
+      className={css(
+        bgStyles.ButtonGroup,
+        props.centered && bgStyles.ButtonGroupCentered,
+        props.right && bgStyles.ButtonGroupRightAligned
+      )}
+    >
+      {props.children}
+    </div>
+  );
 }

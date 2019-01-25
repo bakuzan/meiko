@@ -17,7 +17,7 @@ import pkg from './package.json';
 dotenv.config();
 const isProduction = process.env.NODE_ENV === 'production';
 const entry = 'lib/index.ts';
-const externals = ['react', 'react-dom', 'prop-types'];
+const externals = ['react', 'react-dom', 'prop-types', 'emotion'];
 const globals = {
   react: 'React',
   'react-dom': 'ReactDOM',

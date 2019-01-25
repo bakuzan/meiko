@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
+import {} from 'emotion';
 
 import Icons from 'constants/icons';
 import { Button } from 'components/Button';
@@ -13,6 +14,18 @@ const actions = {
 };
 
 const iconOptions = Icons;
+
+const testTheme = {
+  primaryBackgroundColour: '#db7093',
+  primaryColour: '#fff',
+  primaryBackgroundColourHover: '#d14774',
+  accentBackgroundColour: '#afeeee',
+  accentColour: '#000',
+  accentBackgroundColourHover: '#85e5e5',
+  backgroundColour: 'inherit',
+  colour: 'inherit',
+  backgroundColourHover: '#eee'
+};
 
 storiesOf('Button', module)
   .addDecorator(withInfo)

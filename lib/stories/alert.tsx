@@ -14,12 +14,34 @@ const alerts = [
   }
 ];
 
+function sendType(type) {
+  return (o) => ({ ...o, type });
+}
+
 const actions = {
   dismissAlertMessage: action('dismiss message')
 };
 
 storiesOf('Alert', module)
   .addDecorator(withInfo)
-  .add('basic', () => <Alert alerts={alerts} actions={actions} />, {
-    info: { inline: true }
-  });
+  .add(
+    'error',
+    () => <Alert alerts={alerts.map(sendType('error'))} actions={actions} />,
+    {
+      info: { inline: true }
+    }
+  )
+  .add(
+    'warning',
+    () => <Alert alerts={alerts.map(sendType('warning'))} actions={actions} />,
+    {
+      info: { inline: true }
+    }
+  )
+  .add(
+    'success',
+    () => <Alert alerts={alerts.map(sendType('success'))} actions={actions} />,
+    {
+      info: { inline: true }
+    }
+  );

@@ -14,7 +14,9 @@ export type IJSXChildren =
   | JSX.Element[]
   | JSX.Element
   | React.ReactText[]
-  | React.ReactText;
+  | React.ReactText
+  | HTMLElement
+  | HTMLElement[];
 
 export interface ISelectBoxOption {
   text: string;
