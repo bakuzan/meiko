@@ -21,11 +21,11 @@ export const media = new Map([
   ['lg', `@media (min-width: ${screen_lg}px)`]
 ]);
 
-//Unit helpers:
+// Unit helpers:
 export const pixel = 'px';
 export const percent = '%';
 
-//z-index
+// z-index
 export const zIndexes = new Map([
   ['wafer', 1],
   ['above-siblings', 10],
@@ -79,7 +79,7 @@ export const darkenAmount = '5%';
 
 // Component Variables
 export const anchorColour = col.mostlyBlue;
-export const anchorColourHover = col.mostlyBlue; //lighten(col.mostlyBlue, darkenAmount * 3);
+export const anchorColourHover = col.mostlyBlue; // lighten(col.mostlyBlue, darkenAmount * 3);
 
 // //TEXT:
 // $font-sizes: 10 12 14 15 16 18 20 22 24 25 28 30 32 34 35 36 38 40 42;

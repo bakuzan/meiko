@@ -6,7 +6,7 @@ const fontSize = '1em';
 
 export default {
   AlertContainer: {
-    position: `relative`,
+    position: `relative` as 'relative',
     top: '50px',
     left: '50%',
     width: '50%',
@@ -69,8 +69,8 @@ export default {
     padding: '10px 0',
     paddingLeft: '5px',
     marginLeft: alertIconWidth,
-    whiteSpace: 'pre-line',
-    wordWrap: 'break-word'
+    whiteSpace: 'pre-line' as 'pre-line',
+    wordWrap: 'break-word' as 'break-word'
   },
   AlertContentExpanded: {
     height: 'auto'

@@ -24,7 +24,7 @@ export const darkViolet = '#674ea7';
 export const veryDarkBlue = '#073763';
 export const softBlue = '#6fa8dc';
 export const darkRed = '#a61c00';
-export const desaturatedGreen = '#93c47d'; //moderate-green = '#99cc66';
+export const desaturatedGreen = '#93c47d'; // moderate-green = '#99cc66';
 export const forestGreen = '#228b22';
 export const brownFromDarkYellow = '#7f6000';
 

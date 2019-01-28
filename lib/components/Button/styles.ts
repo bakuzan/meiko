@@ -1,5 +1,6 @@
 import * as col from 'styles/colours';
 import { anchorColour, anchorColourHover } from 'styles/variables';
+import { ITheme } from 'styles';
 
 export const bgStyles = {
   ButtonGroup: {
@@ -96,19 +97,7 @@ function getThemeStyles(backgroundColor, color, backgroundColorHovered) {
   };
 }
 
-interface IButtonTheme {
-  primaryBackgroundColour: string;
-  primaryColour: string;
-  primaryBackgroundColourHover: string;
-  accentBackgroundColour?: string;
-  accentColour?: string;
-  accentBackgroundColourHover?: string;
-  backgroundColour: string;
-  colour: string;
-  backgroundColourHover: string;
-}
-
-export function theming(btnStyle: string, theme: IButtonTheme) {
+export function theming(btnStyle: string, theme: ITheme) {
   console.log('theme ?', theme);
   if (btnStyle === 'primary') {
     return getThemeStyles(

@@ -1,9 +1,10 @@
+/** @jsx jsx */
+import { jsx, SerializedStyles } from '@emotion/core';
 import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-// import './Button.scss';
-import css from 'styles';
+import { ITheme } from 'styles';
 import { styles, bgStyles, theming } from './styles';
 
 interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
@@ -16,7 +17,7 @@ interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
 }
 
 function getButtonClasses({
-  className,
+  css,
   btnStyle,
   btnSize,
   link,
@@ -24,18 +25,12 @@ function getButtonClasses({
   depress,
   icon
 }: IButtonProps) {
-  const hasBtnStyle = !!btnStyle;
   const hasBtnSize = !!btnSize;
   const hasLink = !!link;
   const hasIcon = !!icon;
 
-  return classNames(
-    className,
-    {
-      // TODO - handle themes!
-      [btnStyle]: hasBtnStyle
-    },
-    css(
+  return (theme: ITheme) =>
+    [
       styles.ButtonBase,
       !hasLink && !hasIcon && styles.Button,
       hasLink && styles.ButtonLink,
@@ -43,23 +38,23 @@ function getButtonClasses({
       hasBtnSize && styles.ButtonIconSmall,
       rounded && styles.Rounded,
       depress && styles.Depressed,
-      (theme) => !hasLink && theming(btnStyle, theme)
-    )
-  );
+      css,
+      !hasLink && theming(btnStyle, theme)
+    ] as SerializedStyles[];
 }
 
 export const Button = ({
-  className,
   btnStyle,
   btnSize,
   link,
   rounded,
   depress,
+  css,
   children,
   ...props
 }: IButtonProps) => {
   const buttonClasses = getButtonClasses({
-    className,
+    css,
     btnStyle,
     btnSize,
     link,
@@ -69,7 +64,7 @@ export const Button = ({
   });
 
   return (
-    <button className={buttonClasses} {...props}>
+    <button css={buttonClasses} {...props}>
       {children}
     </button>
   );
@@ -91,7 +86,7 @@ Button.propTypes = {
 
 export function withButtonisation(WrappedComponent) {
   return ({
-    className,
+    css,
     btnStyle,
     btnSize,
     link,
@@ -101,7 +96,7 @@ export function withButtonisation(WrappedComponent) {
     ...passProps
   }: IButtonProps) => {
     const buttonClasses = getButtonClasses({
-      className,
+      css,
       btnStyle,
       btnSize,
       link,
@@ -110,9 +105,7 @@ export function withButtonisation(WrappedComponent) {
       icon
     });
 
-    return (
-      <WrappedComponent {...passProps} icon={icon} className={buttonClasses} />
-    );
+    return <WrappedComponent {...passProps} icon={icon} css={buttonClasses} />;
   };
 }
 
@@ -132,7 +125,8 @@ export function withCustomButtonWrapper(
 }
 
 interface IButtonGroupProps {
-  className: string;
+  className?: string;
+  css?: SerializedStyles;
   centered?: boolean;
   right?: boolean;
   children: React.ReactNode;
@@ -141,11 +135,12 @@ interface IButtonGroupProps {
 export function ButtonGroup(props: IButtonGroupProps) {
   return (
     <div
-      className={css(
+      css={[
         bgStyles.ButtonGroup,
         props.centered && bgStyles.ButtonGroupCentered,
-        props.right && bgStyles.ButtonGroupRightAligned
-      )}
+        props.right && bgStyles.ButtonGroupRightAligned,
+        props.css
+      ]}
     >
       {props.children}
     </div>

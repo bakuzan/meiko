@@ -1,11 +1,11 @@
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 
 import { Button, ButtonGroup } from '../Button';
 import Icons from '../../constants/icons';
-import css from 'styles';
 import styles from './styles';
-// import './Alert.scss';
 
 interface IAlert {
   id: string;
@@ -35,37 +35,31 @@ const AlertMessage = ({
   isExpanded,
   className
 }: IAlertMessageProps) => (
-  <div className={classNames('alert', type, className, css(styles.Alert))}>
+  <div className={classNames('alert', type, className)} css={styles.Alert}>
     <div
-      className={classNames(
-        'alert-content',
-        { 'is-expanded': isExpanded },
-        css(styles.AlertContent, isExpanded && styles.AlertContentExpanded)
-      )}
+      className={classNames('alert-content', { 'is-expanded': isExpanded })}
+      css={[styles.AlertContent, isExpanded && styles.AlertContentExpanded]}
     >
       <div
-        className={classNames('alert-top-content', css(styles.AlertTopContent))}
+        className={classNames('alert-top-content')}
+        css={styles.AlertTopContent}
       >
         <div
-          className={classNames(
-            'alert-icon',
-            css(styles.AlertIcon, styles[type])
-          )}
+          className={classNames('alert-icon')}
+          css={[styles.AlertIcon, styles[type]]}
         />
-        <div className={classNames('alert-title', css(styles.AlertTitle))}>
+        <div className={classNames('alert-title')} css={styles.AlertTitle}>
           {message}
         </div>
-        <ButtonGroup className={css(styles.ButtonGroup)}>
+        <ButtonGroup css={css(styles.ButtonGroup)}>
           {detail && !isExpanded && (
-            <Button
-              className={css(styles.Button)}
-              onClick={() => expandDetail(id)}
-            >
+            <Button css={css(styles.Button)} onClick={() => expandDetail(id)}>
               Details
             </Button>
           )}
           <Button
-            className={classNames('close', css(styles.Button, styles.Close))}
+            className={classNames('close')}
+            css={[styles.Button, styles.Close]}
             aria-label="Close Alert"
             icon={Icons.cross}
             onClick={() => remove(id)}
@@ -73,13 +67,11 @@ const AlertMessage = ({
         </ButtonGroup>
       </div>
       <div
-        className={classNames(
-          'alert-details',
-          css(
-            styles.AlertDetails,
-            isExpanded && styles.AlertContentExpandedDetails
-          )
-        )}
+        className={classNames('alert-details')}
+        css={[
+          styles.AlertDetails,
+          isExpanded && styles.AlertContentExpandedDetails
+        ]}
       >
         {detail}
       </div>
@@ -123,7 +115,8 @@ class Alert extends React.Component<IAlertProps, IAlertState> {
     return (
       <div
         id={id}
-        className={classNames('alert-container', css(styles.AlertContainer))}
+        className={classNames('alert-container')}
+        css={styles.AlertContainer}
       >
         {alerts.slice(0, 1).map((a) => (
           <AlertMessage

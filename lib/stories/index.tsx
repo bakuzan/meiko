@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
+import { ThemeProvider } from 'emotion-theming';
 
 import Example from 'components/Example';
 
@@ -20,4 +21,19 @@ export const storyStyle = {
 const styles = { display: 'flex', justifyContent: 'center', marginTop: '30px' };
 export const CenterDecorator = (storyFn) => (
   <div style={styles}>{storyFn()}</div>
+);
+
+const testTheme = {
+  primaryBackgroundColour: '#db7093',
+  primaryColour: '#fff',
+  primaryBackgroundColourHover: '#d14774',
+  accentBackgroundColour: '#afeeee',
+  accentColour: '#000',
+  accentBackgroundColourHover: '#85e5e5',
+  backgroundColour: 'inherit',
+  colour: 'inherit',
+  backgroundColourHover: '#eee'
+};
+export const ThemeDecorator = (storyFn) => (
+  <ThemeProvider theme={testTheme}>{storyFn()}</ThemeProvider>
 );
