@@ -1,11 +1,15 @@
 export interface ITheme {
-  primaryBackgroundColour: string;
-  primaryColour: string;
-  primaryBackgroundColourHover: string;
-  accentBackgroundColour?: string;
-  accentColour?: string;
-  accentBackgroundColourHover?: string;
-  backgroundColour: string;
+  baseBackground: string;
+  baseBackgroundHover: string;
+  baseColour: string;
   colour: string;
-  backgroundColourHover: string;
+  contrast: string;
+  anchorColour: string;
+  anchorColourHover: string;
+  primaryBackground: string;
+  primaryBackgroundHover: string;
+  primaryColour: string;
+  accentBackground: string;
+  accentColour: string;
+  accentBackgroundHover: string;
 }

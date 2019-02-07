@@ -87,7 +87,11 @@ export const styles = {
   }
 };
 
-function getThemeStyles(backgroundColor, color, backgroundColorHovered) {
+function getThemeStyles(
+  backgroundColor: string,
+  color: string,
+  backgroundColorHovered: string
+) {
   return {
     backgroundColor,
     color,
@@ -101,21 +105,21 @@ export function theming(btnStyle: string, theme: ITheme) {
   console.log('theme ?', theme);
   if (btnStyle === 'primary') {
     return getThemeStyles(
-      theme.primaryBackgroundColour,
+      theme.primaryBackground,
       theme.primaryColour,
-      theme.primaryBackgroundColourHover
+      theme.primaryBackgroundHover
     );
   } else if (btnStyle === 'accent') {
     return getThemeStyles(
-      theme.accentBackgroundColour,
+      theme.accentBackground,
       theme.accentColour,
-      theme.accentBackgroundColourHover
+      theme.accentBackgroundHover
     );
   } else {
     return getThemeStyles(
-      theme.backgroundColour,
-      theme.colour,
-      theme.backgroundColourHover
+      theme.baseBackground,
+      theme.baseColour,
+      theme.baseBackgroundHover
     );
   }
 }

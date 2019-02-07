@@ -5,7 +5,7 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 
 import DropdownMenu from 'components/DropdownMenu';
 import { PositionEnum } from 'constants/enums';
-import { CenterDecorator } from 'stories';
+import { CenterDecorator } from '.';
 
 storiesOf('DropdownMenu', module)
   .addDecorator(withInfo)

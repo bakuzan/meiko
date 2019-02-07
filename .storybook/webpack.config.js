@@ -1,6 +1,6 @@
 const path = require('path');
 
-module.exports = (baseConfig, env, config) => {
+module.exports = ({ config }) => {
   const includePath = path.resolve(__dirname, '../lib');
 
   config.module.rules.push({
@@ -45,6 +45,7 @@ module.exports = (baseConfig, env, config) => {
     ]
   });
 
+  config.resolve.modules = [includePath, 'node_modules'];
   config.resolve.extensions.push('.ts', '.tsx');
 
   return config;
