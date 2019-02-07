@@ -23,7 +23,7 @@ $full-size-minus-padding: calc(100% - 10px);
   top: $full-size-minus-padding;
   display: none;
   width: $full-size-minus-padding;
-
+  z-index: map-get($z-index, popover);
   @extend %standard-shadow;
 
   &.is-open {
@@ -33,7 +33,6 @@ $full-size-minus-padding: calc(100% - 10px);
 
 .multi-select-list {
   width: 100%;
-  z-index: map-get($z-index, popover);
 }
 
 .separator {

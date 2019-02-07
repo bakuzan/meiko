@@ -192,8 +192,10 @@ class MultiSelect extends React.Component<
               </li>
             ))}
           </ul>
-          <Backdrop onClickOrKey={this.handleToggleClose} />
         </div>
+        {this.state.isOpen && (
+          <Backdrop onClickOrKey={this.handleToggleClose} />
+        )}
       </div>
     );
   }
