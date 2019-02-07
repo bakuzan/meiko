@@ -1,11 +1,13 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 
 import Icons from '../../constants/icons';
-import './AppInformation.scss';
+import styles from './styles';
 
-const resolveENVVariable = (str) => (str || '').trim();
-const resolveLabel = (b, v) => {
+const resolveENVVariable = (str: string) => (str || '').trim();
+const resolveLabel = (b: string, v: string) => {
   let label = '';
   if (b) {
     label += `Branch ${b}`;
@@ -34,7 +36,7 @@ class AppInformation extends React.PureComponent<
   IAppInformationProps,
   IAppInformationState
 > {
-  constructor(props) {
+  constructor(props: IAppInformationProps) {
     super(props);
     this.state = {
       hovered: false
@@ -43,7 +45,7 @@ class AppInformation extends React.PureComponent<
     this.handleHovered = this.handleHovered.bind(this);
   }
 
-  handleHovered(hovered) {
+  handleHovered(hovered: boolean) {
     return () => this.setState({ hovered });
   }
 
@@ -61,6 +63,7 @@ class AppInformation extends React.PureComponent<
     return (
       <div
         className={classNames('app-information')}
+        css={styles.AppInformation}
         data-icon={Icons.info}
         onMouseEnter={this.handleHovered(true)}
         onMouseLeave={this.handleHovered(false)}
@@ -70,6 +73,10 @@ class AppInformation extends React.PureComponent<
           className={classNames('app-information__detail', {
             'app-information__detail--visible': this.state.hovered
           })}
+          css={[
+            styles.AppInformationDetail,
+            this.state.hovered && styles.AppInformationDetailVisible
+          ]}
         >
           {codeBranch && <span>Branch: {codeBranch}</span>}
           {!!codeBranch && !!appVersion && <br />}

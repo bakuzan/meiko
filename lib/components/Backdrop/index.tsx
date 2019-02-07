@@ -1,9 +1,11 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as React from 'react';
 
 import { Enums, Strings } from '../../constants';
-import './Backdrop.scss';
+import styles from './styles';
 
 interface IBackdropProps {
   id?: string;
@@ -22,12 +24,18 @@ class Backdrop extends React.Component<IBackdropProps, any> {
     this.handleClose = this.handleClose.bind(this);
   }
 
-  handleClose(e) {
-    if (
-      e.type !== Strings.events.click &&
-      !Enums.CLOSE_KEYS.includes(e.keyCode)
-    ) {
-      return;
+  handleClose(
+    event:
+      | React.MouseEvent<HTMLDivElement, MouseEvent>
+      | React.KeyboardEvent<HTMLDivElement>
+  ) {
+    const isNotClick = event.type !== Strings.events.click;
+
+    if (isNotClick) {
+      const kEvent = event as React.KeyboardEvent<HTMLDivElement>;
+      if (!Enums.CLOSE_KEYS.includes(kEvent.keyCode)) {
+        return;
+      }
     }
 
     this.props.onClickOrKey();
@@ -41,6 +49,7 @@ class Backdrop extends React.Component<IBackdropProps, any> {
       <div
         id={backdropId}
         className={classNames('backdrop')}
+        css={styles.Backdrop}
         role="button"
         tabIndex={0}
         onClick={this.handleClose}

@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
@@ -10,7 +12,8 @@ import AutocompleteSuggestionItem, {
 import { KeyCodes } from '../../constants/enums';
 import { isNumber, getTimeoutSeconds } from '../../utils';
 import { IAutocompleteOption } from 'types';
-import './AutocompleteInput.scss';
+
+import styles from './styles';
 
 interface IAutocompleteInputProps {
   label?: string;
@@ -24,9 +27,9 @@ interface IAutocompleteInputProps {
     clearInputButtonClass?: string;
   };
   noSuggestionsItem?: JSX.Element;
-  onChange(e: Event): void;
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void;
   onSelect(id: string | number): void;
-  onKeyDown?(e: Event): void;
+  onKeyDown?(e: React.KeyboardEvent<HTMLInputElement>): void;
   suggestionTemplate?(props: IAutocompleteSuggestionProps): JSX.Element;
 }
 interface IAutocompleteInputState {
@@ -88,7 +91,7 @@ class AutocompleteInput extends React.Component<
     this.timer = null;
   }
 
-  selectAutocompleteSuggestion(id) {
+  selectAutocompleteSuggestion(id: React.ReactText) {
     if (!id && id !== 0 && !this.props.noSuggestionsItem) {
       return;
     }
@@ -118,7 +121,7 @@ class AutocompleteInput extends React.Component<
     );
   }
 
-  updateActiveSuggestion(value) {
+  updateActiveSuggestion(value: number) {
     const maxIndex = this.filterAutoComplete().length - 1;
     let newValue = this.state.activeSuggestion + value;
     if (newValue > maxIndex) {
@@ -130,7 +133,7 @@ class AutocompleteInput extends React.Component<
     this.setState({ activeSuggestion: newValue });
   }
 
-  highlightMatch(value) {
+  highlightMatch(value: string) {
     const match = value.match(new RegExp(this.props.filter, 'i'));
     if (!match) {
       return value;
@@ -138,9 +141,12 @@ class AutocompleteInput extends React.Component<
 
     const length = this.props.filter.length;
     return (
-      <span className={classNames('autocomplete-suggestion-text')}>
+      <span
+        className={classNames('autocomplete-suggestion-text')}
+        css={styles.AutocompleteSuggestionText}
+      >
         {value.slice(0, match.index)}
-        <span className={classNames('highlight')}>
+        <span className={classNames('highlight')} css={styles.Highlight}>
           {value.slice(match.index, match.index + length)}
         </span>
         {value.slice(match.index + length)}
@@ -148,12 +154,12 @@ class AutocompleteInput extends React.Component<
     );
   }
 
-  handleInputFilter(event) {
+  handleInputFilter(event: React.ChangeEvent<HTMLInputElement>) {
     this.props.onChange(event);
     this.setState({ activeSuggestion: 0 });
   }
 
-  handleKeyDown(event) {
+  handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
     const { keyCode } = event;
     if (keyCode === KeyCodes.enter && this.props.filter) {
       event.preventDefault();
@@ -167,12 +173,12 @@ class AutocompleteInput extends React.Component<
     }
   }
 
-  handleFocus(e) {
+  handleFocus(e: React.FocusEvent<HTMLInputElement>) {
     clearTimeout(this.timer);
     this.setState({ inUse: true });
   }
 
-  handleBlur(e) {
+  handleBlur(e: React.FocusEvent<HTMLInputElement>) {
     clearTimeout(this.timer);
     this.timer = setTimeout(() => {
       if (!this.timer) {
@@ -199,7 +205,7 @@ class AutocompleteInput extends React.Component<
     const hasSuggestions = !!autocomplete.length;
 
     return (
-      <div className={classNames('autocomplete')}>
+      <div className={classNames('autocomplete')} css={styles.Autocomplete}>
         <ClearableInput
           label={label}
           name={attr}
@@ -217,6 +223,7 @@ class AutocompleteInput extends React.Component<
               'autocomplete-menu',
               'list column one'
             )}
+            css={styles.AutocompleteMenu}
           >
             {hasSuggestions &&
               autocomplete.map((item, index) => (
@@ -240,6 +247,7 @@ class AutocompleteInput extends React.Component<
                   'no-suggestions-item',
                   'active'
                 )}
+                css={styles.NoSuggestionsItem}
               >
                 {!!noSuggestionsItem ? (
                   noSuggestionsItem

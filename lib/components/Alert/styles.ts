@@ -1,4 +1,5 @@
 import { uiMessaging, zIndexes } from 'styles/variables';
+import { relative, breakWord, preLine } from 'styles/types';
 
 const alertContainerHeight = '40px';
 const alertIconWidth = alertContainerHeight;
@@ -6,7 +7,7 @@ const fontSize = '1em';
 
 export default {
   AlertContainer: {
-    position: `relative` as 'relative',
+    position: relative,
     top: '50px',
     left: '50%',
     width: '50%',
@@ -69,8 +70,8 @@ export default {
     padding: '10px 0',
     paddingLeft: '5px',
     marginLeft: alertIconWidth,
-    whiteSpace: 'pre-line' as 'pre-line',
-    wordWrap: 'break-word' as 'break-word'
+    whiteSpace: preLine,
+    wordWrap: breakWord
   },
   AlertContentExpanded: {
     height: 'auto'
