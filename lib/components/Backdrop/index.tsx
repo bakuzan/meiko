@@ -1,11 +1,10 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as React from 'react';
 
 import { Enums, Strings } from '../../constants';
-import styles from './styles';
+import styled from 'styles';
+import { zIndexes } from 'styles/variables';
 
 interface IBackdropProps {
   id?: string;
@@ -49,7 +48,6 @@ class Backdrop extends React.Component<IBackdropProps, any> {
       <div
         id={backdropId}
         className={classNames('backdrop')}
-        css={styles.Backdrop}
         role="button"
         tabIndex={0}
         onClick={this.handleClose}
@@ -59,4 +57,11 @@ class Backdrop extends React.Component<IBackdropProps, any> {
   }
 }
 
-export default Backdrop;
+export default styled(Backdrop)`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: ${zIndexes.get('above-siblings')};
+`;

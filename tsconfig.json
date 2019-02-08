@@ -15,7 +15,6 @@
     "target": "es6",
     "jsx": "react",
     "typeRoots": ["node_modules/@types"],
-    "types": ["@emotion/core"],
     "lib": ["es2017", "dom"]
   },
   "include": ["lib/**/*"],

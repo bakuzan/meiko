@@ -17,17 +17,12 @@ import pkg from './package.json';
 dotenv.config();
 const isProduction = process.env.NODE_ENV === 'production';
 const entry = 'lib/index.ts';
-const externals = [
-  'react',
-  'react-dom',
-  'prop-types',
-  '@emotion/core',
-  'emotion-theming'
-];
+const externals = ['react', 'react-dom', 'prop-types', 'styled-components'];
 const globals = {
   react: 'React',
   'react-dom': 'ReactDOM',
-  'prop-types': 'PropTypes'
+  'prop-types': 'PropTypes',
+  'styled-components': 'styled'
 };
 const extensions = ['.js', '.ts', '.tsx', '.scss'];
 

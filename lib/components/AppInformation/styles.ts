@@ -1,4 +1,4 @@
-import { fixed } from 'styles/types';
+import { fixed, none, visible, hidden } from 'styles/types';
 
 const size = '1em';
 
@@ -27,13 +27,13 @@ export default {
     padding: '5px',
     margin: '1em',
     border: '1px solid',
-    pointerEvents: 'none',
-    visibility: 'hidden',
+    pointerEvents: none,
+    visibility: hidden,
     transition: '1s'
   },
   AppInformationDetailVisible: {
     transition: '1s',
-    visibility: 'visible',
+    visibility: visible,
     right: 0
   }
 };

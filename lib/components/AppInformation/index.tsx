@@ -1,10 +1,8 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 
 import Icons from '../../constants/icons';
-import styles from './styles';
+import styled from 'styles';
 
 const resolveENVVariable = (str: string) => (str || '').trim();
 const resolveLabel = (b: string, v: string) => {
@@ -31,6 +29,46 @@ interface IAppInformationProps {
 interface IAppInformationState {
   hovered: boolean;
 }
+
+const size = '1em';
+const StyledContainer = styled.div`
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: ${size};
+  height: ${size};
+  padding: 0.2em;
+
+  &::before {
+    content: attr(data-icon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $size;
+    height: $size;
+  }
+`;
+
+const StyledDetail = styled.div<{ hovered: boolean }>`
+  position: fixed;
+  right: -100%;
+  bottom: 0;
+  background-color: inherit;
+  padding: 5px;
+  margin: 1em;
+  border: 1px solid;
+  pointer-events: none;
+  visibility: hidden;
+  transition: 1s;
+
+  ${(props) =>
+    props.hovered &&
+    `
+      transition: 1s;
+      visibility: visible;
+      right: 0;
+    `}
+`;
 
 class AppInformation extends React.PureComponent<
   IAppInformationProps,
@@ -61,28 +99,24 @@ class AppInformation extends React.PureComponent<
     const ariaLabel = resolveLabel(codeBranch, appVersion);
 
     return (
-      <div
+      <StyledContainer
         className={classNames('app-information')}
-        css={styles.AppInformation}
         data-icon={Icons.info}
         onMouseEnter={this.handleHovered(true)}
         onMouseLeave={this.handleHovered(false)}
         aria-label={ariaLabel}
       >
-        <div
+        <StyledDetail
+          hovered={this.state.hovered}
           className={classNames('app-information__detail', {
             'app-information__detail--visible': this.state.hovered
           })}
-          css={[
-            styles.AppInformationDetail,
-            this.state.hovered && styles.AppInformationDetailVisible
-          ]}
         >
           {codeBranch && <span>Branch: {codeBranch}</span>}
           {!!codeBranch && !!appVersion && <br />}
           {appVersion && <span>Version: {appVersion}</span>}
-        </div>
-      </div>
+        </StyledDetail>
+      </StyledContainer>
     );
   }
 }

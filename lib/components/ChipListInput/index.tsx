@@ -6,12 +6,14 @@ import { Button } from '../Button';
 import AutocompleteInput from '../AutocompleteInput';
 import TagChip from '../TagChip';
 import { KeyCodes } from '../../constants/enums';
-import './ChipListInput.scss';
 
-const resolveId = (o) => o._id || o.id;
+import styled from 'styles';
+
+const resolveId = (o: IChipListItem) => o._id || o.id;
 
 interface IChipListItem {
-  id: string | number;
+  id?: string | number;
+  _id?: string | number;
   name?: string;
 }
 interface IChipListInputProps {
@@ -29,6 +31,36 @@ interface IChipListInputProps {
 interface IChipListInputState {
   readyRemoval?: boolean;
 }
+
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 1em !important;
+
+  .chip-list-clearable-input {
+    padding: {
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .chip-list-wrapper {
+    margin-bottom: 2px;
+  }
+
+  .chip-list-inner {
+    display: inline-flex;
+    flex-wrap: wrap;
+    min-height: 36px;
+    max-width: 400px;
+    padding: 0 2px;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+`;
 
 class ChipListInput extends React.Component<
   IChipListInputProps,
@@ -78,7 +110,7 @@ class ChipListInput extends React.Component<
     this.setState({ [attr]: '' });
   }
 
-  selectAutocompleteSuggestion(id) {
+  selectAutocompleteSuggestion(id: React.ReactText) {
     const item = this.props.chipOptions.find((x) => resolveId(x) === id);
     if (!item) {
       return this.handleCreateNew();
@@ -96,17 +128,17 @@ class ChipListInput extends React.Component<
     this.setState({ [this.props.attr]: '' });
   }
 
-  persistListState(list) {
+  persistListState(list: IChipListItem[]) {
     this.props.updateChipList(this.props.name, list);
     this.setStateRemoval(false);
   }
 
-  updateList(item) {
+  updateList(item: IChipListItem) {
     const list = [...this.props.chipsSelected, item];
     this.persistListState(list);
   }
 
-  removeInputItem(data) {
+  removeInputItem(data: IChipListItem) {
     const { name } = data;
     const list = this.props.chipsSelected.filter(
       (x) => x[this.props.attr] !== name
@@ -122,11 +154,11 @@ class ChipListInput extends React.Component<
     this.persistListState(list);
   }
 
-  setStateRemoval(value) {
+  setStateRemoval(value: boolean) {
     this.setState({ readyRemoval: value });
   }
 
-  handleUserInput(event) {
+  handleUserInput(event: React.ChangeEvent<HTMLInputElement>) {
     const { value } = event.target;
     this.setState({
       [this.props.attr]: value.toLowerCase(),
@@ -158,6 +190,7 @@ class ChipListInput extends React.Component<
       tagClassName,
       createNewMessage
     } = this.props;
+
     const chips = chipsSelected
       .filter((x) => x !== undefined)
       .map((item, index, array) => {
@@ -175,12 +208,12 @@ class ChipListInput extends React.Component<
       });
 
     const hasChips = chips.length > 0;
-    const clearableInputClasses = {
+    const clearableInputProps = {
       className: classNames('chip-list-clearable-input')
     };
 
     return (
-      <div className={classNames('chip-list-input-container')}>
+      <StyledContainer className={classNames('chip-list-input-container')}>
         <AutocompleteInput
           label={label}
           attr={attr}
@@ -197,14 +230,14 @@ class ChipListInput extends React.Component<
             )
           }
           menuClassName={menuClassName}
-          clearableInputProps={clearableInputClasses}
+          clearableInputProps={clearableInputProps}
         />
         {!!hasChips && (
           <div className={classNames('chip-list-wrapper')}>
             <div className={classNames('chip-list-inner')}>{chips}</div>
           </div>
         )}
-      </div>
+      </StyledContainer>
     );
   }
 }

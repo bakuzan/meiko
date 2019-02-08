@@ -1,11 +1,12 @@
-/** @jsx jsx */
-import { jsx, SerializedStyles } from '@emotion/core';
+import styled from 'styles';
 import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-import { ITheme } from 'styles';
-import { styles, bgStyles, theming } from './styles';
+import * as col from 'styles/colours';
+import * as vars from 'styles/variables';
+import { theming } from './styles';
+// import { styles, bgStyles, theming } from './styles';
 
 interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
   btnStyle?: string;
@@ -16,97 +17,102 @@ interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
   icon?: string;
 }
 
-function getButtonClasses({
-  css,
-  btnStyle,
-  btnSize,
-  link,
-  rounded,
-  depress,
-  icon
-}: IButtonProps) {
-  const hasBtnSize = !!btnSize;
-  const hasLink = !!link;
-  const hasIcon = !!icon;
+const PlainButton: React.SFC<IButtonProps> = ({ children, ...props }) => (
+  <button {...props}>{children}</button>
+);
 
-  return (theme: ITheme) =>
-    [
-      styles.ButtonBase,
-      !hasLink && !hasIcon && styles.Button,
-      hasLink && styles.ButtonLink,
-      hasIcon && styles.ButtonIcon,
-      hasBtnSize && styles.ButtonIconSmall,
-      rounded && styles.Rounded,
-      depress && styles.Depressed,
-      css,
-      !hasLink && theming(btnStyle, theme)
-    ] as SerializedStyles[];
-}
+export const Button = styled(PlainButton)`
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    color: inherit;
+    padding: 5px;
+    border: none;
+    white-space: nowrap;
+    cursor: pointer;
 
-export const Button = ({
-  btnStyle,
-  btnSize,
-  link,
-  rounded,
-  depress,
-  css,
-  children,
-  ...props
-}: IButtonProps) => {
-  const buttonClasses = getButtonClasses({
-    css,
-    btnStyle,
-    btnSize,
-    link,
-    rounded,
-    depress,
-    icon: props.icon
-  });
+    :disabled {
+      background-color: ${col.grey80} !important;
+      color: ${col.grey40} !important;
+      cursor: default;
+    }
 
-  return (
-    <button css={buttonClasses} {...props}>
-      {children}
-    </button>
-  );
-};
+    ${(props) => props.rounded && 'border-radius: 5px;'}
+    ${(props) =>
+      props.depress &&
+      `
+        boxShadow: 0 0 5px ${col.onyx};
+        :active {
+          boxShadow: inset 0px 0px 5px ${col.onyx};
+        }
+      }
+    `}
+
+    ${(props) =>
+      !props.icon &&
+      !props.link &&
+      `
+      min-width: 100px;
+      min-height: 25px;
+      text-decoration: none;
+    `}
+  ${(props) =>
+    props.link &&
+    `
+    color: ${vars.anchorColour},
+    text-decoration: underline;
+    :focus,
+    :active {
+      color: ${vars.anchorColour};
+    }
+    :hover {
+      color: ${vars.anchorColourHover};
+    }
+  `}
+  ${(props) =>
+    props.icon &&
+    `
+    flex: '0 1 0%',
+    padding: '3px 6px',
+    margin: '2px 5px',
+    textDecoration: 'none',
+
+    :before {
+      content: attr(icon);
+      font-size: 1.5rem;
+      :not(:disabled) {
+        cursor: pointer;
+      }
+    }
+  `}
+${(props) =>
+  props.btnSize === 'small' &&
+  `
+    :before {
+      font-size: 0.8rem;
+    }
+`}
+${(props) => theming(props.btnStyle, props.theme)}
+`;
 
 Button.defaultProps = {
   type: 'button'
 };
 
-Button.propTypes = {
-  type: PropTypes.string,
-  btnStyle: PropTypes.oneOf(['primary', 'accent']),
-  btnSize: PropTypes.oneOf(['small']),
-  rounded: PropTypes.bool,
-  depress: PropTypes.bool,
-  link: PropTypes.bool,
-  onClick: PropTypes.func
-};
+// Button.propTypes = {
+//   type: PropTypes.string,
+//   btnStyle: PropTypes.oneOf(['primary', 'accent']),
+//   btnSize: PropTypes.oneOf(['small']),
+//   rounded: PropTypes.bool,
+//   depress: PropTypes.bool,
+//   link: PropTypes.bool,
+//   onClick: PropTypes.func
+// };
 
-export function withButtonisation(WrappedComponent) {
-  return ({
-    css,
-    btnStyle,
-    btnSize,
-    link,
-    rounded,
-    depress,
-    icon,
-    ...passProps
-  }: IButtonProps) => {
-    const buttonClasses = getButtonClasses({
-      css,
-      btnStyle,
-      btnSize,
-      link,
-      rounded,
-      depress,
-      icon
-    });
-
-    return <WrappedComponent {...passProps} icon={icon} css={buttonClasses} />;
-  };
+export function withButtonisation(WrappedComponent: React.SFC<IButtonProps>) {
+  return Button.withComponent(WrappedComponent);
 }
 
 export function withCustomButtonWrapper(
@@ -126,23 +132,20 @@ export function withCustomButtonWrapper(
 
 interface IButtonGroupProps {
   className?: string;
-  css?: SerializedStyles;
   centered?: boolean;
   right?: boolean;
   children: React.ReactNode;
 }
 
-export function ButtonGroup(props: IButtonGroupProps) {
-  return (
-    <div
-      css={[
-        bgStyles.ButtonGroup,
-        props.centered && bgStyles.ButtonGroupCentered,
-        props.right && bgStyles.ButtonGroupRightAligned,
-        props.css
-      ]}
-    >
-      {props.children}
-    </div>
-  );
-}
+const PlainButtonGroup: React.SFC<IButtonGroupProps> = (props) => (
+  <div className={props.className}>{props.children}</div>
+);
+
+export const ButtonGroup = styled(PlainButtonGroup)`
+  display: flex;
+  justify-content: ${(props) =>
+    props.centered ? 'center' : props.right ? 'flex-end' : 'space-around'};
+  align-items: center;
+  padding: 5px;
+  margin: 5px 0;
+`;

@@ -1,11 +1,10 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 
 import { Button, ButtonGroup } from '../Button';
 import Icons from '../../constants/icons';
-import styles from './styles';
+import styled from 'styles';
+import { zIndexes } from 'styles/variables';
 
 interface IAlert {
   id: string;
@@ -25,6 +24,83 @@ interface IAlertMessageProps {
   expandDetail(id: string | number): void;
 }
 
+const alertContainerHeight = '40px';
+const alertIconWidth = alertContainerHeight;
+const fontSize = '1em';
+
+const StyledAlert = styled.div`
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  padding: 0;
+  border-radius: inherit;
+  margin: 0;
+  box-shadow: 1px 1px 10px 1px;
+  z-index: ${zIndexes.get('above-siblings')};
+
+  .button-group {
+    padding: 2px;
+    margin: 0;
+    button {
+      min-width: auto;
+    }
+  }
+
+  .close::before {
+    font-size: 1rem;
+  }
+`;
+
+const StyledAlertContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: ${alertContainerHeight};
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: ${alertIconWidth};
+    height: ${alertIconWidth};
+    color: #fff;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__title {
+    display: flex;
+    flex: 1;
+    margin-left: 10px;
+    font-size: ${fontSize};
+  }
+
+  &__details {
+    display: none;
+    padding: 10px 0 {
+      left: 5px;
+    }
+    margin-left: ${alertIconWidth};
+    white-space: pre-line;
+    word-wrap: break-word;
+  }
+
+  &--is-expanded {
+    height: auto;
+    .alert-details {
+      display: flex;
+      width: auto;
+      overflow: hidden;
+    }
+  }
+`;
+
 const AlertMessage = ({
   id,
   type,
@@ -35,48 +111,30 @@ const AlertMessage = ({
   isExpanded,
   className
 }: IAlertMessageProps) => (
-  <div className={classNames('alert', type, className)} css={styles.Alert}>
-    <div
-      className={classNames('alert-content', { 'is-expanded': isExpanded })}
-      css={[styles.AlertContent, isExpanded && styles.AlertContentExpanded]}
+  <StyledAlert className={classNames('alert', type, className)}>
+    <StyledAlertContent
+      className={classNames('alert-content', {
+        'alert-content--is-expanded': isExpanded
+      })}
     >
-      <div
-        className={classNames('alert-top-content')}
-        css={styles.AlertTopContent}
-      >
-        <div
-          className={classNames('alert-icon')}
-          css={[styles.AlertIcon, styles[type]]}
-        />
-        <div className={classNames('alert-title')} css={styles.AlertTitle}>
-          {message}
-        </div>
-        <ButtonGroup css={css(styles.ButtonGroup)}>
+      <div className={classNames('alert-content__top')}>
+        <div className={classNames('alert-content__icon')} />
+        <div className={classNames('alert-content__title')}>{message}</div>
+        <ButtonGroup>
           {detail && !isExpanded && (
-            <Button css={css(styles.Button)} onClick={() => expandDetail(id)}>
-              Details
-            </Button>
+            <Button onClick={() => expandDetail(id)}>Details</Button>
           )}
           <Button
             className={classNames('close')}
-            css={[styles.Button, styles.Close]}
             aria-label="Close Alert"
             icon={Icons.cross}
             onClick={() => remove(id)}
           />
         </ButtonGroup>
       </div>
-      <div
-        className={classNames('alert-details')}
-        css={[
-          styles.AlertDetails,
-          isExpanded && styles.AlertContentExpandedDetails
-        ]}
-      >
-        {detail}
-      </div>
-    </div>
-  </div>
+      <div className={classNames('alert-content__details')}>{detail}</div>
+    </StyledAlertContent>
+  </StyledAlert>
 );
 
 interface IAlertProps {
@@ -90,6 +148,16 @@ interface IAlertProps {
 interface IAlertState {
   expandedAlerts: Array<string | number>;
 }
+
+const StyledContainer = styled.div`
+  position: relative;
+  top: 50px;
+  left: 50%;
+  width: 50%;
+  height: ${alertContainerHeight};
+  transform: translateX(-50%);
+  z-index: ${zIndexes.get('alert')};
+`;
 
 class Alert extends React.Component<IAlertProps, IAlertState> {
   constructor(props: IAlertProps) {
@@ -113,11 +181,7 @@ class Alert extends React.Component<IAlertProps, IAlertState> {
     }
 
     return (
-      <div
-        id={id}
-        className={classNames('alert-container')}
-        css={styles.AlertContainer}
-      >
+      <StyledContainer id={id} className={classNames('alert-container')}>
         {alerts.slice(0, 1).map((a) => (
           <AlertMessage
             key={a.id}
@@ -128,7 +192,7 @@ class Alert extends React.Component<IAlertProps, IAlertState> {
             remove={actions.dismissAlertMessage}
           />
         ))}
-      </div>
+      </StyledContainer>
     );
   }
 }

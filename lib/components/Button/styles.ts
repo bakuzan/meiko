@@ -92,13 +92,20 @@ function getThemeStyles(
   color: string,
   backgroundColorHovered: string
 ) {
-  return {
-    backgroundColor,
-    color,
-    ':hover': {
-      backgroundColor: backgroundColorHovered
+  return `
+    background-color: ${backgroundColor};
+    color: ${color};
+    :hover {
+      background-color: ${backgroundColorHovered};
     }
-  };
+  `;
+  // return {
+  //   backgroundColor,
+  //   color,
+  //   ':hover': {
+  //     backgroundColor: backgroundColorHovered
+  //   }
+  // };
 }
 
 export function theming(btnStyle: string, theme: ITheme) {

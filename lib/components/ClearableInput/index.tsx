@@ -5,7 +5,7 @@ import * as PropTypes from 'prop-types';
 import { Button } from '../Button';
 import Icons from '../../constants/icons';
 import { debounce } from '../../utils';
-import './ClearableInput.scss';
+import styles from './styles';
 
 interface IClearableInputProps extends React.HTMLProps<HTMLInputElement> {
   clearInputButtonClass?: string;
@@ -57,6 +57,7 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
     } = this.props;
     const isTextInput = type === 'text';
     const isNumberInput = type === 'number';
+    const isDateInput = type === 'date';
     const hasMaxNumber = !isNaN(props.max as any);
     const notClearable = !isTextInput;
 
@@ -82,19 +83,28 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
           value={value}
           maxLength={maxLength}
           onChange={onChange}
+          css={[
+            styles.ClearableInputInput,
+            notClearable && styles.ClearableInputInputNotClearable,
+            isDateInput && styles.ClearableInputDateInput
+          ]}
           {...props}
         />
         <label htmlFor={name}>{label}</label>
         {!!value && isTextInput && (
           <Button
             className={classNames('clear-input', clearInputButtonClass)}
+            css={css(styles.ClearableInputClearButton)}
             btnSize="small"
             icon={Icons.cross}
             onClick={this.clearAndFocusInput}
           />
         )}
         {(!!maxLength || hasMaxNumber) && (
-          <span className={classNames('clearable-input-count')}>
+          <span
+            className={classNames('clearable-input-count')}
+            css={styles.ClearableInputCount}
+          >
             {maxLength &&
               isTextInput &&
               `${(value as string).length}/${maxLength}`}

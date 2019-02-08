@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import classNames from 'classnames';
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
@@ -13,7 +11,9 @@ import { KeyCodes } from '../../constants/enums';
 import { isNumber, getTimeoutSeconds } from '../../utils';
 import { IAutocompleteOption } from 'types';
 
+import styled from 'styles';
 import styles from './styles';
+import { zIndexes } from 'styles/variables';
 
 interface IAutocompleteInputProps {
   label?: string;
@@ -36,6 +36,40 @@ interface IAutocompleteInputState {
   inUse: boolean;
   activeSuggestion: number;
 }
+
+const Highlighter = styled.span`
+  white-space: pre-line;
+
+  .highlight {
+    font-weight: bold;
+  }
+`;
+
+const StyledContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex: 1 1 100%;
+
+  .autocomplete-menu {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 250px;
+    padding: 5px;
+    margin: 0;
+    overflow: auto;
+    list-style-type: none;
+    z-index: ${zIndexes.get('menu')};
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+    transform: translateY(100%);
+  }
+
+  .no-suggestions-item {
+    font-size: 13.33px;
+    text-align: center;
+  }
+`;
 
 class AutocompleteInput extends React.Component<
   IAutocompleteInputProps,
@@ -141,16 +175,13 @@ class AutocompleteInput extends React.Component<
 
     const length = this.props.filter.length;
     return (
-      <span
-        className={classNames('autocomplete-suggestion-text')}
-        css={styles.AutocompleteSuggestionText}
-      >
+      <Highlighter className={classNames('autocomplete-suggestion-text')}>
         {value.slice(0, match.index)}
-        <span className={classNames('highlight')} css={styles.Highlight}>
+        <span className={classNames('highlight')}>
           {value.slice(match.index, match.index + length)}
         </span>
         {value.slice(match.index + length)}
-      </span>
+      </Highlighter>
     );
   }
 
@@ -205,7 +236,7 @@ class AutocompleteInput extends React.Component<
     const hasSuggestions = !!autocomplete.length;
 
     return (
-      <div className={classNames('autocomplete')} css={styles.Autocomplete}>
+      <StyledContainer className={classNames('autocomplete')}>
         <ClearableInput
           label={label}
           name={attr}
@@ -223,7 +254,6 @@ class AutocompleteInput extends React.Component<
               'autocomplete-menu',
               'list column one'
             )}
-            css={styles.AutocompleteMenu}
           >
             {hasSuggestions &&
               autocomplete.map((item, index) => (
@@ -247,7 +277,6 @@ class AutocompleteInput extends React.Component<
                   'no-suggestions-item',
                   'active'
                 )}
-                css={styles.NoSuggestionsItem}
               >
                 {!!noSuggestionsItem ? (
                   noSuggestionsItem
@@ -258,7 +287,7 @@ class AutocompleteInput extends React.Component<
             )}
           </ul>
         )}
-      </div>
+      </StyledContainer>
     );
   }
 }

@@ -10,7 +10,7 @@ module.exports = ({ config }) => {
       {
         loader: require.resolve('babel-loader'),
         options: {
-          plugins: [require.resolve('babel-plugin-emotion')]
+          plugins: [require.resolve('babel-plugin-styled-components')]
         }
       },
       {
