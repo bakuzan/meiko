@@ -20,12 +20,24 @@ const step = (name, fn) => async () => {
 
 const buildLib = step('commonjs modules', () =>
   execa.shell(
-    `npx babel ${libRoot} --out-dir ${outputRoot} --extensions=.ts,.tsx,.js --presets @babel/preset-typescript --copy-files --env-name "lib"`,
+    `npx babel ${libRoot} --out-dir ${outputRoot} --extensions=.ts,.tsx,.js --presets @babel/preset-typescript --copy-files --env-name "lib" --source-maps`,
     {
       stdio
     }
   )
 );
+
+// const emitDeclarations = step('typescript declarations', () =>
+//   execa.shell(
+//     `tsc --emitDeclarationOnly --declarationDir ${path.join(
+//       outputRoot,
+//       'types'
+//     )}`,
+//     {
+//       stdio
+//     }
+//   )
+// );
 
 console.log(green('Building library\n'));
 

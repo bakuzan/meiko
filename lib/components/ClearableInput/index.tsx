@@ -5,11 +5,43 @@ import * as PropTypes from 'prop-types';
 import { Button } from '../Button';
 import Icons from '../../constants/icons';
 import { debounce } from '../../utils';
-import styles from './styles';
+
+import styled from 'styles';
+import { StyledControlContainer } from 'styles/generic';
 
 interface IClearableInputProps extends React.HTMLProps<HTMLInputElement> {
   clearInputButtonClass?: string;
 }
+
+const StyledInput = styled.input`
+  display: flex;
+  flex: 1 0 100%;
+  ${(props) => props.type !== 'text' && 'padding-right: 1.5em !important;'}
+  ${(props) =>
+    props.type === 'date' &&
+    `
+    &::-webkit-calendar-picker-indicator,
+    &::-webkit-inner-spin-button,
+    &::-webkit-clear-button {
+      appearance: none;
+      display: none;
+    }
+    `}
+`;
+
+const StyledButton = styled(Button)`
+  position: relative;
+  right: 30px;
+`;
+
+const StyledSpan = styled.span`
+  position: absolute;
+  right: 10px;
+  bottom: -5px;
+  top: auto;
+  left: auto;
+  font-size: 0.5rem;
+`;
 
 class ClearableInput extends React.Component<IClearableInputProps, any> {
   static defaultProps = {
@@ -33,14 +65,15 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
   constructor(props: IClearableInputProps) {
     super(props);
 
+    this.inputField = React.createRef();
     this.clearAndFocusInput = this.clearAndFocusInput.bind(this);
   }
 
   clearAndFocusInput() {
-    this.props.onChange({
-      target: { name: this.props.name, value: '' }
-    } as any);
-    debounce(() => this.inputField.focus(), 100);
+    const target = { name: this.props.name, value: '' };
+    const fakeEvent = { target } as any;
+    this.props.onChange(fakeEvent);
+    debounce(() => this.inputField.current.focus(), 100);
   }
 
   render() {
@@ -52,17 +85,15 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
       name,
       value,
       maxLength,
-      onChange,
       ...props
     } = this.props;
     const isTextInput = type === 'text';
     const isNumberInput = type === 'number';
-    const isDateInput = type === 'date';
     const hasMaxNumber = !isNaN(props.max as any);
     const notClearable = !isTextInput;
 
     return (
-      <div
+      <StyledControlContainer
         className={classNames(
           className,
           'clearable-input',
@@ -73,8 +104,8 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
           }
         )}
       >
-        <input
-          ref={(input) => (this.inputField = input)}
+        <StyledInput
+          ref={this.inputField}
           placeholder=" "
           autoComplete="off"
           type={type}
@@ -82,36 +113,27 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
           name={name}
           value={value}
           maxLength={maxLength}
-          onChange={onChange}
-          css={[
-            styles.ClearableInputInput,
-            notClearable && styles.ClearableInputInputNotClearable,
-            isDateInput && styles.ClearableInputDateInput
-          ]}
           {...props}
+          as={'input'}
         />
         <label htmlFor={name}>{label}</label>
         {!!value && isTextInput && (
-          <Button
+          <StyledButton
             className={classNames('clear-input', clearInputButtonClass)}
-            css={css(styles.ClearableInputClearButton)}
             btnSize="small"
             icon={Icons.cross}
             onClick={this.clearAndFocusInput}
           />
         )}
         {(!!maxLength || hasMaxNumber) && (
-          <span
-            className={classNames('clearable-input-count')}
-            css={styles.ClearableInputCount}
-          >
+          <StyledSpan className={classNames('clearable-input-count')}>
             {maxLength &&
               isTextInput &&
               `${(value as string).length}/${maxLength}`}
             {hasMaxNumber && isNumberInput && `out of ${props.max || '?'}`}
-          </span>
+          </StyledSpan>
         )}
-      </div>
+      </StyledControlContainer>
     );
   }
 }

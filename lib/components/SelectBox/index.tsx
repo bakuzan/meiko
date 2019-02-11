@@ -3,7 +3,9 @@ import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { ISelectBoxOption } from 'types';
-import './SelectBox.scss';
+
+import styled from 'styles';
+import { StyledControlContainer } from 'styles/generic';
 
 interface ISelectBoxProps {
   name: string;
@@ -14,6 +16,16 @@ interface ISelectBoxProps {
   onSelect(e: React.ChangeEvent<HTMLSelectElement>): void;
 }
 
+const StyledSelect = styled.select`
+  display: flex;
+  justify-content: center;
+  min-width: 100px;
+  min-height: 25px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+`;
+
 const SelectBox = ({
   name,
   value,
@@ -22,8 +34,10 @@ const SelectBox = ({
   text,
   options
 }: ISelectBoxProps) => (
-  <div className={classNames('has-float-label', 'select-container')}>
-    <select
+  <StyledControlContainer
+    className={classNames('has-float-label', 'select-container')}
+  >
+    <StyledSelect
       className={classNames('select-box')}
       name={name}
       value={value}
@@ -35,9 +49,9 @@ const SelectBox = ({
           {item.text}
         </option>
       ))}
-    </select>
+    </StyledSelect>
     <label htmlFor={name}>{text}</label>
-  </div>
+  </StyledControlContainer>
 );
 
 SelectBox.defaultProps = {

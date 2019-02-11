@@ -6,7 +6,7 @@ import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
 
 import Icons from 'constants/icons';
 import { Button } from 'components/Button';
-import { CenterDecorator, ThemeDecorator } from 'stories';
+import { CenterDecorator } from 'stories';
 
 const actions = {
   onClick: action('clicked')
@@ -18,7 +18,6 @@ storiesOf('Button', module)
   .addDecorator(withInfo)
   .addDecorator(withKnobs)
   .addDecorator(CenterDecorator)
-  .addDecorator(ThemeDecorator)
   .addDecorator((storyFn) => {
     return (
       <div>

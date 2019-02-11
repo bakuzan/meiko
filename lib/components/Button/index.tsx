@@ -74,12 +74,12 @@ export const Button = styled(PlainButton)`
   ${(props) =>
     props.icon &&
     `
-    flex: '0 1 0%',
-    padding: '3px 6px',
-    margin: '2px 5px',
-    textDecoration: 'none',
+    flex: 0 1 0%;
+    padding: 3px 6px;
+    margin: 2px 5px;
+    textDecoration: none;
 
-    :before {
+    ::before {
       content: attr(icon);
       font-size: 1.5rem;
       :not(:disabled) {
@@ -90,7 +90,7 @@ export const Button = styled(PlainButton)`
 ${(props) =>
   props.btnSize === 'small' &&
   `
-    :before {
+    ::before {
       font-size: 0.8rem;
     }
 `}

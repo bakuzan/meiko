@@ -42,7 +42,7 @@ storiesOf('ClearableInput', module)
           'text',
           'Type'
         ),
-        label: text('Label', '', 'General'),
+        label: text('Label', undefined, 'General'),
         disabled: boolean('Disabled', false, 'General'),
         maxLength: number('Max Length', 140, 'Type-Text'),
         max: number('Max Number', 0, 'Type-Number')

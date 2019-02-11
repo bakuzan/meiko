@@ -1,17 +1,15 @@
-@import './partials/_variables';
-@import './partials/_mixins';
+import styled from './index';
 
-input,
-select {
-  background-color: inherit;
-}
-
-.input-container,
-.select-container {
+export const StyledControlContainer = styled.div`
   flex: 1;
   padding: 5px;
   min-height: 35px;
   box-sizing: content-box;
+
+  input,
+  select {
+    background-color: inherit;
+  }
 
   select {
     width: 100%;
@@ -32,11 +30,11 @@ select {
       bottom: auto;
     }
   }
-}
+`;
 
-.radio-group {
+export const RadioGroup = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 5px;
-}
+`;

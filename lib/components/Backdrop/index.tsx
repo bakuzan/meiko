@@ -8,6 +8,7 @@ import { zIndexes } from 'styles/variables';
 
 interface IBackdropProps {
   id?: string;
+  className?: string;
   onClickOrKey(): void;
 }
 
@@ -41,13 +42,13 @@ class Backdrop extends React.Component<IBackdropProps, any> {
   }
 
   render() {
-    const { id } = this.props;
+    const { id, className } = this.props;
     const backdropId = !!id ? `${id}-backdrop` : undefined;
 
     return (
       <div
         id={backdropId}
-        className={classNames('backdrop')}
+        className={classNames('backdrop', className)}
         role="button"
         tabIndex={0}
         onClick={this.handleClose}

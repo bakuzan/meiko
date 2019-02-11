@@ -1,14 +1,12 @@
 %form-specific {
-  :global {
-    .input-container,
-    .select-container {
-      width: 100%;
-    }
+  .input-container,
+  .select-container {
+    width: 100%;
+  }
 
-    .button-group {
-      width: 100%;
-      justify-content: flex-end;
-    }
+  .button-group {
+    width: 100%;
+    justify-content: flex-end;
   }
 }
 

@@ -22,7 +22,7 @@ const globals = {
   react: 'React',
   'react-dom': 'ReactDOM',
   'prop-types': 'PropTypes',
-  'styled-components': 'styled'
+  'styled-components': 'styledComponents'
 };
 const extensions = ['.js', '.ts', '.tsx', '.scss'];
 

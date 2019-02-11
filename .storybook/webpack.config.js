@@ -1,6 +1,6 @@
 const path = require('path');
 
-module.exports = ({ config }) => {
+module.exports = (_, __, config) => {
   const includePath = path.resolve(__dirname, '../lib');
 
   config.module.rules.push({
