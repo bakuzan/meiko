@@ -28,15 +28,9 @@ const buildLib = step('commonjs modules', () =>
 );
 
 // const emitDeclarations = step('typescript declarations', () =>
-//   execa.shell(
-//     `tsc --emitDeclarationOnly --declarationDir ${path.join(
-//       outputRoot,
-//       'types'
-//     )}`,
-//     {
-//       stdio
-//     }
-//   )
+//   execa.shell(`tsc --emitDeclarationOnly`, {
+//     stdio
+//   })
 // );
 
 console.log(green('Building library\n'));
