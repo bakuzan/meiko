@@ -25,10 +25,10 @@ const {
 } = styledComponents as styledComponents.ThemedStyledComponentsModule<ITheme>;
 
 const GlobalBaseStyle = createGlobalStyle`
-  --app-font-size: 16px;
-  --app-font-family: 'Roboto mono', 'Lucida Console', 'Courier New', monospace;
-
   body {
+    --app-font-size: 16px;
+    --app-font-family: 'Roboto mono', 'Lucida Console', 'Courier New', monospace;
+
     margin: 0;
     padding: 0;
     font-family: var(--app-font-family);

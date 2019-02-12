@@ -13,6 +13,17 @@
     "@babel/preset-react"
   ],
   "plugins": [
+    [
+      "babel-plugin-relative-path-import",
+      {
+        "paths": [
+          {
+            "rootPathPrefix": "",
+            "rootPathSuffix": "./lib"
+          }
+        ]
+      }
+    ],
     "babel-plugin-styled-components",
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-export-namespace-from",

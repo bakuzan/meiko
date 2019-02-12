@@ -1,5 +1,8 @@
 {
   "extends": ["tslint:latest", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["./modules"]
+  },
   "rules": {
     "arrow-return-shorthand": true,
     "callable-types": true,

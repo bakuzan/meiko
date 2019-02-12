@@ -10,7 +10,7 @@ import SidebarLinkTemplate, {
 } from './SidebarLinkTemplate';
 import './Sidebar.scss';
 
-interface ISidebarProps {
+export interface ISidebarProps {
   id?: string;
   className?: string;
   isHidden: boolean;

@@ -1,4 +1,4 @@
-const { green, cyan, magenta, red } = require('chalk');
+const { blue, green, cyan, magenta, red } = require('chalk');
 
 const path = require('path');
 const fse = require('fs-extra');
@@ -8,6 +8,7 @@ const stdio = ['pipe', 'pipe', 'inherit'];
 
 const outputRoot = path.join(__dirname, '../modules/');
 const libRoot = path.join(__dirname, '../lib/');
+const typesRoot = path.join(__dirname, '../dist/out-tsc');
 
 const clean = async (dir) => fse.existsSync(dir) && fse.remove(dir);
 
@@ -18,25 +19,22 @@ const step = (name, fn) => async () => {
   console.log(magenta('Built: ') + green(name));
 };
 
-const buildLib = step('commonjs modules', () =>
-  execa.shell(
-    `npx babel ${libRoot} --out-dir ${outputRoot} --extensions=.ts,.tsx,.js --presets @babel/preset-typescript --copy-files --env-name "lib" --source-maps`,
-    {
-      stdio
-    }
-  )
-);
+const shell = (cmd) => execa.shell(cmd, { stdio: ['pipe', 'pipe', 'inherit'] });
 
-// const emitDeclarations = step('typescript declarations', () =>
-//   execa.shell(`tsc --emitDeclarationOnly`, {
-//     stdio
-//   })
-// );
+const buildLib = step('Library', async () => {
+  await shell(
+    `npx babel ${libRoot} --out-dir ${outputRoot} --extensions=.ts,.tsx,.js --presets @babel/preset-typescript --plugins babel-plugin-relative-path-import --copy-files --source-maps --env-name "lib"`
+  );
+  console.log(blue('Built modules'));
+  await shell(`tsc --emitDeclarationOnly`);
 
-console.log(green('Building library\n'));
+  console.log(blue('Generated declarations'));
+  await shell(`cpy ${typesRoot} ${outputRoot}`);
+  console.log(blue('Copied declarations'));
+});
 
 buildLib()
-  .then(() => console.log(green('Built library\n')))
+  .then(() => console.log(green('Done\n')))
   .catch((err) => {
     if (err) {
       console.error(red(err.stack || err.toString()));

@@ -8,7 +8,7 @@ import * as vars from 'styles/variables';
 import { theming } from './styles';
 // import { styles, bgStyles, theming } from './styles';
 
-interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
+export interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
   btnStyle?: string;
   btnSize?: string;
   link?: boolean;

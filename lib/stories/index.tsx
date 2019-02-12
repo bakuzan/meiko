@@ -2,7 +2,6 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Example from 'components/Example';
-
 import '../styles/index.scss';
 
 storiesOf('Example', module)

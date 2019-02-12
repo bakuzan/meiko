@@ -1,21 +1,4 @@
-interface IUrls {
-  build: (path: string, params: object) => string;
-  images: IImageUrls;
-  graphql: {
-    base: string;
-  };
-  imgur: {
-    postFile: string;
-    postUrl: string;
-  };
-  malSearch: string;
-  sunrise_sunset: string;
-}
-interface IImageUrls {
-  deadImage: string;
-}
-
-const standardUrls: IUrls = {
+const standardUrls = {
   build: (path: string, params: object) => {
     let hasSearch = false;
     for (const k in params) {

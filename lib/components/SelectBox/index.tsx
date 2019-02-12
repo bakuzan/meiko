@@ -7,7 +7,7 @@ import { ISelectBoxOption } from 'types';
 import styled from 'styles';
 import { StyledControlContainer } from 'styles/generic';
 
-interface ISelectBoxProps {
+export interface ISelectBoxProps {
   name: string;
   value: string | number | string[];
   disabled: boolean;

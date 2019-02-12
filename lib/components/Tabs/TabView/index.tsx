@@ -5,7 +5,7 @@ import './TabView.scss';
 
 type ChildrenRenderProps = (isActive: boolean) => JSX.Element;
 
-interface ITabViewProps {
+export interface ITabViewProps {
   name: string;
   displayName?: string;
   isActive: boolean;

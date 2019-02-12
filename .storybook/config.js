@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { checkA11y } from '@storybook/addon-a11y';
-import { ThemeProvider } from 'styles';
+import { ThemeProvider, GlobalBaseStyle } from 'styles';
 
 const themeOne = {
   baseBackground: '#ffffff',
@@ -19,12 +19,17 @@ const themeOne = {
   accentColour: '#fff'
 };
 
-export const ThemeDecorator = (storyFn) => (
-  <ThemeProvider theme={themeOne}>{storyFn()}</ThemeProvider>
+export const AppDecorator = (storyFn) => (
+  <ThemeProvider theme={themeOne}>
+    <React.Fragment>
+      <GlobalBaseStyle />
+      {storyFn()}
+    </React.Fragment>
+  </ThemeProvider>
 );
 
 addDecorator(checkA11y);
-addDecorator(ThemeDecorator);
+addDecorator(AppDecorator);
 addParameters({ info: { inline: false } });
 
 const req = require.context('../lib/stories', true, /\.tsx$/);

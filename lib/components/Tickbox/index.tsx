@@ -3,7 +3,7 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import './Tickbox.scss';
 
-interface ITickboxProps {
+export interface ITickboxProps {
   className?: string;
   name: string;
   checked: boolean;

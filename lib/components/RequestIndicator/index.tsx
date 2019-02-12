@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import './RequestIndicator.scss';
 
-interface IRequestIndicatorProps {
+export interface IRequestIndicatorProps {
   hide: boolean;
   requestInFlight: boolean;
 }

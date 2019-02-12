@@ -6,7 +6,7 @@ import './Grid.scss';
 import { isString } from '../../utils';
 import { IJSXChildren } from 'types';
 
-interface IGridProps extends React.HTMLProps<HTMLUListElement> {
+export interface IGridProps extends React.HTMLProps<HTMLUListElement> {
   noItemsText?: boolean | string;
   items: any[];
   children(item: any, index: number): IJSXChildren;
