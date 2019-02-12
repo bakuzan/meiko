@@ -7,6 +7,11 @@ export interface ICalendarState {
   selectedDate: string;
   isMonthView: boolean;
 }
+export interface IViewOption {
+  key: string;
+  text: string | number;
+  optionType: ViewOptionEnum;
+}
 
 export const mapToViewOption = (optionType: ViewOptionEnum) => (
   text: string | number
@@ -24,7 +29,7 @@ export const displayMonthAndYear = (d: string | number | Date) =>
 export const getMonthsForDate = () =>
   Strings.monthNames.map(mapToViewOption(ViewOptionEnum.MONTH));
 
-export const getDaysForDate = (date: string | number | Date) => {
+export const getDaysForDate = (date: string | number | Date): IViewOption[] => {
   const d = new Date(date);
   const monthLength = DateUtils.getDaysInMonthForDate(d);
   const firstOfMonth = DateUtils.getFirstDateOfMonth(d);

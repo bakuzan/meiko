@@ -6,7 +6,8 @@ import { Button } from '../Button';
 import Strings from '../../constants/strings';
 import { createListeners } from '../../utils';
 import { IJSXChildren } from 'types';
-import './Dialog.scss';
+
+import { StyledDialog, DialogTitle, DialogCustomContent } from './styles';
 
 interface IDialogProps {
   name?: string;
@@ -129,15 +130,23 @@ class MeikoDialog extends React.Component<IDialogProps, any> {
     const hasAction = !!this.props.action;
 
     return (
-      <dialog ref={this.handleRef} style={dialogStyle} className={dialogClass}>
+      <StyledDialog
+        ref={this.handleRef}
+        style={dialogStyle}
+        className={dialogClass}
+      >
         <div className={classNames('dialog-content')}>
           <DialogContent name={this.props.name} isForm={this.props.isForm}>
             {hasTitle && (
-              <h4 className={classNames('dialog-title')}>{this.props.title}</h4>
+              <DialogTitle className={classNames('dialog-title')}>
+                {this.props.title}
+              </DialogTitle>
             )}
-            <div className={classNames('dialog-content-custom')}>
+            <DialogCustomContent
+              className={classNames('dialog-content-custom')}
+            >
               {this.props.children}
-            </div>
+            </DialogCustomContent>
             <div className="button-group">
               {hasAction && (
                 <Button
@@ -156,7 +165,7 @@ class MeikoDialog extends React.Component<IDialogProps, any> {
             </div>
           </DialogContent>
         </div>
-      </dialog>
+      </StyledDialog>
     );
   }
 }

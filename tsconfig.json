@@ -5,7 +5,7 @@
     "paths": {
       "*": ["lib/*"]
     },
-    "outDir": "./dist/out-tsc",
+    "outDir": "./modules",
     "sourceMap": true,
     "declaration": true,
     "module": "es2015",

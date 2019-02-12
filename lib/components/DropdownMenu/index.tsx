@@ -6,11 +6,10 @@ import { Button } from '../Button';
 import Portal from '../Portal';
 import Backdrop from '../Backdrop';
 import { Strings, Icons } from '../../constants/index';
-import { PositionEnum } from 'constants/enums';
+import { PositionEnum } from '../../constants/enums';
 import { getElementCoordinates } from '../../utils';
-import { IElementCoordinates, IJSXChildren } from 'types';
-
-import './DropdownMenu.scss';
+import { IElementCoordinates, IJSXChildren } from '../../types';
+import { StyledContainer, StyledDropdownList, DropdownArrow } from './styles';
 
 interface IDropdownMenuProps {
   id?: string;
@@ -62,8 +61,8 @@ class DropdownMenu extends React.Component<
     this.setState({ isDropdownOpen: false, position: null });
   }
 
-  toggleDropdown(e) {
-    const elementPosition = getElementCoordinates(e.target);
+  toggleDropdown(e: React.MouseEvent<HTMLButtonElement>) {
+    const elementPosition = getElementCoordinates(e.target as HTMLElement);
 
     this.setState((prev) => {
       const isDropdownOpen = !prev.isDropdownOpen;
@@ -92,7 +91,10 @@ class DropdownMenu extends React.Component<
         : { top: `${top}px` };
 
     return (
-      <div id={id} className={classNames('dropdown-menu-container')}>
+      <StyledContainer
+        id={id}
+        className={classNames('dropdown-menu-container')}
+      >
         <Button
           id={togglerId}
           className={classNames('dropdown-toggler')}
@@ -102,19 +104,20 @@ class DropdownMenu extends React.Component<
         />
         {this.state.isDropdownOpen && (
           <Portal querySelector={portalTarget}>
-            <ul
+            <StyledDropdownList
               id={`${id}-menu`}
               className={classNames('dropdown-menu', align)}
-              style={menuStyle}
               role="menu"
+              style={menuStyle}
+              align={align}
             >
-              <li className={classNames('dropdown-arrow')} />
+              <DropdownArrow className={classNames('dropdown-arrow')} />
               {this.props.children}
-            </ul>
+            </StyledDropdownList>
             <Backdrop id={id} onClickOrKey={this.handleClose} />
           </Portal>
         )}
-      </div>
+      </StyledContainer>
     );
   }
 }

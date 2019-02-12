@@ -1,25 +1,24 @@
-import styled from '../../styles';
 import classNames from 'classnames';
-import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
+import { getButtonClasses, IButtonStyleProps } from './getButtonClasses';
+import styled from '../../styles';
 import * as col from '../../styles/colours';
 import * as vars from '../../styles/variables';
-import { theming } from './styles';
-// import { styles, bgStyles, theming } from './styles';
+import ripple from '../../styles/ripple';
 
-export interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
-  btnStyle?: string;
-  btnSize?: string;
-  link?: boolean;
-  rounded?: boolean;
-  depress?: boolean;
-  icon?: string;
-}
+export interface IButtonProps
+  extends IButtonStyleProps,
+    React.HTMLProps<HTMLButtonElement> {}
 
-const PlainButton: React.SFC<IButtonProps> = ({ children, ...props }) => (
-  <button {...props}>{children}</button>
-);
+const PlainButton: React.SFC<IButtonProps> = ({ children, link, ...props }) => {
+  const classes = getButtonClasses({ ...props, link });
+  return (
+    <button {...props} className={classes}>
+      {children}
+    </button>
+  );
+};
 
 export const Button = styled(PlainButton)`
     appearance: none;
@@ -54,6 +53,7 @@ export const Button = styled(PlainButton)`
       !props.icon &&
       !props.link &&
       `
+      ${ripple}
       min-width: 100px;
       min-height: 25px;
       text-decoration: none;
@@ -61,7 +61,7 @@ export const Button = styled(PlainButton)`
   ${(props) =>
     props.link &&
     `
-    color: ${vars.anchorColour},
+    color: ${vars.anchorColour};
     text-decoration: underline;
     :focus,
     :active {
@@ -94,22 +94,11 @@ ${(props) =>
       font-size: 0.8rem;
     }
 `}
-${(props) => theming(props.btnStyle, props.theme)}
 `;
 
 Button.defaultProps = {
   type: 'button'
 };
-
-// Button.propTypes = {
-//   type: PropTypes.string,
-//   btnStyle: PropTypes.oneOf(['primary', 'accent']),
-//   btnSize: PropTypes.oneOf(['small']),
-//   rounded: PropTypes.bool,
-//   depress: PropTypes.bool,
-//   link: PropTypes.bool,
-//   onClick: PropTypes.func
-// };
 
 export function withButtonisation(WrappedComponent: React.SFC<IButtonProps>) {
   return Button.withComponent(WrappedComponent);

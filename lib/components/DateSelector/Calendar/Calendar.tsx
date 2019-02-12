@@ -9,7 +9,13 @@ import { ViewOptionEnum } from '../../../constants/enums';
 import * as DateUtils from '../../../utils/date';
 import * as CalendarUtils from './CalendarUtils';
 
-import './Calendar.scss';
+import {
+  StyledContainer,
+  ViewItem,
+  ViewContainer,
+  ViewControls,
+  ViewShiftButton
+} from './styles';
 
 const { DateFormat } = DateUtils;
 
@@ -58,7 +64,10 @@ class Calendar extends React.Component<
     this.handleViewOptionSelect = this.handleViewOptionSelect.bind(this);
   }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
+  static getDerivedStateFromProps(
+    nextProps: ICalendarProps,
+    prevState: CalendarUtils.ICalendarState
+  ) {
     const selectedDate = DateFormat.formatDateForInput(nextProps.selected);
     const prevSelected = prevState.selectedDate;
     if (selectedDate !== prevSelected) {
@@ -76,7 +85,7 @@ class Calendar extends React.Component<
     this.setState((prev) => ({ isMonthView: !prev.isMonthView }));
   }
 
-  handleViewShift(direction) {
+  handleViewShift(direction: number) {
     return () => {
       if (this.props.disabled) {
         return;
@@ -90,7 +99,7 @@ class Calendar extends React.Component<
     };
   }
 
-  handleViewOptionSelect(option) {
+  handleViewOptionSelect(option: CalendarUtils.IViewOption) {
     if (this.props.disabled) {
       return;
     }
@@ -101,7 +110,7 @@ class Calendar extends React.Component<
       const viewDate = new Date(
         oldViewDate.getFullYear(),
         oldViewDate.getMonth(),
-        option.text
+        option.text as number
       );
       this.setState({ viewDate });
       this.props.onSelect(DateFormat.formatDateForInput(viewDate));
@@ -125,14 +134,14 @@ class Calendar extends React.Component<
       : CalendarUtils.getMonthsForDate();
 
     return (
-      <div
+      <StyledContainer
         id={`${id}-calendar`}
         className={classNames(className, 'mei-calendar', {
           'read-only': isReadOnly
         })}
       >
-        <div className={classNames('mei-calendar-view-controls')}>
-          <Button
+        <ViewControls className={classNames('mei-calendar-view-controls')}>
+          <ViewShiftButton
             className={classNames('view-shift-button', 'ripple')}
             icon={Icons.left}
             onClick={this.handleViewShift(PREV)}
@@ -141,13 +150,13 @@ class Calendar extends React.Component<
             {isMonthView && CalendarUtils.displayMonthAndYear(viewDate)}
             {!isMonthView && CalendarUtils.displayYearOnly(viewDate)}
           </Button>
-          <Button
+          <ViewShiftButton
             className={classNames('view-shift-button', 'ripple')}
             icon={Icons.right}
             onClick={this.handleViewShift(NEXT)}
           />
-        </div>
-        <div className={classNames('mei-calendar-view')}>
+        </ViewControls>
+        <ViewContainer className={classNames('mei-calendar-view')}>
           {isMonthView &&
             viewHeaders.map((header) => (
               <div
@@ -171,7 +180,7 @@ class Calendar extends React.Component<
             const disableDate = isDummyDay || isOutOfRange;
             const title = isOutOfRange ? 'Out of range' : '';
             return (
-              <div
+              <ViewItem
                 key={option.key}
                 className={classNames('mei-calendar-view-option', {
                   day: isMonthView,
@@ -189,11 +198,11 @@ class Calendar extends React.Component<
                 >
                   {option.text}
                 </Button>
-              </div>
+              </ViewItem>
             );
           })}
-        </div>
-      </div>
+        </ViewContainer>
+      </StyledContainer>
     );
   }
 }

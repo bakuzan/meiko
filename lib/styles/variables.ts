@@ -1,4 +1,4 @@
-import Icons from 'constants/icons';
+import Icons from '../constants/icons';
 
 import * as col from './colours';
 
@@ -76,10 +76,17 @@ export const uiMessaging = new Map([
 ]);
 
 export const darkenAmount = '5%';
+export const buttonIconHoverDarkenPercentage = darkenAmount;
 
 // Component Variables
 export const anchorColour = col.mostlyBlue;
 export const anchorColourHover = col.mostlyBlue; // lighten(col.mostlyBlue, darkenAmount * 3);
+
+export const calendarButtonBorderColour = col.grey94;
+export const calendarSelectedDayBackgroundColour = col.darkViolet;
+export const calendarSelectedDayFontColour = col.white;
+export const calendarViewShiftButtonColour = col.white;
+export const calendarViewShiftButtonColourHover = col.grey95;
 
 // //TEXT:
 // $font-sizes: 10 12 14 15 16 18 20 22 24 25 28 30 32 34 35 36 38 40 42;

@@ -14,6 +14,7 @@ import Grid from './Grid';
 import Header from './Header';
 import Image from './Image';
 import ImageSelector from './ImageSelector';
+import List from './List';
 import Loaders from './Loaders';
 import MalSearch from './MalSearch';
 import MultiSelect from './MultiSelect';
@@ -50,6 +51,7 @@ export {
   Header,
   Image,
   ImageSelector,
+  List,
   Loaders,
   MalSearch,
   MultiSelect,

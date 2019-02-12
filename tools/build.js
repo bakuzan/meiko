@@ -29,8 +29,8 @@ const buildLib = step('Library', async () => {
   await shell(`tsc --emitDeclarationOnly`);
 
   console.log(blue('Generated declarations'));
-  await shell(`cpy '${typesRoot}/**/*.d.ts' ${outputRoot} --parents`);
-  console.log(blue('Copied declarations'));
+  // await shell(`cpy '${typesRoot}/**/*.d.ts' ${outputRoot} --parents`);
+  // console.log(blue('Copied declarations'));
 });
 
 buildLib()

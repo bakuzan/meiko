@@ -1,10 +1,9 @@
-@import './partials/_variables';
+import { css } from './index';
 
-.ripple {
+export default css`
   position: relative;
   overflow: hidden;
-
-  &:after {
+  ::after {
     content: '';
     display: block;
     position: absolute;
@@ -13,20 +12,16 @@
     top: 0;
     left: 0;
     pointer-events: none;
-    background-image: radial-gradient(
-      $accent-colour,
-      #000 10%,
-      transparent 10.01%
-    );
+    background-image: radial-gradient(#ccc, #000 10%, transparent 10.01%);
     background-repeat: no-repeat;
     background-position: 50%;
     transform: scale(10, 10);
     opacity: 0;
     transition: transform 0.5s, opacity 1s;
   }
-  &:active:after {
+  :active::after {
     transform: scale(0, 0);
     opacity: 0.2;
     transition: 0s;
   }
-}
+`;

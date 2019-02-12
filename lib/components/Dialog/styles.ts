@@ -1,13 +1,14 @@
-@import '../../styles/partials/_variables';
+import styled from '../../styles';
+import { zIndexes } from 'styles/variables';
 
-.dialog {
+export const StyledDialog = styled.dialog`
   min-width: 300px;
   width: auto;
   max-width: 50vw;
   box-shadow: 2px 2px 10px #aaa;
   border: none;
   transform: translateY(-50%);
-  z-index: map-get($z-index, popover);
+  z-index: ${zIndexes.get('popover')};
 
   &.backdrop::backdrop {
     position: fixed;
@@ -20,12 +21,13 @@
   &.no-backdrop::backdrop {
     background-color: transparent;
   }
-}
-.dialog-title {
-  margin: 0 {
-    bottom: 15px;
-  }
-}
-.dialog-content-custom {
+`;
+
+export const DialogTitle = styled.h4`
+  margin: 0;
+  margin-bottom: 15px;
+`;
+
+export const DialogCustomContent = styled.div`
   padding: 5px 0;
-}
+`;

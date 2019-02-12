@@ -1,4 +1,6 @@
-%form-specific {
+import { css } from './index';
+
+export const formSpecific = css`
   .input-container,
   .select-container {
     width: 100%;
@@ -8,8 +10,8 @@
     width: 100%;
     justify-content: flex-end;
   }
-}
+`;
 
-%standard-shadow {
+export const standardShadow = css`
   box-shadow: 2px 2px 10px #aaa;
-}
+`;

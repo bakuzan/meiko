@@ -1,28 +1,12 @@
 import * as styledComponents from 'styled-components';
 
-export interface ITheme {
-  baseBackground: string;
-  baseBackgroundHover: string;
-  baseColour: string;
-  colour: string;
-  contrast: string;
-  anchorColour: string;
-  anchorColourHover: string;
-  primaryBackground: string;
-  primaryBackgroundHover: string;
-  primaryColour: string;
-  accentBackground: string;
-  accentColour: string;
-  accentBackgroundHover: string;
-}
-
 const {
   default: styled,
   css,
   createGlobalStyle,
   keyframes,
   ThemeProvider
-} = styledComponents as styledComponents.ThemedStyledComponentsModule<ITheme>;
+} = styledComponents as styledComponents.ThemedStyledComponentsModule<any>;
 
 const GlobalBaseStyle = createGlobalStyle`
   body {
@@ -37,6 +21,10 @@ const GlobalBaseStyle = createGlobalStyle`
   button {
     font-family: var(--app-font-family);
     font-size: var(--app-font-size);
+  }
+  input,
+  select {
+    background-color: inherit;
   }
 `;
 

@@ -1,10 +1,12 @@
 import styled from './index';
+import floatLabel from './floatLabel';
 
 export const StyledControlContainer = styled.div`
   flex: 1;
   padding: 5px;
   min-height: 35px;
   box-sizing: content-box;
+  ${floatLabel}
 
   input,
   select {

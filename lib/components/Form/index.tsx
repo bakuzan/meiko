@@ -4,8 +4,10 @@ import * as React from 'react';
 
 import { Button } from '../Button';
 import Strings from '../../constants/strings';
-import { IJSXChildren } from 'types';
-import './Form.scss';
+import { IJSXChildren } from '../../types';
+
+import styled from '../../styles';
+import { formSpecific } from '../../styles/extendables';
 
 interface IFormProps {
   id?: string;
@@ -22,6 +24,10 @@ interface IFormProps {
     onCancel?(): void;
   };
 }
+
+const StyledForm = styled.form`
+  ${formSpecific}
+`;
 
 class Form extends React.Component<IFormProps, any> {
   static propTypes = {
@@ -66,7 +72,7 @@ class Form extends React.Component<IFormProps, any> {
     return (
       <div id={id} className={classNames('form-container', className)}>
         {hasTitle && <h4 className="form-title">{title}</h4>}
-        <form
+        <StyledForm
           name={name}
           className={classNames('form')}
           noValidate
@@ -84,7 +90,7 @@ class Form extends React.Component<IFormProps, any> {
               </Button>
             )}
           </div>
-        </form>
+        </StyledForm>
       </div>
     );
   }

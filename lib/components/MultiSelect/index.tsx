@@ -5,8 +5,9 @@ import * as React from 'react';
 import { Enums, Strings } from '../../constants/index';
 import Tickbox from '../Tickbox';
 import Backdrop from '../Backdrop';
-import { ISelectBoxOption } from 'types';
-import './MultiSelect.scss';
+import { ISelectBoxOption } from '../../types';
+import { StyledContainer, DropdownContainer, StyledList } from './styles';
+import { StyledControlContainer } from '../../styles/generic';
 
 const EXTRACT_OPTION_INDEX = /^.*-/g;
 const OPTION_PREFIX = 'option-';
@@ -66,12 +67,18 @@ class MultiSelect extends React.Component<
     this.handleOptionChange = this.handleOptionChange.bind(this);
   }
 
-  handleToggleOpen(e) {
-    if (
-      e.type !== Strings.events.click &&
-      !Enums.OPEN_KEYS.includes(e.keyCode)
-    ) {
-      return;
+  handleToggleOpen(
+    e:
+      | React.KeyboardEvent<HTMLInputElement>
+      | React.MouseEvent<HTMLInputElement>
+  ) {
+    const isNotClick = !(e.type === Strings.events.click);
+    if (isNotClick) {
+      const keyCode = (e as React.KeyboardEvent<HTMLInputElement>).keyCode;
+      const isNotToggleKey = !Enums.OPEN_KEYS.includes(keyCode);
+      if (isNotToggleKey) {
+        return;
+      }
     }
 
     e.stopPropagation();
@@ -90,7 +97,7 @@ class MultiSelect extends React.Component<
     this.props.onUpdate(newValues, this.props.name);
   }
 
-  handleOptionChange(e) {
+  handleOptionChange(e: React.ChangeEvent<HTMLInputElement>) {
     const { name } = e.target;
     const index = Number(name.replace(EXTRACT_OPTION_INDEX, ''));
     const option = this.props.options.find((x, i) => i === index);
@@ -136,8 +143,8 @@ class MultiSelect extends React.Component<
     const displayValue = this.processValueForDisplay();
 
     return (
-      <div className={classNames('multi-select', className)}>
-        <div
+      <StyledContainer className={classNames('multi-select', className)}>
+        <StyledControlContainer
           className={classNames(
             'display',
             'has-float-label',
@@ -157,15 +164,18 @@ class MultiSelect extends React.Component<
             onKeyDown={this.handleToggleOpen}
           />
           <label htmlFor={multiSelectInput}>{label}</label>
-        </div>
-        <div
+        </StyledControlContainer>
+        <DropdownContainer
           className={classNames(
             'dropdown-container',
             { 'is-open': this.state.isOpen },
             listClassName
           )}
         >
-          <ul className={classNames('multi-select-list', 'list column one')}>
+          <StyledList
+            className={classNames('multi-select-list', 'list column one')}
+            columns={1}
+          >
             <li key="ALL">
               <Tickbox
                 name={`${id}--selectAll`}
@@ -191,10 +201,10 @@ class MultiSelect extends React.Component<
                 />
               </li>
             ))}
-          </ul>
+          </StyledList>
           <Backdrop onClickOrKey={this.handleToggleClose} />
-        </div>
-      </div>
+        </DropdownContainer>
+      </StyledContainer>
     );
   }
 }
