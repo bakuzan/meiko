@@ -1,4 +1,4 @@
-import { relative, absolute } from 'styles/types';
+import { relative, absolute } from '../../styles/types';
 
 export default {
   ClearableInputInput: {

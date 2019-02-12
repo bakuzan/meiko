@@ -1,5 +1,5 @@
-import { zIndexes } from 'styles/variables';
-import { relative, absolute, preLine, center, bold } from 'styles/types';
+import { zIndexes } from '../../styles/variables';
+import { relative, absolute, preLine, center, bold } from '../../styles/types';
 
 export default {
   Autocomplete: {

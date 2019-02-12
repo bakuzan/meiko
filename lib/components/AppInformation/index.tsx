@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 
 import Icons from '../../constants/icons';
-import styled from 'styles';
+import styled from '../../styles';
 
 const resolveENVVariable = (str: string) => (str || '').trim();
 const resolveLabel = (b: string, v: string) => {

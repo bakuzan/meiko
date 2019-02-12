@@ -1,5 +1,5 @@
-import { uiMessaging, zIndexes } from 'styles/variables';
-import styled from 'styles';
+import { uiMessaging, zIndexes } from '../../styles/variables';
+import styled from '../../styles';
 
 const alertContainerHeight = '40px';
 const alertIconWidth = alertContainerHeight;

@@ -1,4 +1,4 @@
-import { rowReverse, wrap } from 'styles/types';
+import { rowReverse, wrap } from '../../styles/types';
 
 export default {
   ChipListInputContainer: {

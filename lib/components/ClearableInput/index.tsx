@@ -6,8 +6,8 @@ import { Button } from '../Button';
 import Icons from '../../constants/icons';
 import { debounce } from '../../utils';
 
-import styled from 'styles';
-import { StyledControlContainer } from 'styles/generic';
+import styled from '../../styles';
+import { StyledControlContainer } from '../../styles/generic';
 
 interface IClearableInputProps extends React.HTMLProps<HTMLInputElement> {
   clearInputButtonClass?: string;

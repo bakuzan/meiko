@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import * as React from 'react';
 
 import { Enums, Strings } from '../../constants';
-import styled from 'styles';
-import { zIndexes } from 'styles/variables';
+import styled from '../../styles';
+import { zIndexes } from '../../styles/variables';
 
 interface IBackdropProps {
   id?: string;

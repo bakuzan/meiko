@@ -1,6 +1,6 @@
-import * as col from 'styles/colours';
-import { anchorColour, anchorColourHover } from 'styles/variables';
-import { ITheme } from 'styles';
+import * as col from '../../styles/colours';
+import { anchorColour, anchorColourHover } from '../../styles/variables';
+import { ITheme } from '../../styles';
 
 export const bgStyles = {
   ButtonGroup: {

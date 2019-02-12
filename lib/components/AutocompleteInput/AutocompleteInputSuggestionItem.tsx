@@ -6,7 +6,7 @@ import { Button } from '../Button';
 import { isNumber } from '../../utils';
 import { IAutocompleteOption } from 'types';
 
-import styled from 'styles';
+import styled from '../../styles';
 
 export interface IAutocompleteSuggestionProps {
   activeSuggestion: number;

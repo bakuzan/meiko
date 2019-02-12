@@ -1,4 +1,4 @@
-import { fixed, none, visible, hidden } from 'styles/types';
+import { fixed, none, visible, hidden } from '../../styles/types';
 
 const size = '1em';
 

@@ -23,13 +23,13 @@ const shell = (cmd) => execa.shell(cmd, { stdio: ['pipe', 'pipe', 'inherit'] });
 
 const buildLib = step('Library', async () => {
   await shell(
-    `npx babel ${libRoot} --out-dir ${outputRoot} --extensions=.ts,.tsx,.js --presets @babel/preset-typescript --plugins babel-plugin-relative-path-import --copy-files --source-maps --env-name "lib"`
+    `npx babel ${libRoot} --out-dir ${outputRoot} --extensions=.ts,.tsx,.js --presets @babel/preset-typescript --copy-files --source-maps --env-name "lib"`
   );
   console.log(blue('Built modules'));
   await shell(`tsc --emitDeclarationOnly`);
 
   console.log(blue('Generated declarations'));
-  await shell(`cpy ${typesRoot} ${outputRoot}`);
+  await shell(`cpy '${typesRoot}/**/*.d.ts' ${outputRoot} --parents`);
   console.log(blue('Copied declarations'));
 });
 

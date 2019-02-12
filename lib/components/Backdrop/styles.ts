@@ -1,5 +1,5 @@
-import { zIndexes } from 'styles/variables';
-import { fixed } from 'styles/types';
+import { zIndexes } from '../../styles/variables';
+import { fixed } from '../../styles/types';
 
 export default {
   Backdrop: {

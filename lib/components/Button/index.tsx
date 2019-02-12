@@ -1,10 +1,10 @@
-import styled from 'styles';
+import styled from '../../styles';
 import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-import * as col from 'styles/colours';
-import * as vars from 'styles/variables';
+import * as col from '../../styles/colours';
+import * as vars from '../../styles/variables';
 import { theming } from './styles';
 // import { styles, bgStyles, theming } from './styles';
 

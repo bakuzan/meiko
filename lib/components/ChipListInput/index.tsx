@@ -7,7 +7,7 @@ import AutocompleteInput from '../AutocompleteInput';
 import TagChip from '../TagChip';
 import { KeyCodes } from '../../constants/enums';
 
-import styled from 'styles';
+import styled from '../../styles';
 
 const resolveId = (o: IChipListItem) => o._id || o.id;
 

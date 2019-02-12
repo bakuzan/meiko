@@ -11,9 +11,8 @@ import { KeyCodes } from '../../constants/enums';
 import { isNumber, getTimeoutSeconds } from '../../utils';
 import { IAutocompleteOption } from 'types';
 
-import styled from 'styles';
-import styles from './styles';
-import { zIndexes } from 'styles/variables';
+import styled from '../../styles';
+import { zIndexes } from '../../styles/variables';
 
 interface IAutocompleteInputProps {
   label?: string;

@@ -4,8 +4,8 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { ISelectBoxOption } from 'types';
 
-import styled from 'styles';
-import { StyledControlContainer } from 'styles/generic';
+import styled from '../../styles';
+import { StyledControlContainer } from '../../styles/generic';
 
 export interface ISelectBoxProps {
   name: string;
