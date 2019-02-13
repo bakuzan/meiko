@@ -82,6 +82,7 @@ class MultiSelect extends React.Component<
     }
 
     e.stopPropagation();
+    e.preventDefault();
     this.setState({ isOpen: true });
   }
 

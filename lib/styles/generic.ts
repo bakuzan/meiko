@@ -1,12 +1,12 @@
 import styled from './index';
 import floatLabel from './floatLabel';
 
-export const StyledControlContainer = styled.div`
+export const StyledControlContainer = styled.div<{ noFloatLabel?: boolean }>`
   flex: 1;
   padding: 5px;
   min-height: 35px;
   box-sizing: content-box;
-  ${floatLabel}
+  ${(props) => !props.noFloatLabel && floatLabel}
 
   input,
   select {

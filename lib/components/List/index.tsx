@@ -1,6 +1,7 @@
 import styled, { css } from '../../styles';
 
 export interface IListProps {
+  shouldWrap?: boolean;
   columns?: number;
 }
 
@@ -16,7 +17,9 @@ const List = styled.ul<IListProps>`
   margin: 5px 0;
   list-style-type: none;
   ${(props) => props.columns && 'flex-direction: column;'}
-  ${(props) => props.columns && props.columns !== 1 && 'flex-flow: wrap;'}
+  ${(props) =>
+    ((props.columns && props.columns !== 1) || props.shouldWrap) &&
+    'flex-flow: wrap;'}
     ${(props) => (props.columns ? columnMixin : '')}
 
   .formatting-container {

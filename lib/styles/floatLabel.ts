@@ -44,7 +44,7 @@ export default css`
     font-size: 1.3em;
     opacity: 0.5;
     pointer-events: none;
-    top: 0.75em;
+    top: 0.65em;
     left: 0.5em;
   }
   input:focus,

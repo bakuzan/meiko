@@ -20,45 +20,57 @@ const StyledCheckbox = styled.label<{ disabled: boolean }>`
   justify-content: flex-start;
   align-items: center;
   padding: 2px;
-  cursor: pointer;
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
+`;
 
-  input[type='checkbox'] {
-    appearance: none;
-    transition: all 0.3s;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-  }
+const CheckboxInput = styled.input<{ disabled: boolean; checked: boolean }>`
+  appearance: none;
+  transition: all 0.3s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
 
-  ${(props) => props.disabled && 'cursor: default;'}
-
-  input:before,
-  input:checked:before {
+  ::before {
+    content: '';
     color: #000;
+    font-size: 2em;
     transition: all 0.3s;
     cursor: pointer;
     z-index: ${zIndexes.get('wafer')};
   }
+  ${(props) => {
+    if (!props.disabled && !props.checked) {
+      return `
+        &::before {
+          content: '\\2610';
+        }
+      `;
+    }
 
-  input:before {
-    content: '\2610';
-    font-size: 2em;
-  }
+    if (props.checked) {
+      return `
+        ::before {
+          content: '\\2611';
+          color: #0f0;
+        }
+      `;
+    }
 
-  input:disabled:before {
-    content: '\274c';
-    color: #666;
-    cursor: default;
-  }
-
-  input:checked:before {
-    content: '\2611';
-    color: #0f0;
-  }
+    if (props.disabled) {
+      return `
+        ::before {
+          content: '\\274c';
+          color: #666;
+          font-size: 1.5em;
+          cursor: default;
+        }
+      `;
+    }
+  }}
 `;
 
 const Tickbox = ({
@@ -69,13 +81,16 @@ const Tickbox = ({
   onChange,
   text
 }: ITickboxProps) => (
-  <StyledControlContainer className={classNames('input-container', className)}>
+  <StyledControlContainer
+    className={classNames('input-container', className)}
+    noFloatLabel
+  >
     <StyledCheckbox
       className={classNames('tickbox', { 'tickbox--disabled': disabled })}
       htmlFor={name}
       disabled={disabled}
     >
-      <input
+      <CheckboxInput
         type="checkbox"
         id={name}
         name={name}

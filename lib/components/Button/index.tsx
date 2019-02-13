@@ -11,8 +11,24 @@ export interface IButtonProps
   extends IButtonStyleProps,
     React.HTMLProps<HTMLButtonElement> {}
 
-const PlainButton: React.SFC<IButtonProps> = ({ children, link, ...props }) => {
-  const classes = getButtonClasses({ ...props, link });
+const PlainButton: React.SFC<IButtonProps> = ({
+  children,
+  link,
+  rounded,
+  depress,
+  btnSize,
+  btnStyle,
+  ...props
+}) => {
+  const classes = getButtonClasses({
+    ...props,
+    link,
+    rounded,
+    depress,
+    btnSize,
+    btnStyle
+  });
+
   return (
     <button {...props} className={classes}>
       {children}

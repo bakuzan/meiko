@@ -38,6 +38,7 @@ class Backdrop extends React.Component<IBackdropProps, any> {
       }
     }
 
+    event.preventDefault();
     this.props.onClickOrKey();
   }
 

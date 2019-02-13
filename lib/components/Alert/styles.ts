@@ -6,7 +6,7 @@ const alertIconWidth = alertContainerHeight;
 const fontSize = '1em';
 
 export const StyledContainer = styled.div`
-  position: relative;
+  position: fixed;
   top: 50px;
   left: 50%;
   width: 50%;
