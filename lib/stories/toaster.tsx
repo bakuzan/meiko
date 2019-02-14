@@ -11,7 +11,8 @@ function toasterStory(funcName) {
     clearTimeout(timer);
     timer = setInterval(() => {
       toaster[funcName]('Example', 'This is a toaster message!');
-    }, 1000);
+    }, 5000);
+
     return <Toaster />;
   });
 }

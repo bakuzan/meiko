@@ -1,5 +1,6 @@
 import Icons from '../constants/icons';
 
+import { css } from './index';
 import * as col from './colours';
 
 // Screen Variables
@@ -15,10 +16,32 @@ export const screenMax_sm = screen_md - 1;
 export const screenMax_md = screen_lg - 1;
 
 export const media = new Map([
-  ['xs', `@media (max-width: ${screenMax_xs}px)`],
-  ['sm', `@media (min-width: ${screen_sm}) and (max-width: ${screenMax_sm}px)`],
-  ['md', `@media (min-width: ${screen_md}) and (max-width: ${screenMax_md}px)`],
-  ['lg', `@media (min-width: ${screen_lg}px)`]
+  [
+    'xs',
+    (...args: any[]) =>
+      `@media (max-width: ${screenMax_xs}px) { ${css.apply(this, args)} }`
+  ],
+  [
+    'sm',
+    (...args: any[]) =>
+      `@media (min-width: ${screen_sm}) and (max-width: ${screenMax_sm}px) { ${css.apply(
+        this,
+        args
+      )} }`
+  ],
+  [
+    'md',
+    (...args: any[]) =>
+      `@media (min-width: ${screen_md}) and (max-width: ${screenMax_md}px) { ${css.apply(
+        this,
+        args
+      )} }`
+  ],
+  [
+    'lg',
+    (...args: any[]) =>
+      `@media (min-width: ${screen_lg}px) { ${css.apply(this, args)} }`
+  ]
 ]);
 
 // Unit helpers:

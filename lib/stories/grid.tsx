@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
 import Grid from 'components/Grid';
-import './grid-story.scss';
 
 const items = [
   'hello',
@@ -18,7 +17,11 @@ const items = [
 
 function GridStory(props) {
   return (
-    <Grid items={items} {...props}>
+    <Grid
+      items={items}
+      gridColumns={new Map([['xs', 50], ['sm', 33], ['md', 25], ['lg', 25]])}
+      {...props}
+    >
       {(item, index) => {
         return (
           <li key={index} className="mko-grid__item">

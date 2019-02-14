@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 import { debounce, getTimeoutSeconds } from '../../utils';
 import toaster, { IToast } from '../../utils/toaster';
-import './Toaster.scss';
+import { ToastContainer, Toast } from './styles';
 
 interface IToasterState {
   stack: IToast[];
@@ -41,24 +41,28 @@ class Toaster extends React.Component<any, IToasterState> {
     const list = this.state.stack || Array(0);
 
     return (
-      <div className={classNames('toaster')}>
+      <ToastContainer className={classNames('toaster')}>
         {list.map((item) => {
           const removeToast = () => this.removeToast(item.time);
+          const itemType = item.type.toLowerCase();
           return (
-            <span
+            <Toast
               key={item.time}
+              type={itemType}
               role="button"
               tabIndex={0}
-              className={classNames('toast', item.type.toLowerCase())}
+              className={classNames('toast', itemType)}
               onClick={removeToast}
               onKeyDown={removeToast}
             >
-              <span className={classNames('title')}>{item.title}</span>
-              <span className={classNames('message')}>{item.message}</span>
-            </span>
+              <span className={classNames('toast__title')}>{item.title}</span>
+              <span className={classNames('toast__message')}>
+                {item.message}
+              </span>
+            </Toast>
           );
         })}
-      </div>
+      </ToastContainer>
     );
   }
 }
