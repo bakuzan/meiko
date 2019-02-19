@@ -42,7 +42,7 @@ export default css`
   input:placeholder-shown:not(:focus) + *:not(.input-has-content),
   select:placeholder-shown:not(:focus) + *:not(.input-has-content) {
     font-size: 1.3em;
-    opacity: 0.5;
+    opacity: 0.7;
     pointer-events: none;
     top: 0.65em;
     left: 0.5em;

@@ -49,6 +49,8 @@ export const AlertContent = styled.div<{ isExpanded: boolean }>`
     .alert-content__details {
       display: flex;
       width: auto;
+      padding: 10px 0;
+      padding-left: 5px;
       overflow: hidden;
     }
   `}
