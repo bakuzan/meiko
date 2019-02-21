@@ -2,7 +2,6 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 import Strings from '../../constants/strings';
-import './Grid.scss';
 import { isString } from '../../utils';
 import { IJSXChildren } from '../../types';
 import styled, { css } from '../../styles';
