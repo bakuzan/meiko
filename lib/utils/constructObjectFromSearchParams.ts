@@ -3,7 +3,7 @@ import parseIfInt from './parseIfInt';
 import castStringToBool from './castStringToBool';
 
 const parseSearchParamValue = compose(
-  castStringToBool,
+  (str) => castStringToBool(str, false),
   parseIfInt,
   decodeURIComponent
 );
