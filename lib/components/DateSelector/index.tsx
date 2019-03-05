@@ -2,12 +2,13 @@ import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { Button } from '../Button';
 import ClearableInput from '../ClearableInput';
 import Calendar from './Calendar/Calendar';
 import { checkDatesAgainstRange } from './Calendar/CalendarUtils';
-import { Enums, Strings, Icons } from '../../constants/index';
-import './DateSelector.scss';
+import Icons from '../../constants/icons';
+
+import Backdrop from 'components/Backdrop';
+import { ErrorMessage, Container, SelectorButton } from './styles';
 
 const CLEAR_EVENT = { target: { value: '' } };
 const ErrorMessages = {
@@ -66,7 +67,7 @@ class DateSelector extends React.Component<
     this.handleDateChange = this.handleDateChange.bind(this);
   }
 
-  setErrorState(errorMessage) {
+  setErrorState(errorMessage: string) {
     this.setState({ errorMessage });
   }
 
@@ -74,27 +75,20 @@ class DateSelector extends React.Component<
     this.setState({ displayCalendar: true });
   }
 
-  handleCloseCalendar(e) {
-    if (
-      e.type !== Strings.events.click &&
-      !Enums.CLOSE_KEYS.includes(e.keyCode)
-    ) {
-      return;
-    }
-
+  handleCloseCalendar() {
     this.setState({ displayCalendar: false });
   }
 
-  handleDateSelect(date) {
+  handleDateSelect(date: string) {
     this.setState({ displayCalendar: false }, () => this.passOutNewValue(date));
   }
 
-  handleDateChange(e) {
+  handleDateChange(e: React.ChangeEvent<HTMLInputElement>) {
     const date = e.target.value;
     this.passOutNewValue(date);
   }
 
-  passOutNewValue(date) {
+  passOutNewValue(date: string) {
     const { afterDate, beforeDate, required } = this.props;
     const dateIsOutOfRange = checkDatesAgainstRange(
       { afterDate, beforeDate },
@@ -132,7 +126,7 @@ class DateSelector extends React.Component<
     const displayClearButton = !required && !isReadOnly && !!value;
 
     return (
-      <div
+      <Container
         id={`${name}-date-selector`}
         className={classNames(
           'date-selector-container',
@@ -157,15 +151,19 @@ class DateSelector extends React.Component<
               onChange={this.handleDateChange}
             />
             {displayClearButton && (
-              <Button
+              <SelectorButton
                 className={classNames('date-selector-button', 'clear')}
                 icon={Icons.cross}
                 btnSize="small"
-                onClick={() => this.handleDateChange(CLEAR_EVENT)}
+                onClick={() =>
+                  this.handleDateChange(CLEAR_EVENT as React.ChangeEvent<
+                    HTMLInputElement
+                  >)
+                }
                 disabled={disabled}
               />
             )}
-            <Button
+            <SelectorButton
               className={classNames('date-selector-button')}
               icon={Icons.calendar}
               btnSize="small"
@@ -173,20 +171,14 @@ class DateSelector extends React.Component<
               disabled={disabled}
             />
             {this.state.errorMessage && (
-              <div className={classNames('error-message')}>
+              <ErrorMessage className={classNames('error-message')}>
                 {this.state.errorMessage}
-              </div>
+              </ErrorMessage>
             )}
           </React.Fragment>
         )}
         {!isFlat && this.state.displayCalendar && (
-          <div
-            className={classNames('date-selector-calendar-backdrop')}
-            role="button"
-            tabIndex={0}
-            onClick={this.handleCloseCalendar}
-            onKeyDown={this.handleCloseCalendar}
-          />
+          <Backdrop onClickOrKey={this.handleCloseCalendar} />
         )}
         {(isFlat || this.state.displayCalendar) && (
           <Calendar
@@ -199,7 +191,7 @@ class DateSelector extends React.Component<
             onSelect={this.handleDateSelect}
           />
         )}
-      </div>
+      </Container>
     );
   }
 }

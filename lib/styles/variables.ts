@@ -60,9 +60,9 @@ export const zIndexes = new Map([
 
 // UI messaging
 const infoColour = col.cyan;
-const successColour = col.green;
 const alertColour = col.orange;
-const dangerColour = col.red;
+export const successColour = col.green;
+export const dangerColour = col.red;
 export const uiMessaging = new Map([
   [
     'success',
@@ -110,6 +110,10 @@ export const calendarSelectedDayBackgroundColour = col.darkViolet;
 export const calendarSelectedDayFontColour = col.white;
 export const calendarViewShiftButtonColour = col.white;
 export const calendarViewShiftButtonColourHover = col.grey95;
+
+export const headerHeight = '50px';
+
+export const spinnerColours = [col.red, col.green, col.blue, col.red];
 
 // //TEXT:
 // $font-sizes: 10 12 14 15 16 18 20 22 24 25 28 30 32 34 35 36 38 40 42;

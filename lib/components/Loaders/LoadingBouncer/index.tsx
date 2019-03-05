@@ -1,14 +1,14 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import './LoadingBouncer.scss';
+import { Loader, Orb } from './styles';
 
-const LoadingBouncer = () => (
-  <div className={classNames('loading-bouncer', 'meiko-bouncer')}>
-    <div />
-    <div />
-    <div />
-  </div>
+const LoadingBouncer = ({ className }) => (
+  <Loader className={classNames('loading-bouncer', 'meiko-bouncer', className)}>
+    <Orb className="loading-bouncer__orb" />
+    <Orb className="loading-bouncer__orb" />
+    <Orb className="loading-bouncer__orb" />
+  </Loader>
 );
 
 export default LoadingBouncer;

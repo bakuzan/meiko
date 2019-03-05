@@ -5,8 +5,8 @@ import * as React from 'react';
 import { Button } from '../Button';
 import { isNumber } from '../../utils';
 import { IAutocompleteOption } from 'types';
-import '../AutocompleteInput/AutocompleteInput.scss';
-import './MalSearch.scss';
+
+import { MalSuggestion, MalSuggestionImage } from './styles';
 
 interface IMalAutocompleteOption extends IAutocompleteOption {
   image?: string;
@@ -34,7 +34,7 @@ const MalSearchSuggestionItem = ({
   const isActiveSuggestion = activeSuggestion === index;
 
   return (
-    <li
+    <MalSuggestion
       className={classNames(
         'autocomplete-suggestion',
         'mal-search-suggestion',
@@ -49,16 +49,16 @@ const MalSearchSuggestionItem = ({
         onClick={() => selectAutocompleteSuggestion(itemId)}
       >
         {!!item.image && (
-          <img
+          <MalSuggestionImage
             className={classNames('mal-search-suggestion-image')}
             src={item.image}
-            alt="mal series cover"
+            alt={`MyAnimeList ${itemText || 'series'} cover`}
           />
         )}
         {highlightMatch(itemText)}
         <span>{`(${item.type})`}</span>
       </Button>
-    </li>
+    </MalSuggestion>
   );
 };
 

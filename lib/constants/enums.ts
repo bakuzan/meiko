@@ -20,5 +20,13 @@ export enum KeyCodes {
   space = 32
 }
 
-export const CLOSE_KEYS = [KeyCodes.escape, KeyCodes.space, KeyCodes.enter];
-export const OPEN_KEYS = [KeyCodes.space, KeyCodes.enter];
+export const CLOSE_KEYS = Object.freeze([
+  KeyCodes.escape,
+  KeyCodes.space,
+  KeyCodes.enter
+]);
+export const OPEN_KEYS = Object.freeze([
+  KeyCodes.escape,
+  KeyCodes.space,
+  KeyCodes.enter
+]);

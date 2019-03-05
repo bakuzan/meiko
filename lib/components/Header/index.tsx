@@ -1,7 +1,9 @@
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as React from 'react';
-import './Header.scss';
+
+import { Navbar, LinkBlock } from './styles';
+import { FlexSpacer } from '../../styles/generic';
 
 export interface IHeaderProps {
   id?: string;
@@ -22,19 +24,21 @@ const Header = ({
   ...props
 }: IHeaderProps) => {
   return (
-    <nav
+    <Navbar
       id={id}
       className={classNames('application-header', className)}
       {...props}
     >
-      {!!navLeft && <div className={classNames('links-block')}>{navLeft}</div>}
-      {!leftAlignTitle && <div className="flex-spacer" />}
-      {!!title && <h1>{title}</h1>}
-      <div className="flex-spacer" />
-      {!!navRight && (
-        <div className={classNames('links-block')}>{navRight}</div>
+      {!!navLeft && (
+        <LinkBlock className={classNames('links-block')}>{navLeft}</LinkBlock>
       )}
-    </nav>
+      {!leftAlignTitle && <FlexSpacer className="flex-spacer" />}
+      {!!title && <h1>{title}</h1>}
+      <FlexSpacer className="flex-spacer" />
+      {!!navRight && (
+        <LinkBlock className={classNames('links-block')}>{navRight}</LinkBlock>
+      )}
+    </Navbar>
   );
 };
 

@@ -3,7 +3,8 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 import { Button } from '../Button';
-import './FileUploader.scss';
+
+import { Container, DisplayText, FileInput } from './styles';
 
 interface IFileUploaderProps {
   className?: string;
@@ -43,8 +44,8 @@ class FileUploader extends React.Component<IFileUploaderProps, any> {
     const { className, name, value, placeholder } = this.props;
 
     return (
-      <div className={classNames('file-uploader', className)}>
-        <input
+      <Container className={classNames('file-uploader', className)}>
+        <FileInput
           ref={(element) => (this.fileInput = element)}
           type="file"
           name={name}
@@ -52,9 +53,9 @@ class FileUploader extends React.Component<IFileUploaderProps, any> {
           placeholder={placeholder}
           onChange={(e) => this.handleUserInput(e)}
         />
-        <div className={classNames('file-value')}>
+        <DisplayText className={classNames('file-value')}>
           {displayFileName(value) || 'Nothing selected'}
-        </div>
+        </DisplayText>
         <Button
           className="ripple"
           btnStyle="primary"
@@ -62,7 +63,7 @@ class FileUploader extends React.Component<IFileUploaderProps, any> {
         >
           {placeholder}
         </Button>
-      </div>
+      </Container>
     );
   }
 }

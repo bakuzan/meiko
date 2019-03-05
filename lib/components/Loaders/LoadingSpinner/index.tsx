@@ -1,7 +1,8 @@
 import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import './LoadingSpinner.scss';
+
+import { Circular, Loader, Path } from './styles';
 
 interface ILoadingSpinnerProps {
   size?: string;
@@ -14,9 +15,11 @@ class LoadingSpinner extends React.Component<ILoadingSpinnerProps, any> {
 
   render() {
     return (
-      <div className={classNames('loader', 'meiko-spinner', this.props.size)}>
-        <svg className={classNames('circular')} viewBox="25 25 50 50">
-          <circle
+      <Loader
+        className={classNames('loader', 'meiko-spinner', this.props.size)}
+      >
+        <Circular className={classNames('circular')} viewBox="25 25 50 50">
+          <Path
             className={classNames('path')}
             cx="50"
             cy="50"
@@ -25,8 +28,8 @@ class LoadingSpinner extends React.Component<ILoadingSpinnerProps, any> {
             strokeWidth="2"
             strokeMiterlimit="10"
           />
-        </svg>
-      </div>
+        </Circular>
+      </Loader>
     );
   }
 }

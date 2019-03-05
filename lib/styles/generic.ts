@@ -40,3 +40,8 @@ export const RadioGroup = styled.div`
   align-items: center;
   padding: 5px;
 `;
+
+export const FlexSpacer = styled.div`
+  display: flex;
+  flex: 1;
+`;

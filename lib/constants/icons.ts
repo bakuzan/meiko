@@ -1,4 +1,4 @@
-const Icons = {
+export default Object.freeze({
   tick: '\u2713', // 10003, // '\u2713',
   cross: '\u2573', // '\u274C',
   pause: '\u2223\u2223', // '\u23F8', // 9208, // '\u23F8',
@@ -13,6 +13,4 @@ const Icons = {
   info: '\uD83D\uDEC8',
   warning: '\u26a0',
   error: '\u0021'
-};
-
-export default Icons;
+});

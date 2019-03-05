@@ -1,12 +1,6 @@
-import * as styledComponents from 'styled-components';
+import * as styledComponents from 'styled-components/macro';
 
-const {
-  default: styled,
-  css,
-  createGlobalStyle,
-  keyframes,
-  ThemeProvider
-} = styledComponents as styledComponents.ThemedStyledComponentsModule<any>;
+const { default: styled, css, createGlobalStyle, keyframes } = styledComponents;
 
 const GlobalBaseStyle = createGlobalStyle`
   body {
@@ -28,5 +22,5 @@ const GlobalBaseStyle = createGlobalStyle`
   }
 `;
 
-export { css, createGlobalStyle, keyframes, ThemeProvider, GlobalBaseStyle };
+export { css, createGlobalStyle, keyframes, GlobalBaseStyle };
 export default styled;

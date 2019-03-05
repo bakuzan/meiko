@@ -16,7 +16,8 @@ import {
 } from '../../utils';
 import Urls from '../../constants/urls';
 import { IAutocompleteOption } from 'types';
-import './MalSearch.scss';
+
+import { MalContainer, MalMessages } from './styles';
 
 interface IMalSearchFilters {
   id: number | string;
@@ -190,12 +191,13 @@ class MalSearch extends React.Component<IMalSearchProps, IMalSearchState> {
   }
 
   render() {
+    const { isFetching, isFirstQuery, hasSelected, alreadyExists } = this.state;
     const { type, search, menuClassName } = this.props;
     const malSearchClasses = classNames('mal-search-container', {
-      fresh: this.state.isFirstQuery,
-      fetching: this.state.isFetching,
-      selected: this.state.hasSelected,
-      exists: this.state.alreadyExists
+      fresh: isFirstQuery,
+      fetching: isFetching,
+      selected: hasSelected,
+      exists: alreadyExists
     });
     const menuCompleteClasses = classNames('mal-results', menuClassName);
     const clearableInputClasses = {
@@ -203,7 +205,12 @@ class MalSearch extends React.Component<IMalSearchProps, IMalSearchState> {
     };
 
     return (
-      <div className={malSearchClasses}>
+      <MalContainer
+        className={malSearchClasses}
+        isFetching={isFetching}
+        isFresh={isFirstQuery}
+        hasSelected={hasSelected}
+      >
         <AutocompleteInput
           attr="title"
           items={this.state.results}
@@ -215,11 +222,11 @@ class MalSearch extends React.Component<IMalSearchProps, IMalSearchState> {
           menuClassName={menuCompleteClasses}
           clearableInputProps={clearableInputClasses}
         />
-        <span className={classNames('mal-search-messages')}>
+        <MalMessages className={classNames('mal-search-messages')}>
           {!!this.state.error && this.state.error(type)}
-        </span>
+        </MalMessages>
         {this.state.isFetching && <Loaders.LoadingSpinner size="control" />}
-      </div>
+      </MalContainer>
     );
   }
 }

@@ -1,4 +1,4 @@
-export default {
+export default Object.freeze({
   // inputs
   checkbox: 'checkbox',
   selectbox: 'select-one',
@@ -58,4 +58,4 @@ export default {
     { name: 'Light', class: 'theme-one' },
     { name: 'Dark', class: 'theme-two' }
   ]
-};
+});

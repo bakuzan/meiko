@@ -1,4 +1,4 @@
-const standardUrls = {
+const standardUrls = Object.freeze({
   build: (path: string, params: object) => {
     let hasSearch = false;
     for (const k in params) {
@@ -26,6 +26,6 @@ const standardUrls = {
   malSearch: '/api/mal-search/:type',
   sunrise_sunset:
     'https://api.sunrise-sunset.org/json?lat=51.9451597&lng=-0.6565607&formatted=0'
-};
+});
 
 export default standardUrls;
