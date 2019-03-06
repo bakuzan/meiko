@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 import './Header.scss';
 
-interface IHeaderProps {
+export interface IHeaderProps {
   id?: string;
   className?: string;
   title?: string;

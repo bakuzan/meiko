@@ -1,10 +1,14 @@
-import toaster from '../toaster';
-import { isObject } from '../typeof';
+import toaster from './toaster';
+import { isObject } from './index';
 
 export const handleErrorResponse = (error: any) => {
   const message = error.message
     ? error.message
-    : error.error ? error.error : error ? error : 'Something went wrong!';
+    : error.error
+    ? error.error
+    : error
+    ? error
+    : 'Something went wrong!';
   toaster.error('Fetch error!', message);
   console.error(error);
 };

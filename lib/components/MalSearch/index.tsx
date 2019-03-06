@@ -11,9 +11,9 @@ import {
   getTimeoutSeconds,
   debounce,
   capitalise,
-  isArray,
-  MeikoFetch
+  isArray
 } from '../../utils';
+import MeikoFetch from '../../utils/fetch';
 import Urls from '../../constants/urls';
 import { IAutocompleteOption } from 'types';
 import './MalSearch.scss';

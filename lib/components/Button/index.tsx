@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import './Button.scss';
 
-interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
+export interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
   btnStyle?: string;
   btnSize?: string;
   link?: boolean;

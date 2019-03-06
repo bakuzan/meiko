@@ -3,7 +3,7 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import './RadioButton.scss';
 
-interface IRadioButtonProps {
+export interface IRadioButtonProps {
   id?: string;
   name: string;
   label: string;

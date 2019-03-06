@@ -1,6 +1,17 @@
 import Strings from '../../../constants/strings';
 import { ViewOptionEnum } from '../../../constants/enums';
-import { generateUniqueId, Date as DateUtils } from '../../../utils';
+import {
+  getDifferenceFromMonday,
+  getDifferenceFromSunday,
+  generateUniqueId,
+  checkIfDatePartsMatch,
+  getMonthName,
+  getDaysInMonthForDate,
+  getFirstDateOfMonth,
+  getLastDateOfMonth,
+  isBefore,
+  isBeforeOrEqual
+} from '../../../utils';
 
 export interface ICalendarState {
   viewDate: string | Date;
@@ -19,18 +30,18 @@ export const mapToViewOption = (optionType: ViewOptionEnum) => (
 export const displayYearOnly = (d: string | number | Date) =>
   new Date(d).getFullYear();
 export const displayMonthAndYear = (d: string | number | Date) =>
-  `${DateUtils.getMonthName(d)} ${displayYearOnly(d)}`;
+  `${getMonthName(d)} ${displayYearOnly(d)}`;
 
 export const getMonthsForDate = () =>
   Strings.monthNames.map(mapToViewOption(ViewOptionEnum.MONTH));
 
 export const getDaysForDate = (date: string | number | Date) => {
   const d = new Date(date);
-  const monthLength = DateUtils.getDaysInMonthForDate(d);
-  const firstOfMonth = DateUtils.getFirstDateOfMonth(d);
-  const lastOfMonth = DateUtils.getLastDateOfMonth(d);
-  const startDummyDays = DateUtils.getDifferenceFromMonday(firstOfMonth);
-  const endDummyDays = DateUtils.getDifferenceFromSunday(lastOfMonth);
+  const monthLength = getDaysInMonthForDate(d);
+  const firstOfMonth = getFirstDateOfMonth(d);
+  const lastOfMonth = getLastDateOfMonth(d);
+  const startDummyDays = getDifferenceFromMonday(firstOfMonth);
+  const endDummyDays = getDifferenceFromSunday(lastOfMonth);
   return [
     ...Array(startDummyDays)
       .fill('')
@@ -47,10 +58,7 @@ export const getDaysForDate = (date: string | number | Date) => {
 
 export const checkIfSelectedForView = (state: ICalendarState) => (option) => {
   const selectedDate = new Date(state.selectedDate);
-  const matches = DateUtils.checkIfDatePartsMatch(
-    state.viewDate,
-    state.selectedDate
-  );
+  const matches = checkIfDatePartsMatch(state.viewDate, state.selectedDate);
   return (
     (option.optionType === ViewOptionEnum.DAY &&
       matches.year &&
@@ -69,9 +77,8 @@ export const checkDatesAgainstRange = (
 ) => {
   const [afterCheck, beforeCheck] = comparisons;
   return (
-    (afterDate && DateUtils.isBefore(afterCheck, afterDate)) ||
-    (beforeDate &&
-      !DateUtils.isBeforeOrEqual(beforeCheck || afterCheck, beforeDate))
+    (afterDate && isBefore(afterCheck, afterDate)) ||
+    (beforeDate && !isBeforeOrEqual(beforeCheck || afterCheck, beforeDate))
   );
 };
 
@@ -91,8 +98,8 @@ export const dateIsOutOfRange = (state, option, { afterDate, beforeDate }) => {
     const d = new Date(viewDate);
     d.setDate(1);
     d.setMonth(Strings.monthNames.findIndex((x) => x === value));
-    const firstOfMonth = DateUtils.getFirstDateOfMonth(d);
-    const lastOfMonth = DateUtils.getLastDateOfMonth(d);
+    const firstOfMonth = getFirstDateOfMonth(d);
+    const lastOfMonth = getLastDateOfMonth(d);
     return checkDatesAgainstRange(
       { afterDate, beforeDate },
       lastOfMonth,

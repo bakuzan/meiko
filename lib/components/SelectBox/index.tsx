@@ -5,7 +5,7 @@ import * as React from 'react';
 import { ISelectBoxOption } from 'types';
 import './SelectBox.scss';
 
-interface ISelectBoxProps {
+export interface ISelectBoxProps {
   name: string;
   value: string | number | string[];
   disabled: boolean;

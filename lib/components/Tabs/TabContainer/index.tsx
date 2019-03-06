@@ -7,13 +7,13 @@ import TabView from '../TabView';
 import { IJSXChildren } from 'types';
 import './TabContainer.scss';
 
-interface ITabContainerProps {
+export interface ITabContainerProps {
   className?: string;
   tabsClassName?: string;
   children: IJSXChildren;
   onChange?(tabName: string): void;
 }
-interface ITabContainerState {
+export interface ITabContainerState {
   activeTab: string;
 }
 
