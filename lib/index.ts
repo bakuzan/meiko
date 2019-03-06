@@ -1,11 +1,11 @@
 import './styles/index.scss';
 
 import * as Components from './components';
-import * as Utils from './utils';
+import * as Fetch from './utils/fetch';
 import * as Constants from './constants';
 
 export default {
   ...Components,
-  Utils,
+  Fetch,
   Constants
 };
