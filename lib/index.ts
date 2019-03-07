@@ -2,10 +2,11 @@ import './styles/index.scss';
 
 import * as Components from './components';
 import * as Constants from './constants';
-import * as toaster from './utils/toaster';
+import toaster, { ToasterService } from './utils/toasterService';
 
 export default {
   ...Components,
   Constants,
-  toaster
+  toaster,
+  ToasterService
 };

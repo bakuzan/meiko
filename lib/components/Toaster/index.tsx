@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 import { debounce, getTimeoutSeconds } from '../../utils';
-import toaster, { IToast } from '../../utils/toaster';
+import toaster, { IToast } from '../../utils/toasterService';
 import './Toaster.scss';
 
 interface IToasterState {
