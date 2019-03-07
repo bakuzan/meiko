@@ -155,6 +155,7 @@ class DateSelector extends React.Component<
             {displayClearButton && (
               <Button
                 className={classNames('date-selector-button', 'clear')}
+                aria-label="Clear date"
                 icon={Icons.cross}
                 btnSize="small"
                 onClick={() => this.handleDateChange(CLEAR_EVENT)}
@@ -163,6 +164,7 @@ class DateSelector extends React.Component<
             )}
             <Button
               className={classNames('date-selector-button')}
+              aria-label="Open calendar"
               icon={Icons.calendar}
               btnSize="small"
               onClick={this.openCalendar}

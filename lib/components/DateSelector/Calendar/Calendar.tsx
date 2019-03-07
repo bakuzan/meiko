@@ -126,6 +126,9 @@ class Calendar extends React.Component<
       ? CalendarUtils.getDaysForDate(viewDate)
       : CalendarUtils.getMonthsForDate();
 
+    const prevLabel = `Move to previous ${isMonthView ? 'year' : 'month'}`;
+    const nextLabel = `Move to next ${isMonthView ? 'year' : 'month'}`;
+
     return (
       <div
         id={`${id}-calendar`}
@@ -136,6 +139,7 @@ class Calendar extends React.Component<
         <div className={classNames('mei-calendar-view-controls')}>
           <Button
             className={classNames('view-shift-button', 'ripple')}
+            aria-label={prevLabel}
             icon={Icons.left}
             onClick={this.handleViewShift(PREV)}
           />
@@ -145,6 +149,7 @@ class Calendar extends React.Component<
           </Button>
           <Button
             className={classNames('view-shift-button', 'ripple')}
+            aria-label={nextLabel}
             icon={Icons.right}
             onClick={this.handleViewShift(NEXT)}
           />

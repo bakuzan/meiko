@@ -42,6 +42,7 @@ const Sidebar = ({
     <div id={id} className={sidebarClasses}>
       <Button
         className={classNames('sidebar-toggler')}
+        aria-label="Toggle sidebar"
         icon={isCollapsed ? Icons.right : Icons.left}
         onClick={toggleCollapse}
       />

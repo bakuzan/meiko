@@ -3,7 +3,7 @@
   "version": "3.0.0-alpha",
   "private": true,
   "description": "Component Library",
-  "main": "index.js",
+  "main": "dist/index.min.js",
   "files": [
     "build",
     "dist"
@@ -27,7 +27,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "rollup -c",
     "build": "node ./tools/build.js",
-    "build-all": "npm run build-bundle && npm run build",
+    "build-all": "npm run bundle && npm run build",
     "storybook": "start-storybook -p 7200 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o .out -s public",
     "deploy-storybook": "storybook-to-ghpages"
@@ -84,11 +84,12 @@
     "react": "^16.8.4",
     "react-docgen-typescript-loader": "^3.0.1",
     "react-dom": "^16.8.4",
-    "rollup": "^1.4.1",
+    "rollup": "^1.5.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-includepaths": "^0.2.3",
     "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-replace": "^2.1.0",
     "rollup-plugin-typescript": "^1.0.0",
     "rollup-plugin-uglify": "^6.0.2",

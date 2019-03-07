@@ -5,7 +5,7 @@ import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
-import uglify from 'rollup-plugin-uglify';
+import { uglify } from 'rollup-plugin-uglify';
 import includePaths from 'rollup-plugin-includepaths';
 import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
@@ -15,9 +15,10 @@ import typescript from 'typescript';
 import pkg from './package.json';
 
 dotenv.config();
+
 const isProduction = process.env.NODE_ENV === 'production';
 const entry = 'lib/index.ts';
-const externals = ['react', 'react-dom', 'prop-types'];
+const externals = ['react', 'react-dom', 'prop-types', 'ayaka'];
 const globals = {
   react: 'React',
   'react-dom': 'ReactDOM',
@@ -32,7 +33,7 @@ export default [
       name: 'bundle',
       file: pkg.main,
       format: 'cjs',
-      globals: globals,
+      globals,
       sourceMap: isProduction
     },
     external: externals,

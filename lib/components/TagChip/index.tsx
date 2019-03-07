@@ -71,6 +71,7 @@ const TagChip = ({
           className={classNames('input-chip-delete')}
           btnSize="small"
           title="remove"
+          aria-label="Remove tag"
           icon={Icons.cross}
           onClick={() => onRemove(data)}
         />

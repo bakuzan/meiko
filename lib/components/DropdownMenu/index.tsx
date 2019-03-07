@@ -96,6 +96,7 @@ class DropdownMenu extends React.Component<
         <Button
           id={togglerId}
           className={classNames('dropdown-toggler')}
+          aria-label="Open dropdown"
           icon={icon}
           title={title}
           onClick={this.toggleDropdown}

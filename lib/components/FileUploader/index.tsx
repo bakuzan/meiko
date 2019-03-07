@@ -55,7 +55,7 @@ class FileUploader extends React.Component<
   }
 
   render() {
-    const { className, ...props } = this.props;
+    const { className, onFileSelect, ...props } = this.props;
 
     return (
       <div

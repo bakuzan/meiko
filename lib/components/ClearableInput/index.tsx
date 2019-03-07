@@ -74,7 +74,6 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
           placeholder=" "
           autoComplete="off"
           type={type}
-          aria-label={label}
           onChange={onChange}
           {...props}
         />
@@ -83,6 +82,7 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
           <Button
             className={classNames('clear-input', clearInputButtonClass)}
             btnSize="small"
+            aria-label="Clear input"
             icon={Icons.cross}
             onClick={this.clearAndFocusInput}
           />
