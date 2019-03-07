@@ -12,7 +12,7 @@ storiesOf('Tickbox', module)
   .add('basic', () => (
     <Tickbox
       text={text('Text', 'Tickbox Option')}
-      name="tick"
+      id="tick"
       checked={boolean('Checked', true)}
       disabled={boolean('Disabled', false)}
       onChange={action('changed')}

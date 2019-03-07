@@ -32,7 +32,7 @@ $font-size: 16px;
       font-size: $font-size;
     }
 
-    :global(.button-group) {
+    .button-group {
       padding: 2px;
       margin: 0;
       button {

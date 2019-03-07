@@ -34,7 +34,7 @@ storiesOf('Form', module)
     >
       <ClearableInput value="" {...actions} />
       <SelectBox
-        name="storyTest"
+        id="storyTest"
         value={2}
         text="SelectBox story"
         options={options}

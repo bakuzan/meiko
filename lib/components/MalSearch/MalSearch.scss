@@ -34,7 +34,7 @@ $base-img-height: 100px;
     align-items: flex-start;
     overflow: hidden;
   }
-  &:global(.active) > button,
+  &.active > button,
   &:hover > button {
     height: #{$base-img-height + 10px};
     align-items: center;

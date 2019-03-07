@@ -12,5 +12,5 @@ const actions = {
 storiesOf('FileUploader', module)
   .addDecorator(withInfo)
   .add('basic', () => {
-    return <FileUploader name="file" value="" {...actions} />;
+    return <FileUploader id="file" name="file" value="" {...actions} />;
   });

@@ -5,7 +5,8 @@ import './Tickbox.scss';
 
 export interface ITickboxProps {
   className?: string;
-  name: string;
+  id: string;
+  name?: string;
   checked: boolean;
   disabled?: boolean;
   text?: string;
@@ -14,6 +15,7 @@ export interface ITickboxProps {
 
 const Tickbox = ({
   className,
+  id,
   name,
   checked,
   disabled,
@@ -23,11 +25,11 @@ const Tickbox = ({
   <div className={classNames('input-container', className)}>
     <label
       className={classNames('tickbox', { 'tickbox--disabled': disabled })}
-      htmlFor={name}
+      htmlFor={id}
     >
       <input
         type="checkbox"
-        id={name}
+        id={id}
         name={name}
         checked={checked}
         disabled={disabled}
@@ -39,7 +41,8 @@ const Tickbox = ({
 );
 
 Tickbox.propTypes = {
-  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string,
   checked: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
   disabled: PropTypes.bool,

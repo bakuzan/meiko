@@ -6,9 +6,9 @@ import { withKnobs, date } from '@storybook/addon-knobs';
 import { storyStyle } from '.';
 
 import DateSelector from 'components/DateSelector';
-import { DateFormat } from 'utils/date';
+import { formatDateForInput } from 'utils';
 
-const TODAY = DateFormat.formatDateForInput(new Date());
+const TODAY = formatDateForInput(new Date());
 
 function DateSelectorStory(props) {
   return (
@@ -16,6 +16,7 @@ function DateSelectorStory(props) {
       {withState({ value: TODAY })(
         withInfo()(({ store }) => (
           <DateSelector
+            id="story"
             name="story"
             {...store.state}
             {...props}

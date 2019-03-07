@@ -11,6 +11,7 @@ storiesOf('RatingControl', module)
   .addDecorator(withKnobs)
   .add('basic', () => (
     <RatingControl
+      id="rating"
       name="rating"
       value={number('Rating', 4)}
       label={text('Label', '')}
@@ -21,6 +22,7 @@ storiesOf('RatingControl', module)
     withState({ value: 'Hello, World' })(
       withInfo()(({ store }) => (
         <RatingControl
+          id="rating"
           name="rating"
           value={store.state.value}
           label={text('Label', '')}

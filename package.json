@@ -3,9 +3,9 @@
   "version": "3.0.0-alpha",
   "private": true,
   "description": "Component Library",
-  "main": "dist/bundle.min.js",
-  "style": "dist/bundle.css",
+  "main": "index.js",
   "files": [
+    "build",
     "dist"
   ],
   "lint-staged": {
@@ -25,9 +25,7 @@
     "lint": "lint-staged",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prep-templates": "node ./tools/copy-templates.js",
-    "build-bundle": "rollup -c",
-    "build-and-prep": "npm run build-bundle && npm run prep-templates",
+    "bundle": "rollup -c",
     "build": "node ./tools/build.js",
     "build-all": "npm run build-bundle && npm run build",
     "storybook": "start-storybook -p 7200 -c .storybook",
@@ -60,7 +58,7 @@
     "@storybook/storybook-deployer": "^2.8.1",
     "@types/storybook__react": "^4.0.0",
     "awesome-typescript-loader": "^5.2.1",
-    "ayaka": "file:../ayaka",
+    "ayaka": "file:../ayaka/build",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "chalk": "^2.4.2",
@@ -107,7 +105,7 @@
     "classnames": "^2.2.6"
   },
   "peerDependencies": {
-    "ayaka": "file:../ayaka",
+    "ayaka": "file:../ayaka/build",
     "react": ">=16.0.0",
     "react-dom": ">=16.0.0",
     "styled-components": ">=4.1.0"

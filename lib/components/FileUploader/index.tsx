@@ -7,15 +7,23 @@ import './FileUploader.scss';
 
 interface IFileUploaderProps {
   className?: string;
+  id: string;
   name: string;
   value?: string;
   placeholder?: string;
   onFileSelect(e: Event): void;
 }
 
+interface IFileUploaderState {
+  isFocused: boolean;
+}
+
 const displayFileName = (str: string) => str.slice(0).replace(/^.*\\/g, '');
 
-class FileUploader extends React.Component<IFileUploaderProps, any> {
+class FileUploader extends React.Component<
+  IFileUploaderProps,
+  IFileUploaderState
+> {
   static defaultProps = {
     placeholder: 'upload'
   };
@@ -30,6 +38,13 @@ class FileUploader extends React.Component<IFileUploaderProps, any> {
 
   private fileInput = null;
 
+  constructor(props: IFileUploaderProps) {
+    super(props);
+    this.state = {
+      isFocused: false
+    };
+  }
+
   handleUserInput(event) {
     event.stopPropagation();
     this.props.onFileSelect(event);
@@ -40,27 +55,36 @@ class FileUploader extends React.Component<IFileUploaderProps, any> {
   }
 
   render() {
-    const { className, name, value, placeholder } = this.props;
+    const { className, ...props } = this.props;
 
     return (
-      <div className={classNames('file-uploader', className)}>
+      <div
+        className={classNames(
+          'file-uploader',
+          { 'file-uploader--focused': this.state.isFocused },
+          className
+        )}
+      >
         <input
           ref={(element) => (this.fileInput = element)}
+          className="file-uploader__input"
           type="file"
-          name={name}
-          value={value}
-          placeholder={placeholder}
+          aria-label="select a file to upload"
           onChange={(e) => this.handleUserInput(e)}
+          onFocus={() => this.setState({ isFocused: true })}
+          onBlur={() => this.setState({ isFocused: false })}
+          {...props}
         />
         <div className={classNames('file-value')}>
-          {displayFileName(value) || 'Nothing selected'}
+          {displayFileName(props.value) || 'Nothing selected'}
         </div>
         <Button
           className="ripple"
           btnStyle="primary"
+          aria-label="select a file to upload"
           onClick={() => this.handleFileUpload()}
         >
-          {placeholder}
+          {props.placeholder}
         </Button>
       </div>
     );

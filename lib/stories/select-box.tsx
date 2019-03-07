@@ -18,7 +18,7 @@ storiesOf('SelectBox', module)
     'basic',
     withState({ value: 2 })(({ store }) => (
       <SelectBox
-        name="storyTest"
+        id="storyTest"
         value={store.state.value}
         text="SelectBox story"
         options={options}

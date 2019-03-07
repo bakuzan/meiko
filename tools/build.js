@@ -6,7 +6,7 @@ const execa = require('execa');
 
 const stdio = ['pipe', 'pipe', 'inherit'];
 
-const outputRoot = path.join(__dirname, '../modules/');
+const outputRoot = path.join(__dirname, '../build/');
 const libRoot = path.join(__dirname, '../lib/');
 
 const clean = async (dir) => fse.existsSync(dir) && fse.remove(dir);

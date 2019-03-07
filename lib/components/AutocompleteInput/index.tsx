@@ -202,6 +202,7 @@ class AutocompleteInput extends React.Component<
       <div className={classNames('autocomplete')}>
         <ClearableInput
           label={label}
+          id={attr}
           name={attr}
           value={filter}
           onChange={this.handleInputFilter}

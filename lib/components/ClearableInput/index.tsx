@@ -49,9 +49,6 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
       clearInputButtonClass,
       type,
       label,
-      name,
-      value,
-      maxLength,
       onChange,
       ...props
     } = this.props;
@@ -78,14 +75,11 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
           autoComplete="off"
           type={type}
           aria-label={label}
-          name={name}
-          value={value}
-          maxLength={maxLength}
           onChange={onChange}
           {...props}
         />
-        <label htmlFor={name}>{label}</label>
-        {!!value && isTextInput && (
+        <label htmlFor={props.id}>{label}</label>
+        {!!props.value && isTextInput && (
           <Button
             className={classNames('clear-input', clearInputButtonClass)}
             btnSize="small"
@@ -93,11 +87,11 @@ class ClearableInput extends React.Component<IClearableInputProps, any> {
             onClick={this.clearAndFocusInput}
           />
         )}
-        {(!!maxLength || hasMaxNumber) && (
+        {(!!props.maxLength || hasMaxNumber) && (
           <span className={classNames('clearable-input-count')}>
-            {maxLength &&
+            {props.maxLength &&
               isTextInput &&
-              `${(value as string).length}/${maxLength}`}
+              `${(props.value as string).length}/${props.maxLength}`}
             {hasMaxNumber && isNumberInput && `out of ${props.max || '?'}`}
           </span>
         )}

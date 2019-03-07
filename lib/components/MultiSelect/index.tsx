@@ -168,6 +168,7 @@ class MultiSelect extends React.Component<
           <ul className={classNames('multi-select-list', 'list column one')}>
             <li key="ALL">
               <Tickbox
+                id={`${id}--selectAll`}
                 name={`${id}--selectAll`}
                 text="Select All"
                 checked={hasAllSelected}
@@ -181,16 +182,20 @@ class MultiSelect extends React.Component<
                 'meiko-multi-select-separator'
               )}
             />
-            {options.map((op, i) => (
-              <li key={op.value}>
-                <Tickbox
-                  name={`${id}--${OPTION_PREFIX}${i}`}
-                  text={op.text}
-                  checked={values.includes(op.value)}
-                  onChange={this.handleOptionChange}
-                />
-              </li>
-            ))}
+            {options.map((op, i) => {
+              const idAndName = `${id}--${OPTION_PREFIX}${i}`;
+              return (
+                <li key={op.value}>
+                  <Tickbox
+                    id={idAndName}
+                    name={idAndName}
+                    text={op.text}
+                    checked={values.includes(op.value)}
+                    onChange={this.handleOptionChange}
+                  />
+                </li>
+              );
+            })}
           </ul>
         </div>
         {this.state.isOpen && (

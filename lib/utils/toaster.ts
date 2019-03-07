@@ -13,7 +13,7 @@ export interface IToaster {
   popToast(toast: IToast): void;
 }
 
-class ToasterService {
+export class ToasterService {
   private toaster: IToaster;
 
   register(instance: IToaster) {

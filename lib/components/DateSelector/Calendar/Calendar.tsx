@@ -6,12 +6,14 @@ import { Button } from '../../Button';
 import Icons from '../../../constants/icons';
 import Strings from '../../../constants/strings';
 import { ViewOptionEnum } from '../../../constants/enums';
-import * as DateUtils from '../../../utils/date';
+import {
+  formatDateForInput,
+  adjustDateMonth,
+  adjustDateYear
+} from '../../../utils';
 import * as CalendarUtils from './CalendarUtils';
 
 import './Calendar.scss';
-
-const { DateFormat } = DateUtils;
 
 const PREV = -1;
 const NEXT = 1;
@@ -46,7 +48,7 @@ class Calendar extends React.Component<
   constructor(props: ICalendarProps) {
     super(props);
 
-    const date = DateFormat.formatDateForInput(props.selected || new Date());
+    const date = formatDateForInput(props.selected || new Date());
     this.state = {
       viewDate: date,
       selectedDate: date,
@@ -59,7 +61,7 @@ class Calendar extends React.Component<
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    const selectedDate = DateFormat.formatDateForInput(nextProps.selected);
+    const selectedDate = formatDateForInput(nextProps.selected);
     const prevSelected = prevState.selectedDate;
     if (selectedDate !== prevSelected) {
       return { selectedDate };
@@ -84,8 +86,8 @@ class Calendar extends React.Component<
 
       const { isMonthView, viewDate: oldViewDate } = this.state;
       const viewDate = isMonthView
-        ? DateUtils.adjustDateMonth(oldViewDate, direction)
-        : DateUtils.adjustDateYear(oldViewDate, direction);
+        ? adjustDateMonth(oldViewDate, direction)
+        : adjustDateYear(oldViewDate, direction);
       this.setState({ viewDate });
     };
   }
@@ -104,7 +106,7 @@ class Calendar extends React.Component<
         option.text
       );
       this.setState({ viewDate });
-      this.props.onSelect(DateFormat.formatDateForInput(viewDate));
+      this.props.onSelect(formatDateForInput(viewDate));
     } else if (option.optionType === ViewOptionEnum.MONTH) {
       const monthIndex = Strings.monthNames.findIndex((x) => x === option.text);
       const viewDate = new Date(oldViewDate.getFullYear(), monthIndex, 1);

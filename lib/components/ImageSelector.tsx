@@ -160,6 +160,7 @@ class ImageSelector extends React.Component<
           hasBackdrop={false}
         >
           <ClearableInput
+            id="imageUrl"
             name="imageUrl"
             label="Image Url"
             value={this.state.imageUrl}
@@ -168,6 +169,7 @@ class ImageSelector extends React.Component<
 
           <FileUploader
             className={this.props.uploaderClassName}
+            id="imageFile"
             name="imageFile"
             value={this.state.imageMessage}
             placeholder="upload image"

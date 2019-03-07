@@ -1,17 +1,26 @@
 %form-specific {
-  :global {
-    .input-container,
-    .select-container {
-      width: 100%;
-    }
+  .input-container,
+  .select-container {
+    width: 100%;
+  }
 
-    .button-group {
-      width: 100%;
-      justify-content: flex-end;
-    }
+  .button-group {
+    width: 100%;
+    justify-content: flex-end;
   }
 }
 
 %standard-shadow {
   box-shadow: 2px 2px 10px #aaa;
+}
+
+%for-screenreader {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

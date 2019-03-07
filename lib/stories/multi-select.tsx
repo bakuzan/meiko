@@ -24,16 +24,22 @@ function MultiSelectStory(props) {
       `}</style>
       {withState({ values: [] })(
         withInfo()(({ store }) => (
-          <MultiSelect
-            {...props}
-            {...store.state}
-            listClassName="story-list"
-            className="meiko-multiselect"
-            name="multiSelect"
-            placeholder="Select a gen"
-            options={options}
-            onUpdate={(values) => store.set({ values })}
-          />
+          <React.Fragment>
+            <button>YOYO</button>
+            <button>YOYO</button>
+            <MultiSelect
+              {...props}
+              {...store.state}
+              listClassName="story-list"
+              className="meiko-multiselect"
+              name="multiSelect"
+              placeholder="Select a gen"
+              options={options}
+              onUpdate={(values) => store.set({ values })}
+            />
+            <button>YOYO</button>
+            <button>YOYO</button>
+          </React.Fragment>
         ))
       )()}
     </div>

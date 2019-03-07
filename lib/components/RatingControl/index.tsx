@@ -4,6 +4,7 @@ import * as React from 'react';
 import './RatingControl.scss';
 
 interface IRatingControlProps {
+  id: string;
   name: string;
   label?: string;
   value: string | number | boolean;
@@ -71,11 +72,11 @@ class RatingControl extends React.Component<IRatingControlProps, any> {
       const value = index + 1;
       const colourise = this.ratingColouriser(value);
       const hoverInfo = `${value}/${this.maximum}`;
-      const radioName = `${this.props.name}-${value}`;
+      const radioId = `${this.props.id}-${value}`;
       return (
         <label
           key={index}
-          htmlFor={radioName}
+          htmlFor={radioId}
           className={classNames('rating-control-option', colourise, {
             past: this.props.value > value,
             selected: this.props.value === value
@@ -84,7 +85,7 @@ class RatingControl extends React.Component<IRatingControlProps, any> {
         >
           <input
             type="radio"
-            name={radioName}
+            id={radioId}
             value={value}
             checked={value === this.props.value}
             onChange={() => null}

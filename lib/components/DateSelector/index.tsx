@@ -5,8 +5,9 @@ import * as React from 'react';
 import { Button } from '../Button';
 import ClearableInput from '../ClearableInput';
 import Calendar from './Calendar/Calendar';
+import Backdrop from '../Backdrop';
 import { checkDatesAgainstRange } from './Calendar/CalendarUtils';
-import { Enums, Strings, Icons } from '../../constants/index';
+import { Icons } from '../../constants/index';
 import './DateSelector.scss';
 
 const CLEAR_EVENT = { target: { value: '' } };
@@ -18,6 +19,7 @@ const ErrorMessages = {
 interface IDateSelectorProps {
   className?: string;
   calendarClassName?: string;
+  id: string;
   name: string;
   value: string;
   label: string;
@@ -74,14 +76,7 @@ class DateSelector extends React.Component<
     this.setState({ displayCalendar: true });
   }
 
-  handleCloseCalendar(e) {
-    if (
-      e.type !== Strings.events.click &&
-      !Enums.CLOSE_KEYS.includes(e.keyCode)
-    ) {
-      return;
-    }
-
+  handleCloseCalendar() {
     this.setState({ displayCalendar: false });
   }
 
@@ -118,6 +113,7 @@ class DateSelector extends React.Component<
     const {
       className,
       calendarClassName,
+      id,
       name,
       value,
       label,
@@ -133,7 +129,7 @@ class DateSelector extends React.Component<
 
     return (
       <div
-        id={`${name}-date-selector`}
+        id={`${id}-date-selector`}
         className={classNames(
           'date-selector-container',
           { 'read-only': isReadOnly },
@@ -146,7 +142,7 @@ class DateSelector extends React.Component<
               type="date"
               label={label}
               placeholder="__/__/____"
-              id={`${name}-ctrl`}
+              id={`${id}-ctrl`}
               name={name}
               value={value}
               required={required}
@@ -179,24 +175,21 @@ class DateSelector extends React.Component<
             )}
           </React.Fragment>
         )}
-        {!isFlat && this.state.displayCalendar && (
-          <div
-            className={classNames('date-selector-calendar-backdrop')}
-            role="button"
-            tabIndex={0}
-            onClick={this.handleCloseCalendar}
-            onKeyDown={this.handleCloseCalendar}
-          />
-        )}
         {(isFlat || this.state.displayCalendar) && (
           <Calendar
-            id={name}
+            id={id}
             className={classNames({ flat: isFlat }, calendarClassName)}
             selected={value}
             afterDate={afterDate}
             beforeDate={beforeDate}
             disabled={disabled}
             onSelect={this.handleDateSelect}
+          />
+        )}
+        {!isFlat && this.state.displayCalendar && (
+          <Backdrop
+            className={classNames('date-selector-calendar-backdrop')}
+            onClickOrKey={this.handleCloseCalendar}
           />
         )}
       </div>

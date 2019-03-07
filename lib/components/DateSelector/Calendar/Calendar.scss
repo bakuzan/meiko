@@ -8,10 +8,10 @@ $button-padding: 10px;
   flex-direction: column;
   width: 100%;
   padding: 5px;
-  z-index: map-get($z-index, above-siblings);
+  z-index: map-get($z-index, above-backdrop);
   box-sizing: border-box;
 
-  &:not(:global(.flat)) {
+  &:not(.flat) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -55,7 +55,7 @@ $button-padding: 10px;
     &.month {
       width: calc(100% / 3);
     }
-    :global(.selected) {
+    .selected {
       background-color: $calendar--selected-day-background-colour;
       color: $calendar--selected-day-font-colour;
     }

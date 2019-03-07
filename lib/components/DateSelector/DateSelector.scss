@@ -5,7 +5,7 @@
   display: flex;
   flex-flow: wrap;
 
-  > :global(.input-container) {
+  > .input-container {
     display: flex;
     flex: 1 1 90%;
   }
@@ -27,15 +27,6 @@
       }
     }
   }
-}
-
-.date-selector-calendar-backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: map-get($z-index, above-siblings);
 }
 
 .error-message {
