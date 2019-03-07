@@ -22,7 +22,8 @@ const standardUrls = {
   },
   graphql: {
     base: '/graphql?query='
-  }
+  },
+  malSearch: '/api/mal-search/:type' // TODO remove(?) when MalSearch is rewritten/removed
 };
 
 export default standardUrls;
