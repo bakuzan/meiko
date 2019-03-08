@@ -205,6 +205,7 @@ class MalSearch extends React.Component<IMalSearchProps, IMalSearchState> {
     return (
       <div className={malSearchClasses}>
         <AutocompleteInput
+          id="mal-search"
           attr="title"
           items={this.state.results}
           filter={search}

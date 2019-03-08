@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
-import ClearableInput from '../ClearableInput';
+import ClearableInput, { IClearableInputProps } from '../ClearableInput';
 import AutocompleteSuggestionItem, {
   IAutocompleteSuggestionProps
 } from './AutocompleteInputSuggestionItem';
@@ -13,6 +13,7 @@ import { IAutocompleteOption } from 'types';
 import './AutocompleteInput.scss';
 
 interface IAutocompleteInputProps {
+  id: string;
   label?: string;
   attr: string;
   items: IAutocompleteOption[];
@@ -187,12 +188,17 @@ class AutocompleteInput extends React.Component<
     const {
       filter,
       attr,
-      label,
       noSuggestionsItem,
       disableLocalFilter,
       suggestionTemplate: AutocompleteSuggestionTemplate,
       menuClassName,
-      clearableInputProps
+      clearableInputProps,
+      items,
+      onChange,
+      onSelect,
+      onKeyDown,
+      suggestionTemplate,
+      ...props
     } = this.props;
     const autocomplete = this.filterAutoComplete();
     const hasOptions = !!this.props.items.length;
@@ -201,8 +207,7 @@ class AutocompleteInput extends React.Component<
     return (
       <div className={classNames('autocomplete')}>
         <ClearableInput
-          label={label}
-          id={attr}
+          {...props}
           name={attr}
           value={filter}
           onChange={this.handleInputFilter}

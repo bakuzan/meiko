@@ -15,6 +15,7 @@ interface IChipListItem {
   name?: string;
 }
 interface IChipListInputProps {
+  id: string;
   label?: string;
   attr: string;
   name: string;
@@ -149,15 +150,15 @@ class ChipListInput extends React.Component<
 
   render() {
     const {
-      label,
-      attr,
       chipOptions,
       chipsSelected,
       createNew,
       menuClassName,
       tagClassName,
-      createNewMessage
+      createNewMessage,
+      ...props
     } = this.props;
+
     const chips = chipsSelected
       .filter((x) => x !== undefined)
       .map((item, index, array) => {
@@ -168,7 +169,7 @@ class ChipListInput extends React.Component<
             key={index}
             className={tagClassName}
             isActive={readyRemoval}
-            data={{ name: item[attr] }}
+            data={{ name: item[props.attr] }}
             onRemove={this.removeInputItem}
           />
         );
@@ -182,10 +183,9 @@ class ChipListInput extends React.Component<
     return (
       <div className={classNames('chip-list-input-container')}>
         <AutocompleteInput
-          label={label}
-          attr={attr}
+          {...props}
           items={chipOptions}
-          filter={this.state[attr]}
+          filter={this.state[props.attr]}
           onChange={this.handleUserInput}
           onSelect={this.selectAutocompleteSuggestion}
           onKeyDown={this.handleKeyDown}

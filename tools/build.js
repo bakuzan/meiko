@@ -1,4 +1,4 @@
-const { green, cyan, magenta, red } = require('chalk');
+const { green, cyan, magenta, red, blue } = require('chalk');
 
 const path = require('path');
 const fse = require('fs-extra');
@@ -11,23 +11,32 @@ const libRoot = path.join(__dirname, '../lib/');
 
 const clean = async (dir) => fse.existsSync(dir) && fse.remove(dir);
 
-const step = (name, fn) => async () => {
-  console.log(cyan('Building: ') + green(name));
-  await clean(outputRoot);
-  await fn();
-  console.log(magenta('Built: ') + green(name));
-};
-
-const buildLib = step('commonjs modules', () =>
-  execa.shell(
-    `npx babel ${libRoot} --out-dir ${outputRoot} --extensions=.ts,.tsx,.js --presets @babel/preset-typescript --copy-files --env-name "lib"`,
+async function build(folderName) {
+  const src = path.join(libRoot, folderName);
+  console.log(blue(`Processing: ${src}`));
+  return execa.shell(
+    `npx babel ${src} --out-dir ${outputRoot} --extensions=.ts,.tsx,.js --presets @babel/preset-env,@babel/preset-typescript --copy-files --env-name "lib"`,
     {
       stdio
     }
-  )
-);
+  );
+}
 
-console.log(green('Building library\n'));
+async function step(name, folder) {
+  console.log(cyan('Building: ') + green(name));
+  await build(folder);
+  console.log(magenta('Built: ') + green(name));
+}
+
+async function buildLib() {
+  await clean(outputRoot);
+  await step('components', '');
+  // await step('components');
+  // await step('constants');
+  // await step('utils');
+}
+
+console.log(blue('Building library\n'));
 
 buildLib()
   .then(() => console.log(green('Built library\n')))

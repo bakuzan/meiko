@@ -7,7 +7,8 @@ import Icons from '../../constants/icons';
 import { debounce } from '../../utils';
 import './ClearableInput.scss';
 
-interface IClearableInputProps extends React.HTMLProps<HTMLInputElement> {
+export interface IClearableInputProps
+  extends React.HTMLProps<HTMLInputElement> {
   clearInputButtonClass?: string;
 }
 
