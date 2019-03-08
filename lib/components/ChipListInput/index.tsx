@@ -156,6 +156,7 @@ class ChipListInput extends React.Component<
       menuClassName,
       tagClassName,
       createNewMessage,
+      updateChipList,
       ...props
     } = this.props;
 
