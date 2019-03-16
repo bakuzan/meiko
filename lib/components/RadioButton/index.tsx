@@ -12,10 +12,10 @@ export interface IRadioButtonProps {
   onSelect(e: React.ChangeEvent<HTMLInputElement>): void;
 }
 
-const RadioButton = ({ id, label, onSelect, ...props }: IRadioButtonProps) => (
+const RadioButton = ({ label, onSelect, ...props }: IRadioButtonProps) => (
   <label
     className={classNames('radio')}
-    htmlFor={id}
+    htmlFor={props.id}
     aria-checked={props.checked}
   >
     <input type="radio" onChange={onSelect} {...props} />
