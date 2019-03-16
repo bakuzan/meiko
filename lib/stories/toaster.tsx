@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
-import toaster from 'utils/toaster';
+import toaster from 'utils/toasterService';
 import Toaster from 'components/Toaster';
 
 let timer;

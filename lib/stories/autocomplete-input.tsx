@@ -19,6 +19,7 @@ storiesOf('AutocompleteInput', module).add(
   withState(initialState)(
     withInfo()(({ store }) => (
       <AutocompleteInput
+        id="text"
         attr="text"
         items={list}
         filter={store.state.value}

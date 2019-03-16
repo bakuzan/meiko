@@ -21,6 +21,7 @@ storiesOf('ChipListInput', module)
     withState({ list: selected })(
       withInfo()(({ store }) => (
         <ChipListInput
+          id="tags"
           attr="text"
           name="tags"
           chipsSelected={store.state.list}
@@ -35,6 +36,7 @@ storiesOf('ChipListInput', module)
     withState({ list: selected, options })(
       withInfo()(({ store }) => (
         <ChipListInput
+          id="tags"
           attr="text"
           name="tags"
           chipsSelected={store.state.list}
@@ -57,6 +59,7 @@ storiesOf('ChipListInput', module)
     withState({ list: selected, options })(
       withInfo()(({ store }) => (
         <ChipListInput
+          id="tags"
           attr="text"
           name="tags"
           chipsSelected={store.state.list}
