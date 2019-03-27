@@ -7,7 +7,6 @@ import ClearableInput from './ClearableInput';
 import DateSelector from './DateSelector';
 import Dialog from './Dialog';
 import DropdownMenu from './DropdownMenu';
-import Example from './Example';
 import FileUploader from './FileUploader';
 import Form from './Form';
 import Grid from './Grid';
@@ -44,7 +43,6 @@ export {
   DateSelector,
   Dialog,
   DropdownMenu,
-  Example,
   FileUploader,
   Form,
   Grid,

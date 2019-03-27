@@ -6,11 +6,11 @@ import Urls from '../constants/urls';
 const Image = (props) => (
   <img
     alt=""
-    {...props}
     onError={(e: any) => {
       e.target.onerror = null;
       e.target.src = Urls.images.deadImage;
     }}
+    {...props}
   />
 );
 
