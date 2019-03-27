@@ -1,7 +1,7 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-import Urls from '../constants/urls';
+import Urls from './_constants/urls';
 
 const Image = (props) => (
   <img

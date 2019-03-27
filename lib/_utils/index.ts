@@ -21,6 +21,7 @@ import { isBefore, isBeforeOrEqual } from 'ayaka/isBefore';
 import isNumber from 'ayaka/isNumber';
 import isObject from 'ayaka/isObject';
 import isString from 'ayaka/isString';
+import { lighten, darken } from 'ayaka/palette';
 
 export {
   adjustDateMonth,
@@ -46,5 +47,7 @@ export {
   getDifferenceFromMonday,
   getDifferenceFromSunday,
   isBefore,
-  isBeforeOrEqual
+  isBeforeOrEqual,
+  lighten,
+  darken
 };

@@ -1,7 +1,7 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 
-const req = require.context('../lib/stories', true, /\.tsx$/);
+const req = require.context('../lib/_stories', true, /\.tsx$/);
 
 addDecorator(withA11y);
 addParameters({ info: { inline: false } });

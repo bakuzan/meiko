@@ -6,9 +6,9 @@ import { Button } from './Button';
 import Dialog from './Dialog';
 import ClearableInput from './ClearableInput';
 import FileUploader from './FileUploader';
-import { isString, convertToBase64 } from '../utils';
-import MeikoFetch from '../utils/fetch';
-import Urls from '../constants/urls';
+import { isString, convertToBase64 } from './_utils';
+import MeikoFetch from './_utils/fetch';
+import Urls from './_constants/urls';
 
 import './FileUploader/FileUploader.scss';
 
