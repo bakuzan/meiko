@@ -3,14 +3,14 @@ import classNames from 'classnames';
 import * as React from 'react';
 
 import { Button } from '../../Button';
-import Icons from '../../../constants/icons';
-import Strings from '../../../constants/strings';
-import { ViewOptionEnum } from '../../../constants/enums';
+import Icons from '../../_constants/icons';
+import Strings from '../../_constants/strings';
+import { ViewOptionEnum } from '../../_constants/enums';
 import {
   formatDateForInput,
   adjustDateMonth,
   adjustDateYear
-} from '../../../utils';
+} from '../../_utils';
 import * as CalendarUtils from './CalendarUtils';
 
 import './Calendar.scss';

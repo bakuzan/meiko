@@ -1,5 +1,5 @@
-import Strings from '../../../constants/strings';
-import { ViewOptionEnum } from '../../../constants/enums';
+import Strings from '../../_constants/strings';
+import { ViewOptionEnum } from '../../_constants/enums';
 import {
   getDifferenceFromMonday,
   getDifferenceFromSunday,
@@ -11,7 +11,7 @@ import {
   getLastDateOfMonth,
   isBefore,
   isBeforeOrEqual
-} from '../../../utils';
+} from '../../_utils';
 
 export interface ICalendarState {
   viewDate: string | Date;

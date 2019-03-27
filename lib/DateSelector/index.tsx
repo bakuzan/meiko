@@ -7,7 +7,7 @@ import ClearableInput from '../ClearableInput';
 import Calendar from './Calendar/Calendar';
 import Backdrop from '../Backdrop';
 import { checkDatesAgainstRange } from './Calendar/CalendarUtils';
-import { Icons } from '../../constants/index';
+import { Icons } from '../_constants/index';
 import './DateSelector.scss';
 
 const CLEAR_EVENT = { target: { value: '' } };

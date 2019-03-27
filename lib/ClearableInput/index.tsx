@@ -3,8 +3,8 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 
 import { Button } from '../Button';
-import Icons from '../../constants/icons';
-import { debounce } from '../../utils';
+import Icons from '../_constants/icons';
+import { debounce } from '../_utils';
 import './ClearableInput.scss';
 
 export interface IClearableInputProps

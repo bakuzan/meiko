@@ -2,7 +2,7 @@ import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as React from 'react';
 
-import Icons from '../../constants/icons';
+import Icons from '../_constants/icons';
 import { Button } from '../Button';
 import SidebarLinkTemplate, {
   ISidebarLink,

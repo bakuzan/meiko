@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 
 import { Button } from '../Button';
-import Strings from '../../constants/strings';
+import Strings from '../_constants/strings';
 import { IJSXChildren } from 'types';
 import './Form.scss';
 

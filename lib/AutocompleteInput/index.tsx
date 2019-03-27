@@ -7,8 +7,8 @@ import AutocompleteSuggestionItem, {
   IAutocompleteSuggestionProps
 } from './AutocompleteInputSuggestionItem';
 
-import { KeyCodes } from '../../constants/enums';
-import { isNumber, getTimeoutSeconds } from '../../utils';
+import { KeyCodes } from '../_constants/enums';
+import { isNumber, getTimeoutSeconds } from '../_utils';
 import { IAutocompleteOption } from 'types';
 import './AutocompleteInput.scss';
 

@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { Button } from '../../Button';
 import TabView from '../TabView';
-import { IJSXChildren } from 'types';
+import { IJSXChildren } from '../../types';
 import './TabContainer.scss';
 
 export interface ITabContainerProps {

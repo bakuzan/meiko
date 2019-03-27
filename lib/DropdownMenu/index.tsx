@@ -5,9 +5,9 @@ import * as React from 'react';
 import { Button } from '../Button';
 import Portal from '../Portal';
 import Backdrop from '../Backdrop';
-import { Strings, Icons } from '../../constants/index';
-import { PositionEnum } from 'constants/enums';
-import { getElementCoordinates } from '../../utils';
+import { Strings, Icons } from '../_constants';
+import { PositionEnum } from '../_constants/enums';
+import { getElementCoordinates } from '../_utils';
 import { IElementCoordinates, IJSXChildren } from 'types';
 
 import './DropdownMenu.scss';

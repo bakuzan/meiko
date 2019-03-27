@@ -2,7 +2,7 @@ import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { Enums, Strings } from '../../constants/index';
+import { Enums, Strings } from '../_constants/index';
 import Tickbox from '../Tickbox';
 import Backdrop from '../Backdrop';
 import { ISelectBoxOption } from 'types';

@@ -5,7 +5,7 @@ import * as PropTypes from 'prop-types';
 import { Button } from '../Button';
 import AutocompleteInput from '../AutocompleteInput';
 import TagChip from '../TagChip';
-import { KeyCodes } from '../../constants/enums';
+import { KeyCodes } from '../_constants/enums';
 import './ChipListInput.scss';
 
 const resolveId = (o) => o._id || o.id;

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 
 import { Button } from '../Button';
-import { isNumber } from '../../utils';
+import { isNumber } from '../_utils';
 import { IAutocompleteOption } from 'types';
 import './AutocompleteInput.scss';
 

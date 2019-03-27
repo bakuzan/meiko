@@ -12,9 +12,9 @@ import {
   debounce,
   capitalise,
   isArray
-} from '../../utils';
-import MeikoFetch from '../../utils/fetch';
-import Urls from '../../constants/urls';
+} from '../_utils';
+import MeikoFetch from '../_utils/fetch';
+import Urls from '../_constants/urls';
 import { IAutocompleteOption } from 'types';
 import './MalSearch.scss';
 

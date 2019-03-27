@@ -2,8 +2,8 @@ import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { Enums, Strings } from '../../constants';
-import { createListeners } from '../../utils';
+import { Enums, Strings } from '../_constants';
+import { createListeners } from '../_utils';
 import './Backdrop.scss';
 
 interface IBackdropProps {

@@ -3,8 +3,8 @@ import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { Button } from '../Button';
-import Strings from '../../constants/strings';
-import { createListeners } from '../../utils';
+import Strings from '../_constants/strings';
+import { createListeners } from '../_utils';
 import { IJSXChildren } from 'types';
 import './Dialog.scss';
 
