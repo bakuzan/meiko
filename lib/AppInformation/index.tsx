@@ -1,11 +1,12 @@
 import classNames from 'classnames';
+import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
 import Icons from '../_constants/icons';
-import './AppInformation.scss';
+import styles from './AppInformation';
 
-const resolveENVVariable = (str) => (str || '').trim();
-const resolveLabel = (b, v) => {
+const resolveENVVariable = (str: string) => (str || '').trim();
+function resolveLabel(b: string, v: string) {
   let label = '';
   if (b) {
     label += `Branch ${b}`;
@@ -20,64 +21,53 @@ const resolveLabel = (b, v) => {
   }
 
   return label;
-};
+}
 
 interface IAppInformationProps {
   branch?: string;
   version?: string;
 }
-interface IAppInformationState {
-  hovered: boolean;
-}
 
-class AppInformation extends React.PureComponent<
-  IAppInformationProps,
-  IAppInformationState
-> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hovered: false
-    };
+function AppInformation({ branch, version }: IAppInformationProps) {
+  const [hovered, setHovered] = React.useState(false);
 
-    this.handleHovered = this.handleHovered.bind(this);
+  if (!branch && !version) {
+    return null;
   }
 
-  handleHovered(hovered) {
-    return () => this.setState({ hovered });
-  }
+  const codeBranch = resolveENVVariable(branch);
+  const appVersion = resolveENVVariable(version);
+  const ariaLabel = resolveLabel(codeBranch, appVersion);
 
-  render() {
-    const { branch, version } = this.props;
-
-    if (!branch && !version) {
-      return null;
-    }
-
-    const codeBranch = resolveENVVariable(branch);
-    const appVersion = resolveENVVariable(version);
-    const ariaLabel = resolveLabel(codeBranch, appVersion);
-
-    return (
+  return (
+    <div
+      className={classNames('app-information', styles.appInformation)}
+      data-icon={Icons.info}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      aria-label={ariaLabel}
+    >
       <div
-        className={classNames('app-information')}
-        data-icon={Icons.info}
-        onMouseEnter={this.handleHovered(true)}
-        onMouseLeave={this.handleHovered(false)}
-        aria-label={ariaLabel}
+        className={classNames(
+          'app-information__detail',
+          styles.appInformation__detail,
+          {
+            'app-information__detail--visible': hovered,
+            [styles.appInformation__detail_visible]: hovered
+          }
+        )}
       >
-        <div
-          className={classNames('app-information__detail', {
-            'app-information__detail--visible': this.state.hovered
-          })}
-        >
-          {codeBranch && <span>Branch: {codeBranch}</span>}
-          {!!codeBranch && !!appVersion && <br />}
-          {appVersion && <span>Version: {appVersion}</span>}
-        </div>
+        {codeBranch && <span>Branch: {codeBranch}</span>}
+        {!!codeBranch && !!appVersion && <br />}
+        {appVersion && <span>Version: {appVersion}</span>}
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+AppInformation.propTypes = {
+  version: PropTypes.string,
+  branch: PropTypes.string
+};
 
 export default AppInformation;

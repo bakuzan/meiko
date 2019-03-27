@@ -1,104 +1,148 @@
 import classNames from 'classnames';
-import * as React from 'react';
 import * as PropTypes from 'prop-types';
+import * as React from 'react';
 
 import { Button } from '../Button';
 import Icons from '../_constants/icons';
-import { debounce } from '../_utils';
-import './ClearableInput.scss';
+import styles from './ClearableInput';
 
 export interface IClearableInputProps
-  extends React.HTMLProps<HTMLInputElement> {
-  clearInputButtonClass?: string;
+  extends React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
+  containerClassName?: string;
+  label: string;
+  error?: string;
+  maxNumberText: (props: IClearableInputProps) => string;
 }
 
-class ClearableInput extends React.Component<IClearableInputProps, any> {
-  static defaultProps = {
-    name: 'search',
-    label: 'search',
-    type: 'text'
-  };
+export const Input = React.forwardRef(function Input(
+  { className, ...props },
+  ref
+) {
+  return (
+    <input
+      ref={ref}
+      type="text"
+      placeholder=" "
+      autoComplete="off"
+      className={classNames('input', className)}
+      {...props}
+    />
+  );
+});
 
-  static propTypes = {
-    clearInputButtonClass: PropTypes.string,
-    name: PropTypes.string,
-    label: PropTypes.string,
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    maxLength: PropTypes.number,
-    onChange: PropTypes.func.isRequired,
-    onKeyDown: PropTypes.func
-  };
+const fakeEvent = ({ type, name }) => ({
+  target: {
+    type: type || 'text',
+    name,
+    value: ''
+  }
+});
 
-  private inputField = null;
+function ClearableInput({
+  containerClassName,
+  label,
+  error,
+  maxNumberText,
+  ...props
+}: IClearableInputProps) {
+  const ref = React.useRef<{ current: HTMLInputElement }>();
+  const isTextInput = props.type === 'text' || !props.type;
+  const isNumberInput = props.type === 'number';
+  const hasMaxNumber = !isNaN(props.max as any);
+  const notClearable = !isTextInput;
 
-  constructor(props: IClearableInputProps) {
-    super(props);
-
-    this.clearAndFocusInput = this.clearAndFocusInput.bind(this);
+  function clearAndFocusInput() {
+    props.onChange(fakeEvent(props));
+    ref.current.focus();
   }
 
-  clearAndFocusInput() {
-    this.props.onChange({
-      target: { name: this.props.name, value: '' }
-    } as any);
-    debounce(() => this.inputField.focus(), 100);
-  }
-
-  render() {
-    const {
-      className,
-      clearInputButtonClass,
-      type,
-      label,
-      onChange,
-      ...props
-    } = this.props;
-    const isTextInput = type === 'text';
-    const isNumberInput = type === 'number';
-    const hasMaxNumber = !isNaN(props.max as any);
-    const notClearable = !isTextInput;
-
-    return (
+  return (
+    <div
+      className={classNames(
+        'clearable-input has-float-label',
+        containerClassName,
+        styles.clearableInput
+      )}
+    >
       <div
         className={classNames(
-          className,
-          'clearable-input',
-          'has-float-label',
-          'input-container',
-          {
-            'not-clearable': notClearable
-          }
+          'clearable-input__inner',
+          styles.clearableInput__inner
         )}
       >
-        <input
-          ref={(input) => (this.inputField = input)}
-          placeholder=" "
-          autoComplete="off"
-          type={type}
-          onChange={onChange}
+        <Input
           {...props}
+          ref={ref}
+          className={classNames(
+            'clearable-input__input',
+            styles.clearableInput__input,
+            notClearable && styles.clearableInput__input_notClearable
+          )}
         />
         <label htmlFor={props.id}>{label}</label>
         {!!props.value && isTextInput && (
           <Button
-            className={classNames('clear-input', clearInputButtonClass)}
+            type="button"
+            className={classNames(
+              'clearable-input__clear',
+              styles.clearableInput__clear
+            )}
             btnSize="small"
             aria-label="Clear input"
             icon={Icons.cross}
-            onClick={this.clearAndFocusInput}
+            onClick={clearAndFocusInput}
           />
         )}
+      </div>
+      <div
+        className={classNames(
+          'clearable-input__under',
+          styles.clearableInput__inner
+        )}
+      >
         {(!!props.maxLength || hasMaxNumber) && (
-          <span className={classNames('clearable-input-count')}>
+          <div
+            className={classNames(
+              'clearable-input__count',
+              styles.clearableInput__count
+            )}
+          >
             {props.maxLength &&
               isTextInput &&
               `${(props.value as string).length}/${props.maxLength}`}
-            {hasMaxNumber && isNumberInput && `out of ${props.max || '?'}`}
-          </span>
+            {hasMaxNumber && isNumberInput && maxNumberText(props)}
+          </div>
+        )}
+
+        {error && (
+          <div
+            className={classNames(
+              'clearable-input__error',
+              styles.clearableInput__error
+            )}
+          >
+            {error}
+          </div>
         )}
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+ClearableInput.defaultProps = {
+  maxNumberText: (props) => `out of ${props.max || '?'}`
+};
+
+ClearableInput.propTypes = {
+  containerClassName: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  error: PropTypes.string,
+  maxNumberText: PropTypes.func
+};
 
 export default ClearableInput;

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withState } from '@dump247/storybook-state';
 import { withInfo } from '@storybook/addon-info';
 
-import ChipListInput from 'components/ChipListInput';
+import ChipListInput from 'ChipListInput';
 
 const options = [
   { id: 1, text: 'Bat' },

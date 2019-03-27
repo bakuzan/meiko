@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
-import ImageSelector from 'components/ImageSelector';
+import ImageSelector from 'ImageSelector';
 
 const actions = {
   onChange: action('changed image')

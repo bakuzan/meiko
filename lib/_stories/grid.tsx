@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
-import Grid from 'components/Grid';
+import Grid from 'Grid';
 import './grid-story.scss';
 
 const items = [

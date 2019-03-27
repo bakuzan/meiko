@@ -6,7 +6,7 @@ import { withKnobs, boolean, object } from '@storybook/addon-knobs';
 
 import { storyStyle } from '.';
 
-import TagCloudSelector from 'components/TagCloudSelector';
+import TagCloudSelector from 'TagCloudSelector';
 
 const OPTIONS = [
   { id: 1, name: 'react', count: 5 },

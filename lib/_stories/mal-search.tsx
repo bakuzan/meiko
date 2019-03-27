@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import { storyStyle } from '.';
 
-import MalSearch from 'components/MalSearch';
+import MalSearch from 'MalSearch';
 
 interface IMalStoryState {
   search: string;

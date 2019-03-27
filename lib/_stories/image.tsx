@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
-import Image from 'components/Image';
+import Image from 'Image';
 
 storiesOf('Image', module)
   .addDecorator(withInfo)

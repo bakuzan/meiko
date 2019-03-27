@@ -4,9 +4,9 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
 
-import Icons from 'constants/icons';
-import { Button } from 'components/Button';
-import { CenterDecorator } from 'stories';
+import Icons from '_constants/icons';
+import { Button } from 'Button';
+import { CenterDecorator } from '_stories';
 
 const actions = {
   onClick: action('clicked')
@@ -83,8 +83,6 @@ storiesOf('Button', module)
       )}
       link={boolean('Link', false)}
       disabled={boolean('Disabled', false, 'functional')}
-      rounded={boolean('Rounded', false, 'style')}
-      depress={boolean('Depress', false, 'style')}
       icon={select('Icon', { ...iconOptions, None: null }, null, 'functional')}
     >
       {text('Button Text', 'I am a Basic Button. Click me!', 'functional')}

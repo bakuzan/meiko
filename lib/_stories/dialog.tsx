@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 
 import { withInfo } from '@storybook/addon-info';
 
-import Dialog from 'components/Dialog';
-import { Button } from 'components/Button';
+import Dialog from 'Dialog';
+import { Button } from 'Button';
 
 let DIALOG_ELEMENT = null;
 storiesOf('Dialog', module)

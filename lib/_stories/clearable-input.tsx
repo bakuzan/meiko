@@ -10,8 +10,8 @@ import {
   boolean
 } from '@storybook/addon-knobs';
 
-import ClearableInput from 'components/ClearableInput';
-import { CenterDecorator } from 'stories';
+import ClearableInput from 'ClearableInput';
+import { CenterDecorator } from '_stories';
 
 function ClearableInputStory(props) {
   return (

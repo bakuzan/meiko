@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withState } from '@dump247/storybook-state';
 import { withInfo } from '@storybook/addon-info';
 
-import AutocompleteInput from 'components/AutocompleteInput';
+import AutocompleteInput from 'AutocompleteInput';
 
 const initialState = { value: '', selectedId: null };
 const list = [

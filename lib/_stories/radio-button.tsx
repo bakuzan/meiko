@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
-import RadioButton from 'components/RadioButton';
+import RadioButton from 'RadioButton';
 
 storiesOf('RadioButton', module)
   .addDecorator(withInfo)

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
-import Header from 'components/Header';
+import Header from 'Header';
 
 storiesOf('Header', module)
   .addDecorator(withInfo)

@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import Urls from './_constants/urls';
 
-const Image = (props) => (
+const Image = (props: React.HTMLAttributes<HTMLImageElement>) => (
   <img
     alt=""
     onError={(e: any) => {

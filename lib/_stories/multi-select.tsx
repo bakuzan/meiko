@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import { storyStyle } from '.';
 
-import MultiSelect from 'components/MultiSelect';
+import MultiSelect from 'MultiSelect';
 
 const options = [
   { value: 1, text: 'Gen1' },

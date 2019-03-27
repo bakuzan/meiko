@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
-import Tickbox from 'components/Tickbox';
+import Tickbox from 'Tickbox';
 
 storiesOf('Tickbox', module)
   .addDecorator(withInfo)

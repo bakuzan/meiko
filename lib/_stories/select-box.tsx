@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import { withState } from '@dump247/storybook-state';
 
-import SelectBox from 'components/SelectBox';
+import SelectBox from 'SelectBox';
 
 const options = [
   { value: 1, text: 'one' },

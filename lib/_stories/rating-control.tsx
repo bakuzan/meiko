@@ -4,7 +4,7 @@ import { withState } from '@dump247/storybook-state';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, number, text } from '@storybook/addon-knobs';
 
-import RatingControl from 'components/RatingControl';
+import RatingControl from 'RatingControl';
 
 storiesOf('RatingControl', module)
   .addDecorator(withInfo)

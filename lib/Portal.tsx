@@ -1,42 +1,29 @@
 import * as PropTypes from 'prop-types';
-import * as React from 'react';
-import ReactDOM from 'react-dom';
+import { useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
-interface IPortalProps {
-  parentTag: string;
-  querySelector: string;
+function Portal({ parentTag, querySelector, children }) {
+  const ref = useRef(document.createElement(parentTag));
+
+  useEffect(() => {
+    const el = ref.current;
+    const targetNode = document.querySelector(querySelector);
+
+    targetNode.appendChild(el);
+
+    return () => targetNode.removeChild(el);
+  }, [ref, querySelector]);
+
+  return createPortal(children, ref.current);
 }
 
-class Portal extends React.Component<IPortalProps, any> {
-  static propTypes = {
-    parentTag: PropTypes.string,
-    querySelector: PropTypes.string.isRequired
-  };
-  static defaultProps = {
-    parentTag: 'div'
-  };
+Portal.defaultProps = {
+  parentTag: 'div'
+};
 
-  el = null;
-  targetNode = null;
-
-  constructor(props: IPortalProps) {
-    super(props);
-
-    this.el = document.createElement(props.parentTag);
-    this.targetNode = document.querySelector(props.querySelector);
-  }
-
-  componentDidMount() {
-    this.targetNode.appendChild(this.el);
-  }
-
-  componentWillUnmount() {
-    this.targetNode.removeChild(this.el);
-  }
-
-  render() {
-    return ReactDOM.createPortal(this.props.children, this.el);
-  }
-}
+Portal.propTypes = {
+  parentTag: PropTypes.string,
+  querySelector: PropTypes.string.isRequired
+};
 
 export default Portal;

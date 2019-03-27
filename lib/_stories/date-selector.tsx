@@ -5,8 +5,8 @@ import { withInfo } from '@storybook/addon-info';
 import { withKnobs, date } from '@storybook/addon-knobs';
 import { storyStyle } from '.';
 
-import DateSelector from 'components/DateSelector';
-import { formatDateForInput } from 'utils';
+import DateSelector from 'DateSelector';
+import { formatDateForInput } from '_utils';
 
 const TODAY = formatDateForInput(new Date());
 

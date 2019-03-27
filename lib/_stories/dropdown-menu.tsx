@@ -3,9 +3,9 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, select } from '@storybook/addon-knobs';
 
-import DropdownMenu from 'components/DropdownMenu';
-import { PositionEnum } from 'constants/enums';
-import { CenterDecorator } from 'stories';
+import DropdownMenu from 'DropdownMenu';
+import { PositionEnum } from '_constants/enums';
+import { CenterDecorator } from '_stories';
 
 storiesOf('DropdownMenu', module)
   .addDecorator(withInfo)
