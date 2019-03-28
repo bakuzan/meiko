@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import './Sidebar.scss';
+import styles from './_styles/Sidebar';
 
 export interface ISidebarLink {
   link: string;
@@ -15,11 +15,17 @@ export interface ISidebarLinkProps {
 
 const SidebarLinkTemplate = ({ data, onClick }: ISidebarLinkProps) => {
   return (
-    <a className="primary" href={data.link} onClick={onClick}>
-      <div className={classNames('item-icon', 'center-contents')}>
+    <a className="sidebar-link" href={data.link} onClick={onClick}>
+      <div
+        className={classNames('sidebar-link__icon', styles.sidebarLink__icon)}
+      >
         {data.icon}
       </div>
-      <div className={classNames('item-text')}>{data.title}</div>
+      <div
+        className={classNames('sidebar-link__text', styles.sidebarLink__text)}
+      >
+        {data.title}
+      </div>
     </a>
   );
 };

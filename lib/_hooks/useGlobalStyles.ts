@@ -1,12 +1,18 @@
 import { useEffect } from 'react';
 
+const appFontSize = '16px';
+const appFontFamily =
+  "'Roboto mono', 'Lucida Console', 'Courier New', monospace";
+
 const globalBase = `
 body {
-  font-size: 16px;
-  font-family: "Roboto mono", "Lucida Console", "Courier New", monospace;
-  min-height: 100vh;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+body,
+button {
+  font-family: ${appFontFamily};
+  font-size: ${appFontSize};
 }
 `;
 

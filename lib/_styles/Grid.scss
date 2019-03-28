@@ -1,5 +1,5 @@
-@import '../_styles/partials/_variables';
-@import '../_styles/partials/_mixins';
+@import './partials/_variables';
+@import './partials/_mixins';
 
 @mixin gridColumnsForPercentage($value) {
   $percentage: $value * 1%;
@@ -24,11 +24,4 @@
   @include respond-to(lg) {
     @include gridColumnsForPercentage($lg-grid);
   }
-}
-
-.mko-grid {
-  display: grid;
-  padding: 5px;
-  margin: 5px 0;
-  list-style-type: none;
 }

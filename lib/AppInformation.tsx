@@ -5,8 +5,9 @@ import * as React from 'react';
 import Icons from './_constants/icons';
 import styles from './_styles/AppInformation';
 
-const resolveENVVariable = (str: string) => (str || '').trim();
-function resolveLabel(b: string, v: string) {
+const resolveENVVariable = (str) => (str || '').trim();
+
+function resolveLabel(b, v) {
   let label = '';
   if (b) {
     label += `Branch ${b}`;
@@ -23,12 +24,7 @@ function resolveLabel(b: string, v: string) {
   return label;
 }
 
-interface IAppInformationProps {
-  branch?: string;
-  version?: string;
-}
-
-function AppInformation({ branch, version }: IAppInformationProps) {
+function AppInformation({ branch, version }) {
   const [hovered, setHovered] = React.useState(false);
 
   if (!branch && !version) {
@@ -65,6 +61,7 @@ function AppInformation({ branch, version }: IAppInformationProps) {
   );
 }
 
+AppInformation.displayName = 'AppInformation';
 AppInformation.propTypes = {
   version: PropTypes.string,
   branch: PropTypes.string

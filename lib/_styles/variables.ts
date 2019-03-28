@@ -32,6 +32,12 @@ export const spinnerColour2 = green;
 export const spinnerColour3 = blue;
 export const spinnerColour4 = red;
 
+export const sidebarWidthOpen = '200px';
+export const sidebarWidthCollapsed = '50px';
+
+export const tabControlBorderColour = grey80;
+export const tabControlBorderBottomColour = white;
+
 // UI Messaging
 const infoColour = cyan;
 const successColour = green;

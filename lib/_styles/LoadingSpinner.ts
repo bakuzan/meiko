@@ -1,4 +1,10 @@
 import { sheet } from './nano';
+import {
+  spinnerColour1,
+  spinnerColour2,
+  spinnerColour3,
+  spinnerColour4
+} from './variables';
 
 const width = '100px';
 const widthSM = '30px';
@@ -14,14 +20,14 @@ const spinnerStyles = {
       paddingTop: '100%'
     }
   },
-  loader_control: {
+  [`loader_control`]: {
     position: 'absolute',
     top: '50%',
     right: 0,
     transform: 'translateY(-50%)',
     width: widthSM
   },
-  loader_fullscreen: {
+  [`loader--fullscreen`]: {
     position: 'fixed',
     top: '50px',
     left: 0,
@@ -76,19 +82,19 @@ const spinnerStyles = {
       }
     },
     '@keyframes color': {
-        '100%, 0%': {
-          stroke: spinnerColour1;
-        },
-        '40%': {
-          stroke: spinnerColour2;
-        },
-        '66%': {
-          stroke: spinnerColour3;
-        },
-        '80%, 90%': {
-          stroke: spinnerColour4;
-        }
+      '100%, 0%': {
+        stroke: spinnerColour1
+      },
+      '40%': {
+        stroke: spinnerColour2
+      },
+      '66%': {
+        stroke: spinnerColour3
+      },
+      '80%, 90%': {
+        stroke: spinnerColour4
       }
+    }
   }
 };
 

@@ -1,50 +1,27 @@
-import adjustDateMonth from 'ayaka/adjustDateMonth';
-import adjustDateYear from 'ayaka/adjustDateYear';
-import { capitalise } from 'ayaka/capitalise';
-import checkIfDatePartsMatch from 'ayaka/checkIfDatePartsMatch';
-import convertToBase64 from 'ayaka/convertToBase64';
-import createListeners from 'ayaka/createListeners';
-import debounce from 'ayaka/debounce';
-import formatDateForInput from 'ayaka/formatDateForInput';
-import generateUniqueId from 'ayaka/generateUniqueId';
-import getDaysInMonthForDate from 'ayaka/getDaysInMonthForDate';
-import getDifferenceFromMonday from 'ayaka/daysDifferenceFromMonday';
-import getDifferenceFromSunday from 'ayaka/daysDifferenceFromSunday';
-import getElementCoordinates from 'ayaka/getElementCoordinates';
-import getEventValue from 'ayaka/getEventValue';
-import getFirstDateOfMonth from 'ayaka/getFirstDateOfMonth';
-import getLastDateOfMonth from 'ayaka/getLastDateOfMonth';
-import getMonthName from 'ayaka/getMonthName';
-import { getTimeoutSeconds } from 'ayaka/getTimeout';
-import isArray from 'ayaka/isArray';
-import { isBefore, isBeforeOrEqual } from 'ayaka/isBefore';
-import isNumber from 'ayaka/isNumber';
-import isObject from 'ayaka/isObject';
-import isString from 'ayaka/isString';
-
+export { default as adjustDateMonth } from 'ayaka/adjustDateMonth';
+export { default as adjustDateYear } from 'ayaka/adjustDateYear';
+export { capitalise } from 'ayaka/capitalise';
+export { default as checkIfDatePartsMatch } from 'ayaka/checkIfDatePartsMatch';
+export { default as convertToBase64 } from 'ayaka/convertToBase64';
+export { default as createListeners } from 'ayaka/createListeners';
+export { default as debounce } from 'ayaka/debounce';
+export { default as formatDateForInput } from 'ayaka/formatDateForInput';
+export { default as generateUniqueId } from 'ayaka/generateUniqueId';
+export { default as getDaysInMonthForDate } from 'ayaka/getDaysInMonthForDate';
 export {
-  adjustDateMonth,
-  adjustDateYear,
-  capitalise,
-  convertToBase64,
-  createListeners,
-  debounce,
-  generateUniqueId,
-  getElementCoordinates,
-  getEventValue,
-  getTimeoutSeconds,
-  isArray,
-  isNumber,
-  isObject,
-  isString,
-  checkIfDatePartsMatch,
-  formatDateForInput,
-  getMonthName,
-  getDaysInMonthForDate,
-  getFirstDateOfMonth,
-  getLastDateOfMonth,
-  getDifferenceFromMonday,
-  getDifferenceFromSunday,
-  isBefore,
-  isBeforeOrEqual
-};
+  default as getDifferenceFromMonday
+} from 'ayaka/daysDifferenceFromMonday';
+export {
+  default as getDifferenceFromSunday
+} from 'ayaka/daysDifferenceFromSunday';
+export { default as getElementCoordinates } from 'ayaka/getElementCoordinates';
+export { default as getEventValue } from 'ayaka/getEventValue';
+export { default as getFirstDateOfMonth } from 'ayaka/getFirstDateOfMonth';
+export { default as getLastDateOfMonth } from 'ayaka/getLastDateOfMonth';
+export { default as getMonthName } from 'ayaka/getMonthName';
+export { getTimeoutSeconds } from 'ayaka/getTimeout';
+export { default as isArray } from 'ayaka/isArray';
+export { isBefore, isBeforeOrEqual } from 'ayaka/isBefore';
+export { default as isNumber } from 'ayaka/isNumber';
+export { default as isObject } from 'ayaka/isObject';
+export { default as isString } from 'ayaka/isString';

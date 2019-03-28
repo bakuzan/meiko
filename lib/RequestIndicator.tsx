@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-import './RequestIndicator.scss';
+import styles from './_styles/RequestIndicator';
 
 export interface IRequestIndicatorProps {
   hide: boolean;
@@ -12,15 +12,17 @@ const RequestIndicator = ({
   hide,
   requestInFlight
 }: IRequestIndicatorProps) => (
-  <div
-    className={classNames(
-      'request-indicator-container',
-      'meiko-request-indicator'
-    )}
-  >
+  <div className={classNames('request-indicator', styles.indicator)}>
     {requestInFlight && (
       <div
-        className={classNames('request-indicator-loader', { hidden: hide })}
+        className={classNames(
+          'request-indicator__loader',
+          {
+            'request-indicator__loader--hidden': hide
+          },
+          styles.loader,
+          hide && styles.loader_hidden
+        )}
       />
     )}
   </div>

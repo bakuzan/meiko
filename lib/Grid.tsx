@@ -1,10 +1,11 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-import Strings from '../_constants/strings';
-import { isString } from '../_utils';
-import { IJSXChildren } from '../types';
-import './Grid.scss';
+import Strings from './_constants/strings';
+import { isString } from './_utils';
+import { IJSXChildren } from './types';
+
+import styles from './_styles/Grid';
 
 export interface IGridProps extends React.HTMLProps<HTMLUListElement> {
   noItemsText?: boolean | string;
@@ -22,9 +23,11 @@ const Grid = (props: IGridProps): JSX.Element => {
     : Strings.noItemsAvailable;
 
   return (
-    <ul className={classNames('mko-grid', className)} {...other}>
+    <ul className={classNames('mko-grid', styles.grid, className)} {...other}>
       {!passedNothing && !hasItems && displayNoItemsText && (
-        <li key="NONE">{noItemsTextToRender}</li>
+        <li key="NONE" className="mko-grid__no-items">
+          {noItemsTextToRender}
+        </li>
       )}
       {hasItems && props.items.map(children)}
     </ul>

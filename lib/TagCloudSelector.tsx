@@ -2,10 +2,11 @@ import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { Button } from '../Button';
-import TagChip, { ITagOption } from '../TagChip';
-import * as TCU from './TagCloudUtils';
-import './TagCloudSelector.scss';
+import { Button } from './Button';
+import TagChip, { ITagOption } from './TagChip';
+import getTagChipSize from './_utils/getTagChipSize';
+
+import styles from './_styles/TagCloudSelector';
 
 interface ITagCloudSelectorProps {
   name: string;
@@ -82,7 +83,7 @@ class TagCloudSelector extends React.PureComponent<
     const canClear = activeTags.size > 0 && hasSelect;
 
     return (
-      <div className={classNames('tag-cloud', className)}>
+      <div className={classNames('tag-cloud', styles.tagCloud, className)}>
         {hasSelect && (
           <div className={classNames('flex', 'right')}>
             <Button disabled={!canClear} onClick={this.handleClear}>
@@ -93,7 +94,7 @@ class TagCloudSelector extends React.PureComponent<
         <div className={classNames('flex', 'wrap')}>
           {tagOptions.map((chip) => {
             const size = sizeRelativeToCount
-              ? TCU.getChipSize(tagOptions, chip.count)
+              ? getTagChipSize(tagOptions, chip.count)
               : null;
 
             return (

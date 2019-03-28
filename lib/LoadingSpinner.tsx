@@ -2,20 +2,32 @@ import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-interface ILoadingSpinnerProps {
-  size?: string;
-}
+import styles from './_styles/LoadingSpinner';
 
-function LoadingSpinner(props: ILoadingSpinnerProps) {
+type Props = {
+  size?: string;
+};
+
+function LoadingSpinner(props: Props) {
+  const hasSize = props.size;
+  const sizeClass = `loader--${props.size}`;
   return (
     <div
-      className={classNames('loader', {
-        [`loader--${props.size}`]: props.size
-      })}
+      className={classNames(
+        'loader',
+        {
+          [sizeClass]: hasSize
+        },
+        styles.loader,
+        hasSize && styles[sizeClass]
+      )}
     >
-      <svg className={classNames('loader__circular')} viewBox="25 25 50 50">
+      <svg
+        className={classNames('loader__circular', styles.circular)}
+        viewBox="25 25 50 50"
+      >
         <circle
-          className={classNames('loader__path')}
+          className={classNames('loader__path', styles.path)}
           cx="50"
           cy="50"
           r="20"

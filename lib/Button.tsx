@@ -4,13 +4,6 @@ import * as React from 'react';
 
 import styles, { isSmall } from './_styles/Button';
 
-export interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
-  btnStyle?: string;
-  btnSize?: string;
-  link?: boolean;
-  icon?: string;
-}
-
 function getButtonClasses({ className, btnStyle, btnSize, link, icon }) {
   const hasBtnStyle = !!btnStyle;
   const hasBtnSize = !!btnSize;
@@ -60,7 +53,7 @@ export function Button({
   link,
   children,
   ...props
-}: IButtonProps) {
+}) {
   const buttonClasses = getButtonClasses({
     className,
     btnStyle,
@@ -68,6 +61,7 @@ export function Button({
     link,
     icon: props.icon
   });
+
   return (
     <button {...props} className={buttonClasses}>
       {children}
@@ -75,6 +69,7 @@ export function Button({
   );
 }
 
+Button.displayName = 'Button';
 Button.defaultProps = {
   type: 'button'
 };
@@ -82,7 +77,6 @@ Button.defaultProps = {
 Button.propTypes = {
   btnStyle: PropTypes.oneOf(['primary', 'accent']),
   btnSize: PropTypes.oneOf(['small']),
-  rounded: PropTypes.bool,
   link: PropTypes.bool,
   icon: PropTypes.string
 };
