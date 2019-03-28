@@ -32,7 +32,7 @@ storiesOf('Form', module)
       submitOptions={submitOptions}
       cancelOptions={cancelOptions}
     >
-      <ClearableInput value="" {...actions} />
+      <ClearableInput label="" value="" {...actions} />
       <SelectBox
         id="storyTest"
         value={2}

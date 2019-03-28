@@ -1,11 +1,10 @@
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as React from 'react';
-import './Header.scss';
 
-export interface IHeaderProps {
-  id?: string;
-  className?: string;
+import styles from './_styles/Header';
+
+export interface IHeaderProps extends React.HTMLProps<HTMLElement> {
   title?: string;
   leftAlignTitle?: boolean;
   navLeft?: JSX.Element;
@@ -13,7 +12,6 @@ export interface IHeaderProps {
 }
 
 const Header = ({
-  id,
   className,
   title,
   navLeft,
@@ -23,23 +21,41 @@ const Header = ({
 }: IHeaderProps) => {
   return (
     <nav
-      id={id}
-      className={classNames('application-header', className)}
+      className={classNames(
+        'application-header',
+        styles.applicationHeader,
+        className
+      )}
       {...props}
     >
-      {!!navLeft && <div className={classNames('links-block')}>{navLeft}</div>}
+      {!!navLeft && (
+        <div
+          className={classNames(
+            'application-header__links-block',
+            styles.linksBlock
+          )}
+        >
+          {navLeft}
+        </div>
+      )}
       {!leftAlignTitle && <div className="flex-spacer" />}
-      {!!title && <h1>{title}</h1>}
+      {!!title && <h1 className="application-header__title">{title}</h1>}
       <div className="flex-spacer" />
       {!!navRight && (
-        <div className={classNames('links-block')}>{navRight}</div>
+        <div
+          className={classNames(
+            'application-header__links-block',
+            styles.linksBlock
+          )}
+        >
+          {navRight}
+        </div>
       )}
     </nav>
   );
 };
 
 Header.propTypes = {
-  id: PropTypes.string,
   title: PropTypes.string,
   leftAlignTitle: PropTypes.bool,
   navLeft: PropTypes.oneOfType([

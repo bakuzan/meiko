@@ -2,7 +2,8 @@ import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { findDOMNode } from 'react-dom';
-import './SVGLogo.scss';
+
+import styles from './_styles/Logo';
 
 interface ISvgLogoProps {
   id?: string;
@@ -10,13 +11,8 @@ interface ISvgLogoProps {
 }
 
 class SvgLogo extends React.Component<ISvgLogoProps, any> {
-  static propTypes = {
-    id: PropTypes.string,
-    text: PropTypes.string.isRequired
-  };
-
-  private letterClass = classNames('letter');
-  private animate = classNames('hideshow');
+  private letterClass = classNames('logo__letter', styles.logo__letter);
+  private animate = classNames('logo__letter--hideshow');
   private sideLength = 50;
   private characters: NodeListOf<Element> = null;
   private interval = null;
@@ -59,6 +55,7 @@ class SvgLogo extends React.Component<ISvgLogoProps, any> {
       nextLetter.setAttribute('class', `${this.letterClass} ${this.animate}`);
     }, 1500);
   }
+
   renderLetters(word) {
     const characters = word
       .toUpperCase()
@@ -67,7 +64,7 @@ class SvgLogo extends React.Component<ISvgLogoProps, any> {
         return (
           <text
             key={index}
-            className={classNames('letter')}
+            className={classNames('logo__letter', styles.logo__letter)}
             x="50%"
             y="50%"
             dy="0.3em"
@@ -78,18 +75,27 @@ class SvgLogo extends React.Component<ISvgLogoProps, any> {
       });
     return characters;
   }
+
   render() {
     const letters = this.renderLetters(this.props.text);
 
     return (
       <div
         id={this.props.id}
-        className={classNames('svg-logo', 'center-contents')}
+        className={classNames('logo', 'center-contents', styles.logo)}
       >
-        <svg xmlns="http://www.w3.org/2000/svg">
+        <svg
+          className={classNames('logo__svg', styles.logo__svg)}
+          xmlns="http://www.w3.org/2000/svg"
+        >
           {letters}
           <text
-            className={classNames('word', 'diagonal')}
+            className={classNames(
+              'logo__word',
+              'logo__word--diagonal',
+              styles.logo__word,
+              styles.logo__word_diagonal
+            )}
             x="50%"
             y="50%"
             dy="0.3em"
@@ -103,5 +109,10 @@ class SvgLogo extends React.Component<ISvgLogoProps, any> {
     );
   }
 }
+
+SvgLogo.propTypes = {
+  id: PropTypes.string,
+  text: PropTypes.string.isRequired
+};
 
 export default SvgLogo;

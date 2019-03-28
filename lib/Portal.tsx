@@ -1,9 +1,16 @@
+import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import { useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
-function Portal({ parentTag, querySelector, children }) {
-  const ref = useRef(document.createElement(parentTag));
+function createPortalContainer(parentTag: string, parentClassName) {
+  const element = document.createElement(parentTag);
+  element.className = classNames('portal-container', parentClassName);
+  return element;
+}
+
+function Portal({ parentTag, parentClassName, querySelector, children }) {
+  const ref = useRef(createPortalContainer(parentTag, parentClassName));
 
   useEffect(() => {
     const el = ref.current;
@@ -23,6 +30,7 @@ Portal.defaultProps = {
 
 Portal.propTypes = {
   parentTag: PropTypes.string,
+  parentClassName: PropTypes.string,
   querySelector: PropTypes.string.isRequired
 };
 

@@ -1,4 +1,4 @@
-import { sheet } from '../_utils/nano';
+import { sheet } from './nano';
 
 const clearableInputStyles = {
   clearableInput: {

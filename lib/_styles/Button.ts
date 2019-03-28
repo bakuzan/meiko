@@ -1,10 +1,10 @@
-import { nano, sheet } from '../_utils/nano';
+import { nano, sheet } from './nano';
 import {
   anchorColour,
   anchorColourHover,
   disabledBackground,
   disabledColour
-} from '../_utils/styleVariables';
+} from './variables';
 
 const buttonStyles = {
   button: {

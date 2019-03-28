@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import SVGLogo from 'SVGLogo';
+import SVGLogo from 'Logo';
 import { CenterDecorator } from '_stories';
 
 storiesOf('SVGLogo', module)

@@ -1,8 +1,9 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { debounce, getTimeoutSeconds } from '../_utils';
-import toaster, { IToast } from '../_utils/toasterService';
-import './Toaster.scss';
+import { debounce, getTimeoutSeconds } from './_utils';
+import toaster, { IToast } from './_utils/toasterService';
+
+import styles from './_styles/Toaster';
 
 interface IToasterState {
   stack: IToast[];
@@ -41,20 +42,32 @@ class Toaster extends React.Component<any, IToasterState> {
     const list = this.state.stack || Array(0);
 
     return (
-      <div className={classNames('toaster')}>
+      <div className={classNames('toaster', styles.toaster)}>
         {list.map((item) => {
           const removeToast = () => this.removeToast(item.time);
+          const type = item.type.toLowerCase();
+          const typeClass = `toast--${type}`;
+
           return (
             <span
               key={item.time}
               role="button"
               tabIndex={0}
-              className={classNames('toast', item.type.toLowerCase())}
+              className={classNames(
+                'toast',
+                typeClass,
+                styles.toast,
+                styles[typeClass]
+              )}
               onClick={removeToast}
               onKeyDown={removeToast}
             >
-              <span className={classNames('title')}>{item.title}</span>
-              <span className={classNames('message')}>{item.message}</span>
+              <span className={classNames('toast__title', styles.toast__title)}>
+                {item.title}
+              </span>
+              <span className={classNames('toast__message')}>
+                {item.message}
+              </span>
             </span>
           );
         })}

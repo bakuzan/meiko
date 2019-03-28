@@ -2,9 +2,9 @@ import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-import { Button } from '../Button';
-import Icons from '../_constants/icons';
-import styles from './ClearableInput';
+import { Button } from './Button';
+import Icons from './_constants/icons';
+import styles from './_styles/ClearableInput';
 
 export interface IClearableInputProps
   extends React.DetailedHTMLProps<
@@ -14,12 +14,18 @@ export interface IClearableInputProps
   containerClassName?: string;
   label: string;
   error?: string;
-  maxNumberText: (props: IClearableInputProps) => string;
+  maxNumberText: (props: React.HTMLProps<HTMLInputElement>) => string;
 }
 
 export const Input = React.forwardRef(function Input(
-  { className, ...props },
-  ref
+  {
+    className,
+    ...props
+  }: React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  >,
+  ref: React.Ref<HTMLInputElement>
 ) {
   return (
     <input
@@ -33,13 +39,14 @@ export const Input = React.forwardRef(function Input(
   );
 });
 
-const fakeEvent = ({ type, name }) => ({
-  target: {
-    type: type || 'text',
-    name,
-    value: ''
-  }
-});
+const fakeEvent = ({ type, name }: React.HTMLProps<HTMLInputElement>) =>
+  ({
+    target: {
+      type: type || 'text',
+      name,
+      value: ''
+    }
+  } as React.ChangeEvent<HTMLInputElement>);
 
 function ClearableInput({
   containerClassName,
@@ -48,7 +55,7 @@ function ClearableInput({
   maxNumberText,
   ...props
 }: IClearableInputProps) {
-  const ref = React.useRef<{ current: HTMLInputElement }>();
+  const ref = React.useRef<HTMLInputElement>();
   const isTextInput = props.type === 'text' || !props.type;
   const isNumberInput = props.type === 'number';
   const hasMaxNumber = !isNaN(props.max as any);

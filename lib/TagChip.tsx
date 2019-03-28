@@ -2,9 +2,10 @@ import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { Button } from '../Button';
-import Icons from '../_constants/icons';
-import './TagChip.scss';
+import { Button } from './Button';
+import Icons from './_constants/icons';
+
+import styles from './_styles/TagChip';
 
 export interface ITagOption {
   id?: string | number;
@@ -56,19 +57,29 @@ const TagChip = ({
 
   return (
     <span
-      className={classNames('input-chip', className, {
-        'input-chip-clickable': hasClick,
-        'input-chip-deletable': hasRemoveFunc,
-        active: isActive
-      })}
+      className={classNames(
+        'tag-chip',
+        {
+          'tag-chip--clickable': hasClick,
+          'tag-chip--deletable': hasRemoveFunc,
+          'tag-chip--active': isActive
+        },
+        className,
+        styles.tagChip,
+        hasClick && styles.tagChip_clickable,
+        hasRemoveFunc && styles.tagChip_deletable
+      )}
       {...tagAccessiblityIfClickable as any}
     >
-      <span className={classNames('input-chip-text')} style={chipTextStyle}>
+      <span
+        className={classNames('tag-chip__text', styles.tagChip__text)}
+        style={chipTextStyle}
+      >
         {data.name}
       </span>
       {hasRemoveFunc && (
         <Button
-          className={classNames('input-chip-delete')}
+          className={classNames('tag-chip__delete', styles.tagChip__delete)}
           btnSize="small"
           title="remove"
           aria-label="Remove tag"

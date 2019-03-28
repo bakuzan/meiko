@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-import styles, { isSmall } from './Button';
+import styles, { isSmall } from './_styles/Button';
 
 export interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
   btnStyle?: string;

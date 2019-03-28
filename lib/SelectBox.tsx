@@ -3,21 +3,33 @@ import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { ISelectBoxOption } from 'types';
-import './SelectBox.scss';
 
-export interface ISelectBoxProps {
-  id: string;
-  name?: string;
-  value: string | number | string[];
-  disabled: boolean;
+import styles from './_styles/SelectBox';
+
+export interface ISelectBoxProps extends React.HTMLProps<HTMLSelectElement> {
+  containerClassName?: string;
   text: string;
   options: ISelectBoxOption[];
-  onSelect(e: React.ChangeEvent<HTMLSelectElement>): void;
 }
 
-const SelectBox = ({ onSelect, text, options, ...props }: ISelectBoxProps) => (
-  <div className={classNames('has-float-label', 'select-container')}>
-    <select className={classNames('select-box')} onChange={onSelect} {...props}>
+const SelectBox = ({
+  containerClassName,
+  className,
+  text,
+  options,
+  ...props
+}: ISelectBoxProps) => (
+  <div
+    className={classNames(
+      'has-float-label',
+      'select-container',
+      containerClassName
+    )}
+  >
+    <select
+      className={classNames('select-box', styles.select, className)}
+      {...props}
+    >
       {options.map((item) => (
         <option key={item.value} value={item.value}>
           {item.text}
@@ -34,16 +46,15 @@ SelectBox.defaultProps = {
 
 SelectBox.propTypes = {
   id: PropTypes.string.isRequired,
-  name: PropTypes.string,
+  containerClassName: PropTypes.string,
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
     PropTypes.bool
   ]).isRequired,
-  disabled: PropTypes.bool,
   text: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.object).isRequired,
-  onSelect: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired
 };
 
 export default SelectBox;

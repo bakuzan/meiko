@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
 import toaster from '_utils/toasterService';
-import Toaster from 'Toaster';
+import Toaster from 'Toaster/Toaster';
 
 let timer: number;
 function toasterStory(funcName: string) {

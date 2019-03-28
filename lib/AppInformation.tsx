@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-import Icons from '../_constants/icons';
-import styles from './AppInformation';
+import Icons from './_constants/icons';
+import styles from './_styles/AppInformation';
 
 const resolveENVVariable = (str: string) => (str || '').trim();
 function resolveLabel(b: string, v: string) {
