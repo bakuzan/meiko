@@ -1,18 +1,4 @@
-@mixin background-image($from, $to) {
-  background-image: -webkit-gradient(
-    linear,
-    left 0,
-    left 100%,
-    from($from),
-    to($to)
-  );
-  background-image: -webkit-linear-gradient(top, $from 0, $to 100%);
-  background-image: -moz-linear-gradient(top, $from 0, $to 100%);
-  background-image: -o-linear-gradient(top, $from 0, $to 100%);
-  background-image: linear-gradient(to bottom, $from 0, $to 100%);
-}
-
-@mixin lighten-or-darken($key, $colour, $percentage) {
+@mixin lightenOrDarken($key, $colour, $percentage) {
   @if lightness($colour) < 50% {
     #{$key}: lighten($colour, $percentage);
   } @else {
@@ -20,7 +6,7 @@
   }
 }
 
-@mixin respond-to($media) {
+@mixin respondTo($media) {
   @if $media == xs {
     @media (max-width: $screen-xs-max) {
       @content;
@@ -37,5 +23,30 @@
     @media (min-width: $screen-lg) {
       @content;
     }
+  }
+}
+
+@mixin gridColumnsForPercentage($value) {
+  $percentage: $value * 1%;
+  grid-template-columns: repeat(auto-fit, $percentage);
+}
+
+@mixin gridColumnGenerator($grid-values) {
+  $xs-grid: map-get($grid-values, xs);
+  $sm-grid: map-get($grid-values, sm);
+  $md-grid: map-get($grid-values, md);
+  $lg-grid: map-get($grid-values, lg);
+
+  @include respondTo(xs) {
+    @include gridColumnsForPercentage($xs-grid);
+  }
+  @include respondTo(sm) {
+    @include gridColumnsForPercentage($sm-grid);
+  }
+  @include respondTo(md) {
+    @include gridColumnsForPercentage($md-grid);
+  }
+  @include respondTo(lg) {
+    @include gridColumnsForPercentage($lg-grid);
   }
 }

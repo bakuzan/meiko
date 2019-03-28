@@ -3,18 +3,18 @@ const path = require('path');
 module.exports = ({ config }) => {
   const includePath = path.resolve(__dirname, '../lib');
 
-  config.module.rules.push({
-    test: /\.tsx?$/,
-    include: includePath,
-    use: [
-      {
-        loader: require.resolve('awesome-typescript-loader')
-      },
-      {
-        loader: require.resolve('react-docgen-typescript-loader')
-      }
-    ]
-  });
+  // config.module.rules.push({
+  //   test: /\.tsx?$/,
+  //   include: includePath,
+  //   use: [
+  //     {
+  //       loader: require.resolve('awesome-typescript-loader')
+  //     },
+  //     {
+  //       loader: require.resolve('react-docgen-typescript-loader')
+  //     }
+  //   ]
+  // });
 
   config.module.rules.push({
     test: /\.scss$/,
@@ -39,7 +39,7 @@ module.exports = ({ config }) => {
     ]
   });
 
-  config.resolve.extensions.push('.ts', '.tsx');
+  // config.resolve.extensions.push('.ts', '.tsx');
 
   return config;
 };
