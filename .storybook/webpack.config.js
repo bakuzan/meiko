@@ -9,7 +9,8 @@ module.exports = ({ config }) => {
       {
         enforce: 'pre',
         test: /\.js$/,
-        exclude: /node_modules/,
+        include: includePath,
+        exclude: /stories/,
         loader: 'eslint-loader'
       },
       {

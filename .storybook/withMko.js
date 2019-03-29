@@ -17,7 +17,7 @@ export const withMko = makeDecorator({
   name: 'withMko',
   parameterName: 'mko',
   skipIfNoParametersOrOptions: false,
-  wrapper: (getStory, context, { parameters }) => {
+  wrapper: (getStory, context, { parameters = {} }) => {
     const channel = addons.getChannel();
 
     // Our simple API above simply sets the notes parameter to a string,
@@ -25,8 +25,13 @@ export const withMko = makeDecorator({
     channel.emit('mko/process', parameters);
     // we can also add subscriptions here using channel.on('eventName', callback);
 
+    const overrideStyles = parameters.style || {};
+    const styles = parameters.noStyle
+      ? overrideStyles
+      : { ...centerStyles, ...overrideStyles };
+
     return (
-      <GlobalStyleInjector className="with-mko" style={centerStyles}>
+      <GlobalStyleInjector className="with-mko" style={styles}>
         {getStory(context)}
       </GlobalStyleInjector>
     );

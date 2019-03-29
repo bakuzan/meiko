@@ -3,9 +3,9 @@
 In Progress
 -----------
 
-ImageSelector
 
-Needs Stories/Tests
+
+Improve/Fix Stories
 -----------
 
 Alert
@@ -16,6 +16,7 @@ FileUploader
 Grid
 Header
 Image
+ImageSelector
 List
 Loadable
 LoadableContent
@@ -35,6 +36,11 @@ TagChip
 TagCloudSelector
 Tickbox
 Toaster
+
+Create Tests
+-----------
+
+
 
 Done
 ----
