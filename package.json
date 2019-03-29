@@ -3,25 +3,28 @@
   "version": "3.1.0",
   "private": true,
   "description": "Component Library",
-  "main": "dist/index.min.js",
+  "main": "index.js",
+  "module": "dist/index.min.js",
   "files": [
     "build",
     "dist"
   ],
   "lint-staged": {
-    "{,lib,tools,.storybook}/**/*.{ts,tsx,js,jsx,json,scss}": [
+    "{,lib,tools,.storybook,__tests__}/**/*.{js,json}": [
       "prettier --single-quote --write",
       "git add"
     ]
   },
   "pre-commit": [
     "precommit-msg",
-    "lint"
+    "pretty"
   ],
   "scripts": {
-    "lint": "lint-staged",
+    "pretty": "lint-staged",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx jest",
+    "test-w": "npx jest -o --watch",
+    "coverage": "npx jest --coverage",
     "bundle": "rollup -c",
     "build": "node ./tools/build.js && node ./tools/postBuild.js",
     "build-all": "npm run bundle && npm run build",
@@ -44,7 +47,6 @@
     "@babel/plugin-transform-runtime": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.3.3",
     "@babel/register": "^7.4.0",
     "@dump247/storybook-state": "^1.5.2",
     "@storybook/addon-a11y": "^5.0.5",
@@ -53,13 +55,12 @@
     "@storybook/addon-knobs": "^5.0.5",
     "@storybook/react": "^5.0.5",
     "@storybook/storybook-deployer": "^2.8.1",
-    "@types/storybook__react": "^4.0.1",
-    "awesome-typescript-loader": "^5.2.1",
     "ayaka": "file:../ayaka/build",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.5.0",
     "chalk": "^2.4.2",
+    "classnames": "^2.2.6",
     "css-loader": "^2.1.1",
     "dotenv": "^6.2.0",
     "enzyme": "^3.9.0",
@@ -83,7 +84,6 @@
     "prettier": "^1.16.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.5",
-    "react-docgen-typescript-loader": "^3.0.1",
     "react-dom": "^16.8.5",
     "react-test-renderer": "^16.8.6",
     "rollup": "^1.7.3",
@@ -93,22 +93,17 @@
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-replace": "^2.1.1",
-    "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-uglify": "^6.0.2",
     "sass-loader": "^7.1.0",
     "storybook-addon-react-docgen": "^1.2.0",
-    "style-loader": "^0.23.1",
-    "tslib": "^1.9.3",
-    "tslint": "^5.14.0",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.3.4000"
+    "style-loader": "^0.23.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.2",
-    "classnames": "^2.2.6"
+    "@babel/runtime": "^7.4.2"
   },
   "peerDependencies": {
     "ayaka": "file:../ayaka/build",
+    "classnames": "^2.2.6",
     "nano-css": "^5.1.0",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"

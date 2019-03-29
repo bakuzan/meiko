@@ -9,37 +9,28 @@ import { uglify } from 'rollup-plugin-uglify';
 import includePaths from 'rollup-plugin-includepaths';
 import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
-import ts from 'rollup-plugin-typescript';
-import typescript from 'typescript';
 
 import pkg from './package.json';
 
 dotenv.config();
 
 const isProduction = process.env.NODE_ENV === 'production';
-const entry = 'lib/index.ts';
-const externals = ['react', 'react-dom', 'prop-types', 'ayaka'];
-const globals = {
-  react: 'React',
-  'react-dom': 'ReactDOM',
-  'prop-types': 'PropTypes'
-};
-const extensions = ['.js', '.ts', '.tsx', '.scss'];
-
-export default [
-  {
-    input: entry,
-    output: {
-      name: 'bundle',
-      file: pkg.main,
-      format: 'cjs',
-      globals,
-      sourceMap: isProduction
-    },
-    external: externals,
-    plugins: rollupPlugins()
-  }
+const input = 'lib/index.js';
+const externals = [
+  'ayaka',
+  'classnames',
+  'nano-css',
+  'prop-types',
+  'react',
+  'react-dom'
 ];
+const globals = {
+  classnames: 'classNames',
+  'prop-types': 'PropTypes',
+  react: 'React',
+  'react-dom': 'ReactDOM'
+};
+const extensions = ['.js', '.scss'];
 
 function rollupPlugins() {
   return [
@@ -63,9 +54,6 @@ function rollupPlugins() {
       extensions: ['.scss'],
       use: ['sass'],
       plugins: [autoprefixer]
-    }),
-    ts({
-      typescript
     }),
     babel({
       exclude: 'node_modules/**',
@@ -92,3 +80,18 @@ function rollupPlugins() {
       })
   ];
 }
+
+export default [
+  {
+    input,
+    output: {
+      name: 'bundle',
+      file: pkg.main,
+      format: 'cjs',
+      globals,
+      sourceMap: isProduction
+    },
+    external: externals,
+    plugins: rollupPlugins()
+  }
+];

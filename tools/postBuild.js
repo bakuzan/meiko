@@ -31,7 +31,7 @@ async function copyBundleStyles() {
 
 async function postBuild() {
   await copyPackageJson();
-  await copyBundleStyles();
+  await copyBundleStyles(); // TODO remove when using nano-css
 }
 
 console.log(blue('Starting Post-build...'));

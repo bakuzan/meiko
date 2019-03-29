@@ -15,7 +15,7 @@ async function build(folderName) {
   const src = path.join(libRoot, folderName);
   console.log(blue(`Processing: ${src}`));
   return execa.shell(
-    `npx babel ${src} --out-dir ${outputRoot} --extensions=.ts,.tsx,.js --presets @babel/preset-env,@babel/preset-typescript --copy-files --env-name "lib"`,
+    `npx babel ${src} --out-dir ${outputRoot} --extensions=.js --presets @babel/preset-env --copy-files --env-name "lib"`,
     {
       stdio
     }
