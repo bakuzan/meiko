@@ -2,44 +2,39 @@ const path = require('path');
 
 module.exports = ({ config }) => {
   const includePath = path.resolve(__dirname, '../lib');
+  const includeFontPath = path.resolve(__dirname, '../lig/_stories/styles');
 
-  // config.module.rules.push({
-  //   test: /\.tsx?$/,
-  //   include: includePath,
-  //   use: [
-  //     {
-  //       loader: require.resolve('awesome-typescript-loader')
-  //     },
-  //     {
-  //       loader: require.resolve('react-docgen-typescript-loader')
-  //     }
-  //   ]
-  // });
-
-  config.module.rules.push({
-    test: /\.scss$/,
-    include: includePath,
-    use: [
+  config.module.rules.push(
+    ...[
       {
-        loader: 'style-loader'
+        test: /\.scss$/,
+        include: includePath,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [require('autoprefixer')()]
+            }
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
       },
       {
-        loader: 'css-loader'
-      },
-      {
-        loader: 'postcss-loader',
-        options: {
-          ident: 'postcss',
-          plugins: () => [require('autoprefixer')()]
-        }
-      },
-      {
-        loader: 'sass-loader'
+        test: /\.ttf$|\.woff$|\.woff2$/,
+        loader: 'file-loader',
+        include: includeFontPath
       }
     ]
-  });
-
-  // config.resolve.extensions.push('.ts', '.tsx');
+  );
 
   return config;
 };

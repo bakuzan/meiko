@@ -16,12 +16,9 @@
   },
   "pre-commit": [
     "precommit-msg",
-    "lint-ts",
     "lint"
   ],
   "scripts": {
-    "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "lint-ts": "tslint -c tslint.json 'lib/**/*.{ts,tsx}'",
     "lint": "lint-staged",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -65,6 +62,7 @@
     "chalk": "^2.4.2",
     "css-loader": "^2.1.1",
     "dotenv": "^6.2.0",
+    "enzyme": "^3.9.0",
     "eslint": "^5.15.3",
     "eslint-config-react-app": "^3.0.8",
     "eslint-loader": "^2.1.2",
@@ -98,6 +96,7 @@
     "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-uglify": "^6.0.2",
     "sass-loader": "^7.1.0",
+    "storybook-addon-react-docgen": "^1.2.0",
     "style-loader": "^0.23.1",
     "tslib": "^1.9.3",
     "tslint": "^5.14.0",
