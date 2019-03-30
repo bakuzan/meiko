@@ -7,6 +7,13 @@ const styles = {
 };
 
 class Mko extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      params: {}
+    };
+  }
+
   componentDidMount() {
     const { api } = this.props;
     api.on('mko/process', this.onAction);
@@ -21,6 +28,7 @@ class Mko extends React.Component {
 
   onAction = (params) => {
     console.log('%c [mko] story action > ', 'color: #800080', params);
+    this.setState({ params });
   };
 
   onStoryChange = (storyId) => {
@@ -28,15 +36,19 @@ class Mko extends React.Component {
   };
 
   render() {
+    const { params } = this.state;
     const { active } = this.props;
-    if (!active) {
+
+    if (!active || !Object.keys(params).length) {
       return null;
     }
 
+    const state = JSON.stringify(params, null, 2);
+
     return (
       <section className="mko-panel" style={styles.mkoPanel}>
-        <div>Mko Addon</div>
-        <div>This addon panel is blank.</div>
+        <div>Current State:</div>
+        <pre>{state}</pre>
       </section>
     );
   }

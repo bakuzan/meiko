@@ -4,6 +4,13 @@ module.exports = ({ config }) => {
   const includePath = path.resolve(__dirname, '../lib');
   const includeFontPath = path.resolve(__dirname, '../lig/_stories/styles');
 
+  config.resolve = {
+    ...config.resolve,
+    alias: {
+      'mko-book': path.resolve(__dirname, './withMko')
+    }
+  };
+
   config.module.rules.push(
     ...[
       {
