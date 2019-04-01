@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import addons, { makeDecorator } from '@storybook/addons';
-import { useGlobalStyles } from '../lib/_hooks/useGlobalStyles';
+import { useGlobalStyles } from '../lib/hooks/useGlobalStyles';
 
 const centerStyles = {
   display: 'flex',

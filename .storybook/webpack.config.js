@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = ({ config }) => {
   const includePath = path.resolve(__dirname, '../lib');
-  const includeFontPath = path.resolve(__dirname, '../lig/_stories/styles');
+  const includeFontPath = path.resolve(__dirname, '../lig/stories/styles');
 
   config.resolve = {
     ...config.resolve,

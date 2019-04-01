@@ -4,7 +4,7 @@ import { withPropsTable } from 'storybook-addon-react-docgen';
 
 import { withMko } from './withMko';
 
-const req = require.context('../lib/_stories', true, /\.js$/);
+const req = require.context('../lib/stories', true, /\.js$/);
 
 addDecorator(withA11y);
 addDecorator(withPropsTable);
