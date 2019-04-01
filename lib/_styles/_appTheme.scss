@@ -1,0 +1,141 @@
+@import './_variables';
+@import './_mixins';
+
+@mixin appTheme($theme-maps) {
+  @each $name, $values in $theme-maps {
+    $theme: $values !global;
+    $base-background: map-get($values, base-background) !global;
+    $base-colour: map-get($values, base-colour) !global;
+    $primary-background: map-get($values, primary-background) !global;
+    $primary-colour: map-get($values, primary-colour) !global;
+    $active-background: map-get($values, active-background) !global;
+    $active-colour: map-get($values, active-colour) !global;
+    $faded-out-background: map-get($values, faded-out-background) !global;
+    $faded-out-colour: map-get($values, faded-out-colour) !global;
+
+    .theme--#{$name} {
+      background-color: $base-background;
+      color: $base-colour;
+
+      // With BaseColour
+      .select-box__input,
+      .input__input {
+        color: $base-colour;
+      }
+
+      // With BaseBackground
+      .multi-select__dropdown-container,
+      .mko-calendar,
+      .input__input,
+      .select-box__input {
+        background-color: $base-background;
+      }
+
+      // Primary
+      .themed-background {
+        background-color: $primary-background;
+        color: $primary-colour;
+        &--reversed {
+          color: $primary-background;
+          background-color: $primary-colour;
+        }
+      }
+      .has-float-label input:focus,
+      .has-float-label select:focus,
+      .file-uploader--focused,
+      .image-selector__url-uploader--focused {
+        border-color: $primary-background;
+      }
+      .application-header,
+      .sidebar {
+        background-color: $primary-background;
+        color: $primary-colour;
+      }
+      .loading-bouncer__orb {
+        background-color: $primary-background;
+      }
+      .logo__svg {
+        background-color: $primary-background;
+      }
+      .logo__letter,
+      .logo__word {
+        fill: $primary-colour;
+      }
+      .request-indicator__loader {
+        background-color: $primary-background;
+      }
+      .radio__input:checked::after {
+        color: $primary-background;
+      }
+      .autocomplete-suggestion--active,
+      .chip-list-input--focused .chip-list__inner {
+        border-color: $primary-background;
+      }
+      .autocomplete-suggestion-highlight {
+        color: $primary-background;
+      }
+
+      // Buttons
+      .button--standard,
+      .mko-calendar__shift-button {
+        background-color: $base-background;
+
+        &:focus,
+        &:hover {
+          @include lightenOrDarken('background-color', $base-background, 10%);
+        }
+      }
+      .button--primary {
+        background-color: $primary-background;
+
+        &:focus,
+        &:hover {
+          @include lightenOrDarken(
+            'background-color',
+            $primary-background,
+            10%
+          );
+        }
+      }
+
+      // Tabs
+      .tabs__panels {
+        border-top: 1px solid $primary-background;
+      }
+      .tab-control:not(.tab-control--active) {
+        &:not(:hover),
+        .tab-control__button:not(:hover) {
+          background-color: $faded-out-background;
+          color: $faded-out-colour;
+          border-color: $faded-out-background;
+          border-bottom: none;
+        }
+      }
+      .tab-control--active,
+      .tab-control:hover {
+        border: {
+          color: $primary-background;
+          bottom-color: $base-background;
+        }
+      }
+
+      // Calendar
+      .mko-calendar__view-button--selected,
+      .mko-calendar__view-button--selected:focus,
+      .mko-calendar__view-button--selected:hover {
+        background-color: $active-background;
+        color: $active-colour;
+      }
+
+      // Tag Chip
+      .tag-chip--active {
+        background-color: $active-background;
+        color: $active-colour;
+      }
+
+      // Additional styles on demand.
+      // These could be overrides or application specific
+      @content;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import { useGlobalStyles } from '../lib/_hooks/useGlobalStyles';
 const centerStyles = {
   display: 'flex',
   justifyContent: 'center',
+  border: '1px dashed #800080',
   marginTop: '30px'
 };
 
@@ -41,7 +42,7 @@ export const withMko = makeDecorator({
     channel.emit('mko/process', defaultValues);
 
     return (
-      <GlobalStyleInjector className="with-mko" style={styles}>
+      <GlobalStyleInjector className="with-mko theme theme--mko" style={styles}>
         <MkoStory
           updateState={(values) => channel.emit('mko/process', values)}
           defaultValues={defaultValues}

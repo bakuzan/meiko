@@ -1,0 +1,28 @@
+@import '../../_styles/_appTheme';
+
+$meiko--primary: #db7093;
+$meiko--active: #afeeee;
+
+$theme-maps: (
+  mko: (
+    base-background: #fff,
+    base-colour: #000,
+    primary-background: $meiko--primary,
+    primary-colour: #fff,
+    active-background: $meiko--active,
+    active-colour: #000,
+    faded-out-background: #ccc,
+    faded-out-colour: $grey33,
+    info: paleturquoise,
+    success: forestgreen,
+    warning: orangered,
+    danger: firebrick,
+    control-focused: #000,
+    control-border-colour: rgba(0, 0, 0, 0.1)
+  )
+);
+
+@include appTheme($theme-maps) {
+  // Any app specifics would go here.
+  // All mko component theming is in the mixin
+}

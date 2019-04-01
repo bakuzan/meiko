@@ -28,7 +28,7 @@
     "bundle": "rollup -c",
     "build": "node ./tools/build.js && node ./tools/postBuild.js",
     "build-all": "npm run bundle && npm run build",
-    "storybook": "start-storybook -p 7200 -c .storybook",
+    "storybook": "start-storybook -p 7200 -c .storybook -s public",
     "build-storybook": "build-storybook -c .storybook -o .out -s public",
     "deploy-storybook": "storybook-to-ghpages"
   },
@@ -48,7 +48,6 @@
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.0",
-    "@dump247/storybook-state": "^1.5.2",
     "@storybook/addon-a11y": "^5.0.5",
     "@storybook/addon-actions": "^5.0.5",
     "@storybook/addon-info": "^5.0.5",
