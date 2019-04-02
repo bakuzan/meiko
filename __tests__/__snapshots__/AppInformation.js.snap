@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppInformation should render both 1`] = `
+<div
+  aria-label="Branch master, Version 4.0.0"
+  className="app-information  mko_1ko0jmt-appInformation"
+  data-icon="🛈︎"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="app-information__detail  mko_1ko0jmt-appInformation__detail"
+  >
+    <span>
+      Branch: 
+      master
+    </span>
+    <br />
+    <span>
+      Version: 
+      4.0.0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`AppInformation should render when branch present 1`] = `
+<div
+  aria-label="Branch master"
+  className="app-information  mko_1ko0jmt-appInformation"
+  data-icon="🛈︎"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="app-information__detail  mko_1ko0jmt-appInformation__detail"
+  >
+    <span>
+      Branch: 
+      master
+    </span>
+  </div>
+</div>
+`;
+
+exports[`AppInformation should render when version present 1`] = `
+<div
+  aria-label="Version 4.0.0"
+  className="app-information  mko_1ko0jmt-appInformation"
+  data-icon="🛈︎"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="app-information__detail  mko_1ko0jmt-appInformation__detail"
+  >
+    <span>
+      Version: 
+      4.0.0
+    </span>
+  </div>
+</div>
+`;

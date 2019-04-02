@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AutocompleteInput should call onSelect when suggestion is click 1`] = `
+<AutocompleteInput
+  attr="text"
+  clearableInputProps={Object {}}
+  disableLocalFilter={false}
+  filter="at"
+  id="jest"
+  items={
+    Array [
+      Object {
+        "id": 5,
+        "text": "Bat",
+      },
+      Object {
+        "id": 6,
+        "text": "Cat",
+      },
+      Object {
+        "id": 9,
+        "text": "Frog",
+      },
+    ]
+  }
+  noSuggestionsItem={null}
+  onChange={[MockFunction]}
+  onSelect={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          5,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  suggestionTemplate={[Function]}
+>
+  <div
+    className="autocomplete  mko_ydt0iq-autocomplete"
+  >
+    <ClearableInput
+      id="jest"
+      maxNumberText={[Function]}
+      name="text"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      value="at"
+    >
+      <div
+        className="clearable-input has-float-label  mko_8tgsun-clearableInput  mko_mwr88m-controlContainer"
+      >
+        <div
+          className="clearable-input__inner  mko_8tgsun-clearableInput__inner"
+        >
+          <ForwardRef(Input)
+            className="clearable-input__input  mko_8tgsun-clearableInput__input"
+            id="jest"
+            name="text"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            value="at"
+          >
+            <input
+              autoComplete="off"
+              className="input clearable-input__input  mko_8tgsun-clearableInput__input"
+              id="jest"
+              name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder=" "
+              type="text"
+              value="at"
+            />
+          </ForwardRef(Input)>
+          <label
+            htmlFor="jest"
+          />
+          <Button
+            aria-label="Clear input"
+            btnSize="small"
+            className="clearable-input__clear  mko_8tgsun-clearableInput__clear"
+            icon="╳︎"
+            onClick={[Function]}
+            type="button"
+          >
+            <button
+              aria-label="Clear input"
+              className="button ripple button--icon button--small clearable-input__clear  mko_8tgsun-clearableInput__clear  mko_1g3c03c-button  mko_1g3c03c-button_icon"
+              icon="╳︎"
+              onClick={[Function]}
+              type="button"
+            />
+          </Button>
+        </div>
+        <div
+          className="clearable-input__under  mko_8tgsun-clearableInput__inner  mko_8tgsun-clearableInput__under"
+        />
+      </div>
+    </ClearableInput>
+    <ul
+      className="autocomplete__menu  mko_ydt0iq-autocomplete__menu"
+    >
+      <AutocompleteSuggestionItem
+        activeSuggestion={0}
+        attr="text"
+        highlightMatch={[Function]}
+        index={0}
+        item={
+          Object {
+            "id": 5,
+            "text": "Bat",
+          }
+        }
+        key="5"
+        selectAutocompleteSuggestion={[Function]}
+      >
+        <li
+          className="autocomplete-suggestion autocomplete-suggestion--active  mko_ydt0iq-suggestion"
+        >
+          <Button
+            className="autocomplete-suggestion__button"
+            onClick={[Function]}
+            title="Bat"
+            type="button"
+          >
+            <button
+              className="button ripple button--standard autocomplete-suggestion__button  mko_1g3c03c-button  mko_1g3c03c-button_standard"
+              onClick={[Function]}
+              title="Bat"
+              type="button"
+            >
+              <span
+                className="autocomplete-suggestion__text  mko_ydt0iq-suggestion__text"
+              >
+                B
+                <span
+                  className="autocomplete-suggestion-highlight  mko_ydt0iq-suggestionHighlight"
+                >
+                  at
+                </span>
+              </span>
+            </button>
+          </Button>
+        </li>
+      </AutocompleteSuggestionItem>
+      <AutocompleteSuggestionItem
+        activeSuggestion={0}
+        attr="text"
+        highlightMatch={[Function]}
+        index={1}
+        item={
+          Object {
+            "id": 6,
+            "text": "Cat",
+          }
+        }
+        key="6"
+        selectAutocompleteSuggestion={[Function]}
+      >
+        <li
+          className="autocomplete-suggestion  mko_ydt0iq-suggestion"
+        >
+          <Button
+            className="autocomplete-suggestion__button"
+            onClick={[Function]}
+            title="Cat"
+            type="button"
+          >
+            <button
+              className="button ripple button--standard autocomplete-suggestion__button  mko_1g3c03c-button  mko_1g3c03c-button_standard"
+              onClick={[Function]}
+              title="Cat"
+              type="button"
+            >
+              <span
+                className="autocomplete-suggestion__text  mko_ydt0iq-suggestion__text"
+              >
+                C
+                <span
+                  className="autocomplete-suggestion-highlight  mko_ydt0iq-suggestionHighlight"
+                >
+                  at
+                </span>
+              </span>
+            </button>
+          </Button>
+        </li>
+      </AutocompleteSuggestionItem>
+    </ul>
+  </div>
+</AutocompleteInput>
+`;
+
+exports[`AutocompleteInput should render with minimum props 1`] = `
+<div
+  className="autocomplete  mko_ydt0iq-autocomplete"
+>
+  <ClearableInput
+    id="jest"
+    maxNumberText={[Function]}
+    name="text"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    value=""
+  />
+</div>
+`;

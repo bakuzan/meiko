@@ -9,6 +9,20 @@
     "build",
     "dist"
   ],
+  "jest": {
+    "setupFiles": [
+      "./setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "watchPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/build/",
+      "<rootDir>/dist/",
+      "<rootDir>/tools/"
+    ]
+  },
   "lint-staged": {
     "{,lib,tools,.storybook,__tests__}/**/*.{js,json}": [
       "prettier --single-quote --write",
@@ -17,13 +31,14 @@
   },
   "pre-commit": [
     "precommit-msg",
-    "pretty"
+    "pretty",
+    "test"
   ],
   "scripts": {
     "pretty": "lint-staged",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "test": "npx jest",
-    "test-w": "npx jest -o --watch",
+    "test-w": "npx jest -o --watch --maxWorkers=10",
     "coverage": "npx jest --coverage",
     "bundle": "rollup -c",
     "build": "node ./tools/build.js && node ./tools/postBuild.js",
@@ -57,12 +72,14 @@
     "ayaka": "file:../ayaka/build",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.5.0",
+    "babel-jest": "^24.6.0",
     "chalk": "^2.4.2",
     "classnames": "^2.2.6",
     "css-loader": "^2.1.1",
     "dotenv": "^6.2.0",
     "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.15.3",
     "eslint-config-react-app": "^3.0.8",
     "eslint-loader": "^2.1.2",
@@ -74,7 +91,7 @@
     "fetch-mock": "^6.3.0",
     "fs-extra": "^7.0.1",
     "husky": "^1.3.1",
-    "jest": "^24.5.0",
+    "jest": "^24.6.0",
     "lint-staged": "^8.1.5",
     "nano-css": "^5.1.0",
     "node-sass-chokidar": "^1.3.4",

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render apply icon class 1`] = `
+<button
+  className="button ripple button--icon  mko_1g3c03c-button  mko_1g3c03c-button_icon"
+  icon="T"
+  type="button"
+/>
+`;
+
+exports[`Button should render apply link class 1`] = `
+<button
+  className="button ripple button--link  mko_1g3c03c-button  mko_1g3c03c-button_link"
+  type="button"
+/>
+`;
+
+exports[`Button should render apply size class 1`] = `
+<button
+  className="button ripple button--standard button--small  mko_1g3c03c-button  mko_1g3c03c-button_standard"
+  type="button"
+/>
+`;
+
+exports[`Button should render apply style class 1`] = `
+<button
+  className="button ripple button--standard button--primary  mko_1g3c03c-button  mko_1g3c03c-button_standard"
+  type="button"
+/>
+`;
+
+exports[`Button should render when no props 1`] = `
+<button
+  className="button ripple button--standard  mko_1g3c03c-button  mko_1g3c03c-button_standard"
+  type="button"
+/>
+`;
