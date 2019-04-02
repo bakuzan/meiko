@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadableContent should render with minimum props 1`] = `
+<div
+  id="jest"
+/>
+`;
+
+exports[`LoadingBouncer should render with minimum props 1`] = `
+<div
+  className="loading-bouncer  mko_flo780-bouncer"
+>
+  <div
+    className="loading-bouncer__orb  mko_flo780-orb"
+    key="0"
+  />
+  <div
+    className="loading-bouncer__orb  mko_flo780-orb"
+    key="1"
+  />
+  <div
+    className="loading-bouncer__orb  mko_flo780-orb"
+    key="2"
+  />
+</div>
+`;
+
+exports[`LoadingSpinner should render with minimum props 1`] = `
+<div
+  className="loader  mko_zz2xb6-loader"
+>
+  <svg
+    className="loader__circular  mko_zz2xb6-circular"
+    viewBox="25 25 50 50"
+  >
+    <circle
+      className="loader__path  mko_zz2xb6-path"
+      cx="50"
+      cy="50"
+      fill="none"
+      r="20"
+      strokeMiterlimit="10"
+      strokeWidth="2"
+    />
+  </svg>
+</div>
+`;

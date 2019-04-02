@@ -1,0 +1,749 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChipListInput should call updateChipList when suggestion is clicked 1`] = `
+<ChipListInput
+  attr="text"
+  chipOptions={
+    Array [
+      Object {
+        "id": 5,
+        "text": "Bat",
+      },
+      Object {
+        "id": 6,
+        "text": "Cat",
+      },
+      Object {
+        "id": 9,
+        "text": "Frog",
+      },
+    ]
+  }
+  chipsSelected={Array []}
+  createNewMessage="Create New Tag"
+  id="jest"
+  label="tags"
+  name="jest"
+  updateChipList={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "jest",
+          Array [
+            Object {
+              "id": 5,
+              "text": "Bat",
+            },
+          ],
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="chip-list-input chip-list-input--focused  mko_1b6kyov-chipListInput"
+  >
+    <AutocompleteInput
+      attr="text"
+      clearableInputProps={
+        Object {
+          "className": "chip-list-input__clearable-input  mko_1b6kyov-clearButton",
+        }
+      }
+      disableLocalFilter={false}
+      filter=""
+      id="jest"
+      items={
+        Array [
+          Object {
+            "id": 5,
+            "text": "Bat",
+          },
+          Object {
+            "id": 6,
+            "text": "Cat",
+          },
+          Object {
+            "id": 9,
+            "text": "Frog",
+          },
+        ]
+      }
+      label="tags"
+      name="jest"
+      noSuggestionsItem={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onSelect={[Function]}
+      suggestionTemplate={[Function]}
+    >
+      <div
+        className="autocomplete  mko_ydt0iq-autocomplete"
+      >
+        <ClearableInput
+          className="chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+          id="jest"
+          label="tags"
+          maxNumberText={[Function]}
+          name="text"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          value=""
+        >
+          <div
+            className="clearable-input has-float-label  mko_8tgsun-clearableInput  mko_mwr88m-controlContainer"
+          >
+            <div
+              className="clearable-input__inner  mko_8tgsun-clearableInput__inner"
+            >
+              <ForwardRef(Input)
+                className="clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                id="jest"
+                name="text"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                value=""
+              >
+                <input
+                  autoComplete="off"
+                  className="input clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                  id="jest"
+                  name="text"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder=" "
+                  type="text"
+                  value=""
+                />
+              </ForwardRef(Input)>
+              <label
+                htmlFor="jest"
+              >
+                tags
+              </label>
+            </div>
+            <div
+              className="clearable-input__under  mko_8tgsun-clearableInput__inner  mko_8tgsun-clearableInput__under"
+            />
+          </div>
+        </ClearableInput>
+      </div>
+    </AutocompleteInput>
+  </div>
+</ChipListInput>
+`;
+
+exports[`ChipListInput should ready removal of selected chip 1`] = `
+<ChipListInput
+  attr="text"
+  chipOptions={
+    Array [
+      Object {
+        "id": 5,
+        "text": "Bat",
+      },
+      Object {
+        "id": 6,
+        "text": "Cat",
+      },
+      Object {
+        "id": 9,
+        "text": "Frog",
+      },
+    ]
+  }
+  chipsSelected={
+    Array [
+      Object {
+        "id": 5,
+        "text": "Bat",
+      },
+    ]
+  }
+  createNewMessage="Create New Tag"
+  id="jest"
+  label="tags"
+  name="jest"
+  updateChipList={[MockFunction]}
+>
+  <div
+    className="chip-list-input  mko_1b6kyov-chipListInput"
+  >
+    <div
+      className="chip-list  mko_1b6kyov-chipList"
+    >
+      <div
+        className="chip-list__inner  mko_1b6kyov-chipList__inner"
+      >
+        <TagChip
+          data={
+            Object {
+              "name": "Bat",
+            }
+          }
+          isActive={true}
+          key="0"
+          onRemove={[Function]}
+        >
+          <span
+            className="tag-chip tag-chip--deletable tag-chip--active  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_deletable"
+          >
+            <span
+              className="tag-chip__text  mko_xm6hi0-tagChip__text"
+              style={Object {}}
+            >
+              Bat
+            </span>
+            <Button
+              aria-label="Remove tag"
+              btnSize="small"
+              className="tag-chip__delete  mko_xm6hi0-tagChip__delete"
+              icon="╳︎"
+              onClick={[Function]}
+              title="remove"
+              type="button"
+            >
+              <button
+                aria-label="Remove tag"
+                className="button ripple button--icon button--small tag-chip__delete  mko_xm6hi0-tagChip__delete  mko_1g3c03c-button  mko_1g3c03c-button_icon"
+                icon="╳︎"
+                onClick={[Function]}
+                title="remove"
+                type="button"
+              />
+            </Button>
+          </span>
+        </TagChip>
+      </div>
+    </div>
+    <AutocompleteInput
+      attr="text"
+      clearableInputProps={
+        Object {
+          "className": "chip-list-input__clearable-input  mko_1b6kyov-clearButton",
+        }
+      }
+      disableLocalFilter={false}
+      filter=""
+      id="jest"
+      items={
+        Array [
+          Object {
+            "id": 5,
+            "text": "Bat",
+          },
+          Object {
+            "id": 6,
+            "text": "Cat",
+          },
+          Object {
+            "id": 9,
+            "text": "Frog",
+          },
+        ]
+      }
+      label="tags"
+      name="jest"
+      noSuggestionsItem={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onSelect={[Function]}
+      suggestionTemplate={[Function]}
+    >
+      <div
+        className="autocomplete  mko_ydt0iq-autocomplete"
+      >
+        <ClearableInput
+          className="chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+          id="jest"
+          label="tags"
+          maxNumberText={[Function]}
+          name="text"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          value=""
+        >
+          <div
+            className="clearable-input has-float-label  mko_8tgsun-clearableInput  mko_mwr88m-controlContainer"
+          >
+            <div
+              className="clearable-input__inner  mko_8tgsun-clearableInput__inner"
+            >
+              <ForwardRef(Input)
+                className="clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                id="jest"
+                name="text"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                value=""
+              >
+                <input
+                  autoComplete="off"
+                  className="input clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                  id="jest"
+                  name="text"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder=" "
+                  type="text"
+                  value=""
+                />
+              </ForwardRef(Input)>
+              <label
+                htmlFor="jest"
+              >
+                tags
+              </label>
+            </div>
+            <div
+              className="clearable-input__under  mko_8tgsun-clearableInput__inner  mko_8tgsun-clearableInput__under"
+            />
+          </div>
+        </ClearableInput>
+      </div>
+    </AutocompleteInput>
+  </div>
+</ChipListInput>
+`;
+
+exports[`ChipListInput should render selected chips and remove 1`] = `
+<ChipListInput
+  attr="text"
+  chipOptions={
+    Array [
+      Object {
+        "id": 5,
+        "text": "Bat",
+      },
+      Object {
+        "id": 6,
+        "text": "Cat",
+      },
+      Object {
+        "id": 9,
+        "text": "Frog",
+      },
+    ]
+  }
+  chipsSelected={
+    Array [
+      Object {
+        "id": 5,
+        "text": "Bat",
+      },
+    ]
+  }
+  createNewMessage="Create New Tag"
+  id="jest"
+  label="tags"
+  name="jest"
+  updateChipList={[MockFunction]}
+>
+  <div
+    className="chip-list-input  mko_1b6kyov-chipListInput"
+  >
+    <div
+      className="chip-list  mko_1b6kyov-chipList"
+    >
+      <div
+        className="chip-list__inner  mko_1b6kyov-chipList__inner"
+      >
+        <TagChip
+          data={
+            Object {
+              "name": "Bat",
+            }
+          }
+          isActive={false}
+          key="0"
+          onRemove={[Function]}
+        >
+          <span
+            className="tag-chip tag-chip--deletable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_deletable"
+          >
+            <span
+              className="tag-chip__text  mko_xm6hi0-tagChip__text"
+              style={Object {}}
+            >
+              Bat
+            </span>
+            <Button
+              aria-label="Remove tag"
+              btnSize="small"
+              className="tag-chip__delete  mko_xm6hi0-tagChip__delete"
+              icon="╳︎"
+              onClick={[Function]}
+              title="remove"
+              type="button"
+            >
+              <button
+                aria-label="Remove tag"
+                className="button ripple button--icon button--small tag-chip__delete  mko_xm6hi0-tagChip__delete  mko_1g3c03c-button  mko_1g3c03c-button_icon"
+                icon="╳︎"
+                onClick={[Function]}
+                title="remove"
+                type="button"
+              />
+            </Button>
+          </span>
+        </TagChip>
+      </div>
+    </div>
+    <AutocompleteInput
+      attr="text"
+      clearableInputProps={
+        Object {
+          "className": "chip-list-input__clearable-input  mko_1b6kyov-clearButton",
+        }
+      }
+      disableLocalFilter={false}
+      filter=""
+      id="jest"
+      items={
+        Array [
+          Object {
+            "id": 5,
+            "text": "Bat",
+          },
+          Object {
+            "id": 6,
+            "text": "Cat",
+          },
+          Object {
+            "id": 9,
+            "text": "Frog",
+          },
+        ]
+      }
+      label="tags"
+      name="jest"
+      noSuggestionsItem={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onSelect={[Function]}
+      suggestionTemplate={[Function]}
+    >
+      <div
+        className="autocomplete  mko_ydt0iq-autocomplete"
+      >
+        <ClearableInput
+          className="chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+          id="jest"
+          label="tags"
+          maxNumberText={[Function]}
+          name="text"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          value=""
+        >
+          <div
+            className="clearable-input has-float-label  mko_8tgsun-clearableInput  mko_mwr88m-controlContainer"
+          >
+            <div
+              className="clearable-input__inner  mko_8tgsun-clearableInput__inner"
+            >
+              <ForwardRef(Input)
+                className="clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                id="jest"
+                name="text"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                value=""
+              >
+                <input
+                  autoComplete="off"
+                  className="input clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                  id="jest"
+                  name="text"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder=" "
+                  type="text"
+                  value=""
+                />
+              </ForwardRef(Input)>
+              <label
+                htmlFor="jest"
+              >
+                tags
+              </label>
+            </div>
+            <div
+              className="clearable-input__under  mko_8tgsun-clearableInput__inner  mko_8tgsun-clearableInput__under"
+            />
+          </div>
+        </ClearableInput>
+      </div>
+    </AutocompleteInput>
+  </div>
+</ChipListInput>
+`;
+
+exports[`ChipListInput should render selected chips and remove 2`] = `
+<ChipListInput
+  attr="text"
+  chipOptions={
+    Array [
+      Object {
+        "id": 5,
+        "text": "Bat",
+      },
+      Object {
+        "id": 6,
+        "text": "Cat",
+      },
+      Object {
+        "id": 9,
+        "text": "Frog",
+      },
+    ]
+  }
+  chipsSelected={
+    Array [
+      Object {
+        "id": 5,
+        "text": "Bat",
+      },
+    ]
+  }
+  createNewMessage="Create New Tag"
+  id="jest"
+  label="tags"
+  name="jest"
+  updateChipList={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "jest",
+          Array [],
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="chip-list-input  mko_1b6kyov-chipListInput"
+  >
+    <div
+      className="chip-list  mko_1b6kyov-chipList"
+    >
+      <div
+        className="chip-list__inner  mko_1b6kyov-chipList__inner"
+      >
+        <TagChip
+          data={
+            Object {
+              "name": "Bat",
+            }
+          }
+          isActive={false}
+          key="0"
+          onRemove={[Function]}
+        >
+          <span
+            className="tag-chip tag-chip--deletable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_deletable"
+          >
+            <span
+              className="tag-chip__text  mko_xm6hi0-tagChip__text"
+              style={Object {}}
+            >
+              Bat
+            </span>
+            <Button
+              aria-label="Remove tag"
+              btnSize="small"
+              className="tag-chip__delete  mko_xm6hi0-tagChip__delete"
+              icon="╳︎"
+              onClick={[Function]}
+              title="remove"
+              type="button"
+            >
+              <button
+                aria-label="Remove tag"
+                className="button ripple button--icon button--small tag-chip__delete  mko_xm6hi0-tagChip__delete  mko_1g3c03c-button  mko_1g3c03c-button_icon"
+                icon="╳︎"
+                onClick={[Function]}
+                title="remove"
+                type="button"
+              />
+            </Button>
+          </span>
+        </TagChip>
+      </div>
+    </div>
+    <AutocompleteInput
+      attr="text"
+      clearableInputProps={
+        Object {
+          "className": "chip-list-input__clearable-input  mko_1b6kyov-clearButton",
+        }
+      }
+      disableLocalFilter={false}
+      filter=""
+      id="jest"
+      items={
+        Array [
+          Object {
+            "id": 5,
+            "text": "Bat",
+          },
+          Object {
+            "id": 6,
+            "text": "Cat",
+          },
+          Object {
+            "id": 9,
+            "text": "Frog",
+          },
+        ]
+      }
+      label="tags"
+      name="jest"
+      noSuggestionsItem={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onSelect={[Function]}
+      suggestionTemplate={[Function]}
+    >
+      <div
+        className="autocomplete  mko_ydt0iq-autocomplete"
+      >
+        <ClearableInput
+          className="chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+          id="jest"
+          label="tags"
+          maxNumberText={[Function]}
+          name="text"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          value=""
+        >
+          <div
+            className="clearable-input has-float-label  mko_8tgsun-clearableInput  mko_mwr88m-controlContainer"
+          >
+            <div
+              className="clearable-input__inner  mko_8tgsun-clearableInput__inner"
+            >
+              <ForwardRef(Input)
+                className="clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                id="jest"
+                name="text"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                value=""
+              >
+                <input
+                  autoComplete="off"
+                  className="input clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                  id="jest"
+                  name="text"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder=" "
+                  type="text"
+                  value=""
+                />
+              </ForwardRef(Input)>
+              <label
+                htmlFor="jest"
+              >
+                tags
+              </label>
+            </div>
+            <div
+              className="clearable-input__under  mko_8tgsun-clearableInput__inner  mko_8tgsun-clearableInput__under"
+            />
+          </div>
+        </ClearableInput>
+      </div>
+    </AutocompleteInput>
+  </div>
+</ChipListInput>
+`;
+
+exports[`ChipListInput should render with minimum props 1`] = `
+<div
+  className="chip-list-input  mko_1b6kyov-chipListInput"
+>
+  <AutocompleteInput
+    attr="text"
+    clearableInputProps={
+      Object {
+        "className": "chip-list-input__clearable-input  mko_1b6kyov-clearButton",
+      }
+    }
+    disableLocalFilter={false}
+    filter=""
+    id="jest"
+    items={
+      Array [
+        Object {
+          "id": 5,
+          "text": "Bat",
+        },
+        Object {
+          "id": 6,
+          "text": "Cat",
+        },
+        Object {
+          "id": 9,
+          "text": "Frog",
+        },
+      ]
+    }
+    label="tags"
+    name="jest"
+    noSuggestionsItem={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onSelect={[Function]}
+    suggestionTemplate={[Function]}
+  />
+</div>
+`;

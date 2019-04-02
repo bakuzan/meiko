@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar should apply collapsed styles 1`] = `
+<div
+  className="sidebar sidebar--collapsed  mko_vrt9r1-sidebar  mko_vrt9r1-sidebar_collapsed"
+>
+  <Button
+    aria-label="Toggle sidebar"
+    className="sidebar__toggler  mko_vrt9r1-sidebar__toggler"
+    icon="›"
+    onClick={[MockFunction]}
+    type="button"
+  />
+  <ul
+    className="sidebar__menu  mko_vrt9r1-sidebar__menu"
+  >
+    <li
+      className="sidebar__item  mko_vrt9r1-sidebar__item"
+      key="0"
+      title="One"
+    >
+      <SidebarLinkTemplate
+        data={
+          Object {
+            "icon": "A",
+            "link": "fake/link",
+            "title": "One",
+          }
+        }
+        onClick={[MockFunction]}
+      />
+    </li>
+    <li
+      className="sidebar__item  mko_vrt9r1-sidebar__item"
+      key="1"
+      title="Two"
+    >
+      <SidebarLinkTemplate
+        data={
+          Object {
+            "icon": "B",
+            "link": "fake/link",
+            "title": "Two",
+          }
+        }
+        onClick={[MockFunction]}
+      />
+    </li>
+    <li
+      className="sidebar__item  mko_vrt9r1-sidebar__item"
+      key="2"
+      title="Three"
+    >
+      <SidebarLinkTemplate
+        data={
+          Object {
+            "icon": "C",
+            "link": "fake/link",
+            "title": "Three",
+          }
+        }
+        onClick={[MockFunction]}
+      />
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Sidebar should apply hidden styles 1`] = `
+<div
+  className="sidebar sidebar--hidden  mko_vrt9r1-sidebar  mko_vrt9r1-sidebar_hidden"
+>
+  <Button
+    aria-label="Toggle sidebar"
+    className="sidebar__toggler  mko_vrt9r1-sidebar__toggler"
+    icon="‹"
+    onClick={[MockFunction]}
+    type="button"
+  />
+  <ul
+    className="sidebar__menu  mko_vrt9r1-sidebar__menu"
+  >
+    <li
+      className="sidebar__item  mko_vrt9r1-sidebar__item"
+      key="0"
+      title="One"
+    >
+      <SidebarLinkTemplate
+        data={
+          Object {
+            "icon": "A",
+            "link": "fake/link",
+            "title": "One",
+          }
+        }
+        onClick={[MockFunction]}
+      />
+    </li>
+    <li
+      className="sidebar__item  mko_vrt9r1-sidebar__item"
+      key="1"
+      title="Two"
+    >
+      <SidebarLinkTemplate
+        data={
+          Object {
+            "icon": "B",
+            "link": "fake/link",
+            "title": "Two",
+          }
+        }
+        onClick={[MockFunction]}
+      />
+    </li>
+    <li
+      className="sidebar__item  mko_vrt9r1-sidebar__item"
+      key="2"
+      title="Three"
+    >
+      <SidebarLinkTemplate
+        data={
+          Object {
+            "icon": "C",
+            "link": "fake/link",
+            "title": "Three",
+          }
+        }
+        onClick={[MockFunction]}
+      />
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Sidebar should render with minimum props 1`] = `
+<div
+  className="sidebar  mko_vrt9r1-sidebar"
+>
+  <Button
+    aria-label="Toggle sidebar"
+    className="sidebar__toggler  mko_vrt9r1-sidebar__toggler"
+    icon="‹"
+    onClick={[MockFunction]}
+    type="button"
+  />
+  <ul
+    className="sidebar__menu  mko_vrt9r1-sidebar__menu"
+  >
+    <li
+      className="sidebar__item  mko_vrt9r1-sidebar__item"
+      key="0"
+      title="One"
+    >
+      <SidebarLinkTemplate
+        data={
+          Object {
+            "icon": "A",
+            "link": "fake/link",
+            "title": "One",
+          }
+        }
+        onClick={[MockFunction]}
+      />
+    </li>
+    <li
+      className="sidebar__item  mko_vrt9r1-sidebar__item"
+      key="1"
+      title="Two"
+    >
+      <SidebarLinkTemplate
+        data={
+          Object {
+            "icon": "B",
+            "link": "fake/link",
+            "title": "Two",
+          }
+        }
+        onClick={[MockFunction]}
+      />
+    </li>
+    <li
+      className="sidebar__item  mko_vrt9r1-sidebar__item"
+      key="2"
+      title="Three"
+    >
+      <SidebarLinkTemplate
+        data={
+          Object {
+            "icon": "C",
+            "link": "fake/link",
+            "title": "Three",
+          }
+        }
+        onClick={[MockFunction]}
+      />
+    </li>
+  </ul>
+</div>
+`;

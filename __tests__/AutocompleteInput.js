@@ -46,11 +46,9 @@ describe('AutocompleteInput', function() {
 
     const input = component.find('input#jest');
     input.simulate('change', changeEvent);
-    expect(component.state('activeSuggestion')).toBe(0);
-
-    component.setProps({ filter: 'at' });
 
     expect(mockChangeFn).toHaveBeenCalled();
+    expect(component.state('activeSuggestion')).toEqual(0);
     expect(component).toMatchSnapshot();
     component.unmount();
   });

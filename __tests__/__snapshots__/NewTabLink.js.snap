@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewTabLink should render with minimum props 1`] = `
+<a
+  href="#jest"
+  rel="noopener noreferrer"
+  target="_blank"
+/>
+`;
