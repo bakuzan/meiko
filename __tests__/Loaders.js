@@ -36,10 +36,11 @@ describe('SimpleLoading', function() {
   });
 
   it('should render', function() {
-    const component = shallow(<SimpleLoading pastDelay={true} />);
+    const component = mount(<SimpleLoading pastDelay={true} />);
 
-    expect(component.is('.loading-bouncer')).toBeTruthy();
+    expect(component.find('.loading-bouncer').exists()).toBe(true);
     expect(component).toMatchSnapshot();
+    component.unmount();
   });
 });
 
@@ -51,10 +52,11 @@ describe('Loading', function() {
   });
 
   it('should render', function() {
-    const component = shallow(<Loading pastDelay={true} />);
+    const component = mount(<Loading pastDelay={true} />);
 
-    expect(component.is('.loader')).toBeTruthy();
+    expect(component.find('.loader').exists()).toBe(true);
     expect(component).toMatchSnapshot();
+    component.unmount();
   });
 
   it('should render error message', function() {
@@ -77,12 +79,13 @@ describe('Loading', function() {
 describe('LoadableContent', function() {
   it('should render with minimum props', function() {
     const component = shallow(
-      <LoadableContent>
+      <LoadableContent isFetching={false}>
         <div id="jest" />
       </LoadableContent>
     );
 
-    expect(component.find('#jest').exists()).toBe(true);
+    expect(component.exists('#jest')).toBe(true);
+    expect(component.exists('LoadingSpinner')).toBe(false);
     expect(component).toMatchSnapshot();
   });
 
@@ -96,10 +99,11 @@ describe('LoadableContent', function() {
     expect(component.state('pastDelay')).toBe(false);
 
     component.setProps({ isFetching: true });
-    jest.runAllTimers();
+    jest.advanceTimersByTime(1200);
 
     expect(component.state('pastDelay')).toBe(true);
-    expect(component.is('.loader')).toBeTruthy();
+    expect(component.exists('#jest')).toBe(false);
+    expect(component.exists('LoadingSpinner')).toBe(true);
     expect(component).toMatchSnapshot();
   });
 });

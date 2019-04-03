@@ -1,9 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LoadableContent should render spinner after timeout 1`] = `
+<LoadingSpinner
+  size="fullscreen"
+/>
+`;
+
 exports[`LoadableContent should render with minimum props 1`] = `
 <div
   id="jest"
 />
+`;
+
+exports[`Loading should render 1`] = `
+<Loading
+  pastDelay={true}
+>
+  <LoadingSpinner
+    size="fullscreen"
+  >
+    <div
+      className="loader loader--fullscreen  mko_zz2xb6-loader  mko_zz2xb6-loader--fullscreen"
+    >
+      <svg
+        className="loader__circular  mko_zz2xb6-circular"
+        viewBox="25 25 50 50"
+      >
+        <circle
+          className="loader__path  mko_zz2xb6-path"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="20"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+        />
+      </svg>
+    </div>
+  </LoadingSpinner>
+</Loading>
+`;
+
+exports[`Loading should render error message 1`] = `
+<div>
+  An Error was encountered loading the page!
+</div>
+`;
+
+exports[`Loading should render timeout message 1`] = `
+<div>
+  The request has timed out!
+</div>
 `;
 
 exports[`LoadingBouncer should render with minimum props 1`] = `
@@ -44,4 +91,29 @@ exports[`LoadingSpinner should render with minimum props 1`] = `
     />
   </svg>
 </div>
+`;
+
+exports[`SimpleLoading should render 1`] = `
+<SimpleLoading
+  pastDelay={true}
+>
+  <LoadingBouncer>
+    <div
+      className="loading-bouncer  mko_flo780-bouncer"
+    >
+      <div
+        className="loading-bouncer__orb  mko_flo780-orb"
+        key="0"
+      />
+      <div
+        className="loading-bouncer__orb  mko_flo780-orb"
+        key="1"
+      />
+      <div
+        className="loading-bouncer__orb  mko_flo780-orb"
+        key="2"
+      />
+    </div>
+  </LoadingBouncer>
+</SimpleLoading>
 `;

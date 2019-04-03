@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AutocompleteInput should call onSelect when suggestion is click 1`] = `
+exports[`should call onSelect when suggestion is click 1`] = `
 <AutocompleteInput
   attr="text"
   clearableInputProps={Object {}}
@@ -92,14 +92,14 @@ exports[`AutocompleteInput should call onSelect when suggestion is click 1`] = `
             aria-label="Clear input"
             btnSize="small"
             className="clearable-input__clear  mko_8tgsun-clearableInput__clear"
-            icon="╳︎"
+            icon="❌︎"
             onClick={[Function]}
             type="button"
           >
             <button
               aria-label="Clear input"
-              className="button ripple button--icon button--small clearable-input__clear  mko_8tgsun-clearableInput__clear  mko_1g3c03c-button  mko_1g3c03c-button_icon"
-              icon="╳︎"
+              className="button ripple button--icon button--small  mko_xh0n1r-button  mko_xh0n1r-button_icon clearable-input__clear  mko_8tgsun-clearableInput__clear"
+              icon="❌︎"
               onClick={[Function]}
               type="button"
             />
@@ -137,7 +137,7 @@ exports[`AutocompleteInput should call onSelect when suggestion is click 1`] = `
             type="button"
           >
             <button
-              className="button ripple button--standard autocomplete-suggestion__button  mko_1g3c03c-button  mko_1g3c03c-button_standard"
+              className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard autocomplete-suggestion__button"
               onClick={[Function]}
               title="Bat"
               type="button"
@@ -180,7 +180,7 @@ exports[`AutocompleteInput should call onSelect when suggestion is click 1`] = `
             type="button"
           >
             <button
-              className="button ripple button--standard autocomplete-suggestion__button  mko_1g3c03c-button  mko_1g3c03c-button_standard"
+              className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard autocomplete-suggestion__button"
               onClick={[Function]}
               title="Cat"
               type="button"
@@ -204,7 +204,7 @@ exports[`AutocompleteInput should call onSelect when suggestion is click 1`] = `
 </AutocompleteInput>
 `;
 
-exports[`AutocompleteInput should render with minimum props 1`] = `
+exports[`should render with minimum props 1`] = `
 <div
   className="autocomplete  mko_ydt0iq-autocomplete"
 >

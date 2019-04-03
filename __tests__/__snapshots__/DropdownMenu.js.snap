@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display menu on toggler click 1`] = `
+<DropdownMenu
+  align="center"
+  icon="⚙"
+>
+  <div
+    className="dropdown-menu  mko_dmkujd-container"
+  >
+    <Button
+      aria-label="Open dropdown menu"
+      className="dropdown-menu__toggler  mko_dmkujd-toggler"
+      icon="⚙"
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      <button
+        aria-label="Open dropdown menu"
+        className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon dropdown-menu__toggler  mko_dmkujd-toggler"
+        icon="⚙"
+        id={null}
+        onClick={[Function]}
+        type="button"
+      />
+    </Button>
+    <div>
+      <ul
+        className="dropdown-menu__menu  mko_dmkujd-menu  mko_dmkujd-menu_center"
+        id={null}
+        role="menu"
+      >
+        <li
+          className="dropdown-menu__arrow  mko_dmkujd-arrow"
+        />
+        <li>
+          Test item
+        </li>
+        <li>
+          And another one!
+        </li>
+      </ul>
+    </div>
+  </div>
+</DropdownMenu>
+`;
+
+exports[`should render with minimum props 1`] = `
+<div
+  className="dropdown-menu  mko_dmkujd-container"
+>
+  <Button
+    aria-label="Open dropdown menu"
+    className="dropdown-menu__toggler  mko_dmkujd-toggler"
+    icon="⚙"
+    id={null}
+    onClick={[Function]}
+    type="button"
+  />
+  <div />
+</div>
+`;

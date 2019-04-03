@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sidebar should apply collapsed styles 1`] = `
+exports[`should apply collapsed styles 1`] = `
 <div
   className="sidebar sidebar--collapsed  mko_vrt9r1-sidebar  mko_vrt9r1-sidebar_collapsed"
 >
@@ -66,7 +66,7 @@ exports[`Sidebar should apply collapsed styles 1`] = `
 </div>
 `;
 
-exports[`Sidebar should apply hidden styles 1`] = `
+exports[`should apply hidden styles 1`] = `
 <div
   className="sidebar sidebar--hidden  mko_vrt9r1-sidebar  mko_vrt9r1-sidebar_hidden"
 >
@@ -132,7 +132,7 @@ exports[`Sidebar should apply hidden styles 1`] = `
 </div>
 `;
 
-exports[`Sidebar should render with minimum props 1`] = `
+exports[`should render with minimum props 1`] = `
 <div
   className="sidebar  mko_vrt9r1-sidebar"
 >

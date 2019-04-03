@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppInformation should render both 1`] = `
+exports[`should render both 1`] = `
 <div
   aria-label="Branch master, Version 4.0.0"
   className="app-information  mko_1ko0jmt-appInformation"
@@ -24,7 +24,7 @@ exports[`AppInformation should render both 1`] = `
 </div>
 `;
 
-exports[`AppInformation should render when branch present 1`] = `
+exports[`should render when branch present 1`] = `
 <div
   aria-label="Branch master"
   className="app-information  mko_1ko0jmt-appInformation"
@@ -43,7 +43,7 @@ exports[`AppInformation should render when branch present 1`] = `
 </div>
 `;
 
-exports[`AppInformation should render when version present 1`] = `
+exports[`should render when version present 1`] = `
 <div
   aria-label="Version 4.0.0"
   className="app-information  mko_1ko0jmt-appInformation"

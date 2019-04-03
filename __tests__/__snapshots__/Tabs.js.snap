@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should change active tab 1`] = `
+<TabContainer>
+  <div
+    className="tabs  mko_184elue-container"
+  >
+    <ul
+      className="tabs__controls  mko_184elue-controls"
+      role="tablist"
+    >
+      <li
+        className="tab-control  mko_184elue-tabControl"
+        key="one"
+        role="tab"
+      >
+        <Button
+          className="tab-control__button"
+          onClick={[Function]}
+          type="button"
+        >
+          <button
+            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard tab-control__button"
+            onClick={[Function]}
+            type="button"
+          >
+            one
+          </button>
+        </Button>
+      </li>
+      <li
+        className="tab-control tab-control--active  mko_184elue-tabControl  mko_184elue-tabControl_active"
+        key="two"
+        role="tab"
+      >
+        <Button
+          className="tab-control__button"
+          onClick={[Function]}
+          type="button"
+        >
+          <button
+            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard tab-control__button"
+            onClick={[Function]}
+            type="button"
+          >
+            two
+          </button>
+        </Button>
+      </li>
+    </ul>
+    <div
+      className="tabs__panels  mko_184elue-panels"
+    >
+      <TabView
+        isActive={false}
+        key="one"
+        name="one"
+      >
+        <div
+          className="tab-view  mko_184elue-view"
+          role="tabpanel"
+        >
+          <div>
+            this is the first tab...
+          </div>
+        </div>
+      </TabView>
+      <TabView
+        isActive={true}
+        key="two"
+        name="two"
+      >
+        <div
+          className="tab-view tab-view--active  mko_184elue-view  mko_184elue-view_active"
+          role="tabpanel"
+        >
+          <div>
+            ...and this is another tab
+          </div>
+        </div>
+      </TabView>
+    </div>
+  </div>
+</TabContainer>
+`;
+
+exports[`should pass isActive if child is function 1`] = `
+<TabContainer>
+  <div
+    className="tabs  mko_184elue-container"
+  >
+    <ul
+      className="tabs__controls  mko_184elue-controls"
+      role="tablist"
+    >
+      <li
+        className="tab-control  mko_184elue-tabControl"
+        key="one"
+        role="tab"
+      >
+        <Button
+          className="tab-control__button"
+          onClick={[Function]}
+          type="button"
+        >
+          <button
+            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard tab-control__button"
+            onClick={[Function]}
+            type="button"
+          >
+            one
+          </button>
+        </Button>
+      </li>
+      <li
+        className="tab-control tab-control--active  mko_184elue-tabControl  mko_184elue-tabControl_active"
+        key="two"
+        role="tab"
+      >
+        <Button
+          className="tab-control__button"
+          onClick={[Function]}
+          type="button"
+        >
+          <button
+            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard tab-control__button"
+            onClick={[Function]}
+            type="button"
+          >
+            two
+          </button>
+        </Button>
+      </li>
+    </ul>
+    <div
+      className="tabs__panels  mko_184elue-panels"
+    >
+      <TabView
+        isActive={false}
+        key="one"
+        name="one"
+      >
+        <div
+          className="tab-view  mko_184elue-view"
+          role="tabpanel"
+        />
+      </TabView>
+      <TabView
+        isActive={true}
+        key="two"
+        name="two"
+      >
+        <div
+          className="tab-view tab-view--active  mko_184elue-view  mko_184elue-view_active"
+          role="tabpanel"
+        >
+          <div>
+            ...and this is another tab
+          </div>
+        </div>
+      </TabView>
+    </div>
+  </div>
+</TabContainer>
+`;
+
+exports[`should render with minimum props 1`] = `
+<div
+  className="tabs  mko_184elue-container"
+>
+  <ul
+    className="tabs__controls  mko_184elue-controls"
+    role="tablist"
+  >
+    <li
+      className="tab-control  mko_184elue-tabControl"
+      key="one"
+      role="tab"
+    >
+      <Button
+        className="tab-control__button"
+        onClick={[Function]}
+        type="button"
+      >
+        one
+      </Button>
+    </li>
+    <li
+      className="tab-control  mko_184elue-tabControl"
+      key="two"
+      role="tab"
+    >
+      <Button
+        className="tab-control__button"
+        onClick={[Function]}
+        type="button"
+      >
+        two
+      </Button>
+    </li>
+  </ul>
+  <div
+    className="tabs__panels  mko_184elue-panels"
+  >
+    <TabView
+      isActive={false}
+      key="one"
+      name="one"
+    >
+      <div>
+        this is the first tab...
+      </div>
+    </TabView>
+    <TabView
+      isActive={false}
+      key="two"
+      name="two"
+    >
+      <div>
+        ...and this is another tab
+      </div>
+    </TabView>
+  </div>
+</div>
+`;

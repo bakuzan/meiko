@@ -1,6 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header should render navLeft 1`] = `
+exports[`should left align title 1`] = `
+<nav
+  className="application-header  mko_1x9y6no-applicationHeader"
+>
+  <h1
+    className="application-header__title"
+  >
+    Hello
+  </h1>
+  <div
+    className="flex-spacer"
+  />
+</nav>
+`;
+
+exports[`should render navLeft 1`] = `
 <nav
   className="application-header  mko_1x9y6no-applicationHeader"
 >
@@ -18,7 +33,7 @@ exports[`Header should render navLeft 1`] = `
 </nav>
 `;
 
-exports[`Header should render navRight 1`] = `
+exports[`should render navRight 1`] = `
 <nav
   className="application-header  mko_1x9y6no-applicationHeader"
 >
@@ -36,7 +51,7 @@ exports[`Header should render navRight 1`] = `
 </nav>
 `;
 
-exports[`Header should render title 1`] = `
+exports[`should render title 1`] = `
 <nav
   className="application-header  mko_1x9y6no-applicationHeader"
 >
@@ -54,7 +69,7 @@ exports[`Header should render title 1`] = `
 </nav>
 `;
 
-exports[`Header should render with minimum props 1`] = `
+exports[`should render with minimum props 1`] = `
 <nav
   className="application-header  mko_1x9y6no-applicationHeader"
 >

@@ -2,68 +2,78 @@ import React from 'react';
 
 import { Tabs } from '../lib';
 
-describe('Tabs', function() {
-  it('should render with minimum props', function() {
-    const component = shallow(
-      <Tabs.Container>
-        <Tabs.View name="one">
-          <div>this is the first tab...</div>
-        </Tabs.View>
-        <Tabs.View name="two">
-          <div>...and this is another tab</div>
-        </Tabs.View>
-      </Tabs.Container>
-    );
+it('should render with minimum props', function() {
+  const component = shallow(
+    <Tabs.Container>
+      <Tabs.View name="one">
+        <div>this is the first tab...</div>
+      </Tabs.View>
+      <Tabs.View name="two">
+        <div>...and this is another tab</div>
+      </Tabs.View>
+    </Tabs.Container>
+  );
 
-    expect(component.is('.tabs')).toBeTruthy();
-    expect(component).toMatchSnapshot();
-  });
+  expect(component.is('.tabs')).toBeTruthy();
+  expect(component).toMatchSnapshot();
+});
 
-  it('should change active tab', function() {
-    const component = shallow(
-      <Tabs.Container>
-        <Tabs.View name="one">
-          <div>this is the first tab...</div>
-        </Tabs.View>
-        <Tabs.View name="two">
-          <div>...and this is another tab</div>
-        </Tabs.View>
-      </Tabs.Container>
-    );
+it('should change active tab', function() {
+  const component = mount(
+    <Tabs.Container>
+      <Tabs.View name="one">
+        <div>this is the first tab...</div>
+      </Tabs.View>
+      <Tabs.View name="two">
+        <div>...and this is another tab</div>
+      </Tabs.View>
+    </Tabs.Container>
+  );
 
-    expect(component.state('activeTab')).toEqual('one');
-
+  expect(
     component
-      .find('.tab-control__button')
-      .at(1)
-      .simulate('click');
+      .find('.tab-view')
+      .at(0)
+      .hasClass('tab-view--active')
+  ).toBe(true);
 
-    expect(component.state('activeTab')).toEqual('two');
-    expect(component).toMatchSnapshot();
-  });
+  component
+    .find('button.tab-control__button')
+    .at(1)
+    .simulate('click');
 
-  it('should pass isActive if child is function', function() {
-    const component = shallow(
-      <Tabs.Container>
-        <Tabs.View name="one">
-          {(isActive) =>
-            isActive && <div id="jest">this is the first tab...</div>
-          }
-        </Tabs.View>
-        <Tabs.View name="two">
-          <div>...and this is another tab</div>
-        </Tabs.View>
-      </Tabs.Container>
-    );
-
-    expect(component.find('#jest').exists()).toBe(true);
-
+  expect(
     component
-      .find('.tab-control__button')
+      .find('.tab-view')
       .at(1)
-      .simulate('click');
+      .hasClass('tab-view--active')
+  ).toBe(true);
+  expect(component).toMatchSnapshot();
+  component.unmount();
+});
 
-    expect(component.find('#jest').exists()).toBe(false);
-    expect(component).toMatchSnapshot();
-  });
+it('should pass isActive if child is function', function() {
+  const component = mount(
+    <Tabs.Container>
+      <Tabs.View name="one">
+        {(isActive) =>
+          isActive && <div id="jest">this is the first tab...</div>
+        }
+      </Tabs.View>
+      <Tabs.View name="two">
+        <div>...and this is another tab</div>
+      </Tabs.View>
+    </Tabs.Container>
+  );
+
+  expect(component.find('#jest').exists()).toBe(true);
+
+  component
+    .find('button.tab-control__button')
+    .at(1)
+    .simulate('click');
+
+  expect(component.find('#jest').exists()).toBe(false);
+  expect(component).toMatchSnapshot();
+  component.unmount();
 });

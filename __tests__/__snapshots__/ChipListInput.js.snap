@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ChipListInput should call updateChipList when suggestion is clicked 1`] = `
+exports[`should call updateChipList when suggestion is clicked 1`] = `
 <ChipListInput
   attr="text"
   chipOptions={
@@ -147,7 +147,7 @@ exports[`ChipListInput should call updateChipList when suggestion is clicked 1`]
 </ChipListInput>
 `;
 
-exports[`ChipListInput should ready removal of selected chip 1`] = `
+exports[`should ready removal of selected chip 1`] = `
 <ChipListInput
   attr="text"
   chipOptions={
@@ -212,15 +212,15 @@ exports[`ChipListInput should ready removal of selected chip 1`] = `
               aria-label="Remove tag"
               btnSize="small"
               className="tag-chip__delete  mko_xm6hi0-tagChip__delete"
-              icon="╳︎"
+              icon="❌︎"
               onClick={[Function]}
               title="remove"
               type="button"
             >
               <button
                 aria-label="Remove tag"
-                className="button ripple button--icon button--small tag-chip__delete  mko_xm6hi0-tagChip__delete  mko_1g3c03c-button  mko_1g3c03c-button_icon"
-                icon="╳︎"
+                className="button ripple button--icon button--small  mko_xh0n1r-button  mko_xh0n1r-button_icon tag-chip__delete  mko_xm6hi0-tagChip__delete"
+                icon="❌︎"
                 onClick={[Function]}
                 title="remove"
                 type="button"
@@ -328,7 +328,7 @@ exports[`ChipListInput should ready removal of selected chip 1`] = `
 </ChipListInput>
 `;
 
-exports[`ChipListInput should render selected chips and remove 1`] = `
+exports[`should render selected chips and remove 1`] = `
 <ChipListInput
   attr="text"
   chipOptions={
@@ -393,15 +393,15 @@ exports[`ChipListInput should render selected chips and remove 1`] = `
               aria-label="Remove tag"
               btnSize="small"
               className="tag-chip__delete  mko_xm6hi0-tagChip__delete"
-              icon="╳︎"
+              icon="❌︎"
               onClick={[Function]}
               title="remove"
               type="button"
             >
               <button
                 aria-label="Remove tag"
-                className="button ripple button--icon button--small tag-chip__delete  mko_xm6hi0-tagChip__delete  mko_1g3c03c-button  mko_1g3c03c-button_icon"
-                icon="╳︎"
+                className="button ripple button--icon button--small  mko_xh0n1r-button  mko_xh0n1r-button_icon tag-chip__delete  mko_xm6hi0-tagChip__delete"
+                icon="❌︎"
                 onClick={[Function]}
                 title="remove"
                 type="button"
@@ -509,7 +509,7 @@ exports[`ChipListInput should render selected chips and remove 1`] = `
 </ChipListInput>
 `;
 
-exports[`ChipListInput should render selected chips and remove 2`] = `
+exports[`should render selected chips and remove 2`] = `
 <ChipListInput
   attr="text"
   chipOptions={
@@ -589,15 +589,15 @@ exports[`ChipListInput should render selected chips and remove 2`] = `
               aria-label="Remove tag"
               btnSize="small"
               className="tag-chip__delete  mko_xm6hi0-tagChip__delete"
-              icon="╳︎"
+              icon="❌︎"
               onClick={[Function]}
               title="remove"
               type="button"
             >
               <button
                 aria-label="Remove tag"
-                className="button ripple button--icon button--small tag-chip__delete  mko_xm6hi0-tagChip__delete  mko_1g3c03c-button  mko_1g3c03c-button_icon"
-                icon="╳︎"
+                className="button ripple button--icon button--small  mko_xh0n1r-button  mko_xh0n1r-button_icon tag-chip__delete  mko_xm6hi0-tagChip__delete"
+                icon="❌︎"
                 onClick={[Function]}
                 title="remove"
                 type="button"
@@ -705,7 +705,7 @@ exports[`ChipListInput should render selected chips and remove 2`] = `
 </ChipListInput>
 `;
 
-exports[`ChipListInput should render with minimum props 1`] = `
+exports[`should render with minimum props 1`] = `
 <div
   className="chip-list-input  mko_1b6kyov-chipListInput"
 >
