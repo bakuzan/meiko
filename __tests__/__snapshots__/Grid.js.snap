@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should NOT render "no items" message 1`] = `
+<ul
+  className="mko-grid  mko_8taz1t-grid"
+/>
+`;
+
+exports[`should render "no items" message 1`] = `
+<ul
+  className="mko-grid  mko_8taz1t-grid"
+>
+  <li
+    className="mko-grid__no-items"
+    key="NONE"
+  >
+    No items were found.
+  </li>
+</ul>
+`;
+
+exports[`should render custom "no items" message 1`] = `
+<ul
+  className="mko-grid  mko_8taz1t-grid"
+>
+  <li
+    className="mko-grid__no-items"
+    key="NONE"
+  >
+    Jest No Items
+  </li>
+</ul>
+`;
+
+exports[`should render items using children render props 1`] = `
+<ul
+  className="mko-grid  mko_8taz1t-grid"
+>
+  <li
+    key="jest"
+  >
+    jest
+  </li>
+  <li
+    key="enzyme"
+  >
+    enzyme
+  </li>
+  <li
+    key="react"
+  >
+    react
+  </li>
+</ul>
+`;
+
+exports[`should render with minimum props 1`] = `
+<ul
+  className="mko-grid  mko_8taz1t-grid"
+/>
+`;

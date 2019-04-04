@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with minimum props 1`] = `
+<div
+  className="tickbox"
+>
+  <label
+    className="tickbox__label  mko_10rmoft-tickbox__label"
+    htmlFor="jest"
+  >
+    <input
+      checked={false}
+      className=" mko_10rmoft-tickbox__input"
+      id="jest"
+      onChange={[MockFunction]}
+      type="checkbox"
+    />
+  </label>
+</div>
+`;
+
+exports[`should toggle checkbox on click 1`] = `
+<div
+  className="tickbox"
+>
+  <label
+    className="tickbox__label  mko_10rmoft-tickbox__label"
+    htmlFor="jest"
+  >
+    <input
+      checked={false}
+      className=" mko_10rmoft-tickbox__input"
+      id="jest"
+      onChange={
+        [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "target": Object {
+                  "checked": true,
+                },
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
+      type="checkbox"
+    />
+  </label>
+</div>
+`;

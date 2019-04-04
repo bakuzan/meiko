@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should call onChange 1`] = `
+<div
+  className="has-float-label select-container  mko_mwr88m-controlContainer"
+>
+  <select
+    className="select-box  mko_7fjkm0-select"
+    disabled={false}
+    id="jest"
+    onChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "target": Object {
+                "value": 2,
+              },
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    value=""
+  >
+    <option
+      key="1"
+      value={1}
+    >
+      one
+    </option>
+    <option
+      key="2"
+      value={2}
+    >
+      two
+    </option>
+    <option
+      key="3"
+      value={3}
+    >
+      three
+    </option>
+  </select>
+  <label
+    htmlFor="jest"
+  >
+    Jesters
+  </label>
+</div>
+`;
+
+exports[`should render with minimum props 1`] = `
+<div
+  className="has-float-label select-container  mko_mwr88m-controlContainer"
+>
+  <select
+    className="select-box  mko_7fjkm0-select"
+    disabled={false}
+    id="jest"
+    onChange={[MockFunction]}
+    value=""
+  >
+    <option
+      key="1"
+      value={1}
+    >
+      one
+    </option>
+    <option
+      key="2"
+      value={2}
+    >
+      two
+    </option>
+    <option
+      key="3"
+      value={3}
+    >
+      three
+    </option>
+  </select>
+  <label
+    htmlFor="jest"
+  >
+    Jesters
+  </label>
+</div>
+`;

@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should call onChange 1`] = `
+<div
+  className="radio-group"
+>
+  <RadioButton
+    checked={true}
+    id="jest"
+    key="1"
+    label="one"
+    name="jest"
+    onChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "target": Object {
+                "value": 2,
+              },
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    value={1}
+  >
+    <label
+      aria-checked={true}
+      className="radio  mko_vo66cf-radio"
+      htmlFor="jest"
+    >
+      <input
+        checked={true}
+        className="radio__input  mko_vo66cf-radio__input"
+        id="jest"
+        name="jest"
+        onChange={
+          [MockFunction] {
+            "calls": Array [
+              Array [
+                Object {
+                  "target": Object {
+                    "value": 2,
+                  },
+                },
+              ],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          }
+        }
+        type="radio"
+        value={1}
+      />
+      <span
+        className="radio__label"
+      >
+        one
+      </span>
+    </label>
+  </RadioButton>
+  <RadioButton
+    checked={false}
+    id="jest"
+    key="2"
+    label="two"
+    name="jest"
+    onChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "target": Object {
+                "value": 2,
+              },
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    value={2}
+  >
+    <label
+      aria-checked={false}
+      className="radio  mko_vo66cf-radio"
+      htmlFor="jest"
+    >
+      <input
+        checked={false}
+        className="radio__input  mko_vo66cf-radio__input"
+        id="jest"
+        name="jest"
+        onChange={
+          [MockFunction] {
+            "calls": Array [
+              Array [
+                Object {
+                  "target": Object {
+                    "value": 2,
+                  },
+                },
+              ],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          }
+        }
+        type="radio"
+        value={2}
+      />
+      <span
+        className="radio__label"
+      >
+        two
+      </span>
+    </label>
+  </RadioButton>
+  <RadioButton
+    checked={false}
+    id="jest"
+    key="3"
+    label="three"
+    name="jest"
+    onChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "target": Object {
+                "value": 2,
+              },
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    value={3}
+  >
+    <label
+      aria-checked={false}
+      className="radio  mko_vo66cf-radio"
+      htmlFor="jest"
+    >
+      <input
+        checked={false}
+        className="radio__input  mko_vo66cf-radio__input"
+        id="jest"
+        name="jest"
+        onChange={
+          [MockFunction] {
+            "calls": Array [
+              Array [
+                Object {
+                  "target": Object {
+                    "value": 2,
+                  },
+                },
+              ],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          }
+        }
+        type="radio"
+        value={3}
+      />
+      <span
+        className="radio__label"
+      >
+        three
+      </span>
+    </label>
+  </RadioButton>
+</div>
+`;
+
+exports[`should render with minimum props 1`] = `
+<label
+  aria-checked={false}
+  className="radio  mko_vo66cf-radio"
+  htmlFor="jest"
+>
+  <input
+    checked={false}
+    className="radio__input  mko_vo66cf-radio__input"
+    id="jest"
+    name="jest"
+    onChange={[MockFunction]}
+    type="radio"
+    value={0}
+  />
+  <span
+    className="radio__label"
+  >
+    jester
+  </span>
+</label>
+`;

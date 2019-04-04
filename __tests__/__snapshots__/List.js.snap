@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should apply columns style 1`] = `
+<ul
+  className="list list--column list--columns_2 list--wrap  mko_d7avmc-list  mko_d7avmc-list_column  mko_d7avmc-list--columns_2  mko_d7avmc-list_wrap"
+>
+  <li />
+  <li />
+  <li />
+</ul>
+`;
+
+exports[`should apply wrapping style 1`] = `
+<ul
+  className="list list--wrap  mko_d7avmc-list  mko_d7avmc-list_wrap"
+>
+  <li />
+  <li />
+  <li />
+</ul>
+`;
+
+exports[`should render children 1`] = `
+<ul
+  className="list  mko_d7avmc-list"
+>
+  <li />
+  <li />
+  <li />
+</ul>
+`;
+
+exports[`should render with minimum props 1`] = `
+<ul
+  className="list  mko_d7avmc-list"
+/>
+`;

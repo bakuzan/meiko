@@ -1,0 +1,324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should call onCancel 1`] = `
+<Form
+  cancelOptions={
+    Object {
+      "onCancel": [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
+    }
+  }
+  name="jest"
+  submitOptions={
+    Object {
+      "onSubmit": [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
+    }
+  }
+>
+  <div
+    className="mko-form"
+  >
+    <form
+      autoComplete="off"
+      className="mko-form__form  mko_dhl6m7-form"
+      name="jest"
+      noValidate={true}
+      onSubmit={[Function]}
+    >
+      <div>
+        Form Children
+      </div>
+      <div
+        className="button-group"
+      >
+        <Button
+          className="mko-form__submit"
+          type="submit"
+        >
+          <button
+            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__submit"
+            type="submit"
+          >
+            Save
+          </button>
+        </Button>
+        <Button
+          className="mko-form__cancel"
+          onClick={[Function]}
+          type="button"
+        >
+          <button
+            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__cancel"
+            onClick={[Function]}
+            type="button"
+          >
+            cancel
+          </button>
+        </Button>
+      </div>
+    </form>
+  </div>
+</Form>
+`;
+
+exports[`should call onSubmit 1`] = `
+<Form
+  cancelOptions={
+    Object {
+      "onCancel": [MockFunction],
+    }
+  }
+  name="jest"
+  submitOptions={
+    Object {
+      "onSubmit": [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
+    }
+  }
+>
+  <div
+    className="mko-form"
+  >
+    <form
+      autoComplete="off"
+      className="mko-form__form  mko_dhl6m7-form"
+      name="jest"
+      noValidate={true}
+      onSubmit={[Function]}
+    >
+      <div>
+        Form Children
+      </div>
+      <div
+        className="button-group"
+      >
+        <Button
+          className="mko-form__submit"
+          type="submit"
+        >
+          <button
+            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__submit"
+            type="submit"
+          >
+            Save
+          </button>
+        </Button>
+        <Button
+          className="mko-form__cancel"
+          onClick={[Function]}
+          type="button"
+        >
+          <button
+            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__cancel"
+            onClick={[Function]}
+            type="button"
+          >
+            cancel
+          </button>
+        </Button>
+      </div>
+    </form>
+  </div>
+</Form>
+`;
+
+exports[`should display custom submit button text 1`] = `
+<Form
+  cancelOptions={
+    Object {
+      "onCancel": [MockFunction],
+    }
+  }
+  name="jest"
+  submitOptions={
+    Object {
+      "onSubmit": [MockFunction],
+      "text": "Save - Jest",
+    }
+  }
+>
+  <div
+    className="mko-form"
+  >
+    <form
+      autoComplete="off"
+      className="mko-form__form  mko_dhl6m7-form"
+      name="jest"
+      noValidate={true}
+      onSubmit={[Function]}
+    >
+      <div>
+        Form Children
+      </div>
+      <div
+        className="button-group"
+      >
+        <Button
+          className="mko-form__submit"
+          type="submit"
+        >
+          <button
+            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__submit"
+            type="submit"
+          >
+            Save - Jest
+          </button>
+        </Button>
+        <Button
+          className="mko-form__cancel"
+          onClick={[Function]}
+          type="button"
+        >
+          <button
+            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__cancel"
+            onClick={[Function]}
+            type="button"
+          >
+            cancel
+          </button>
+        </Button>
+      </div>
+    </form>
+  </div>
+</Form>
+`;
+
+exports[`should render children 1`] = `
+<div
+  className="mko-form"
+>
+  <form
+    autoComplete="off"
+    className="mko-form__form  mko_dhl6m7-form"
+    name="jest"
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <div
+      id="jestChild"
+    >
+      Form Children
+    </div>
+    <div
+      className="button-group"
+    >
+      <Button
+        className="mko-form__submit"
+        type="submit"
+      >
+        Save
+      </Button>
+      <Button
+        className="mko-form__cancel"
+        onClick={[Function]}
+        type="button"
+      >
+        cancel
+      </Button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`should render title if truthy 1`] = `
+<div
+  className="mko-form"
+>
+  <h4
+    className="mko-form__title"
+  >
+    jester
+  </h4>
+  <form
+    autoComplete="off"
+    className="mko-form__form  mko_dhl6m7-form"
+    name="jest"
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <div>
+      Form Children
+    </div>
+    <div
+      className="button-group"
+    >
+      <Button
+        className="mko-form__submit"
+        type="submit"
+      >
+        Save
+      </Button>
+      <Button
+        className="mko-form__cancel"
+        onClick={[Function]}
+        type="button"
+      >
+        cancel
+      </Button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`should render with minimum props 1`] = `
+<div
+  className="mko-form"
+>
+  <form
+    autoComplete="off"
+    className="mko-form__form  mko_dhl6m7-form"
+    name="jest"
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <div>
+      Form Children
+    </div>
+    <div
+      className="button-group"
+    >
+      <Button
+        className="mko-form__submit"
+        type="submit"
+      >
+        Save
+      </Button>
+      <Button
+        className="mko-form__cancel"
+        onClick={[Function]}
+        type="button"
+      >
+        cancel
+      </Button>
+    </div>
+  </form>
+</div>
+`;
