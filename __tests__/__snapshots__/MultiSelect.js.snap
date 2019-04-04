@@ -1,0 +1,476 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should call onUpdate when select all clicked 1`] = `
+<div
+  className="multi-select  mko_1vizb5e-multiSelect"
+>
+  <div
+    className="multi-select__display has-float-label select-container  mko_1vizb5e-multiSelect__display  mko_mwr88m-controlContainer"
+  >
+    <input
+      autoComplete="off"
+      className="multi-select__input"
+      id="mko"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Select a jester"
+      readOnly={true}
+      tabIndex={0}
+      type="text"
+      value=""
+    />
+    <label
+      htmlFor="mko"
+    >
+      MultiSelect
+    </label>
+  </div>
+  <div
+    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1vizb5e-multiSelect__dropdown  mko_1vizb5e-multiSelect__dropdown_open"
+  >
+    <ul
+      className="multi-select__list  mko_1vizb5e-multiSelect__list"
+    >
+      <li
+        key="ALL"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--selectAll"
+          name="mko--selectAll"
+          onChange={[Function]}
+          text="Select All"
+        />
+      </li>
+      <li
+        className="multi-select__separator  mko_1vizb5e-separator"
+        key="SEPARATOR"
+      />
+      <li
+        key="1"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-0"
+          name="mko--option-0"
+          onChange={[Function]}
+          text="Gen1"
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-1"
+          name="mko--option-1"
+          onChange={[Function]}
+          text="Gen2"
+        />
+      </li>
+      <li
+        key="3"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-2"
+          name="mko--option-2"
+          onChange={[Function]}
+          text="Gen3"
+        />
+      </li>
+      <li
+        key="4"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-3"
+          name="mko--option-3"
+          onChange={[Function]}
+          text="Gen4"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`should call onUpdate when tickboxes are changed 1`] = `
+<div
+  className="multi-select  mko_1vizb5e-multiSelect"
+>
+  <div
+    className="multi-select__display has-float-label select-container  mko_1vizb5e-multiSelect__display  mko_mwr88m-controlContainer"
+  >
+    <input
+      autoComplete="off"
+      className="multi-select__input"
+      id="mko"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Select a jester"
+      readOnly={true}
+      tabIndex={0}
+      type="text"
+      value="Gen1"
+    />
+    <label
+      htmlFor="mko"
+    >
+      MultiSelect
+    </label>
+  </div>
+  <div
+    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1vizb5e-multiSelect__dropdown  mko_1vizb5e-multiSelect__dropdown_open"
+  >
+    <ul
+      className="multi-select__list  mko_1vizb5e-multiSelect__list"
+    >
+      <li
+        key="ALL"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--selectAll"
+          name="mko--selectAll"
+          onChange={[Function]}
+          text="Select All"
+        />
+      </li>
+      <li
+        className="multi-select__separator  mko_1vizb5e-separator"
+        key="SEPARATOR"
+      />
+      <li
+        key="1"
+      >
+        <Tickbox
+          checked={true}
+          id="mko--option-0"
+          name="mko--option-0"
+          onChange={[Function]}
+          text="Gen1"
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-1"
+          name="mko--option-1"
+          onChange={[Function]}
+          text="Gen2"
+        />
+      </li>
+      <li
+        key="3"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-2"
+          name="mko--option-2"
+          onChange={[Function]}
+          text="Gen3"
+        />
+      </li>
+      <li
+        key="4"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-3"
+          name="mko--option-3"
+          onChange={[Function]}
+          text="Gen4"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`should open dropdown on input click 1`] = `
+<div
+  className="multi-select  mko_1vizb5e-multiSelect"
+>
+  <div
+    className="multi-select__display has-float-label select-container  mko_1vizb5e-multiSelect__display  mko_mwr88m-controlContainer"
+  >
+    <input
+      autoComplete="off"
+      className="multi-select__input"
+      id="mko"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Select a jester"
+      readOnly={true}
+      tabIndex={0}
+      type="text"
+      value=""
+    />
+    <label
+      htmlFor="mko"
+    >
+      MultiSelect
+    </label>
+  </div>
+  <div
+    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1vizb5e-multiSelect__dropdown  mko_1vizb5e-multiSelect__dropdown_open"
+  >
+    <ul
+      className="multi-select__list  mko_1vizb5e-multiSelect__list"
+    >
+      <li
+        key="ALL"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--selectAll"
+          name="mko--selectAll"
+          onChange={[Function]}
+          text="Select All"
+        />
+      </li>
+      <li
+        className="multi-select__separator  mko_1vizb5e-separator"
+        key="SEPARATOR"
+      />
+      <li
+        key="1"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-0"
+          name="mko--option-0"
+          onChange={[Function]}
+          text="Gen1"
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-1"
+          name="mko--option-1"
+          onChange={[Function]}
+          text="Gen2"
+        />
+      </li>
+      <li
+        key="3"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-2"
+          name="mko--option-2"
+          onChange={[Function]}
+          text="Gen3"
+        />
+      </li>
+      <li
+        key="4"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-3"
+          name="mko--option-3"
+          onChange={[Function]}
+          text="Gen4"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`should render correct number of options 1`] = `
+<div
+  className="multi-select  mko_1vizb5e-multiSelect"
+>
+  <div
+    className="multi-select__display has-float-label select-container  mko_1vizb5e-multiSelect__display  mko_mwr88m-controlContainer"
+  >
+    <input
+      autoComplete="off"
+      className="multi-select__input"
+      id="mko"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Select a jester"
+      readOnly={true}
+      tabIndex={0}
+      type="text"
+      value=""
+    />
+    <label
+      htmlFor="mko"
+    >
+      MultiSelect
+    </label>
+  </div>
+  <div
+    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1vizb5e-multiSelect__dropdown  mko_1vizb5e-multiSelect__dropdown_open"
+  >
+    <ul
+      className="multi-select__list  mko_1vizb5e-multiSelect__list"
+    >
+      <li
+        key="ALL"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--selectAll"
+          name="mko--selectAll"
+          onChange={[Function]}
+          text="Select All"
+        />
+      </li>
+      <li
+        className="multi-select__separator  mko_1vizb5e-separator"
+        key="SEPARATOR"
+      />
+      <li
+        key="1"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-0"
+          name="mko--option-0"
+          onChange={[Function]}
+          text="Gen1"
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-1"
+          name="mko--option-1"
+          onChange={[Function]}
+          text="Gen2"
+        />
+      </li>
+      <li
+        key="3"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-2"
+          name="mko--option-2"
+          onChange={[Function]}
+          text="Gen3"
+        />
+      </li>
+      <li
+        key="4"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-3"
+          name="mko--option-3"
+          onChange={[Function]}
+          text="Gen4"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`should render with minimum props 1`] = `
+<div
+  className="multi-select  mko_1vizb5e-multiSelect"
+>
+  <div
+    className="multi-select__display has-float-label select-container  mko_1vizb5e-multiSelect__display  mko_mwr88m-controlContainer"
+  >
+    <input
+      autoComplete="off"
+      className="multi-select__input"
+      id="mko"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Select a jester"
+      readOnly={true}
+      tabIndex={0}
+      type="text"
+      value=""
+    />
+    <label
+      htmlFor="mko"
+    >
+      MultiSelect
+    </label>
+  </div>
+  <div
+    className="multi-select__dropdown-container  mko_1vizb5e-multiSelect__dropdown"
+  >
+    <ul
+      className="multi-select__list  mko_1vizb5e-multiSelect__list"
+    >
+      <li
+        key="ALL"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--selectAll"
+          name="mko--selectAll"
+          onChange={[Function]}
+          text="Select All"
+        />
+      </li>
+      <li
+        className="multi-select__separator  mko_1vizb5e-separator"
+        key="SEPARATOR"
+      />
+      <li
+        key="1"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-0"
+          name="mko--option-0"
+          onChange={[Function]}
+          text="Gen1"
+        />
+      </li>
+      <li
+        key="2"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-1"
+          name="mko--option-1"
+          onChange={[Function]}
+          text="Gen2"
+        />
+      </li>
+      <li
+        key="3"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-2"
+          name="mko--option-2"
+          onChange={[Function]}
+          text="Gen3"
+        />
+      </li>
+      <li
+        key="4"
+      >
+        <Tickbox
+          checked={false}
+          id="mko--option-3"
+          name="mko--option-3"
+          onChange={[Function]}
+          text="Gen4"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;

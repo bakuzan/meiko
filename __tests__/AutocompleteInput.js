@@ -30,7 +30,7 @@ it('should render with minimum props', function() {
   expect(component).toMatchSnapshot();
 });
 
-xit('should call onChange when filter updated', function() {
+it('should call onChange when filter updated', function() {
   const changeEvent = { target: { value: 'at' } };
   const component = mount(
     <AutocompleteInput
@@ -44,7 +44,7 @@ xit('should call onChange when filter updated', function() {
   );
 
   const input = component.find('input#jest');
-  input.simulate('change', changeEvent);
+  input.prop('onChange')(changeEvent);
 
   expect(mockChangeFn).toHaveBeenCalled();
   expect(component.state('activeSuggestion')).toEqual(0);

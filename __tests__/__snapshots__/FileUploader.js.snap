@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should call onFileSelect when changed 1`] = `
+<div
+  className="file-uploader  mko_1shwo9j-uploader"
+>
+  <input
+    aria-label="select a file to upload"
+    className="file-uploader__input  mko_1shwo9j-uploader__input"
+    id="file"
+    name="file"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="upload"
+    type="file"
+    value=""
+  />
+  <div
+    className="file-uploader__value  mko_1shwo9j-uploader__value"
+  >
+    Nothing selected
+  </div>
+  <Button
+    aria-label="select a file to upload"
+    btnStyle="primary"
+    className="file-uploader__button"
+    onClick={[Function]}
+    type="button"
+  >
+    upload
+  </Button>
+</div>
+`;
+
+exports[`should render with minimum props 1`] = `
+<div
+  className="file-uploader  mko_1shwo9j-uploader"
+>
+  <input
+    aria-label="select a file to upload"
+    className="file-uploader__input  mko_1shwo9j-uploader__input"
+    id="file"
+    name="file"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="upload"
+    type="file"
+    value=""
+  />
+  <div
+    className="file-uploader__value  mko_1shwo9j-uploader__value"
+  >
+    Nothing selected
+  </div>
+  <Button
+    aria-label="select a file to upload"
+    btnStyle="primary"
+    className="file-uploader__button"
+    onClick={[Function]}
+    type="button"
+  >
+    upload
+  </Button>
+</div>
+`;

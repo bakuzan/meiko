@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should remove toasts on click 1`] = `
+<div
+  className="toaster  mko_1qf48bz-toaster"
+/>
+`;
+
+exports[`should render toasts when popped 1`] = `
+<div
+  className="toaster  mko_1qf48bz-toaster"
+>
+  <span
+    className="toast toast--info  mko_1qf48bz-toast  mko_1qf48bz-toast--info"
+    key="1554336000000"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span
+      className="toast__title  mko_1qf48bz-toast__title"
+    >
+      jest
+    </span>
+    <span
+      className="toast__message"
+    >
+      this is a test
+    </span>
+  </span>
+</div>
+`;
+
+exports[`should render with minimum props 1`] = `
+<div
+  className="toaster  mko_1qf48bz-toaster"
+/>
+`;

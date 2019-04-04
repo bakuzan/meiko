@@ -1,5 +1,6 @@
 import { configure, shallow, mount, render } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { JSDOM } from 'jsdom';
 
 configure({ adapter: new Adapter() });
 
@@ -7,3 +8,8 @@ configure({ adapter: new Adapter() });
 global.shallow = shallow;
 global.mount = mount;
 global.render = render;
+
+// Mock document
+const dom = new JSDOM();
+global.document = dom.window.document;
+global.window = dom.window;

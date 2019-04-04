@@ -1,0 +1,631 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should call onSelect when cleared 1`] = `
+<div
+  className="tag-cloud  mko_tuytk3-tagCloud"
+>
+  <div
+    className="flex right"
+  >
+    <Button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </Button>
+  </div>
+  <div
+    className="flex wrap"
+  >
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 5,
+          "id": 1,
+          "name": "react",
+        }
+      }
+      isActive={true}
+      key="1"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 0,
+          "id": 2,
+          "name": "jquery",
+        }
+      }
+      isActive={false}
+      key="2"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 0,
+          "id": 3,
+          "name": "angular",
+        }
+      }
+      isActive={false}
+      key="3"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 2,
+          "id": 4,
+          "name": "elm",
+        }
+      }
+      isActive={false}
+      key="4"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 3,
+          "id": 5,
+          "name": "graphql",
+        }
+      }
+      isActive={false}
+      key="5"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 6,
+          "name": "apollo",
+        }
+      }
+      isActive={false}
+      key="6"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 7,
+          "name": "python",
+        }
+      }
+      isActive={false}
+      key="7"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 8,
+          "name": "rust",
+        }
+      }
+      isActive={false}
+      key="8"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`should call onSelect when tagchip is clicked 1`] = `
+<div
+  className="tag-cloud  mko_tuytk3-tagCloud"
+>
+  <div
+    className="flex right"
+  >
+    <Button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </Button>
+  </div>
+  <div
+    className="flex wrap"
+  >
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 5,
+          "id": 1,
+          "name": "react",
+        }
+      }
+      isActive={true}
+      key="1"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 0,
+          "id": 2,
+          "name": "jquery",
+        }
+      }
+      isActive={false}
+      key="2"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 0,
+          "id": 3,
+          "name": "angular",
+        }
+      }
+      isActive={false}
+      key="3"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 2,
+          "id": 4,
+          "name": "elm",
+        }
+      }
+      isActive={false}
+      key="4"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 3,
+          "id": 5,
+          "name": "graphql",
+        }
+      }
+      isActive={false}
+      key="5"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 6,
+          "name": "apollo",
+        }
+      }
+      isActive={false}
+      key="6"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 7,
+          "name": "python",
+        }
+      }
+      isActive={false}
+      key="7"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 8,
+          "name": "rust",
+        }
+      }
+      isActive={false}
+      key="8"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`should display clear button when has selected 1`] = `
+<div
+  className="tag-cloud  mko_tuytk3-tagCloud"
+>
+  <div
+    className="flex right"
+  >
+    <Button
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </Button>
+  </div>
+  <div
+    className="flex wrap"
+  >
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 5,
+          "id": 1,
+          "name": "react",
+        }
+      }
+      isActive={true}
+      key="1"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 0,
+          "id": 2,
+          "name": "jquery",
+        }
+      }
+      isActive={false}
+      key="2"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 0,
+          "id": 3,
+          "name": "angular",
+        }
+      }
+      isActive={false}
+      key="3"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 2,
+          "id": 4,
+          "name": "elm",
+        }
+      }
+      isActive={false}
+      key="4"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 3,
+          "id": 5,
+          "name": "graphql",
+        }
+      }
+      isActive={false}
+      key="5"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 6,
+          "name": "apollo",
+        }
+      }
+      isActive={false}
+      key="6"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 7,
+          "name": "python",
+        }
+      }
+      isActive={false}
+      key="7"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 8,
+          "name": "rust",
+        }
+      }
+      isActive={false}
+      key="8"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`should render correct children 1`] = `
+<div
+  className="tag-cloud  mko_tuytk3-tagCloud"
+>
+  <div
+    className="flex right"
+  >
+    <Button
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </Button>
+  </div>
+  <div
+    className="flex wrap"
+  >
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 5,
+          "id": 1,
+          "name": "react",
+        }
+      }
+      isActive={false}
+      key="1"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 0,
+          "id": 2,
+          "name": "jquery",
+        }
+      }
+      isActive={false}
+      key="2"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 0,
+          "id": 3,
+          "name": "angular",
+        }
+      }
+      isActive={false}
+      key="3"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 2,
+          "id": 4,
+          "name": "elm",
+        }
+      }
+      isActive={false}
+      key="4"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 3,
+          "id": 5,
+          "name": "graphql",
+        }
+      }
+      isActive={false}
+      key="5"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 6,
+          "name": "apollo",
+        }
+      }
+      isActive={false}
+      key="6"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 7,
+          "name": "python",
+        }
+      }
+      isActive={false}
+      key="7"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 8,
+          "name": "rust",
+        }
+      }
+      isActive={false}
+      key="8"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`should render with minimum props 1`] = `
+<div
+  className="tag-cloud  mko_tuytk3-tagCloud"
+>
+  <div
+    className="flex right"
+  >
+    <Button
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </Button>
+  </div>
+  <div
+    className="flex wrap"
+  >
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 5,
+          "id": 1,
+          "name": "react",
+        }
+      }
+      isActive={false}
+      key="1"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 0,
+          "id": 2,
+          "name": "jquery",
+        }
+      }
+      isActive={false}
+      key="2"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 0,
+          "id": 3,
+          "name": "angular",
+        }
+      }
+      isActive={false}
+      key="3"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 2,
+          "id": 4,
+          "name": "elm",
+        }
+      }
+      isActive={false}
+      key="4"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 3,
+          "id": 5,
+          "name": "graphql",
+        }
+      }
+      isActive={false}
+      key="5"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 6,
+          "name": "apollo",
+        }
+      }
+      isActive={false}
+      key="6"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 7,
+          "name": "python",
+        }
+      }
+      isActive={false}
+      key="7"
+      onClick={[Function]}
+    />
+    <TagChip
+      chipSize={null}
+      data={
+        Object {
+          "count": 1,
+          "id": 8,
+          "name": "rust",
+        }
+      }
+      isActive={false}
+      key="8"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

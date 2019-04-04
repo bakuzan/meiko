@@ -1,5 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should call onChange when filter updated 1`] = `
+<AutocompleteInput
+  attr="text"
+  clearableInputProps={Object {}}
+  disableLocalFilter={false}
+  filter=""
+  id="jest"
+  items={
+    Array [
+      Object {
+        "id": 5,
+        "text": "Bat",
+      },
+      Object {
+        "id": 6,
+        "text": "Cat",
+      },
+      Object {
+        "id": 9,
+        "text": "Frog",
+      },
+    ]
+  }
+  noSuggestionsItem={null}
+  onChange={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "target": Object {
+              "value": "at",
+            },
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onSelect={[MockFunction]}
+  suggestionTemplate={[Function]}
+>
+  <div
+    className="autocomplete  mko_ydt0iq-autocomplete"
+  >
+    <ClearableInput
+      id="jest"
+      maxNumberText={[Function]}
+      name="text"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      value=""
+    >
+      <div
+        className="clearable-input has-float-label  mko_8tgsun-clearableInput  mko_mwr88m-controlContainer"
+      >
+        <div
+          className="clearable-input__inner  mko_8tgsun-clearableInput__inner"
+        >
+          <ForwardRef(Input)
+            className="clearable-input__input  mko_8tgsun-clearableInput__input"
+            id="jest"
+            name="text"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            value=""
+          >
+            <input
+              autoComplete="off"
+              className="input clearable-input__input  mko_8tgsun-clearableInput__input"
+              id="jest"
+              name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder=" "
+              type="text"
+              value=""
+            />
+          </ForwardRef(Input)>
+          <label
+            htmlFor="jest"
+          />
+        </div>
+        <div
+          className="clearable-input__under  mko_8tgsun-clearableInput__inner  mko_8tgsun-clearableInput__under"
+        />
+      </div>
+    </ClearableInput>
+  </div>
+</AutocompleteInput>
+`;
+
 exports[`should call onSelect when suggestion is click 1`] = `
 <AutocompleteInput
   attr="text"

@@ -1,0 +1,382 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should call onClose when cancel button clicked 1`] = `
+<dialog
+  className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+  open={true}
+  style={
+    Object {
+      "top": "calc(0px + 50vh)",
+    }
+  }
+>
+  <div
+    className="dialog__content"
+  >
+    <DialogContent
+      isForm={true}
+      name="jest"
+    >
+      <div
+        className="dialog__content-custom"
+      >
+        <div>
+          jest
+        </div>
+      </div>
+      <div
+        className="dialog__actions  mko_1h7ugta-actions"
+      >
+        <Button
+          className="dialog__cancel"
+          onClick={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          type="button"
+        >
+          cancel
+        </Button>
+      </div>
+    </DialogContent>
+  </div>
+</dialog>
+`;
+
+exports[`should only render title when passed 1`] = `
+<dialog
+  className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+  open={true}
+  style={
+    Object {
+      "top": "calc(0px + 50vh)",
+    }
+  }
+>
+  <div
+    className="dialog__content"
+  >
+    <DialogContent
+      isForm={true}
+      name="jest"
+    >
+      <h4
+        className="dialog__title  mko_1h7ugta-title"
+      >
+        jester!
+      </h4>
+      <div
+        className="dialog__content-custom"
+      >
+        <div>
+          jest
+        </div>
+      </div>
+      <div
+        className="dialog__actions  mko_1h7ugta-actions"
+      >
+        <Button
+          className="dialog__action"
+          onClick={[Function]}
+          type="submit"
+        >
+          Submit
+        </Button>
+        <Button
+          className="dialog__cancel"
+          onClick={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          type="button"
+        >
+          cancel
+        </Button>
+      </div>
+    </DialogContent>
+  </div>
+</dialog>
+`;
+
+exports[`should open when passed new prop 1`] = `
+<dialog
+  className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+  open={true}
+  style={
+    Object {
+      "top": "calc(0px + 50vh)",
+    }
+  }
+>
+  <div
+    className="dialog__content"
+  >
+    <DialogContent
+      isForm={true}
+      name="jest"
+    >
+      <div
+        className="dialog__content-custom"
+      >
+        <div>
+          jest
+        </div>
+      </div>
+      <div
+        className="dialog__actions  mko_1h7ugta-actions"
+      >
+        <Button
+          className="dialog__cancel"
+          onClick={[MockFunction]}
+          type="button"
+        >
+          cancel
+        </Button>
+      </div>
+    </DialogContent>
+  </div>
+</dialog>
+`;
+
+exports[`should render action button and call onAction when clicked 1`] = `
+<dialog
+  className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+  open={true}
+  style={
+    Object {
+      "top": "calc(0px + 50vh)",
+    }
+  }
+>
+  <div
+    className="dialog__content"
+  >
+    <DialogContent
+      isForm={true}
+      name="jest"
+    >
+      <div
+        className="dialog__content-custom"
+      >
+        <div>
+          jest
+        </div>
+      </div>
+      <div
+        className="dialog__actions  mko_1h7ugta-actions"
+      >
+        <Button
+          className="dialog__action"
+          onClick={[Function]}
+          type="submit"
+        >
+          Submit
+        </Button>
+        <Button
+          className="dialog__cancel"
+          onClick={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            }
+          }
+          type="button"
+        >
+          cancel
+        </Button>
+      </div>
+    </DialogContent>
+  </div>
+</dialog>
+`;
+
+exports[`should render with minimum props 1`] = `
+<dialog
+  className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+  open={false}
+  style={
+    Object {
+      "top": "calc(0px + 50vh)",
+    }
+  }
+>
+  <div
+    className="dialog__content"
+  >
+    <DialogContent
+      isForm={true}
+      name="jest"
+    >
+      <div
+        className="dialog__content-custom"
+      >
+        <div>
+          jest
+        </div>
+      </div>
+      <div
+        className="dialog__actions  mko_1h7ugta-actions"
+      >
+        <Button
+          className="dialog__cancel"
+          onClick={[MockFunction]}
+          type="button"
+        >
+          cancel
+        </Button>
+      </div>
+    </DialogContent>
+  </div>
+</dialog>
+`;
+
+exports[`should replace form element with div 1`] = `
+<Dialog
+  actionText="Submit"
+  hasBackdrop={true}
+  hideCancel={false}
+  isForm={false}
+  isOpen={true}
+  name="jest"
+  onAction={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "preventDefault": [Function],
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onClose={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <dialog
+    className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+    open={true}
+    style={
+      Object {
+        "top": "calc(0px + 50vh)",
+      }
+    }
+  >
+    <div
+      className="dialog__content"
+    >
+      <DialogContent
+        isForm={false}
+        name="jest"
+      >
+        <div
+          className="dialog-content"
+        >
+          <div
+            className="dialog__content-custom"
+          >
+            <div>
+              jest
+            </div>
+          </div>
+          <div
+            className="dialog__actions  mko_1h7ugta-actions"
+          >
+            <Button
+              className="dialog__action"
+              onClick={[Function]}
+              type="button"
+            >
+              <button
+                className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard dialog__action"
+                onClick={[Function]}
+                type="button"
+              >
+                Submit
+              </button>
+            </Button>
+            <Button
+              className="dialog__cancel"
+              onClick={
+                [MockFunction] {
+                  "calls": Array [
+                    Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                }
+              }
+              type="button"
+            >
+              <button
+                className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard dialog__cancel"
+                onClick={
+                  [MockFunction] {
+                    "calls": Array [
+                      Array [],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  }
+                }
+                type="button"
+              >
+                cancel
+              </button>
+            </Button>
+          </div>
+        </div>
+      </DialogContent>
+    </div>
+  </dialog>
+</Dialog>
+`;

@@ -36,28 +36,25 @@ it('should display menu on toggler click', function() {
 });
 
 xit('should close display menu on outside click', function() {
-  const { component, mockOutsideClick } = mountWithOutsideClick(
-    <div>
-      <div id="jest" />
-      <DropdownMenu>
-        <li id="inside">Test item</li>
-        <li>And another one!</li>
-      </DropdownMenu>
-    </div>,
-    '.dropdown-menu'
+  const component = shallow(
+    <DropdownMenu>
+      <li id="inside">Test item</li>
+      <li>And another one!</li>
+    </DropdownMenu>
   );
 
   expect(component.find('.dropdown-menu__menu').exists()).toBe(false);
 
-  component.find('button.dropdown-menu__toggler').simulate('click');
+  component.find('.dropdown-menu__toggler').simulate('click');
   expect(component.find('.dropdown-menu__menu').exists()).toBe(true);
 
   component.find('#inside').simulate('click');
   expect(component.find('.dropdown-menu__menu').exists()).toBe(true);
 
-  mockOutsideClick();
+  // component.update();
+
+  document.dispatchEvent(new Event('click'));
 
   expect(component.find('.dropdown-menu__menu').exists()).toBe(false);
   expect(component).toMatchSnapshot();
-  component.unmount();
 });
