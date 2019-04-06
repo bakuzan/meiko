@@ -11,7 +11,10 @@
   ],
   "jest": {
     "collectCoverageFrom": [
-      "lib/**/*.{js,jsx}"
+      "lib/**/*.{js,jsx}",
+      "!lib/stories/*",
+      "!lib/constants/*",
+      "!lib/styles/*"
     ],
     "setupFiles": [
       "./setupTests.js"
@@ -26,7 +29,7 @@
       "<rootDir>/tools/"
     ],
     "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/__utils__"
+      "<rootDir>/__tests__/__helpers__"
     ]
   },
   "lint-staged": {
@@ -104,9 +107,10 @@
     "postcss-loader": "^3.0.0",
     "prettier": "^1.16.4",
     "prop-types": "^15.7.2",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
+    "react": "^16.9.0-alpha.0",
+    "react-dom": "^16.9.0-alpha.0",
     "react-test-renderer": "^16.8.6",
+    "react-testing-library": "^6.0.4",
     "rollup": "^1.7.3",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.2",

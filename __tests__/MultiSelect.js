@@ -1,6 +1,13 @@
 import React from 'react';
+import { act } from 'react-testing-library';
+
+import mockDocumentEventListeners from './__helpers__/documentEventListeners';
 
 import { MultiSelect } from '../lib';
+
+const { trigger } = mockDocumentEventListeners();
+
+const mockedUpdateFn = jest.fn();
 
 const options = [
   { value: 1, text: 'Gen1' },
@@ -9,12 +16,12 @@ const options = [
   { value: 4, text: 'Gen4' }
 ];
 
-const mockedUpdateFn = jest.fn();
-
 const clickToOpenEvent = {
   type: 'click',
   stopPropagation: () => null
 };
+
+afterEach(() => jest.restoreAllMocks());
 
 it('should render with minimum props', function() {
   const component = shallow(
@@ -128,8 +135,8 @@ it('should call onUpdate when tickboxes are changed', function() {
   expect(component).toMatchSnapshot();
 });
 
-xit('should close dropdown on outside click', function() {
-  const component = shallow(
+xit('should close dropdown on outside click', async function() {
+  const component = mount(
     <MultiSelect
       id="mko"
       placeholder="Select a jester"
@@ -139,17 +146,19 @@ xit('should close dropdown on outside click', function() {
     />
   );
 
-  component.find('.multi-select__input').prop('onClick')(clickToOpenEvent);
-  const menuAfterClick = component.exists(
-    '.multi-select__dropdown-container--is-open'
-  );
-  expect(menuAfterClick).toBe(true);
+  await act(async () => {
+    // component.instance().menuRef.current = component
+    //   .find('.multi-select__list')
+    //   .getDOMNode();
 
-  component.instance().dispatchEvent(new Event('click', { bubbles: true }));
+    component.setState({ isOpen: true });
+    trigger.click({ target: document.body });
+  });
 
   const menuAfterOutsideClick = component.exists(
     '.multi-select__dropdown-container--is-open'
   );
   expect(menuAfterOutsideClick).toBe(false);
   expect(component).toMatchSnapshot();
+  component.unmount();
 });

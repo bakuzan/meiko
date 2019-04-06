@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should call on change for file selection 1`] = `
+<div
+  className="image-selector  mko_1x2u0vd-selector"
+>
+  <div
+    className="image-selector__controls"
+  >
+    <div
+      className="image-selector__url-uploader  mko_1x2u0vd-selector__urlUploader"
+    >
+      <ClearableInput
+        className=" mko_1x2u0vd-selector__urlInput"
+        containerClassName="image-selector__url  mko_1x2u0vd-selector__url"
+        id="imageUrl"
+        label="Image Url"
+        maxNumberText={[Function]}
+        name="imageUrl"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+      <Button
+        btnStyle="primary"
+        className="image-selector__upload-url"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        upload url
+      </Button>
+    </div>
+    <FileUploader
+      disabled={false}
+      id="imageFile"
+      name="imageFile"
+      onFileSelect={[Function]}
+      placeholder="upload file"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should call on change for url upload button click 1`] = `
+<div
+  className="image-selector  mko_1x2u0vd-selector"
+>
+  <div
+    className="image-selector__controls"
+  >
+    <div
+      className="image-selector__url-uploader  mko_1x2u0vd-selector__urlUploader"
+    >
+      <ClearableInput
+        className=" mko_1x2u0vd-selector__urlInput"
+        containerClassName="image-selector__url  mko_1x2u0vd-selector__url"
+        id="imageUrl"
+        label="Image Url"
+        maxNumberText={[Function]}
+        name="imageUrl"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+      <Button
+        btnStyle="primary"
+        className="image-selector__upload-url"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        upload url
+      </Button>
+    </div>
+    <FileUploader
+      disabled={false}
+      id="imageFile"
+      name="imageFile"
+      onFileSelect={[Function]}
+      placeholder="upload file"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should call on error for failed upload 1`] = `
+<div
+  className="image-selector  mko_1x2u0vd-selector"
+>
+  <div
+    className="image-selector__controls"
+  >
+    <div
+      className="image-selector__url-uploader  mko_1x2u0vd-selector__urlUploader"
+    >
+      <ClearableInput
+        className=" mko_1x2u0vd-selector__urlInput"
+        containerClassName="image-selector__url  mko_1x2u0vd-selector__url"
+        id="imageUrl"
+        label="Image Url"
+        maxNumberText={[Function]}
+        name="imageUrl"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+      <Button
+        btnStyle="primary"
+        className="image-selector__upload-url"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        upload url
+      </Button>
+    </div>
+    <FileUploader
+      disabled={false}
+      id="imageFile"
+      name="imageFile"
+      onFileSelect={[Function]}
+      placeholder="upload file"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should render with minimum props 1`] = `
+<div
+  className="image-selector  mko_1x2u0vd-selector"
+>
+  <div
+    className="image-selector__controls"
+  >
+    <div
+      className="image-selector__url-uploader  mko_1x2u0vd-selector__urlUploader"
+    >
+      <ClearableInput
+        className=" mko_1x2u0vd-selector__urlInput"
+        containerClassName="image-selector__url  mko_1x2u0vd-selector__url"
+        id="imageUrl"
+        label="Image Url"
+        maxNumberText={[Function]}
+        name="imageUrl"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+      <Button
+        btnStyle="primary"
+        className="image-selector__upload-url"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        upload url
+      </Button>
+    </div>
+    <FileUploader
+      disabled={false}
+      id="imageFile"
+      name="imageFile"
+      onFileSelect={[Function]}
+      placeholder="upload file"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should show url display 1`] = `
+<div
+  className="image-selector  mko_1x2u0vd-selector"
+>
+  <div
+    className="image-selector__value-display  mko_1x2u0vd-selector__display"
+  >
+    <div
+      className=" mko_1x2u0vd-selector__text"
+    >
+      <div>
+        fakeurlhere
+      </div>
+      <div
+        className="image-selector__error  mko_1x2u0vd-error"
+      />
+    </div>
+    <Button
+      btnStyle="accent"
+      className="image-selector__show-controls"
+      onClick={[Function]}
+      type="button"
+    >
+      upload new image
+    </Button>
+  </div>
+</div>
+`;
+
+exports[`should toggle url display 1`] = `
+<div
+  className="image-selector  mko_1x2u0vd-selector"
+>
+  <div
+    className="image-selector__controls"
+  >
+    <div
+      className="image-selector__url-uploader  mko_1x2u0vd-selector__urlUploader"
+    >
+      <ClearableInput
+        className=" mko_1x2u0vd-selector__urlInput"
+        containerClassName="image-selector__url  mko_1x2u0vd-selector__url"
+        id="imageUrl"
+        label="Image Url"
+        maxNumberText={[Function]}
+        name="imageUrl"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+      <Button
+        btnStyle="primary"
+        className="image-selector__upload-url"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        upload url
+      </Button>
+    </div>
+    <FileUploader
+      disabled={false}
+      id="imageFile"
+      name="imageFile"
+      onFileSelect={[Function]}
+      placeholder="upload file"
+      value=""
+    />
+  </div>
+</div>
+`;

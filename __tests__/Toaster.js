@@ -37,12 +37,15 @@ it('should remove toasts on click', function() {
   expect(component).toMatchSnapshot();
 });
 
-xit('should remove toasts after 3sec', function() {
+it('should remove toasts after 3sec', function() {
   const component = shallow(<Toaster />);
 
-  toaster.info('jest', 'this is a test');
-  jest.advanceTimersByTime(3100);
+  const mockedRemoveFn = jest.fn();
+  component.instance().removeToast = mockedRemoveFn;
 
-  expect(component.find('.toast').exists()).toBe(false);
+  toaster.info('jest', 'this is a test');
+  jest.runOnlyPendingTimers();
+
+  expect(mockedRemoveFn).toHaveBeenCalled();
   expect(component).toMatchSnapshot();
 });

@@ -1,8 +1,11 @@
 import React from 'react';
+import { act } from 'react-testing-library';
 
-import mountWithOutsideClick from './__utils__/mountWithOutsideClick';
+import mockDocumentEventListeners from './__helpers__/documentEventListeners';
 
 import { DropdownMenu } from '../lib';
+
+const { trigger } = mockDocumentEventListeners();
 
 afterEach(() => jest.restoreAllMocks());
 
@@ -35,7 +38,7 @@ it('should display menu on toggler click', function() {
   component.unmount();
 });
 
-xit('should close display menu on outside click', function() {
+xit('should close display menu on outside click', async function() {
   const component = shallow(
     <DropdownMenu>
       <li id="inside">Test item</li>
@@ -51,9 +54,32 @@ xit('should close display menu on outside click', function() {
   component.find('#inside').simulate('click');
   expect(component.find('.dropdown-menu__menu').exists()).toBe(true);
 
-  // component.update();
+  await act(() => trigger.click({ target: document.body }));
 
-  document.dispatchEvent(new Event('click'));
+  expect(component.find('.dropdown-menu__menu').exists()).toBe(false);
+  expect(component).toMatchSnapshot();
+});
+
+xit('should close display menu on escape key', async function() {
+  const escape = 27;
+  const component = shallow(
+    <DropdownMenu>
+      <li id="inside">Test item</li>
+      <li>And another one!</li>
+    </DropdownMenu>
+  );
+
+  expect(component.find('.dropdown-menu__menu').exists()).toBe(false);
+
+  component.find('.dropdown-menu__toggler').simulate('click');
+  expect(component.find('.dropdown-menu__menu').exists()).toBe(true);
+
+  component.find('#inside').simulate('click');
+  expect(component.find('.dropdown-menu__menu').exists()).toBe(true);
+
+  await act(async () => {
+    trigger.keydown({ keyCode: escape });
+  });
 
   expect(component.find('.dropdown-menu__menu').exists()).toBe(false);
   expect(component).toMatchSnapshot();
