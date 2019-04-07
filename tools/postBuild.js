@@ -8,8 +8,7 @@ const copyFileAsync = util.promisify(fs.copyFile);
 
 // Get paths
 const projectRoot = path.resolve(__dirname, '../');
-const distRoot = path.resolve(__dirname, '../dist');
-const buildFolder = path.resolve(__dirname, '../build/components');
+const buildFolder = path.resolve(__dirname, '../build');
 
 async function copyPackageJson() {
   const fileName = 'package.json';
@@ -20,18 +19,8 @@ async function copyPackageJson() {
   console.log(magenta(`Copied ${fileName} to ${buildFolder}`));
 }
 
-async function copyBundleStyles() {
-  const fileName = 'bundle.min.css';
-  await copyFileAsync(
-    path.resolve(distRoot, fileName),
-    path.resolve(buildFolder, fileName)
-  );
-  console.log(magenta(`Copied ${fileName} to ${buildFolder}`));
-}
-
 async function postBuild() {
   await copyPackageJson();
-  await copyBundleStyles(); // TODO remove when using nano-css
 }
 
 console.log(blue('Starting Post-build...'));

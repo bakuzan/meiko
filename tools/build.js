@@ -31,9 +31,6 @@ async function step(name, folder) {
 async function buildLib() {
   await clean(outputRoot);
   await step('components', '');
-  // await step('components');
-  // await step('constants');
-  // await step('utils');
 }
 
 console.log(blue('Building library\n'));
