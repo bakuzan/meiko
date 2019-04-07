@@ -27,7 +27,8 @@
       .multi-select__dropdown-container,
       .mko-calendar,
       .input__input,
-      .select-box__input {
+      .select-box__input,
+      .alert__content {
         background-color: $base-background;
       }
 
@@ -128,6 +129,7 @@
       }
 
       // Tag Chip
+      .tag-chip--clickable:hover,
       .tag-chip--active {
         background-color: $active-background;
         color: $active-colour;

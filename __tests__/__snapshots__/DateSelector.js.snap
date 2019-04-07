@@ -2,11 +2,12 @@
 
 exports[`should call onChange when clear is clicked 1`] = `
 <div
-  className="date-selector  mko_1tk6t5-dateSelector"
+  className="date-selector  mko_1da9cpz-dateSelector"
   id="jest-date-selector"
 >
   <ClearableInput
-    className=" mko_1tk6t5-dateSelector__input"
+    className=" mko_1da9cpz-dateSelector__input"
+    containerClassName="date-selector__input  mko_1da9cpz-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
     maxNumberText={[Function]}
@@ -32,17 +33,17 @@ exports[`should call onChange when clear is clicked 1`] = `
     onClick={[Function]}
     type="button"
   />
-  <div />
 </div>
 `;
 
 exports[`should not display clear button when value required 1`] = `
 <div
-  className="date-selector  mko_1tk6t5-dateSelector"
+  className="date-selector  mko_1da9cpz-dateSelector"
   id="jest-date-selector"
 >
   <ClearableInput
-    className=" mko_1tk6t5-dateSelector__input"
+    className=" mko_1da9cpz-dateSelector__input"
+    containerClassName="date-selector__input  mko_1da9cpz-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
     maxNumberText={[Function]}
@@ -61,17 +62,17 @@ exports[`should not display clear button when value required 1`] = `
     onClick={[Function]}
     type="button"
   />
-  <div />
 </div>
 `;
 
 exports[`should open calendar 1`] = `
 <div
-  className="date-selector date-selector--read-only  mko_1tk6t5-dateSelector"
+  className="date-selector date-selector--read-only  mko_1da9cpz-dateSelector"
   id="jest-date-selector"
 >
   <ClearableInput
-    className=" mko_1tk6t5-dateSelector__input"
+    className=" mko_1da9cpz-dateSelector__input"
+    containerClassName="date-selector__input  mko_1da9cpz-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
     maxNumberText={[Function]}
@@ -89,42 +90,41 @@ exports[`should open calendar 1`] = `
     onClick={[Function]}
     type="button"
   />
-  <div>
-    <Calendar
-      className=""
-      id="jest"
-      isFlat={false}
-      onSelect={[Function]}
-      selected="2019-04-05"
-    />
-  </div>
+  <Calendar
+    className=""
+    id="jest"
+    isFlat={false}
+    onClose={[Function]}
+    onSelect={[Function]}
+    selected="2019-04-05"
+  />
 </div>
 `;
 
 exports[`should render flat view 1`] = `
 <div
-  className="date-selector date-selector--read-only  mko_1tk6t5-dateSelector"
+  className="date-selector date-selector--read-only  mko_1da9cpz-dateSelector"
   id="jest-date-selector"
 >
-  <div>
-    <Calendar
-      className=""
-      id="jest"
-      isFlat={true}
-      onSelect={[Function]}
-      selected="2019-04-05"
-    />
-  </div>
+  <Calendar
+    className=""
+    id="jest"
+    isFlat={true}
+    onClose={[Function]}
+    onSelect={[Function]}
+    selected="2019-04-05"
+  />
 </div>
 `;
 
 exports[`should render standard view 1`] = `
 <div
-  className="date-selector date-selector--read-only  mko_1tk6t5-dateSelector"
+  className="date-selector date-selector--read-only  mko_1da9cpz-dateSelector"
   id="jest-date-selector"
 >
   <ClearableInput
-    className=" mko_1tk6t5-dateSelector__input"
+    className=" mko_1da9cpz-dateSelector__input"
+    containerClassName="date-selector__input  mko_1da9cpz-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
     maxNumberText={[Function]}
@@ -142,17 +142,17 @@ exports[`should render standard view 1`] = `
     onClick={[Function]}
     type="button"
   />
-  <div />
 </div>
 `;
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="date-selector date-selector--read-only  mko_1tk6t5-dateSelector"
+  className="date-selector date-selector--read-only  mko_1da9cpz-dateSelector"
   id="jest-date-selector"
 >
   <ClearableInput
-    className=" mko_1tk6t5-dateSelector__input"
+    className=" mko_1da9cpz-dateSelector__input"
+    containerClassName="date-selector__input  mko_1da9cpz-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
     maxNumberText={[Function]}
@@ -170,6 +170,5 @@ exports[`should render with minimum props 1`] = `
     onClick={[Function]}
     type="button"
   />
-  <div />
 </div>
 `;

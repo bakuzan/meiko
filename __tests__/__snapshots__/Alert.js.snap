@@ -31,7 +31,7 @@ exports[`should call remove on close button click 1`] = `
   }
 >
   <div
-    className="alert-container  mko_1vawdo4-container"
+    className="alert-container  mko_1wyx37g-container"
   >
     <AlertMessage
       detail="More words"
@@ -58,24 +58,24 @@ exports[`should call remove on close button click 1`] = `
       type="error"
     >
       <div
-        className="alert alert--error  mko_1vawdo4-alert  mko_1vawdo4-error"
+        className="alert alert--error  mko_1wyx37g-alert  mko_1wyx37g-error"
       >
         <div
-          className="alert__content  mko_1vawdo4-alert__content"
+          className="alert__content  mko_1wyx37g-alert__content"
         >
           <div
-            className="alert__message  mko_1vawdo4-alert__message"
+            className="alert__message  mko_1wyx37g-alert__message"
           >
             <div
-              className="alert__icon  mko_1vawdo4-alert__icon"
+              className="alert__icon  mko_1wyx37g-alert__icon"
             />
             <div
-              className="alert__title  mko_1vawdo4-alert__title"
+              className="alert__title  mko_1wyx37g-alert__title"
             >
               Test message
             </div>
             <div
-              className="alert__actions  mko_1vawdo4-alert__actions"
+              className="alert__actions  mko_1wyx37g-alert__actions"
             >
               <Button
                 className="alert__expand"
@@ -92,14 +92,14 @@ exports[`should call remove on close button click 1`] = `
               </Button>
               <Button
                 aria-label="Close Alert"
-                className="alert__close  mko_1vawdo4-close"
+                className="alert__close  mko_1wyx37g-close"
                 icon="❌︎"
                 onClick={[Function]}
                 type="button"
               >
                 <button
                   aria-label="Close Alert"
-                  className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon alert__close  mko_1vawdo4-close"
+                  className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon alert__close  mko_1wyx37g-close"
                   icon="❌︎"
                   onClick={[Function]}
                   type="button"
@@ -108,7 +108,7 @@ exports[`should call remove on close button click 1`] = `
             </div>
           </div>
           <div
-            className="alert__details  mko_1vawdo4-alert__details"
+            className="alert__details  mko_1wyx37g-alert__details"
           >
             More words
           </div>
@@ -138,7 +138,7 @@ exports[`should expand alert on click 1`] = `
   }
 >
   <div
-    className="alert-container  mko_1vawdo4-container"
+    className="alert-container  mko_1wyx37g-container"
   >
     <AlertMessage
       detail="More words"
@@ -151,24 +151,24 @@ exports[`should expand alert on click 1`] = `
       type="error"
     >
       <div
-        className="alert alert--error  mko_1vawdo4-alert  mko_1vawdo4-error"
+        className="alert alert--error  mko_1wyx37g-alert  mko_1wyx37g-error"
       >
         <div
-          className="alert__content  mko_1vawdo4-alert__content"
+          className="alert__content  mko_1wyx37g-alert__content"
         >
           <div
-            className="alert__message  mko_1vawdo4-alert__message"
+            className="alert__message  mko_1wyx37g-alert__message"
           >
             <div
-              className="alert__icon  mko_1vawdo4-alert__icon"
+              className="alert__icon  mko_1wyx37g-alert__icon"
             />
             <div
-              className="alert__title  mko_1vawdo4-alert__title"
+              className="alert__title  mko_1wyx37g-alert__title"
             >
               Test message
             </div>
             <div
-              className="alert__actions  mko_1vawdo4-alert__actions"
+              className="alert__actions  mko_1wyx37g-alert__actions"
             >
               <Button
                 className="alert__expand"
@@ -185,14 +185,14 @@ exports[`should expand alert on click 1`] = `
               </Button>
               <Button
                 aria-label="Close Alert"
-                className="alert__close  mko_1vawdo4-close"
+                className="alert__close  mko_1wyx37g-close"
                 icon="❌︎"
                 onClick={[Function]}
                 type="button"
               >
                 <button
                   aria-label="Close Alert"
-                  className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon alert__close  mko_1vawdo4-close"
+                  className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon alert__close  mko_1wyx37g-close"
                   icon="❌︎"
                   onClick={[Function]}
                   type="button"
@@ -201,7 +201,7 @@ exports[`should expand alert on click 1`] = `
             </div>
           </div>
           <div
-            className="alert__details  mko_1vawdo4-alert__details"
+            className="alert__details  mko_1wyx37g-alert__details"
           >
             More words
           </div>
@@ -231,7 +231,7 @@ exports[`should expand alert on click 2`] = `
   }
 >
   <div
-    className="alert-container  mko_1vawdo4-container"
+    className="alert-container  mko_1wyx37g-container"
   >
     <AlertMessage
       detail="More words"
@@ -244,35 +244,35 @@ exports[`should expand alert on click 2`] = `
       type="error"
     >
       <div
-        className="alert alert--error  mko_1vawdo4-alert  mko_1vawdo4-error"
+        className="alert alert--error  mko_1wyx37g-alert  mko_1wyx37g-error"
       >
         <div
-          className="alert__content alert__content--is-expanded  mko_1vawdo4-alert__content  mko_1vawdo4-alert__content_expanded"
+          className="alert__content alert__content--is-expanded  mko_1wyx37g-alert__content  mko_1wyx37g-alert__content_expanded"
         >
           <div
-            className="alert__message  mko_1vawdo4-alert__message"
+            className="alert__message  mko_1wyx37g-alert__message"
           >
             <div
-              className="alert__icon  mko_1vawdo4-alert__icon"
+              className="alert__icon  mko_1wyx37g-alert__icon"
             />
             <div
-              className="alert__title  mko_1vawdo4-alert__title"
+              className="alert__title  mko_1wyx37g-alert__title"
             >
               Test message
             </div>
             <div
-              className="alert__actions  mko_1vawdo4-alert__actions"
+              className="alert__actions  mko_1wyx37g-alert__actions"
             >
               <Button
                 aria-label="Close Alert"
-                className="alert__close  mko_1vawdo4-close"
+                className="alert__close  mko_1wyx37g-close"
                 icon="❌︎"
                 onClick={[Function]}
                 type="button"
               >
                 <button
                   aria-label="Close Alert"
-                  className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon alert__close  mko_1vawdo4-close"
+                  className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon alert__close  mko_1wyx37g-close"
                   icon="❌︎"
                   onClick={[Function]}
                   type="button"
@@ -281,7 +281,7 @@ exports[`should expand alert on click 2`] = `
             </div>
           </div>
           <div
-            className="alert__details  mko_1vawdo4-alert__details"
+            className="alert__details  mko_1wyx37g-alert__details"
           >
             More words
           </div>
@@ -294,7 +294,7 @@ exports[`should expand alert on click 2`] = `
 
 exports[`should render container when has alerts 1`] = `
 <div
-  className="alert-container  mko_1vawdo4-container"
+  className="alert-container  mko_1wyx37g-container"
 >
   <AlertMessage
     detail="More words"

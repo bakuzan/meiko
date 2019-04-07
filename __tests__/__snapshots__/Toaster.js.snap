@@ -2,10 +2,10 @@
 
 exports[`should remove toasts after 3sec 1`] = `
 <div
-  className="toaster  mko_1qf48bz-toaster"
+  className="toaster  mko_aa16jz-toaster"
 >
   <span
-    className="toast toast--info  mko_1qf48bz-toast  mko_1qf48bz-toast--info"
+    className="toast toast--info  mko_aa16jz-toast  mko_aa16jz-toast--info"
     key="1554336000000"
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -13,7 +13,7 @@ exports[`should remove toasts after 3sec 1`] = `
     tabIndex={0}
   >
     <span
-      className="toast__title  mko_1qf48bz-toast__title"
+      className="toast__title  mko_aa16jz-toast__title"
     >
       jest
     </span>
@@ -28,16 +28,16 @@ exports[`should remove toasts after 3sec 1`] = `
 
 exports[`should remove toasts on click 1`] = `
 <div
-  className="toaster  mko_1qf48bz-toaster"
+  className="toaster  mko_aa16jz-toaster"
 />
 `;
 
 exports[`should render toasts when popped 1`] = `
 <div
-  className="toaster  mko_1qf48bz-toaster"
+  className="toaster  mko_aa16jz-toaster"
 >
   <span
-    className="toast toast--info  mko_1qf48bz-toast  mko_1qf48bz-toast--info"
+    className="toast toast--info  mko_aa16jz-toast  mko_aa16jz-toast--info"
     key="1554336000000"
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -45,7 +45,7 @@ exports[`should render toasts when popped 1`] = `
     tabIndex={0}
   >
     <span
-      className="toast__title  mko_1qf48bz-toast__title"
+      className="toast__title  mko_aa16jz-toast__title"
     >
       jest
     </span>
@@ -60,6 +60,6 @@ exports[`should render toasts when popped 1`] = `
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="toaster  mko_1qf48bz-toaster"
+  className="toaster  mko_aa16jz-toaster"
 />
 `;

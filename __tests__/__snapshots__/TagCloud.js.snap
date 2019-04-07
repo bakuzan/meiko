@@ -8,6 +8,7 @@ exports[`should call onSelect when cleared 1`] = `
     className="flex right"
   >
     <Button
+      btnStyle="primary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -134,6 +135,7 @@ exports[`should call onSelect when tagchip is clicked 1`] = `
     className="flex right"
   >
     <Button
+      btnStyle="primary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -260,6 +262,7 @@ exports[`should display clear button when has selected 1`] = `
     className="flex right"
   >
     <Button
+      btnStyle="primary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -386,6 +389,7 @@ exports[`should render correct children 1`] = `
     className="flex right"
   >
     <Button
+      btnStyle="primary"
       disabled={true}
       onClick={[Function]}
       type="button"
@@ -512,6 +516,7 @@ exports[`should render with minimum props 1`] = `
     className="flex right"
   >
     <Button
+      btnStyle="primary"
       disabled={true}
       onClick={[Function]}
       type="button"
