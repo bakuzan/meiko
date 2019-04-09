@@ -42,7 +42,7 @@ function rollupPlugins() {
       extensions
     }),
     resolve({
-      main: true,
+      mainFields: ['main'],
       preferBuiltins: false
     }),
     babel({
@@ -75,7 +75,6 @@ export default [
   {
     input,
     output: {
-      name: 'bundle',
       file: pkg.main,
       format: 'cjs',
       globals,
