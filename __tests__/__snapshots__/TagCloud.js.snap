@@ -2,22 +2,10 @@
 
 exports[`should call onSelect when cleared 1`] = `
 <div
-  className="tag-cloud  mko_tuytk3-tagCloud"
+  className="tag-cloud  mko_qcfya-tagCloud"
 >
   <div
-    className="flex right"
-  >
-    <Button
-      btnStyle="primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      Clear
-    </Button>
-  </div>
-  <div
-    className="flex wrap"
+    className="tag-cloud__options  mko_qcfya-tagCloud__options"
   >
     <TagChip
       chipSize={null}
@@ -123,28 +111,29 @@ exports[`should call onSelect when cleared 1`] = `
       key="8"
       onClick={[Function]}
     />
+  </div>
+  <div
+    className="tag-cloud__actions  mko_qcfya-actions"
+  >
+    <Button
+      btnStyle="primary"
+      className="tag-cloud__clear"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </Button>
   </div>
 </div>
 `;
 
 exports[`should call onSelect when tagchip is clicked 1`] = `
 <div
-  className="tag-cloud  mko_tuytk3-tagCloud"
+  className="tag-cloud  mko_qcfya-tagCloud"
 >
   <div
-    className="flex right"
-  >
-    <Button
-      btnStyle="primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      Clear
-    </Button>
-  </div>
-  <div
-    className="flex wrap"
+    className="tag-cloud__options  mko_qcfya-tagCloud__options"
   >
     <TagChip
       chipSize={null}
@@ -250,28 +239,29 @@ exports[`should call onSelect when tagchip is clicked 1`] = `
       key="8"
       onClick={[Function]}
     />
+  </div>
+  <div
+    className="tag-cloud__actions  mko_qcfya-actions"
+  >
+    <Button
+      btnStyle="primary"
+      className="tag-cloud__clear"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </Button>
   </div>
 </div>
 `;
 
 exports[`should display clear button when has selected 1`] = `
 <div
-  className="tag-cloud  mko_tuytk3-tagCloud"
+  className="tag-cloud  mko_qcfya-tagCloud"
 >
   <div
-    className="flex right"
-  >
-    <Button
-      btnStyle="primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      Clear
-    </Button>
-  </div>
-  <div
-    className="flex wrap"
+    className="tag-cloud__options  mko_qcfya-tagCloud__options"
   >
     <TagChip
       chipSize={null}
@@ -378,27 +368,28 @@ exports[`should display clear button when has selected 1`] = `
       onClick={[Function]}
     />
   </div>
-</div>
-`;
-
-exports[`should render correct children 1`] = `
-<div
-  className="tag-cloud  mko_tuytk3-tagCloud"
->
   <div
-    className="flex right"
+    className="tag-cloud__actions  mko_qcfya-actions"
   >
     <Button
       btnStyle="primary"
-      disabled={true}
+      className="tag-cloud__clear"
+      disabled={false}
       onClick={[Function]}
       type="button"
     >
       Clear
     </Button>
   </div>
+</div>
+`;
+
+exports[`should render correct children 1`] = `
+<div
+  className="tag-cloud  mko_qcfya-tagCloud"
+>
   <div
-    className="flex wrap"
+    className="tag-cloud__options  mko_qcfya-tagCloud__options"
   >
     <TagChip
       chipSize={null}
@@ -504,28 +495,29 @@ exports[`should render correct children 1`] = `
       key="8"
       onClick={[Function]}
     />
+  </div>
+  <div
+    className="tag-cloud__actions  mko_qcfya-actions"
+  >
+    <Button
+      btnStyle="primary"
+      className="tag-cloud__clear"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </Button>
   </div>
 </div>
 `;
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="tag-cloud  mko_tuytk3-tagCloud"
+  className="tag-cloud  mko_qcfya-tagCloud"
 >
   <div
-    className="flex right"
-  >
-    <Button
-      btnStyle="primary"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    >
-      Clear
-    </Button>
-  </div>
-  <div
-    className="flex wrap"
+    className="tag-cloud__options  mko_qcfya-tagCloud__options"
   >
     <TagChip
       chipSize={null}
@@ -631,6 +623,19 @@ exports[`should render with minimum props 1`] = `
       key="8"
       onClick={[Function]}
     />
+  </div>
+  <div
+    className="tag-cloud__actions  mko_qcfya-actions"
+  >
+    <Button
+      btnStyle="primary"
+      className="tag-cloud__clear"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </Button>
   </div>
 </div>
 `;
