@@ -26,6 +26,18 @@
   }
 }
 
+@mixin respondToAll($sizes) {
+  @each $size in $sizes {
+    @include respondTo($size) {
+      @content;
+    }
+  }
+}
+
+@mixin standardShadow($colour) {
+  box-shadow: 2px 2px 10px $colour;
+}
+
 @mixin gridColumnsForPercentage($value) {
   $percentage: $value * 1%;
   grid-template-columns: repeat(auto-fit, $percentage);

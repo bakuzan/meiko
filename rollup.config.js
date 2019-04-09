@@ -7,8 +7,6 @@ import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import { uglify } from 'rollup-plugin-uglify';
 import includePaths from 'rollup-plugin-includepaths';
-// import autoprefixer from 'autoprefixer';
-// import postcss from 'rollup-plugin-postcss';
 
 import pkg from './package.json';
 
@@ -47,14 +45,6 @@ function rollupPlugins() {
       main: true,
       preferBuiltins: false
     }),
-    // postcss({
-    //   extract: 'dist/bundle.min.css',
-    //   sourceMap: true,
-    //   minimize: isProduction ? { safe: true } : false,
-    //   extensions: ['.scss'],
-    //   use: ['sass'],
-    //   plugins: [autoprefixer]
-    // }),
     babel({
       exclude: 'node_modules/**',
       runtimeHelpers: true,

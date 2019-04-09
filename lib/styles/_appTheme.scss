@@ -18,17 +18,21 @@
       color: $base-colour;
 
       // With BaseColour
-      .select-box__input,
-      .input__input {
+      .select-box,
+      .clearable-input__input,
+      .multi-select__input,
+      .dropdown-menu__menu {
         color: $base-colour;
       }
 
       // With BaseBackground
       .multi-select__dropdown-container,
       .mko-calendar,
-      .input__input,
-      .select-box__input,
-      .alert__content {
+      .clearable-input__input,
+      .select-box,
+      .multi-select__input,
+      .alert__content,
+      .dropdown-menu__menu {
         background-color: $base-background;
       }
 
@@ -78,8 +82,10 @@
 
       // Buttons
       .button--standard,
+      .button--icon,
       .mko-calendar__shift-button {
         background-color: $base-background;
+        color: $base-colour;
 
         &:focus,
         &:hover {
@@ -88,6 +94,7 @@
       }
       .button--primary {
         background-color: $primary-background;
+        color: $primary-colour;
 
         &:focus,
         &:hover {
@@ -133,6 +140,19 @@
       .tag-chip--active {
         background-color: $active-background;
         color: $active-colour;
+      }
+
+      // AppInformation
+      .app-information {
+        color: $primary-colour;
+        &:hover {
+          @include lightenOrDarken('color', $primary-colour, 10%);
+        }
+
+        &__detail {
+          background-color: $base-background;
+          color: $base-colour;
+        }
       }
 
       // Additional styles on demand.
