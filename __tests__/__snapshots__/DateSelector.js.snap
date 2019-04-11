@@ -2,12 +2,12 @@
 
 exports[`should call onChange when clear is clicked 1`] = `
 <div
-  className="date-selector  mko_1da9cpz-dateSelector"
+  className="date-selector  mko_1vy27dt-dateSelector"
   id="jest-date-selector"
 >
   <ClearableInput
-    className=" mko_1da9cpz-dateSelector__input"
-    containerClassName="date-selector__input  mko_1da9cpz-dateSelector__inputContainer"
+    className=" mko_1vy27dt-dateSelector__input"
+    containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
     maxNumberText={[Function]}
@@ -38,12 +38,12 @@ exports[`should call onChange when clear is clicked 1`] = `
 
 exports[`should not display clear button when value required 1`] = `
 <div
-  className="date-selector  mko_1da9cpz-dateSelector"
+  className="date-selector  mko_1vy27dt-dateSelector"
   id="jest-date-selector"
 >
   <ClearableInput
-    className=" mko_1da9cpz-dateSelector__input"
-    containerClassName="date-selector__input  mko_1da9cpz-dateSelector__inputContainer"
+    className=" mko_1vy27dt-dateSelector__input"
+    containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
     maxNumberText={[Function]}
@@ -67,12 +67,12 @@ exports[`should not display clear button when value required 1`] = `
 
 exports[`should open calendar 1`] = `
 <div
-  className="date-selector date-selector--read-only  mko_1da9cpz-dateSelector"
+  className="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
   id="jest-date-selector"
 >
   <ClearableInput
-    className=" mko_1da9cpz-dateSelector__input"
-    containerClassName="date-selector__input  mko_1da9cpz-dateSelector__inputContainer"
+    className=" mko_1vy27dt-dateSelector__input"
+    containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
     maxNumberText={[Function]}
@@ -103,7 +103,7 @@ exports[`should open calendar 1`] = `
 
 exports[`should render flat view 1`] = `
 <div
-  className="date-selector date-selector--read-only  mko_1da9cpz-dateSelector"
+  className="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
   id="jest-date-selector"
 >
   <Calendar
@@ -119,12 +119,12 @@ exports[`should render flat view 1`] = `
 
 exports[`should render standard view 1`] = `
 <div
-  className="date-selector date-selector--read-only  mko_1da9cpz-dateSelector"
+  className="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
   id="jest-date-selector"
 >
   <ClearableInput
-    className=" mko_1da9cpz-dateSelector__input"
-    containerClassName="date-selector__input  mko_1da9cpz-dateSelector__inputContainer"
+    className=" mko_1vy27dt-dateSelector__input"
+    containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
     maxNumberText={[Function]}
@@ -147,12 +147,12 @@ exports[`should render standard view 1`] = `
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="date-selector date-selector--read-only  mko_1da9cpz-dateSelector"
+  className="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
   id="jest-date-selector"
 >
   <ClearableInput
-    className=" mko_1da9cpz-dateSelector__input"
-    containerClassName="date-selector__input  mko_1da9cpz-dateSelector__inputContainer"
+    className=" mko_1vy27dt-dateSelector__input"
+    containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
     maxNumberText={[Function]}

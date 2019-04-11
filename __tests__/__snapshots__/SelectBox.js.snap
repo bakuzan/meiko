@@ -2,7 +2,7 @@
 
 exports[`should call onChange 1`] = `
 <div
-  className="has-float-label select-container  mko_mwr88m-controlContainer"
+  className="has-float-label select-container  mko_3o96yq-controlContainer"
 >
   <select
     className="select-box  mko_7fjkm0-select"
@@ -58,7 +58,7 @@ exports[`should call onChange 1`] = `
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="has-float-label select-container  mko_mwr88m-controlContainer"
+  className="has-float-label select-container  mko_3o96yq-controlContainer"
 >
   <select
     className="select-box  mko_7fjkm0-select"

@@ -12,6 +12,7 @@
     $active-colour: map-get($values, active-colour) !global;
     $faded-out-background: map-get($values, faded-out-background) !global;
     $faded-out-colour: map-get($values, faded-out-colour) !global;
+    $danger-colour: map-get($values, danger-colour) !global;
 
     .theme--#{$name} {
       background-color: $base-background;
@@ -32,9 +33,11 @@
       .select-box,
       .multi-select__input,
       .alert__content,
-      .dropdown-menu__menu,
-      .dropdown-menu__arrow {
+      .dropdown-menu__menu {
         background-color: $base-background;
+      }
+      .dropdown-menu__arrow {
+        border-bottom-color: $base-background;
       }
 
       // Primary
@@ -154,6 +157,16 @@
           background-color: $base-background;
           color: $base-colour;
         }
+      }
+
+      // Radio Toggle
+      .radio-toggle {
+        --radio-toggle--box-shadow-colour: #{$active-background};
+      }
+
+      // Form Errors
+      .form-control__error {
+        color: $danger-colour;
       }
 
       // Additional styles on demand.

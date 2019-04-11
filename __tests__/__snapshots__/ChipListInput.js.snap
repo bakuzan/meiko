@@ -47,13 +47,13 @@ exports[`should call updateChipList when suggestion is clicked 1`] = `
   }
 >
   <div
-    className="chip-list-input chip-list-input--focused  mko_1b6kyov-chipListInput"
+    className="chip-list-input chip-list-input--focused  mko_vagvjv-chipListInput"
   >
     <AutocompleteInput
       attr="text"
       clearableInputProps={
         Object {
-          "className": "chip-list-input__clearable-input  mko_1b6kyov-clearButton",
+          "className": "chip-list-input__clearable-input  mko_vagvjv-clearButton",
         }
       }
       disableLocalFilter={false}
@@ -89,7 +89,7 @@ exports[`should call updateChipList when suggestion is clicked 1`] = `
         className="autocomplete  mko_ydt0iq-autocomplete"
       >
         <ClearableInput
-          className="chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+          className="chip-list-input__clearable-input  mko_vagvjv-clearButton"
           id="jest"
           label="tags"
           maxNumberText={[Function]}
@@ -101,13 +101,13 @@ exports[`should call updateChipList when suggestion is clicked 1`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_8tgsun-clearableInput  mko_mwr88m-controlContainer"
+            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
           >
             <div
-              className="clearable-input__inner  mko_8tgsun-clearableInput__inner"
+              className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
             >
               <ForwardRef(Input)
-                className="clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                className="clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
                 id="jest"
                 name="text"
                 onBlur={[Function]}
@@ -118,7 +118,7 @@ exports[`should call updateChipList when suggestion is clicked 1`] = `
               >
                 <input
                   autoComplete="off"
-                  className="input clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                  className="input clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
                   id="jest"
                   name="text"
                   onBlur={[Function]}
@@ -136,9 +136,6 @@ exports[`should call updateChipList when suggestion is clicked 1`] = `
                 tags
               </label>
             </div>
-            <div
-              className="clearable-input__under  mko_8tgsun-clearableInput__inner  mko_8tgsun-clearableInput__under"
-            />
           </div>
         </ClearableInput>
       </div>
@@ -181,13 +178,13 @@ exports[`should ready removal of selected chip 1`] = `
   updateChipList={[MockFunction]}
 >
   <div
-    className="chip-list-input  mko_1b6kyov-chipListInput"
+    className="chip-list-input  mko_vagvjv-chipListInput"
   >
     <div
-      className="chip-list  mko_1b6kyov-chipList"
+      className="chip-list  mko_vagvjv-chipList"
     >
       <div
-        className="chip-list__inner  mko_1b6kyov-chipList__inner"
+        className="chip-list__inner  mko_vagvjv-chipList__inner"
       >
         <TagChip
           data={
@@ -234,7 +231,7 @@ exports[`should ready removal of selected chip 1`] = `
       attr="text"
       clearableInputProps={
         Object {
-          "className": "chip-list-input__clearable-input  mko_1b6kyov-clearButton",
+          "className": "chip-list-input__clearable-input  mko_vagvjv-clearButton",
         }
       }
       disableLocalFilter={false}
@@ -270,7 +267,7 @@ exports[`should ready removal of selected chip 1`] = `
         className="autocomplete  mko_ydt0iq-autocomplete"
       >
         <ClearableInput
-          className="chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+          className="chip-list-input__clearable-input  mko_vagvjv-clearButton"
           id="jest"
           label="tags"
           maxNumberText={[Function]}
@@ -282,13 +279,13 @@ exports[`should ready removal of selected chip 1`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_8tgsun-clearableInput  mko_mwr88m-controlContainer"
+            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
           >
             <div
-              className="clearable-input__inner  mko_8tgsun-clearableInput__inner"
+              className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
             >
               <ForwardRef(Input)
-                className="clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                className="clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
                 id="jest"
                 name="text"
                 onBlur={[Function]}
@@ -299,7 +296,7 @@ exports[`should ready removal of selected chip 1`] = `
               >
                 <input
                   autoComplete="off"
-                  className="input clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                  className="input clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
                   id="jest"
                   name="text"
                   onBlur={[Function]}
@@ -317,9 +314,6 @@ exports[`should ready removal of selected chip 1`] = `
                 tags
               </label>
             </div>
-            <div
-              className="clearable-input__under  mko_8tgsun-clearableInput__inner  mko_8tgsun-clearableInput__under"
-            />
           </div>
         </ClearableInput>
       </div>
@@ -362,13 +356,13 @@ exports[`should render selected chips and remove 1`] = `
   updateChipList={[MockFunction]}
 >
   <div
-    className="chip-list-input  mko_1b6kyov-chipListInput"
+    className="chip-list-input  mko_vagvjv-chipListInput"
   >
     <div
-      className="chip-list  mko_1b6kyov-chipList"
+      className="chip-list  mko_vagvjv-chipList"
     >
       <div
-        className="chip-list__inner  mko_1b6kyov-chipList__inner"
+        className="chip-list__inner  mko_vagvjv-chipList__inner"
       >
         <TagChip
           data={
@@ -415,7 +409,7 @@ exports[`should render selected chips and remove 1`] = `
       attr="text"
       clearableInputProps={
         Object {
-          "className": "chip-list-input__clearable-input  mko_1b6kyov-clearButton",
+          "className": "chip-list-input__clearable-input  mko_vagvjv-clearButton",
         }
       }
       disableLocalFilter={false}
@@ -451,7 +445,7 @@ exports[`should render selected chips and remove 1`] = `
         className="autocomplete  mko_ydt0iq-autocomplete"
       >
         <ClearableInput
-          className="chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+          className="chip-list-input__clearable-input  mko_vagvjv-clearButton"
           id="jest"
           label="tags"
           maxNumberText={[Function]}
@@ -463,13 +457,13 @@ exports[`should render selected chips and remove 1`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_8tgsun-clearableInput  mko_mwr88m-controlContainer"
+            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
           >
             <div
-              className="clearable-input__inner  mko_8tgsun-clearableInput__inner"
+              className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
             >
               <ForwardRef(Input)
-                className="clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                className="clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
                 id="jest"
                 name="text"
                 onBlur={[Function]}
@@ -480,7 +474,7 @@ exports[`should render selected chips and remove 1`] = `
               >
                 <input
                   autoComplete="off"
-                  className="input clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                  className="input clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
                   id="jest"
                   name="text"
                   onBlur={[Function]}
@@ -498,9 +492,6 @@ exports[`should render selected chips and remove 1`] = `
                 tags
               </label>
             </div>
-            <div
-              className="clearable-input__under  mko_8tgsun-clearableInput__inner  mko_8tgsun-clearableInput__under"
-            />
           </div>
         </ClearableInput>
       </div>
@@ -558,13 +549,13 @@ exports[`should render selected chips and remove 2`] = `
   }
 >
   <div
-    className="chip-list-input  mko_1b6kyov-chipListInput"
+    className="chip-list-input  mko_vagvjv-chipListInput"
   >
     <div
-      className="chip-list  mko_1b6kyov-chipList"
+      className="chip-list  mko_vagvjv-chipList"
     >
       <div
-        className="chip-list__inner  mko_1b6kyov-chipList__inner"
+        className="chip-list__inner  mko_vagvjv-chipList__inner"
       >
         <TagChip
           data={
@@ -611,7 +602,7 @@ exports[`should render selected chips and remove 2`] = `
       attr="text"
       clearableInputProps={
         Object {
-          "className": "chip-list-input__clearable-input  mko_1b6kyov-clearButton",
+          "className": "chip-list-input__clearable-input  mko_vagvjv-clearButton",
         }
       }
       disableLocalFilter={false}
@@ -647,7 +638,7 @@ exports[`should render selected chips and remove 2`] = `
         className="autocomplete  mko_ydt0iq-autocomplete"
       >
         <ClearableInput
-          className="chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+          className="chip-list-input__clearable-input  mko_vagvjv-clearButton"
           id="jest"
           label="tags"
           maxNumberText={[Function]}
@@ -659,13 +650,13 @@ exports[`should render selected chips and remove 2`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_8tgsun-clearableInput  mko_mwr88m-controlContainer"
+            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
           >
             <div
-              className="clearable-input__inner  mko_8tgsun-clearableInput__inner"
+              className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
             >
               <ForwardRef(Input)
-                className="clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                className="clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
                 id="jest"
                 name="text"
                 onBlur={[Function]}
@@ -676,7 +667,7 @@ exports[`should render selected chips and remove 2`] = `
               >
                 <input
                   autoComplete="off"
-                  className="input clearable-input__input  mko_8tgsun-clearableInput__input chip-list-input__clearable-input  mko_1b6kyov-clearButton"
+                  className="input clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
                   id="jest"
                   name="text"
                   onBlur={[Function]}
@@ -694,9 +685,6 @@ exports[`should render selected chips and remove 2`] = `
                 tags
               </label>
             </div>
-            <div
-              className="clearable-input__under  mko_8tgsun-clearableInput__inner  mko_8tgsun-clearableInput__under"
-            />
           </div>
         </ClearableInput>
       </div>
@@ -707,13 +695,13 @@ exports[`should render selected chips and remove 2`] = `
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="chip-list-input  mko_1b6kyov-chipListInput"
+  className="chip-list-input  mko_vagvjv-chipListInput"
 >
   <AutocompleteInput
     attr="text"
     clearableInputProps={
       Object {
-        "className": "chip-list-input__clearable-input  mko_1b6kyov-clearButton",
+        "className": "chip-list-input__clearable-input  mko_vagvjv-clearButton",
       }
     }
     disableLocalFilter={false}

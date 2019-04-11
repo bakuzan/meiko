@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render error for clearable input 1`] = `
+<div
+  className="form-control"
+>
+  <ClearableInput
+    id="jest"
+    maxNumberText={[Function]}
+    name="jester"
+    onChange={[MockFunction]}
+    value="hello world"
+  />
+  <ErrorBlock
+    className="form-control__error  mko_et6tqb-formControl__error"
+  >
+    Jest Error Test
+  </ErrorBlock>
+</div>
+`;
+
+exports[`should render error for select box 1`] = `
+<div
+  className="form-control"
+>
+  <SelectBox
+    disabled={false}
+    id="jest"
+    name="jester"
+    onChange={[MockFunction]}
+    options={
+      Array [
+        Object {
+          "text": "one",
+          "value": 1,
+        },
+        Object {
+          "text": "two",
+          "value": 2,
+        },
+        Object {
+          "text": "three",
+          "value": 3,
+        },
+      ]
+    }
+    text="Jesters"
+    value=""
+  />
+  <ErrorBlock
+    className="form-control__error  mko_et6tqb-formControl__error"
+  >
+    Jest Error Test
+  </ErrorBlock>
+</div>
+`;

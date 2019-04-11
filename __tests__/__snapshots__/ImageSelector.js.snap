@@ -2,17 +2,17 @@
 
 exports[`should call on change for file selection 1`] = `
 <div
-  className="image-selector  mko_1x2u0vd-selector"
+  className="image-selector  mko_1eonyy2-selector"
 >
   <div
     className="image-selector__controls"
   >
     <div
-      className="image-selector__url-uploader  mko_1x2u0vd-selector__urlUploader"
+      className="image-selector__url-uploader  mko_1eonyy2-selector__urlUploader"
     >
       <ClearableInput
-        className=" mko_1x2u0vd-selector__urlInput"
-        containerClassName="image-selector__url  mko_1x2u0vd-selector__url"
+        className=" mko_1eonyy2-selector__urlInput"
+        containerClassName="image-selector__url  mko_1eonyy2-selector__url"
         id="imageUrl"
         label="Image Url"
         maxNumberText={[Function]}
@@ -46,17 +46,17 @@ exports[`should call on change for file selection 1`] = `
 
 exports[`should call on change for url upload button click 1`] = `
 <div
-  className="image-selector  mko_1x2u0vd-selector"
+  className="image-selector  mko_1eonyy2-selector"
 >
   <div
     className="image-selector__controls"
   >
     <div
-      className="image-selector__url-uploader  mko_1x2u0vd-selector__urlUploader"
+      className="image-selector__url-uploader  mko_1eonyy2-selector__urlUploader"
     >
       <ClearableInput
-        className=" mko_1x2u0vd-selector__urlInput"
-        containerClassName="image-selector__url  mko_1x2u0vd-selector__url"
+        className=" mko_1eonyy2-selector__urlInput"
+        containerClassName="image-selector__url  mko_1eonyy2-selector__url"
         id="imageUrl"
         label="Image Url"
         maxNumberText={[Function]}
@@ -90,17 +90,17 @@ exports[`should call on change for url upload button click 1`] = `
 
 exports[`should call on error for failed upload 1`] = `
 <div
-  className="image-selector  mko_1x2u0vd-selector"
+  className="image-selector  mko_1eonyy2-selector"
 >
   <div
     className="image-selector__controls"
   >
     <div
-      className="image-selector__url-uploader  mko_1x2u0vd-selector__urlUploader"
+      className="image-selector__url-uploader  mko_1eonyy2-selector__urlUploader"
     >
       <ClearableInput
-        className=" mko_1x2u0vd-selector__urlInput"
-        containerClassName="image-selector__url  mko_1x2u0vd-selector__url"
+        className=" mko_1eonyy2-selector__urlInput"
+        containerClassName="image-selector__url  mko_1eonyy2-selector__url"
         id="imageUrl"
         label="Image Url"
         maxNumberText={[Function]}
@@ -134,17 +134,17 @@ exports[`should call on error for failed upload 1`] = `
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="image-selector  mko_1x2u0vd-selector"
+  className="image-selector  mko_1eonyy2-selector"
 >
   <div
     className="image-selector__controls"
   >
     <div
-      className="image-selector__url-uploader  mko_1x2u0vd-selector__urlUploader"
+      className="image-selector__url-uploader  mko_1eonyy2-selector__urlUploader"
     >
       <ClearableInput
-        className=" mko_1x2u0vd-selector__urlInput"
-        containerClassName="image-selector__url  mko_1x2u0vd-selector__url"
+        className=" mko_1eonyy2-selector__urlInput"
+        containerClassName="image-selector__url  mko_1eonyy2-selector__url"
         id="imageUrl"
         label="Image Url"
         maxNumberText={[Function]}
@@ -178,19 +178,19 @@ exports[`should render with minimum props 1`] = `
 
 exports[`should show url display 1`] = `
 <div
-  className="image-selector  mko_1x2u0vd-selector"
+  className="image-selector  mko_1eonyy2-selector"
 >
   <div
-    className="image-selector__value-display  mko_1x2u0vd-selector__display"
+    className="image-selector__value-display  mko_1eonyy2-selector__display"
   >
     <div
-      className=" mko_1x2u0vd-selector__text"
+      className=" mko_1eonyy2-selector__text"
     >
       <div>
         fakeurlhere
       </div>
       <div
-        className="image-selector__error  mko_1x2u0vd-error"
+        className="image-selector__error  mko_1eonyy2-error"
       />
     </div>
     <Button
@@ -207,17 +207,17 @@ exports[`should show url display 1`] = `
 
 exports[`should toggle url display 1`] = `
 <div
-  className="image-selector  mko_1x2u0vd-selector"
+  className="image-selector  mko_1eonyy2-selector"
 >
   <div
     className="image-selector__controls"
   >
     <div
-      className="image-selector__url-uploader  mko_1x2u0vd-selector__urlUploader"
+      className="image-selector__url-uploader  mko_1eonyy2-selector__urlUploader"
     >
       <ClearableInput
-        className=" mko_1x2u0vd-selector__urlInput"
-        containerClassName="image-selector__url  mko_1x2u0vd-selector__url"
+        className=" mko_1eonyy2-selector__urlInput"
+        containerClassName="image-selector__url  mko_1eonyy2-selector__url"
         id="imageUrl"
         label="Image Url"
         maxNumberText={[Function]}

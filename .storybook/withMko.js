@@ -5,6 +5,7 @@ import { useGlobalStyles } from '../lib/hooks/useGlobalStyles';
 const centerStyles = {
   display: 'flex',
   justifyContent: 'center',
+  minHeight: '100px',
   border: '1px dashed #800080',
   marginTop: '30px'
 };

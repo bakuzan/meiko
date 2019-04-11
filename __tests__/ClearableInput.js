@@ -92,26 +92,3 @@ it('should display max text for number field', function() {
   expect(countElement.text()).toEqual('out of 10');
   component.unmount();
 });
-
-it('should render error', function() {
-  const message = 'Jest Error Test';
-
-  const component = mount(
-    <ClearableInput
-      id="jest"
-      value={'hello world'}
-      error=""
-      onChange={mockChangeFn}
-    />
-  );
-
-  let error = component.find('.clearable-input__error');
-  expect(error.exists()).toBe(false);
-
-  component.setProps({ error: message });
-
-  error = component.find('.clearable-input__error');
-  expect(error.exists()).toBe(true);
-  expect(error.text()).toEqual(message);
-  component.unmount();
-});
