@@ -60,7 +60,7 @@ exports[`should call onChange when filter updated 1`] = `
       value=""
     >
       <div
-        className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
+        className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
       >
         <div
           className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
@@ -155,7 +155,7 @@ exports[`should call onSelect when suggestion is click 1`] = `
       value="at"
     >
       <div
-        className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
+        className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
       >
         <div
           className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"

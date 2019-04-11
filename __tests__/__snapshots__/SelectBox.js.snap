@@ -2,10 +2,10 @@
 
 exports[`should call onChange 1`] = `
 <div
-  className="has-float-label select-container  mko_3o96yq-controlContainer"
+  className="has-float-label select-container  mko_1aosyyv-controlContainer"
 >
   <select
-    className="select-box  mko_7fjkm0-select"
+    className="select-box  mko_16anp6y-select"
     disabled={false}
     id="jest"
     onChange={
@@ -58,10 +58,10 @@ exports[`should call onChange 1`] = `
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="has-float-label select-container  mko_3o96yq-controlContainer"
+  className="has-float-label select-container  mko_1aosyyv-controlContainer"
 >
   <select
-    className="select-box  mko_7fjkm0-select"
+    className="select-box  mko_16anp6y-select"
     disabled={false}
     id="jest"
     onChange={[MockFunction]}

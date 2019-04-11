@@ -101,7 +101,7 @@ exports[`should call updateChipList when suggestion is clicked 1`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
+            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
           >
             <div
               className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
@@ -279,7 +279,7 @@ exports[`should ready removal of selected chip 1`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
+            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
           >
             <div
               className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
@@ -457,7 +457,7 @@ exports[`should render selected chips and remove 1`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
+            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
           >
             <div
               className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
@@ -650,7 +650,7 @@ exports[`should render selected chips and remove 2`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
+            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
           >
             <div
               className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"

@@ -2,7 +2,7 @@
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="tickbox"
+  className="tickbox  mko_483rqv-tickbox"
 >
   <label
     className="tickbox__label  mko_483rqv-tickbox__label"
@@ -21,7 +21,7 @@ exports[`should render with minimum props 1`] = `
 
 exports[`should toggle checkbox on click 1`] = `
 <div
-  className="tickbox"
+  className="tickbox  mko_483rqv-tickbox"
 >
   <label
     className="tickbox__label  mko_483rqv-tickbox__label"

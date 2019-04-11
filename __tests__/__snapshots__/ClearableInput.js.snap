@@ -28,7 +28,7 @@ exports[`should be clearable when type equals "text" 1`] = `
   value=""
 >
   <div
-    className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
+    className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
   >
     <div
       className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
@@ -99,7 +99,7 @@ exports[`should be clearable when type equals "text" 1`] = `
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_3o96yq-controlContainer"
+  className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
 >
   <div
     className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"

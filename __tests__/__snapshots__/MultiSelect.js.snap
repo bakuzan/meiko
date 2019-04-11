@@ -2,10 +2,10 @@
 
 exports[`should call onUpdate when select all clicked 1`] = `
 <div
-  className="multi-select  mko_1crd6xj-multiSelect"
+  className="multi-select  mko_1xijne-multiSelect"
 >
   <div
-    className="multi-select__display has-float-label select-container  mko_1crd6xj-multiSelect__display  mko_3o96yq-controlContainer"
+    className="multi-select__display has-float-label select-container  mko_1xijne-multiSelect__display  mko_1aosyyv-controlContainer"
   >
     <input
       autoComplete="off"
@@ -26,10 +26,10 @@ exports[`should call onUpdate when select all clicked 1`] = `
     </label>
   </div>
   <div
-    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1crd6xj-multiSelect__dropdown  mko_1crd6xj-multiSelect__dropdown_open"
+    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1xijne-multiSelect__dropdown  mko_1xijne-multiSelect__dropdown_open"
   >
     <ul
-      className="multi-select__list  mko_1crd6xj-multiSelect__list"
+      className="multi-select__list  mko_1xijne-multiSelect__list"
     >
       <li
         key="ALL"
@@ -43,7 +43,7 @@ exports[`should call onUpdate when select all clicked 1`] = `
         />
       </li>
       <li
-        className="multi-select__separator  mko_1crd6xj-separator"
+        className="multi-select__separator  mko_1xijne-separator"
         key="SEPARATOR"
       />
       <li
@@ -97,10 +97,10 @@ exports[`should call onUpdate when select all clicked 1`] = `
 
 exports[`should call onUpdate when tickboxes are changed 1`] = `
 <div
-  className="multi-select  mko_1crd6xj-multiSelect"
+  className="multi-select  mko_1xijne-multiSelect"
 >
   <div
-    className="multi-select__display has-float-label select-container  mko_1crd6xj-multiSelect__display  mko_3o96yq-controlContainer"
+    className="multi-select__display has-float-label select-container  mko_1xijne-multiSelect__display  mko_1aosyyv-controlContainer"
   >
     <input
       autoComplete="off"
@@ -121,10 +121,10 @@ exports[`should call onUpdate when tickboxes are changed 1`] = `
     </label>
   </div>
   <div
-    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1crd6xj-multiSelect__dropdown  mko_1crd6xj-multiSelect__dropdown_open"
+    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1xijne-multiSelect__dropdown  mko_1xijne-multiSelect__dropdown_open"
   >
     <ul
-      className="multi-select__list  mko_1crd6xj-multiSelect__list"
+      className="multi-select__list  mko_1xijne-multiSelect__list"
     >
       <li
         key="ALL"
@@ -138,7 +138,7 @@ exports[`should call onUpdate when tickboxes are changed 1`] = `
         />
       </li>
       <li
-        className="multi-select__separator  mko_1crd6xj-separator"
+        className="multi-select__separator  mko_1xijne-separator"
         key="SEPARATOR"
       />
       <li
@@ -192,10 +192,10 @@ exports[`should call onUpdate when tickboxes are changed 1`] = `
 
 exports[`should open dropdown on input click 1`] = `
 <div
-  className="multi-select  mko_1crd6xj-multiSelect"
+  className="multi-select  mko_1xijne-multiSelect"
 >
   <div
-    className="multi-select__display has-float-label select-container  mko_1crd6xj-multiSelect__display  mko_3o96yq-controlContainer"
+    className="multi-select__display has-float-label select-container  mko_1xijne-multiSelect__display  mko_1aosyyv-controlContainer"
   >
     <input
       autoComplete="off"
@@ -216,10 +216,10 @@ exports[`should open dropdown on input click 1`] = `
     </label>
   </div>
   <div
-    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1crd6xj-multiSelect__dropdown  mko_1crd6xj-multiSelect__dropdown_open"
+    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1xijne-multiSelect__dropdown  mko_1xijne-multiSelect__dropdown_open"
   >
     <ul
-      className="multi-select__list  mko_1crd6xj-multiSelect__list"
+      className="multi-select__list  mko_1xijne-multiSelect__list"
     >
       <li
         key="ALL"
@@ -233,7 +233,7 @@ exports[`should open dropdown on input click 1`] = `
         />
       </li>
       <li
-        className="multi-select__separator  mko_1crd6xj-separator"
+        className="multi-select__separator  mko_1xijne-separator"
         key="SEPARATOR"
       />
       <li
@@ -287,10 +287,10 @@ exports[`should open dropdown on input click 1`] = `
 
 exports[`should render correct number of options 1`] = `
 <div
-  className="multi-select  mko_1crd6xj-multiSelect"
+  className="multi-select  mko_1xijne-multiSelect"
 >
   <div
-    className="multi-select__display has-float-label select-container  mko_1crd6xj-multiSelect__display  mko_3o96yq-controlContainer"
+    className="multi-select__display has-float-label select-container  mko_1xijne-multiSelect__display  mko_1aosyyv-controlContainer"
   >
     <input
       autoComplete="off"
@@ -311,10 +311,10 @@ exports[`should render correct number of options 1`] = `
     </label>
   </div>
   <div
-    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1crd6xj-multiSelect__dropdown  mko_1crd6xj-multiSelect__dropdown_open"
+    className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1xijne-multiSelect__dropdown  mko_1xijne-multiSelect__dropdown_open"
   >
     <ul
-      className="multi-select__list  mko_1crd6xj-multiSelect__list"
+      className="multi-select__list  mko_1xijne-multiSelect__list"
     >
       <li
         key="ALL"
@@ -328,7 +328,7 @@ exports[`should render correct number of options 1`] = `
         />
       </li>
       <li
-        className="multi-select__separator  mko_1crd6xj-separator"
+        className="multi-select__separator  mko_1xijne-separator"
         key="SEPARATOR"
       />
       <li
@@ -382,10 +382,10 @@ exports[`should render correct number of options 1`] = `
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="multi-select  mko_1crd6xj-multiSelect"
+  className="multi-select  mko_1xijne-multiSelect"
 >
   <div
-    className="multi-select__display has-float-label select-container  mko_1crd6xj-multiSelect__display  mko_3o96yq-controlContainer"
+    className="multi-select__display has-float-label select-container  mko_1xijne-multiSelect__display  mko_1aosyyv-controlContainer"
   >
     <input
       autoComplete="off"
@@ -406,10 +406,10 @@ exports[`should render with minimum props 1`] = `
     </label>
   </div>
   <div
-    className="multi-select__dropdown-container  mko_1crd6xj-multiSelect__dropdown"
+    className="multi-select__dropdown-container  mko_1xijne-multiSelect__dropdown"
   >
     <ul
-      className="multi-select__list  mko_1crd6xj-multiSelect__list"
+      className="multi-select__list  mko_1xijne-multiSelect__list"
     >
       <li
         key="ALL"
@@ -423,7 +423,7 @@ exports[`should render with minimum props 1`] = `
         />
       </li>
       <li
-        className="multi-select__separator  mko_1crd6xj-separator"
+        className="multi-select__separator  mko_1xijne-separator"
         key="SEPARATOR"
       />
       <li
