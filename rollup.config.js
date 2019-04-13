@@ -13,21 +13,6 @@ import pkg from './package.json';
 dotenv.config();
 
 const isProduction = process.env.NODE_ENV === 'production';
-const input = 'lib/index.js';
-const externals = [
-  'ayaka',
-  'classnames',
-  'nano-css',
-  'prop-types',
-  'react',
-  'react-dom'
-];
-const globals = {
-  classnames: 'classNames',
-  'prop-types': 'PropTypes',
-  react: 'React',
-  'react-dom': 'ReactDOM'
-};
 const extensions = ['.js', '.scss'];
 
 function rollupPlugins() {
@@ -73,14 +58,20 @@ function rollupPlugins() {
 
 export default [
   {
-    input,
+    input: 'lib/index.js',
     output: {
       file: pkg.main,
       format: 'cjs',
-      globals,
       sourceMap: isProduction
     },
-    external: externals,
+    external: [
+      'ayaka',
+      'classnames',
+      'nano-css',
+      'prop-types',
+      'react',
+      'react-dom'
+    ],
     plugins: rollupPlugins()
   }
 ];

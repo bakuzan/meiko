@@ -28,13 +28,13 @@ exports[`should be clearable when type equals "text" 1`] = `
   value=""
 >
   <div
-    className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
+    className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
   >
     <div
-      className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
+      className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
     >
       <ForwardRef(Input)
-        className="clearable-input__input  mko_1wcuo11-clearableInput__input"
+        className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
         id="jest"
         onChange={
           [MockFunction] {
@@ -61,7 +61,7 @@ exports[`should be clearable when type equals "text" 1`] = `
       >
         <input
           autoComplete="off"
-          className="input clearable-input__input  mko_1wcuo11-clearableInput__input"
+          className="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
           id="jest"
           onChange={
             [MockFunction] {
@@ -99,13 +99,13 @@ exports[`should be clearable when type equals "text" 1`] = `
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
+  className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
 >
   <div
-    className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
+    className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
   >
     <ForwardRef(Input)
-      className="clearable-input__input  mko_1wcuo11-clearableInput__input"
+      className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
       id="jest"
       onChange={[MockFunction]}
       value=""

@@ -109,6 +109,15 @@
           );
         }
       }
+      .button--accent {
+        background-color: $active-background;
+        color: $active-colour;
+
+        &:focus,
+        &:hover {
+          @include lightenOrDarken('background-color', $active-background, 10%);
+        }
+      }
 
       // Tabs
       .tabs__panels {

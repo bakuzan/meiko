@@ -60,13 +60,13 @@ exports[`should call onChange when filter updated 1`] = `
       value=""
     >
       <div
-        className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
+        className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
       >
         <div
-          className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
+          className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
         >
           <ForwardRef(Input)
-            className="clearable-input__input  mko_1wcuo11-clearableInput__input"
+            className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
             id="jest"
             name="text"
             onBlur={[Function]}
@@ -77,7 +77,7 @@ exports[`should call onChange when filter updated 1`] = `
           >
             <input
               autoComplete="off"
-              className="input clearable-input__input  mko_1wcuo11-clearableInput__input"
+              className="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
               id="jest"
               name="text"
               onBlur={[Function]}
@@ -155,13 +155,13 @@ exports[`should call onSelect when suggestion is click 1`] = `
       value="at"
     >
       <div
-        className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
+        className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
       >
         <div
-          className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
+          className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
         >
           <ForwardRef(Input)
-            className="clearable-input__input  mko_1wcuo11-clearableInput__input"
+            className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
             id="jest"
             name="text"
             onBlur={[Function]}
@@ -172,7 +172,7 @@ exports[`should call onSelect when suggestion is click 1`] = `
           >
             <input
               autoComplete="off"
-              className="input clearable-input__input  mko_1wcuo11-clearableInput__input"
+              className="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
               id="jest"
               name="text"
               onBlur={[Function]}
@@ -190,14 +190,14 @@ exports[`should call onSelect when suggestion is click 1`] = `
           <Button
             aria-label="Clear input"
             btnSize="small"
-            className="clearable-input__clear  mko_1wcuo11-clearableInput__clear"
+            className="clearable-input__clear  mko_18z22vm-clearableInput__clear"
             icon="❌︎"
             onClick={[Function]}
             type="button"
           >
             <button
               aria-label="Clear input"
-              className="button ripple button--icon button--small  mko_xh0n1r-button  mko_xh0n1r-button_icon clearable-input__clear  mko_1wcuo11-clearableInput__clear"
+              className="button ripple button--icon button--small  mko_xh0n1r-button  mko_xh0n1r-button_icon clearable-input__clear  mko_18z22vm-clearableInput__clear"
               icon="❌︎"
               onClick={[Function]}
               type="button"

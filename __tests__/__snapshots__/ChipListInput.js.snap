@@ -101,13 +101,13 @@ exports[`should call updateChipList when suggestion is clicked 1`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
+            className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
           >
             <div
-              className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
+              className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
             >
               <ForwardRef(Input)
-                className="clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
+                className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable chip-list-input__clearable-input  mko_vagvjv-clearButton"
                 id="jest"
                 name="text"
                 onBlur={[Function]}
@@ -118,7 +118,7 @@ exports[`should call updateChipList when suggestion is clicked 1`] = `
               >
                 <input
                   autoComplete="off"
-                  className="input clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
+                  className="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable chip-list-input__clearable-input  mko_vagvjv-clearButton"
                   id="jest"
                   name="text"
                   onBlur={[Function]}
@@ -279,13 +279,13 @@ exports[`should ready removal of selected chip 1`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
+            className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
           >
             <div
-              className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
+              className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
             >
               <ForwardRef(Input)
-                className="clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
+                className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable chip-list-input__clearable-input  mko_vagvjv-clearButton"
                 id="jest"
                 name="text"
                 onBlur={[Function]}
@@ -296,7 +296,7 @@ exports[`should ready removal of selected chip 1`] = `
               >
                 <input
                   autoComplete="off"
-                  className="input clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
+                  className="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable chip-list-input__clearable-input  mko_vagvjv-clearButton"
                   id="jest"
                   name="text"
                   onBlur={[Function]}
@@ -457,13 +457,13 @@ exports[`should render selected chips and remove 1`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
+            className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
           >
             <div
-              className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
+              className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
             >
               <ForwardRef(Input)
-                className="clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
+                className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable chip-list-input__clearable-input  mko_vagvjv-clearButton"
                 id="jest"
                 name="text"
                 onBlur={[Function]}
@@ -474,7 +474,7 @@ exports[`should render selected chips and remove 1`] = `
               >
                 <input
                   autoComplete="off"
-                  className="input clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
+                  className="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable chip-list-input__clearable-input  mko_vagvjv-clearButton"
                   id="jest"
                   name="text"
                   onBlur={[Function]}
@@ -650,13 +650,13 @@ exports[`should render selected chips and remove 2`] = `
           value=""
         >
           <div
-            className="clearable-input has-float-label  mko_1wcuo11-clearableInput  mko_1aosyyv-controlContainer"
+            className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
           >
             <div
-              className="clearable-input__inner  mko_1wcuo11-clearableInput__inner"
+              className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
             >
               <ForwardRef(Input)
-                className="clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
+                className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable chip-list-input__clearable-input  mko_vagvjv-clearButton"
                 id="jest"
                 name="text"
                 onBlur={[Function]}
@@ -667,7 +667,7 @@ exports[`should render selected chips and remove 2`] = `
               >
                 <input
                   autoComplete="off"
-                  className="input clearable-input__input  mko_1wcuo11-clearableInput__input chip-list-input__clearable-input  mko_vagvjv-clearButton"
+                  className="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable chip-list-input__clearable-input  mko_vagvjv-clearButton"
                   id="jest"
                   name="text"
                   onBlur={[Function]}
