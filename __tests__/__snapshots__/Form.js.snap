@@ -35,11 +35,11 @@ exports[`should call onCancel 1`] = `
   }
 >
   <div
-    className="mko-form"
+    className="mko-form  mko_u3fnxm-mkoForm"
   >
     <form
       autoComplete="off"
-      className="mko-form__form  mko_dhl6m7-form"
+      className="mko-form__form  mko_u3fnxm-form"
       name="jest"
       noValidate={true}
       onSubmit={[Function]}
@@ -105,11 +105,11 @@ exports[`should call onSubmit 1`] = `
   }
 >
   <div
-    className="mko-form"
+    className="mko-form  mko_u3fnxm-mkoForm"
   >
     <form
       autoComplete="off"
-      className="mko-form__form  mko_dhl6m7-form"
+      className="mko-form__form  mko_u3fnxm-form"
       name="jest"
       noValidate={true}
       onSubmit={[Function]}
@@ -166,11 +166,11 @@ exports[`should display custom submit button text 1`] = `
   }
 >
   <div
-    className="mko-form"
+    className="mko-form  mko_u3fnxm-mkoForm"
   >
     <form
       autoComplete="off"
-      className="mko-form__form  mko_dhl6m7-form"
+      className="mko-form__form  mko_u3fnxm-form"
       name="jest"
       noValidate={true}
       onSubmit={[Function]}
@@ -213,11 +213,11 @@ exports[`should display custom submit button text 1`] = `
 
 exports[`should render children 1`] = `
 <div
-  className="mko-form"
+  className="mko-form  mko_u3fnxm-mkoForm"
 >
   <form
     autoComplete="off"
-    className="mko-form__form  mko_dhl6m7-form"
+    className="mko-form__form  mko_u3fnxm-form"
     name="jest"
     noValidate={true}
     onSubmit={[Function]}
@@ -250,16 +250,16 @@ exports[`should render children 1`] = `
 
 exports[`should render title if truthy 1`] = `
 <div
-  className="mko-form"
+  className="mko-form  mko_u3fnxm-mkoForm"
 >
-  <h4
-    className="mko-form__title"
+  <h2
+    className="mko-form__title  mko_u3fnxm-title"
   >
     jester
-  </h4>
+  </h2>
   <form
     autoComplete="off"
-    className="mko-form__form  mko_dhl6m7-form"
+    className="mko-form__form  mko_u3fnxm-form"
     name="jest"
     noValidate={true}
     onSubmit={[Function]}
@@ -290,11 +290,11 @@ exports[`should render title if truthy 1`] = `
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="mko-form"
+  className="mko-form  mko_u3fnxm-mkoForm"
 >
   <form
     autoComplete="off"
-    className="mko-form__form  mko_dhl6m7-form"
+    className="mko-form__form  mko_u3fnxm-form"
     name="jest"
     noValidate={true}
     onSubmit={[Function]}
