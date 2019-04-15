@@ -7,7 +7,7 @@ const mockedCloseFn = jest.fn();
 
 it('should render with minimum props', function() {
   const component = shallow(
-    <Dialog name="jest" isOpen={false} onClose={mockedCloseFn}>
+    <Dialog name="jest" isOpen={false} onCancel={mockedCloseFn}>
       <div>jest</div>
     </Dialog>
   );
@@ -18,7 +18,7 @@ it('should render with minimum props', function() {
 
 it('should open when passed new prop', function() {
   const component = shallow(
-    <Dialog name="jest" isOpen={false} onClose={mockedCloseFn}>
+    <Dialog name="jest" isOpen={false} onCancel={mockedCloseFn}>
       <div>jest</div>
     </Dialog>
   );
@@ -31,9 +31,9 @@ it('should open when passed new prop', function() {
   expect(component).toMatchSnapshot();
 });
 
-it('should call onClose when cancel button clicked', function() {
+it('should call onCancel when cancel button clicked', function() {
   const component = shallow(
-    <Dialog name="jest" isOpen={true} onClose={mockedCloseFn}>
+    <Dialog name="jest" isOpen={true} onCancel={mockedCloseFn}>
       <div>jest</div>
     </Dialog>
   );
@@ -50,7 +50,7 @@ it('should render action button and call onAction when clicked', function() {
       name="jest"
       isOpen={true}
       onAction={mockedActionFn}
-      onClose={mockedCloseFn}
+      onCancel={mockedCloseFn}
     >
       <div>jest</div>
     </Dialog>
@@ -71,7 +71,7 @@ it('should only render title when passed', function() {
       name="jest"
       isOpen={true}
       onAction={mockedActionFn}
-      onClose={mockedCloseFn}
+      onCancel={mockedCloseFn}
     >
       <div>jest</div>
     </Dialog>
@@ -93,7 +93,7 @@ it('should replace form element with div', function() {
       name="jest"
       isOpen={true}
       onAction={mockedActionFn}
-      onClose={mockedCloseFn}
+      onCancel={mockedCloseFn}
     >
       <div>jest</div>
     </Dialog>

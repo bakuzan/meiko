@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should call onClose when cancel button clicked 1`] = `
+exports[`should call onCancel when cancel button clicked 1`] = `
 <dialog
   className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
   open={true}
@@ -280,7 +280,7 @@ exports[`should replace form element with div 1`] = `
       ],
     }
   }
-  onClose={
+  onCancel={
     [MockFunction] {
       "calls": Array [
         Array [],
