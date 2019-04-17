@@ -6,7 +6,8 @@ import {
   checkDatesAgainstRange,
   checkIfSelectedForView,
   getDaysForDate,
-  dateIsOutOfRange
+  dateIsOutOfRange,
+  addDateSuffix
 } from '../../lib/utils/calendar';
 
 jest.mock('../../lib/utils', () => ({
@@ -239,5 +240,31 @@ describe('dateIsOutOfRange', () => {
     expect(getLastDateOfMonth).toHaveBeenCalled();
     expect(isBefore).toHaveBeenCalled();
     expect(isBeforeOrEqual).toHaveBeenCalled();
+  });
+});
+
+describe('addDateSuffix', () => {
+  it('should return month and year', () => {
+    const expected = 'Jan 2019';
+
+    const result = addDateSuffix(false, new Date('2019-04-17'), 'Jan');
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should return date with suffix, month, and year', () => {
+    const expected = [
+      '1st undefined 2019',
+      '2nd undefined 2019',
+      '3rd undefined 2019',
+      '4th undefined 2019'
+    ];
+
+    const results = Array(4)
+      .fill(null)
+      .map((_, i) => addDateSuffix(true, new Date('2019-04-17'), i + 1));
+
+    results.forEach((result, i) => expect(result).toEqual(expected[i]));
+    expect(getMonthName).toHaveBeenCalledTimes(4);
   });
 });
