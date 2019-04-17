@@ -22,7 +22,8 @@
       .select-box,
       .clearable-input__input,
       .multi-select__input,
-      .dropdown-menu__menu {
+      .dropdown-menu__menu,
+      .dialog {
         color: $base-colour;
       }
 
@@ -33,7 +34,9 @@
       .select-box,
       .multi-select__input,
       .alert__content,
-      .dropdown-menu__menu {
+      .dropdown-menu__menu,
+      .autocomplete__menu,
+      .dialog {
         background-color: $base-background;
       }
       .dropdown-menu__arrow {
