@@ -73,9 +73,6 @@
       .logo__word {
         fill: $primary-colour;
       }
-      .request-indicator__loader {
-        background-color: $primary-background;
-      }
       .radio__input:checked::after {
         color: $primary-background;
       }
@@ -169,6 +166,11 @@
           background-color: $base-background;
           color: $base-colour;
         }
+      }
+
+      // Request Indicator
+      .request-indicator__loader {
+        background-color: $active-background;
       }
 
       // Radio Toggle

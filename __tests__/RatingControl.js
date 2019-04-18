@@ -12,7 +12,7 @@ it('should render with minimum props', function() {
 });
 
 it('should call onChange', function() {
-  const clickEvent = { target: { value: '5', type: 'radio' } };
+  const clickEvent = { type: 'click', target: { value: '5', type: 'radio' } };
   const component = shallow(
     <RatingControl id="jest" value={0} onChange={mockedChangeFn} />
   );
@@ -20,14 +20,14 @@ it('should call onChange', function() {
   component
     .find('.rating-control__input')
     .at(4)
-    .simulate('click', clickEvent);
+    .prop('onClick')(clickEvent);
 
   expect(mockedChangeFn).toHaveBeenCalled();
   expect(component).toMatchSnapshot();
 });
 
 it('should return value of 0 if active value is selected', function() {
-  const clickEvent = { target: { value: '5', type: 'radio' } };
+  const clickEvent = { type: 'click', target: { value: '5', type: 'radio' } };
   const component = shallow(
     <RatingControl id="jest" value={5} onChange={mockedChangeFn} />
   );
@@ -35,7 +35,7 @@ it('should return value of 0 if active value is selected', function() {
   component
     .find('.rating-control__input')
     .at(4)
-    .simulate('click', clickEvent);
+    .prop('onClick')(clickEvent);
 
   expect(mockedChangeFn).toHaveBeenCalledWith({
     target: {
