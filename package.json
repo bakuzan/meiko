@@ -1,6 +1,6 @@
 {
   "name": "meiko",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "private": true,
   "description": "Component Library",
   "main": "dist/index.min.js",
