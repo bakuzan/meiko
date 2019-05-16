@@ -83,7 +83,7 @@ exports[`should call remove on close button click 1`] = `
                 type="button"
               >
                 <button
-                  className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard alert__expand"
+                  className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard alert__expand"
                   onClick={[Function]}
                   type="button"
                 >
@@ -99,7 +99,7 @@ exports[`should call remove on close button click 1`] = `
               >
                 <button
                   aria-label="Close Alert"
-                  className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon alert__close  mko_13trn4w-close"
+                  className="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon alert__close  mko_13trn4w-close"
                   icon="❌︎"
                   onClick={[Function]}
                   type="button"
@@ -176,7 +176,7 @@ exports[`should expand alert on click 1`] = `
                 type="button"
               >
                 <button
-                  className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard alert__expand"
+                  className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard alert__expand"
                   onClick={[Function]}
                   type="button"
                 >
@@ -192,7 +192,7 @@ exports[`should expand alert on click 1`] = `
               >
                 <button
                   aria-label="Close Alert"
-                  className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon alert__close  mko_13trn4w-close"
+                  className="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon alert__close  mko_13trn4w-close"
                   icon="❌︎"
                   onClick={[Function]}
                   type="button"
@@ -272,7 +272,7 @@ exports[`should expand alert on click 2`] = `
               >
                 <button
                   aria-label="Close Alert"
-                  className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon alert__close  mko_13trn4w-close"
+                  className="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon alert__close  mko_13trn4w-close"
                   icon="❌︎"
                   onClick={[Function]}
                   type="button"

@@ -18,7 +18,7 @@ exports[`should display menu on toggler click 1`] = `
     >
       <button
         aria-label="Open dropdown menu"
-        className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon dropdown-menu__toggler  mko_dmkujd-toggler"
+        className="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon dropdown-menu__toggler  mko_dmkujd-toggler"
         icon="⚙"
         id={null}
         onClick={[Function]}

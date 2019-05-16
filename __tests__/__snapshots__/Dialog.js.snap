@@ -329,7 +329,7 @@ exports[`should replace form element with div 1`] = `
               type="button"
             >
               <button
-                className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard dialog__action"
+                className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__action"
                 onClick={[Function]}
                 type="button"
               >
@@ -354,7 +354,7 @@ exports[`should replace form element with div 1`] = `
               type="button"
             >
               <button
-                className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard dialog__cancel"
+                className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__cancel"
                 onClick={
                   [MockFunction] {
                     "calls": Array [

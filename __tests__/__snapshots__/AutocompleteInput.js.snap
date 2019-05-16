@@ -197,7 +197,7 @@ exports[`should call onSelect when suggestion is click 1`] = `
           >
             <button
               aria-label="Clear input"
-              className="button ripple button--icon button--small  mko_xh0n1r-button  mko_xh0n1r-button_icon clearable-input__clear  mko_18z22vm-clearableInput__clear"
+              className="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small clearable-input__clear  mko_18z22vm-clearableInput__clear"
               icon="❌︎"
               onClick={[Function]}
               type="button"
@@ -233,7 +233,7 @@ exports[`should call onSelect when suggestion is click 1`] = `
             type="button"
           >
             <button
-              className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard autocomplete-suggestion__button"
+              className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard autocomplete-suggestion__button"
               onClick={[Function]}
               title="Bat"
               type="button"
@@ -276,7 +276,7 @@ exports[`should call onSelect when suggestion is click 1`] = `
             type="button"
           >
             <button
-              className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard autocomplete-suggestion__button"
+              className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard autocomplete-suggestion__button"
               onClick={[Function]}
               title="Cat"
               type="button"

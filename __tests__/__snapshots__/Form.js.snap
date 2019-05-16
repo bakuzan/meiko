@@ -55,7 +55,7 @@ exports[`should call onCancel 1`] = `
           type="submit"
         >
           <button
-            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__submit"
+            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
             type="submit"
           >
             Save
@@ -67,7 +67,7 @@ exports[`should call onCancel 1`] = `
           type="button"
         >
           <button
-            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__cancel"
+            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
             onClick={[Function]}
             type="button"
           >
@@ -125,7 +125,7 @@ exports[`should call onSubmit 1`] = `
           type="submit"
         >
           <button
-            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__submit"
+            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
             type="submit"
           >
             Save
@@ -137,7 +137,7 @@ exports[`should call onSubmit 1`] = `
           type="button"
         >
           <button
-            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__cancel"
+            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
             onClick={[Function]}
             type="button"
           >
@@ -186,7 +186,7 @@ exports[`should display custom submit button text 1`] = `
           type="submit"
         >
           <button
-            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__submit"
+            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
             type="submit"
           >
             Save - Jest
@@ -198,7 +198,7 @@ exports[`should display custom submit button text 1`] = `
           type="button"
         >
           <button
-            className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard mko-form__cancel"
+            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
             onClick={[Function]}
             type="button"
           >

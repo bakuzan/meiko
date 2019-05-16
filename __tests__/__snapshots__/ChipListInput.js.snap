@@ -216,7 +216,7 @@ exports[`should ready removal of selected chip 1`] = `
             >
               <button
                 aria-label="Remove tag"
-                className="button ripple button--icon button--small  mko_xh0n1r-button  mko_xh0n1r-button_icon tag-chip__delete  mko_xm6hi0-tagChip__delete"
+                className="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small tag-chip__delete  mko_xm6hi0-tagChip__delete"
                 icon="❌︎"
                 onClick={[Function]}
                 title="remove"
@@ -394,7 +394,7 @@ exports[`should render selected chips and remove 1`] = `
             >
               <button
                 aria-label="Remove tag"
-                className="button ripple button--icon button--small  mko_xh0n1r-button  mko_xh0n1r-button_icon tag-chip__delete  mko_xm6hi0-tagChip__delete"
+                className="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small tag-chip__delete  mko_xm6hi0-tagChip__delete"
                 icon="❌︎"
                 onClick={[Function]}
                 title="remove"
@@ -587,7 +587,7 @@ exports[`should render selected chips and remove 2`] = `
             >
               <button
                 aria-label="Remove tag"
-                className="button ripple button--icon button--small  mko_xh0n1r-button  mko_xh0n1r-button_icon tag-chip__delete  mko_xm6hi0-tagChip__delete"
+                className="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small tag-chip__delete  mko_xm6hi0-tagChip__delete"
                 icon="❌︎"
                 onClick={[Function]}
                 title="remove"

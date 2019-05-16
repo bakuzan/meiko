@@ -2,7 +2,7 @@
 
 exports[`should render apply icon class 1`] = `
 <button
-  className="button ripple button--icon  mko_xh0n1r-button  mko_xh0n1r-button_icon"
+  className="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon"
   icon="T"
   type="button"
 />
@@ -10,28 +10,28 @@ exports[`should render apply icon class 1`] = `
 
 exports[`should render apply link class 1`] = `
 <button
-  className="button ripple button--link  mko_xh0n1r-button  mko_xh0n1r-button_link"
+  className="button ripple button--link  mko_c5ujei-button  mko_c5ujei-button_link"
   type="button"
 />
 `;
 
 exports[`should render apply size class 1`] = `
 <button
-  className="button ripple button--standard button--small  mko_xh0n1r-button  mko_xh0n1r-button_standard"
+  className="button ripple button--standard button--small  mko_c5ujei-button  mko_c5ujei-button_standard  mko_c5ujei-button_small"
   type="button"
 />
 `;
 
 exports[`should render apply style class 1`] = `
 <button
-  className="button ripple button--standard button--primary  mko_xh0n1r-button  mko_xh0n1r-button_standard"
+  className="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard"
   type="button"
 />
 `;
 
 exports[`should render when no props 1`] = `
 <button
-  className="button ripple button--standard  mko_xh0n1r-button  mko_xh0n1r-button_standard"
+  className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard"
   type="button"
 />
 `;
