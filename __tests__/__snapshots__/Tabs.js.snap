@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should change active tab 1`] = `
-<TabContainer>
+<TabContainer
+  activeTab={null}
+  defaultTab={null}
+>
   <div
     className="tabs  mko_184elue-container"
   >
@@ -85,7 +88,10 @@ exports[`should change active tab 1`] = `
 `;
 
 exports[`should pass isActive if child is function 1`] = `
-<TabContainer>
+<TabContainer
+  activeTab={null}
+  defaultTab={null}
+>
   <div
     className="tabs  mko_184elue-container"
   >

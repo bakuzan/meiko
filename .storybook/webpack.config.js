@@ -7,6 +7,7 @@ module.exports = ({ config }) => {
   config.resolve = {
     ...config.resolve,
     alias: {
+      ...config.resolve.alias,
       'mko-book': path.resolve(__dirname, './withMko')
     }
   };
