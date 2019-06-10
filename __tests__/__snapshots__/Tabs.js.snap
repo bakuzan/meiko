@@ -6,14 +6,14 @@ exports[`should change active tab 1`] = `
   defaultTab={null}
 >
   <div
-    className="tabs  mko_184elue-container"
+    className="tabs  mko_i63we-container"
   >
     <ul
-      className="tabs__controls  mko_184elue-controls"
+      className="tabs__controls  mko_i63we-controls"
       role="tablist"
     >
       <li
-        className="tab-control  mko_184elue-tabControl"
+        className="tab-control  mko_i63we-tabControl"
         key="one"
         role="tab"
       >
@@ -32,7 +32,7 @@ exports[`should change active tab 1`] = `
         </Button>
       </li>
       <li
-        className="tab-control tab-control--active  mko_184elue-tabControl  mko_184elue-tabControl_active"
+        className="tab-control tab-control--active  mko_i63we-tabControl  mko_i63we-tabControl_active"
         key="two"
         role="tab"
       >
@@ -52,7 +52,7 @@ exports[`should change active tab 1`] = `
       </li>
     </ul>
     <div
-      className="tabs__panels  mko_184elue-panels"
+      className="tabs__panels  mko_i63we-panels"
     >
       <TabView
         isActive={false}
@@ -60,7 +60,7 @@ exports[`should change active tab 1`] = `
         name="one"
       >
         <div
-          className="tab-view  mko_184elue-view"
+          className="tab-view  mko_i63we-view"
           role="tabpanel"
         >
           <div>
@@ -74,7 +74,7 @@ exports[`should change active tab 1`] = `
         name="two"
       >
         <div
-          className="tab-view tab-view--active  mko_184elue-view  mko_184elue-view_active"
+          className="tab-view tab-view--active  mko_i63we-view  mko_i63we-view_active"
           role="tabpanel"
         >
           <div>
@@ -93,14 +93,14 @@ exports[`should pass isActive if child is function 1`] = `
   defaultTab={null}
 >
   <div
-    className="tabs  mko_184elue-container"
+    className="tabs  mko_i63we-container"
   >
     <ul
-      className="tabs__controls  mko_184elue-controls"
+      className="tabs__controls  mko_i63we-controls"
       role="tablist"
     >
       <li
-        className="tab-control  mko_184elue-tabControl"
+        className="tab-control  mko_i63we-tabControl"
         key="one"
         role="tab"
       >
@@ -119,7 +119,7 @@ exports[`should pass isActive if child is function 1`] = `
         </Button>
       </li>
       <li
-        className="tab-control tab-control--active  mko_184elue-tabControl  mko_184elue-tabControl_active"
+        className="tab-control tab-control--active  mko_i63we-tabControl  mko_i63we-tabControl_active"
         key="two"
         role="tab"
       >
@@ -139,7 +139,7 @@ exports[`should pass isActive if child is function 1`] = `
       </li>
     </ul>
     <div
-      className="tabs__panels  mko_184elue-panels"
+      className="tabs__panels  mko_i63we-panels"
     >
       <TabView
         isActive={false}
@@ -147,7 +147,7 @@ exports[`should pass isActive if child is function 1`] = `
         name="one"
       >
         <div
-          className="tab-view  mko_184elue-view"
+          className="tab-view  mko_i63we-view"
           role="tabpanel"
         />
       </TabView>
@@ -157,7 +157,7 @@ exports[`should pass isActive if child is function 1`] = `
         name="two"
       >
         <div
-          className="tab-view tab-view--active  mko_184elue-view  mko_184elue-view_active"
+          className="tab-view tab-view--active  mko_i63we-view  mko_i63we-view_active"
           role="tabpanel"
         >
           <div>
@@ -172,14 +172,14 @@ exports[`should pass isActive if child is function 1`] = `
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="tabs  mko_184elue-container"
+  className="tabs  mko_i63we-container"
 >
   <ul
-    className="tabs__controls  mko_184elue-controls"
+    className="tabs__controls  mko_i63we-controls"
     role="tablist"
   >
     <li
-      className="tab-control  mko_184elue-tabControl"
+      className="tab-control  mko_i63we-tabControl"
       key="one"
       role="tab"
     >
@@ -192,7 +192,7 @@ exports[`should render with minimum props 1`] = `
       </Button>
     </li>
     <li
-      className="tab-control  mko_184elue-tabControl"
+      className="tab-control  mko_i63we-tabControl"
       key="two"
       role="tab"
     >
@@ -206,7 +206,7 @@ exports[`should render with minimum props 1`] = `
     </li>
   </ul>
   <div
-    className="tabs__panels  mko_184elue-panels"
+    className="tabs__panels  mko_i63we-panels"
   >
     <TabView
       isActive={false}
