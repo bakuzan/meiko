@@ -4,6 +4,6 @@ exports[`should render with minimum props 1`] = `
 <img
   alt="jest"
   onError={[Function]}
-  src={null}
+  src="fakeimage"
 />
 `;

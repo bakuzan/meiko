@@ -1,46 +1,43 @@
-const { green, cyan, magenta, red, blue } = require('chalk');
-
-const path = require('path');
+const fs = require('fs');
 const fse = require('fs-extra');
+const path = require('path');
+const util = require('util');
 const execa = require('execa');
+const chalk = require('chalk');
 
-const stdio = ['pipe', 'pipe', 'inherit'];
+const copyFileAsync = util.promisify(fs.copyFile);
 
-const outputRoot = path.join(__dirname, '../build/');
-const libRoot = path.join(__dirname, '../lib/');
+const projectRoot = path.resolve(__dirname, '../');
+const buildFolder = path.resolve(__dirname, '../build');
 
-const clean = async (dir) => fse.existsSync(dir) && fse.remove(dir);
+async function copyRootFile(fileName) {
+  await copyFileAsync(
+    path.resolve(projectRoot, fileName),
+    path.resolve(buildFolder, fileName)
+  );
 
-async function build(folderName) {
-  const src = path.join(libRoot, folderName);
-  console.log(blue(`Processing: ${src}`));
-  return execa.shell(
-    `npx babel ${src} --out-dir ${outputRoot} --extensions=.js --presets @babel/preset-env --copy-files --env-name "lib"`,
+  console.log(chalk.magenta(`Copied ${fileName} to ${buildFolder}`));
+}
+
+async function babelJS() {
+  await execa.shell(
+    `npx babel ${src} --out-dir ${buildFolder} --extensions=.js --presets @babel/preset-env --copy-files --env-name "lib"`,
     {
-      stdio
+      stdio: ['pipe', 'pipe', 'inherit']
     }
   );
+
+  console.log(chalk.green(`Files in ${buildFolder} transpiled successfully.`));
 }
 
-async function step(name, folder) {
-  console.log(cyan('Building: ') + green(name));
-  await build(folder);
-  console.log(magenta('Built: ') + green(name));
+function run() {
+  if (fse.existsSync(dir)) {
+    fse.remove(dir);
+  }
+
+  babelJS();
+  copyRootFile('package.json');
+  copyRootFile('README.md');
 }
 
-async function buildLib() {
-  await clean(outputRoot);
-  await step('components', '');
-}
-
-console.log(blue('Building library\n'));
-
-buildLib()
-  .then(() => console.log(green('Built library\n')))
-  .catch((err) => {
-    if (err) {
-      console.error(red(err.stack || err.toString()));
-    }
-
-    process.exit(1);
-  });
+run();

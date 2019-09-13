@@ -2,12 +2,13 @@ const path = require('path');
 
 module.exports = ({ config }) => {
   const includePath = path.resolve(__dirname, '../lib');
-  const includeFontPath = path.resolve(__dirname, '../lig/stories/styles');
+  const includeFontPath = path.resolve(__dirname, '../stories/styles');
 
   config.resolve = {
     ...config.resolve,
     alias: {
       ...config.resolve.alias,
+      '@': path.resolve(__dirname, '..', './lib'),
       'mko-book': path.resolve(__dirname, './withMko')
     }
   };
@@ -45,7 +46,7 @@ module.exports = ({ config }) => {
       },
       {
         test: /\.ttf$|\.woff$|\.woff2$/,
-        loader: 'file-loader',
+        loader: 'file-loader?limit=10000&mimetype=application/font-woff',
         include: includeFontPath
       }
     ]

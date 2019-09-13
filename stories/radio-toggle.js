@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { MkoContext } from 'mko-book';
 
 import RadioToggle from 'RadioToggle';
-import Icons from '../constants/icons';
+import Icons from '@/constants/icons';
 
 function RadioToggleStory(props) {
   const [state, setState] = useContext(MkoContext);

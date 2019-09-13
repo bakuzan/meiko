@@ -55,7 +55,7 @@ it('should toggle url display', function() {
 
 it('should call on change for file selection', async function() {
   setup();
-  const file = new File([''], 'jest.txt');
+  const file = new File(['qwerty'], 'jest.txt');
 
   const component = shallow(<ImageSelector onChange={mockedChangeFn} />);
 
@@ -93,7 +93,7 @@ it('should call on error for failed upload', async function() {
 
   await act(async () => {
     component.find('ClearableInput').prop('onChange')({
-      target: { value: 'aurlhere' }
+      target: { value: '' }
     });
     component.find('.image-selector__upload-url').prop('onClick')();
   });
