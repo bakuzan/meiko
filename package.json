@@ -1,7 +1,11 @@
 {
   "name": "bkz-meiko",
-  "version": "4.3.1",
+  "version": "1.0.0",
   "description": "Bakuzan's Component Library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bakuzan/meiko.git"
+  },
   "main": "index.js",
   "files": [
     "*",
@@ -38,12 +42,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run precommit-msg && npm run pretty && npm run test"
+      "pre-commit": "npm run pretty && npm run test"
     }
   },
   "scripts": {
     "pretty": "lint-staged",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "test": "npx jest",
     "test:update": "npx jest -u",
     "test:watch": "npx jest -o --watch --maxWorkers=10",
@@ -54,7 +57,8 @@
     "storybook": "start-storybook -p 7200 -c .storybook -s public",
     "build-storybook": "build-storybook -c .storybook -o .out -s public",
     "deploy-storybook": "storybook-to-ghpages",
-    "release": "npm run build:modules && cd .\\build && npm publish && cd .."
+    "release:test": "npm run build:modules && cd .\\build && npm pack && cd ..",
+    "release:npm": "npm run build:modules && cd .\\build && npm publish && cd .."
   },
   "keywords": [
     "reactjs",

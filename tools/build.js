@@ -7,12 +7,13 @@ const chalk = require('chalk');
 
 const copyFileAsync = util.promisify(fs.copyFile);
 
-const projectRoot = path.resolve(__dirname, '../');
+const projectRoot = path.resolve(__dirname, '../lib');
 const buildFolder = path.resolve(__dirname, '../build');
 
 async function copyRootFile(fileName) {
+  const fromPath = path.resolve(__dirname, '../');
   await copyFileAsync(
-    path.resolve(projectRoot, fileName),
+    path.resolve(fromPath, fileName),
     path.resolve(buildFolder, fileName)
   );
 
@@ -21,7 +22,7 @@ async function copyRootFile(fileName) {
 
 async function babelJS() {
   await execa.shell(
-    `npx babel ${src} --out-dir ${buildFolder} --extensions=.js --presets @babel/preset-env --copy-files --env-name "lib"`,
+    `npx babel ${projectRoot} --out-dir ${buildFolder} --extensions=.js --presets @babel/preset-env --copy-files --env-name "lib"`,
     {
       stdio: ['pipe', 'pipe', 'inherit']
     }
@@ -30,14 +31,14 @@ async function babelJS() {
   console.log(chalk.green(`Files in ${buildFolder} transpiled successfully.`));
 }
 
-function run() {
-  if (fse.existsSync(dir)) {
-    fse.remove(dir);
+async function run() {
+  if (fse.existsSync(buildFolder)) {
+    await fse.remove(buildFolder);
   }
 
-  babelJS();
-  copyRootFile('package.json');
-  copyRootFile('README.md');
+  await babelJS();
+  await copyRootFile('package.json');
+  await copyRootFile('README.md');
 }
 
 run();
