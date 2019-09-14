@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import { MkoContext } from 'mko-book';
 
-import Tickbox from 'Tickbox';
+import Tickbox from '@/Tickbox';
 
 function TickboxStory() {
   const [state, setState] = useContext(MkoContext);

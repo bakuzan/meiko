@@ -5,7 +5,7 @@ import { MkoContext } from 'mko-book';
 
 import { storyStyle } from '.';
 
-import TagCloudSelector from 'TagCloudSelector';
+import TagCloudSelector from '@/TagCloudSelector';
 
 const OPTIONS = [
   { id: 1, name: 'react', count: 5 },

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import { action } from '@storybook/addon-actions';
 
-import Alert from 'Alert';
+import Alert from '@/Alert';
 
 const alerts = (type) => [
   {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import toaster from 'utils/toasterService';
-import Toaster from 'Toaster';
-import { Button } from 'Button';
+import toaster from '@/utils/toasterService';
+import Toaster from '@/Toaster';
+import { Button } from '@/Button';
 
 storiesOf('Toaster', module).add('toaster options', () => (
   <div>

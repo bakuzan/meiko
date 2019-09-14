@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { MkoContext } from 'mko-book';
 
-import RatingControl from 'RatingControl';
+import RatingControl from '@/RatingControl';
 
 function RatingStory() {
   const [state, setState] = useContext(MkoContext);

@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { storiesOf } from '@storybook/react';
 import { MkoContext } from 'mko-book';
 
-import ClearableInput from 'ClearableInput';
-import FC from 'FormControls';
+import ClearableInput from '@/ClearableInput';
+import FC from '@/FormControls';
 
 function ClearableInputStory({ as: customComponent, ...props }) {
   const [state, setState] = useContext(MkoContext);

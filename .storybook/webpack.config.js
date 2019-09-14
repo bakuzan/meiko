@@ -1,11 +1,15 @@
 const path = require('path');
 
 module.exports = ({ config }) => {
-  const includePath = path.resolve(__dirname, '../lib');
-  const includeFontPath = path.resolve(__dirname, '../stories/styles');
+  const includeLib = path.resolve(__dirname, '../lib');
+  const includeLibStyles = path.resolve(__dirname, '../lib/styles');
+  const includeStoryStyles = path.resolve(__dirname, '../stories/styles');
+
+  config.stats = 'verbose';
 
   config.resolve = {
     ...config.resolve,
+    extensions: [...config.resolve.extensions, '.scss'],
     alias: {
       ...config.resolve.alias,
       '@': path.resolve(__dirname, '..', './lib'),
@@ -18,13 +22,13 @@ module.exports = ({ config }) => {
       {
         enforce: 'pre',
         test: /\.js$/,
-        include: includePath,
+        include: includeLib,
         exclude: /stories/,
         loader: 'eslint-loader'
       },
       {
         test: /\.scss$/,
-        include: includePath,
+        include: [includeLibStyles, includeStoryStyles],
         use: [
           {
             loader: 'style-loader'
@@ -46,8 +50,8 @@ module.exports = ({ config }) => {
       },
       {
         test: /\.ttf$|\.woff$|\.woff2$/,
-        loader: 'file-loader?limit=10000&mimetype=application/font-woff',
-        include: includeFontPath
+        loader: 'file-loader',
+        include: includeStoryStyles
       }
     ]
   );

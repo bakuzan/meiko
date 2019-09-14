@@ -3,10 +3,10 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import { MkoContext } from 'mko-book';
 
-import DropdownMenu from 'DropdownMenu';
-import Tickbox from 'Tickbox';
-import { Button } from 'Button';
-import { PositionEnum } from 'constants/enums';
+import DropdownMenu from '@/DropdownMenu';
+import Tickbox from '@/Tickbox';
+import { Button } from '@/Button';
+import { PositionEnum } from '@/constants/enums';
 
 function DropdownItem({ children }) {
   return <li style={{ padding: '5px' }}>{children}</li>;

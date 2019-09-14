@@ -4,8 +4,8 @@ import { action } from '@storybook/addon-actions';
 
 import { withKnobs, select } from '@storybook/addon-knobs';
 
-import Icons from 'constants/icons';
-import { Button } from 'Button';
+import Icons from '@/constants/icons';
+import { Button } from '@/Button';
 
 const actions = {
   onClick: action('clicked')

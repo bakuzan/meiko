@@ -1,14 +1,24 @@
 import React from 'react';
 
 import { Image, Urls } from '../lib';
+import { act } from 'react-testing-library';
+
+let trggerIntersection = null;
+const observeMock = {
+  observe: jest.fn(),
+  disconnect: jest.fn()
+};
 
 beforeEach(() => {
-  const observeMock = {
-    observe: jest.fn(),
-    disconnect: jest.fn()
-  };
+  observeMock.observe.mockReset();
+  observeMock.disconnect.mockReset();
 
-  window.IntersectionObserver = () => observeMock;
+  global.IntersectionObserver = class {
+    constructor(fn) {
+      trggerIntersection = fn;
+      return observeMock;
+    }
+  };
 });
 
 it('should render with minimum props', function() {
@@ -18,25 +28,29 @@ it('should render with minimum props', function() {
   expect(component).toMatchSnapshot();
 });
 
-xit('should update src with dead image onError', function() {
+it('should update src with dead image onError', function() {
   const component = shallow(<Image src="fakeimage" alt="jest" />);
 
   expect(component.find('img').prop('src')).toEqual('fakeimage');
 
-  component.find('img').prop('onError')({
-    target: component.find('img').instance()
-  });
+  component.find('img').prop('onError')();
 
   expect(component.find('img').prop('src')).toEqual(Urls.images.deadImage);
   expect(component).toMatchSnapshot();
 });
 
 xit('should delay source until intersect if lazy', function() {
-  const component = shallow(<Image isLazy src="fakeimage" alt="jest" />);
+  const component = mount(<Image isLazy src="fakeimage" alt="jest" />);
 
-  expect(component.find('img').prop('src')).toEqual(undefined);
+  expect(component.find('img').prop('src')).toEqual(null);
+  expect(observeMock.observe).toHaveBeenCalled();
 
-  // trigger intersection
+  act(() => {
+    // trigger intersection
+    const entry = { isIntersecting: true };
+    const ob = observeMock;
+    trggerIntersection([entry], ob);
+  });
 
   expect(component.find('img').prop('src')).toEqual('fakeimage');
   expect(component).toMatchSnapshot();

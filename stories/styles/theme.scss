@@ -3,6 +3,11 @@
 $meiko--primary: #db7093;
 $meiko--active: #afeeee;
 
+:root {
+  --meiko--primary: #db7093;
+  --meiko--active: #afeeee;
+}
+
 $theme-maps: (
   mko: (
     base-background: #f1f1f1,

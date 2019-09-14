@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import Form from 'Form';
-import ClearableInput from 'ClearableInput';
-import SelectBox from 'SelectBox';
+import Form from '@/Form';
+import ClearableInput from '@/ClearableInput';
+import SelectBox from '@/SelectBox';
 
 const cancelOptions = {
   onCancel: action('cancel')

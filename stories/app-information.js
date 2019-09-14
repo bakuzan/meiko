@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import AppInformation from 'AppInformation';
+import AppInformation from '@/AppInformation';
 
 storiesOf('AppInformation', module)
   .addDecorator(withKnobs)

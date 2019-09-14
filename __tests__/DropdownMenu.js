@@ -77,7 +77,7 @@ xit('should close display menu on escape key', async function() {
   component.find('#inside').simulate('click');
   expect(component.find('.dropdown-menu__menu').exists()).toBe(true);
 
-  await act(async () => {
+  act(() => {
     trigger.keydown({ keyCode: escape });
   });
 

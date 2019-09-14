@@ -4,7 +4,7 @@ import { MkoContext } from 'mko-book';
 
 import { action } from '@storybook/addon-actions';
 
-import Tabs from 'Tabs';
+import Tabs from '@/Tabs';
 
 function TabStory() {
   const [{ tab }, setState] = useContext(MkoContext);

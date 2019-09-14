@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { MkoContext } from 'mko-book';
 
-import Dialog from 'Dialog';
-import { Button } from 'Button';
+import Dialog from '@/Dialog';
+import { Button } from '@/Button';
 
 function DialogStory(props) {
   const [state, setState] = useContext(MkoContext);

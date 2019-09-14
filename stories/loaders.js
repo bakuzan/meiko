@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 
-import { SimpleLoading, Loading } from 'Loadable';
-import LoadingContent from 'LoadableContent';
-import LoadingBouncer from 'LoadingBouncer';
-import LoadingSpinner from 'LoadingSpinner';
+import { SimpleLoading, Loading } from '@/Loadable';
+import LoadingContent from '@/LoadableContent';
+import LoadingBouncer from '@/LoadingBouncer';
+import LoadingSpinner from '@/LoadingSpinner';
 
 storiesOf('Loading Bouncer', module).add('basic', () => <LoadingBouncer />);
 

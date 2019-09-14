@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { storiesOf } from '@storybook/react';
 import { MkoContext } from 'mko-book';
 
-import ChipListInput from 'ChipListInput';
+import ChipListInput from '@/ChipListInput';
 
 const options = [
   { id: 1, text: 'Bat' },

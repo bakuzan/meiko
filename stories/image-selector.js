@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { MkoContext } from 'mko-book';
 
-import ImageSelector from 'ImageSelector';
+import ImageSelector from '@/ImageSelector';
 
 const payload = {
   good: { success: true, url: '[mko] Successfully Uploaded Image Url' },

@@ -5,8 +5,8 @@ import { MkoContext } from 'mko-book';
 import { withKnobs, date } from '@storybook/addon-knobs';
 import { storyStyle } from '.';
 
-import DateSelector from 'DateSelector';
-import { formatDateForInput } from 'utils';
+import DateSelector from '@/DateSelector';
+import { formatDateForInput } from '@/utils';
 
 const TODAY = formatDateForInput(new Date());
 

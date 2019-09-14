@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { storiesOf } from '@storybook/react';
 import { MkoContext } from 'mko-book';
 
-import RadioButton from 'RadioButton';
+import RadioButton from '@/RadioButton';
 
 const options = Array(3).fill(null);
 

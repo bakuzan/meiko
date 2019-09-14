@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { storiesOf } from '@storybook/react';
 import { MkoContext } from 'mko-book';
 
-import SelectBox from 'SelectBox';
-import FC from 'FormControls';
+import SelectBox from '@/SelectBox';
+import FC from '@/FormControls';
 
 const options = [
   { value: 0, text: 'Select a value' },

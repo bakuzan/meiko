@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { storiesOf } from '@storybook/react';
 import { MkoContext } from 'mko-book';
 
-import RadioToggle from 'RadioToggle';
+import RadioToggle from '@/RadioToggle';
 import Icons from '@/constants/icons';
 
 function RadioToggleStory(props) {

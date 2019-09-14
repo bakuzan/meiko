@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { storiesOf } from '@storybook/react';
 import { MkoContext } from 'mko-book';
 
-import MultiSelect from 'MultiSelect';
+import MultiSelect from '@/MultiSelect';
 
 const options = [
   { value: 1, text: 'Gen1' },

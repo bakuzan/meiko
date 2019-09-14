@@ -147,10 +147,6 @@ xit('should close dropdown on outside click', async function() {
   );
 
   await act(async () => {
-    // component.instance().menuRef.current = component
-    //   .find('.multi-select__list')
-    //   .getDOMNode();
-
     component.setState({ isOpen: true });
     trigger.click({ target: document.body });
   });
