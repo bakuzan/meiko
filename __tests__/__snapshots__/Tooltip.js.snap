@@ -8,7 +8,7 @@ exports[`should render with minimum props 1`] = `
 >
   <div
     aria-hidden={false}
-    className=" mko_1dx2rda-tooltipContent"
+    className="tooltip__content  mko_1dx2rda-tooltipContent"
     style={Object {}}
   >
     Tooltip!
