@@ -2,16 +2,16 @@
 
 exports[`should NOT render "no items" message 1`] = `
 <ul
-  className="mko-grid  mko_8taz1t-grid"
+  className="mko-grid  mko_4w49wy-grid"
 />
 `;
 
 exports[`should render "no items" message 1`] = `
 <ul
-  className="mko-grid  mko_8taz1t-grid"
+  className="mko-grid  mko_4w49wy-grid"
 >
   <li
-    className="mko-grid__no-items"
+    className="mko-grid__no-items  mko_4w49wy-grid__noItems"
     key="NONE"
   >
     No items were found.
@@ -21,10 +21,10 @@ exports[`should render "no items" message 1`] = `
 
 exports[`should render custom "no items" message 1`] = `
 <ul
-  className="mko-grid  mko_8taz1t-grid"
+  className="mko-grid  mko_4w49wy-grid"
 >
   <li
-    className="mko-grid__no-items"
+    className="mko-grid__no-items  mko_4w49wy-grid__noItems"
     key="NONE"
   >
     Jest No Items
@@ -34,7 +34,7 @@ exports[`should render custom "no items" message 1`] = `
 
 exports[`should render items using children render props 1`] = `
 <ul
-  className="mko-grid  mko_8taz1t-grid"
+  className="mko-grid  mko_4w49wy-grid"
 >
   <li
     key="jest"
@@ -56,6 +56,6 @@ exports[`should render items using children render props 1`] = `
 
 exports[`should render with minimum props 1`] = `
 <ul
-  className="mko-grid  mko_8taz1t-grid"
+  className="mko-grid  mko_4w49wy-grid"
 />
 `;
