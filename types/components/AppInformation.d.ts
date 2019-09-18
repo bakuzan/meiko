@@ -3,8 +3,6 @@ export interface AppInformationProps {
   branch?: string;
 }
 
-declare function AppInformation(
-  props: AppInformationProps
-): React.SFC<AppInformationProps>;
+declare function AppInformation(props: AppInformationProps): React.ReactElement;
 
 export default AppInformation;

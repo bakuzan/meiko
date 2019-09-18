@@ -5,7 +5,15 @@ import {
   AppInformation,
   AutocompleteInput,
   AutocompleteInputSuggestionItem,
-  Button
+  Button,
+  withButtonisation,
+  ChipListInput,
+  ClearableInput,
+  Input,
+  DateSelector,
+  DateSelectorCalendar,
+  Dialog,
+  DropdownMenu
 } from 'meiko';
 
 <Alert
@@ -41,3 +49,30 @@ import {
 <Button btnSize="small" btnStyle="primary" icon="" link>
   Hello world
 </Button>;
+
+withButtonisation(AutocompleteInput);
+withButtonisation(AutocompleteInputSuggestionItem);
+withButtonisation(Button);
+
+<ChipListInput
+  name="typings"
+  attr="text"
+  chipsSelected={[]}
+  chipOptions={[]}
+  updateChipList={() => null}
+/>;
+
+<ClearableInput label="Testing" />;
+<Input />;
+
+<DateSelector id="unique" value="2019-09-18" onChange={() => null} />;
+<DateSelectorCalendar id="unique" selected="2019-09-01" />;
+
+<Dialog isOpen={false} name="popup">
+  Something that can pass as children.
+</Dialog>;
+
+<DropdownMenu align="left">Muh dropdown</DropdownMenu>;
+<DropdownMenu align="center">
+  {() => `Dropdown, but render props!`}
+</DropdownMenu>;

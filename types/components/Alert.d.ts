@@ -13,6 +13,6 @@ export interface AlertProps extends React.HTMLProps<HTMLDivElement> {
   };
 }
 
-declare function Alert(props: AlertProps): React.Component<AlertProps, any>;
+declare const Alert: React.SFC<AlertProps>;
 
 export default Alert;

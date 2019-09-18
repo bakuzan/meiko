@@ -28,15 +28,17 @@
       "<rootDir>/build/",
       "<rootDir>/dist/",
       "<rootDir>/tools/",
-      "<rootDir>/stories/"
+      "<rootDir>/stories/",
+      "<rootDir>/types/"
     ],
     "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/__helpers__"
+      "<rootDir>/__tests__/__helpers__",
+      "<rootDir>/types"
     ]
   },
   "lint-staged": {
-    "{,lib,tools,.storybook,__tests__}/**/*.{js}": [
-      "prettier --single-quote --write",
+    "{,lib,tools,.storybook,__tests__, types}/**/*.{,js,ts}": [
+      "prettier --write",
       "git add"
     ]
   },
@@ -47,6 +49,7 @@
   },
   "scripts": {
     "pretty": "lint-staged",
+    "dtslint": "dtslint types",
     "test": "npx jest",
     "test:update": "npx jest -u",
     "test:watch": "npx jest -o --watch --maxWorkers=10",
