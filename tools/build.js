@@ -6,6 +6,7 @@ const execa = require('execa');
 const chalk = require('chalk');
 
 const copyFileAsync = util.promisify(fs.copyFile);
+const copyDirAsync = util.promisify(fse.copy);
 
 const projectRoot = path.resolve(__dirname, '../lib');
 const buildFolder = path.resolve(__dirname, '../build');
@@ -17,7 +18,17 @@ async function copyRootFile(fileName) {
     path.resolve(buildFolder, fileName)
   );
 
-  console.log(chalk.magenta(`Copied ${fileName} to ${buildFolder}`));
+  console.log(chalk.magenta(`Copied ${fileName} to build\\${fileName}`));
+}
+
+async function copyDir(folder) {
+  const fromPath = path.resolve(__dirname, '../');
+  await copyDirAsync(
+    path.resolve(fromPath, folder),
+    path.resolve(buildFolder, folder)
+  );
+
+  console.log(chalk.magenta(`Copied ${folder} to build\\${folder}`));
 }
 
 async function babelJS() {
@@ -28,7 +39,7 @@ async function babelJS() {
     }
   );
 
-  console.log(chalk.green(`Files in ${buildFolder} transpiled successfully.`));
+  console.log(chalk.green(`Library transpiled successfully.`));
 }
 
 async function run() {
@@ -39,6 +50,7 @@ async function run() {
   await babelJS();
   await copyRootFile('package.json');
   await copyRootFile('README.md');
+  await copyDir('types');
 }
 
 run();

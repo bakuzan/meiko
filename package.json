@@ -33,7 +33,12 @@
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/__tests__/__helpers__",
-      "<rootDir>/types"
+      "<rootDir>/node_modules/",
+      "<rootDir>/build/",
+      "<rootDir>/dist/",
+      "<rootDir>/tools/",
+      "<rootDir>/stories/",
+      "<rootDir>/types/"
     ]
   },
   "lint-staged": {
