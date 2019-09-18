@@ -13,7 +13,12 @@ import {
   DateSelector,
   DateSelectorCalendar,
   Dialog,
-  DropdownMenu
+  DropdownMenu,
+  FileUploader,
+  Form,
+  Grid,
+  SelectBox,
+  FormControls
 } from 'meiko';
 
 <Alert
@@ -76,3 +81,23 @@ withButtonisation(Button);
 <DropdownMenu align="center">
   {() => `Dropdown, but render props!`}
 </DropdownMenu>;
+
+<FileUploader name="files" onFileSelect={() => null} />;
+
+<Form name="testForm">
+  <input type="text" value="" />
+</Form>;
+
+<FormControls.ErrorBlock>Something is wrong.</FormControls.ErrorBlock>;
+<FormControls.ClearableInput containerClassName="Did it work?" label="Text" />;
+<FormControls.SelectBox value={1} disabled={true}>
+  <option value={1}>1</option>
+</FormControls.SelectBox>;
+
+<Grid items={[]}>{() => <li></li>}</Grid>;
+
+<SelectBox options={[]} />;
+<SelectBox>
+  <option value={1}>1</option>
+</SelectBox>;
+<SelectBox>{(op) => <option value={op.value}>{op.text}</option>}</SelectBox>;
