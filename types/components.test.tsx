@@ -16,9 +16,19 @@ import {
   DropdownMenu,
   FileUploader,
   Form,
+  FormControls,
   Grid,
+  Header,
+  Image,
+  ImageSelector,
+  List,
+  SimpleLoading,
+  Loading,
+  LoadableContent,
+  LoadingBouncer,
+  LoadingSpinner,
   SelectBox,
-  FormControls
+  Logo
 } from 'meiko';
 
 <Alert
@@ -95,6 +105,36 @@ withButtonisation(Button);
 </FormControls.SelectBox>;
 
 <Grid items={[]}>{() => <li></li>}</Grid>;
+
+<Header
+  leftAlignTitle={true}
+  navLeft={<div></div>}
+  navRight={<div></div>}
+  title="sdfsdfsdf"
+/>;
+
+<Image src="" alt="" isLazy={false} intersectionMargin="" />;
+<ImageSelector
+  uploaderClassName=""
+  onChange={() => null}
+  onError={() => null}
+/>;
+
+<List shouldWrap columns={3}>
+  <div>dfsdasdasda</div>
+</List>;
+
+<SimpleLoading pastDelay={false} />;
+<Loading pastDelay={false} error={new Error()} timedOut={false} />;
+
+<LoadableContent isFetching={true}>
+  <div>dfgsdgsergs rsrgs hs</div>
+</LoadableContent>;
+
+<LoadingBouncer className="" />;
+<LoadingSpinner size="test" />;
+
+<Logo text="LOGO" />;
 
 <SelectBox options={[]} />;
 <SelectBox>
