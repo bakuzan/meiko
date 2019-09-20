@@ -71,7 +71,7 @@ exports[`should call onCancel 1`] = `
             onClick={[Function]}
             type="button"
           >
-            cancel
+            Cancel
           </button>
         </Button>
       </div>
@@ -141,7 +141,7 @@ exports[`should call onSubmit 1`] = `
             onClick={[Function]}
             type="button"
           >
-            cancel
+            Cancel
           </button>
         </Button>
       </div>
@@ -202,7 +202,7 @@ exports[`should display custom submit button text 1`] = `
             onClick={[Function]}
             type="button"
           >
-            cancel
+            Cancel
           </button>
         </Button>
       </div>
@@ -241,7 +241,7 @@ exports[`should render children 1`] = `
         onClick={[Function]}
         type="button"
       >
-        cancel
+        Cancel
       </Button>
     </div>
   </form>
@@ -281,7 +281,7 @@ exports[`should render title if truthy 1`] = `
         onClick={[Function]}
         type="button"
       >
-        cancel
+        Cancel
       </Button>
     </div>
   </form>
@@ -316,7 +316,7 @@ exports[`should render with minimum props 1`] = `
         onClick={[Function]}
         type="button"
       >
-        cancel
+        Cancel
       </Button>
     </div>
   </form>
