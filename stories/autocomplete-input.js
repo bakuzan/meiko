@@ -23,6 +23,7 @@ function AutocompleteStory() {
       filter={state.value}
       onChange={(e) => setState({ value: e.target.value })}
       onSelect={(selectedId) => setState({ selectedId })}
+      autoFocus
     />
   );
 }

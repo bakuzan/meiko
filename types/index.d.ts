@@ -105,6 +105,7 @@ export {
   TabContainerProps,
   TabViewProps
 } from './components/Tabs';
+export { default as TabTrap, TabTrapProps } from './components/TabTrap';
 export { default as TagChip, TagChipProps } from './components/TagChip';
 export {
   default as TagCloudSelector,

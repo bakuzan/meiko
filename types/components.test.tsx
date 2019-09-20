@@ -44,7 +44,8 @@ import {
   TagCloudSelector,
   Toaster,
   Tickbox,
-  Tooltip
+  Tooltip,
+  TabTrap
 } from 'meiko';
 
 <Alert
@@ -99,7 +100,15 @@ withButtonisation(Button);
 <DateSelector id="unique" value="2019-09-18" onChange={() => null} />;
 <DateSelectorCalendar id="unique" selected="2019-09-01" />;
 
-<Dialog isOpen={false} name="popup">
+<Dialog
+  isOpen={false}
+  name="popup"
+  tabTrapProps={{
+    firstId: 'test',
+    lastId: 'lastTest',
+    onDeactivate: () => null
+  }}
+>
   Something that can pass as children.
 </Dialog>;
 
@@ -201,6 +210,8 @@ withButtonisation(Button);
     </View>
   )}
 </Container>;
+
+<TabTrap isActive={true} firstId="test" lastId="testLast"></TabTrap>;
 
 <TagChip data={{ id: 1, name: 'test' }} />;
 

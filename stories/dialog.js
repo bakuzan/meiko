@@ -6,7 +6,7 @@ import { MkoContext } from 'mko-book';
 import Dialog from '@/Dialog';
 import { Button } from '@/Button';
 
-function DialogStory(props) {
+function DialogStory({ children, ...props }) {
   const [state, setState] = useContext(MkoContext);
 
   return (
@@ -15,9 +15,11 @@ function DialogStory(props) {
         {...props}
         isOpen={state.isOpen}
         name="story"
-        onClose={() => setState({ isOpen: false })}
+        onCancel={() => setState({ isOpen: false })}
+        tabTrapProps={{ firstId: 'firstId', lastId: 'lastId' }}
       >
         <p>This is a dialog!</p>
+        {children}
       </Dialog>
       <Button onClick={() => setState({ isOpen: true })}>Click me!</Button>
     </div>
@@ -37,4 +39,15 @@ storiesOf('Dialog', module)
   .add('with simple notification', () => <DialogStory />)
   .add('with user action', () => (
     <DialogStory hasBackdrop onAction={action('User Submit')} />
+  ))
+  .add('with form fields', () => (
+    <DialogStory hasBackdrop onAction={action('User Submit')}>
+      <input type="text" id="firstId" />
+      <input type="checkbox" />
+      <select>
+        <option value="hello">hello</option>
+        <option value="goodbye">goodbye</option>
+      </select>
+      <input type="text" id="lastId" />
+    </DialogStory>
   ));
