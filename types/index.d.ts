@@ -69,7 +69,29 @@ export {
   LoadingSpinnerProps
 } from './components/LoadingSpinner';
 export { default as Logo, LogoProps } from './components/Logo';
+export {
+  default as MultiSelect,
+  MultiSelectProps
+} from './components/MultiSelect';
+export { default as NewTabLink } from './components/NewTabLink';
+export { default as Portal, PortalProps } from './components/Portal';
 
+export {
+  default as RadioButton,
+  RadioButtonProps
+} from './components/RadioButton';
+export {
+  default as RadioToggle,
+  RadioToggleProps
+} from './components/RadioToggle';
+export {
+  default as RatingControl,
+  RatingControlProps
+} from './components/RatingControl';
+export {
+  default as RequestIndicator,
+  RequestIndicatorProps
+} from './components/RequestIndicator';
 export {
   default as SelectBox,
   SelectBoxProps,

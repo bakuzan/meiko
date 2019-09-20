@@ -28,7 +28,14 @@ import {
   LoadingBouncer,
   LoadingSpinner,
   SelectBox,
-  Logo
+  Logo,
+  RequestIndicator,
+  Portal,
+  NewTabLink,
+  MultiSelect,
+  RadioButton,
+  RadioToggle,
+  RatingControl
 } from 'meiko';
 
 <Alert
@@ -135,6 +142,23 @@ withButtonisation(Button);
 <LoadingSpinner size="test" />;
 
 <Logo text="LOGO" />;
+
+<MultiSelect id="test" values={[1, 2, 3]} options={[]} />;
+<MultiSelect id="test" values={['a', 'b', 'c']} options={[]} />;
+
+<NewTabLink href="/url">my link</NewTabLink>;
+
+<Portal querySelector="#test">
+  <div></div>
+</Portal>;
+
+<RadioButton id="test" name="test" value="true" onChange={() => null} />;
+<RadioToggle label="Testing" checked={true} onChange={() => null} />;
+
+<RatingControl id="rating" value={5} />;
+<RatingControl id="rating" value={'5'} />;
+
+<RequestIndicator hide={false} requestInFlight={true} />;
 
 <SelectBox options={[]} />;
 <SelectBox>
