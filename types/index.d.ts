@@ -97,3 +97,19 @@ export {
   SelectBoxProps,
   SelectBoxOption
 } from './components/SelectBox';
+export { default as Sidebar, SidebarProps } from './components/Sidebar';
+export {
+  default as Tabs,
+  Container,
+  View,
+  TabContainerProps,
+  TabViewProps
+} from './components/Tabs';
+export { default as TagChip, TagChipProps } from './components/TagChip';
+export {
+  default as TagCloudSelector,
+  TagCloudSelectorProps
+} from './components/TagCloudSelector';
+export { default as Tickbox, TickboxProps } from './components/Tickbox';
+export { default as Toaster } from './components/Toaster';
+export { default as Tooltip, TooltipProps } from './components/Tooltip';

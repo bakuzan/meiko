@@ -27,15 +27,24 @@ import {
   LoadableContent,
   LoadingBouncer,
   LoadingSpinner,
-  SelectBox,
   Logo,
-  RequestIndicator,
-  Portal,
-  NewTabLink,
   MultiSelect,
+  NewTabLink,
+  Portal,
   RadioButton,
   RadioToggle,
-  RatingControl
+  RatingControl,
+  RequestIndicator,
+  SelectBox,
+  Sidebar,
+  Tabs,
+  Container,
+  View,
+  TagChip,
+  TagCloudSelector,
+  Toaster,
+  Tickbox,
+  Tooltip
 } from 'meiko';
 
 <Alert
@@ -165,3 +174,51 @@ withButtonisation(Button);
   <option value={1}>1</option>
 </SelectBox>;
 <SelectBox>{(op) => <option value={op.value}>{op.text}</option>}</SelectBox>;
+
+<Sidebar
+  items={[]}
+  isCollapsed={false}
+  isHidden={false}
+  toggleCollapse={() => null}
+  close={() => null}
+/>;
+
+<Tabs.Container>
+  <Tabs.View name="first">
+    <div></div>
+  </Tabs.View>
+  <Tabs.View name="second">{() => <div></div>}</Tabs.View>
+  {false && (
+    <Tabs.View name="third">
+      <div></div>
+    </Tabs.View>
+  )}
+</Tabs.Container>;
+<Container>
+  {false && (
+    <View name="only one">
+      <div></div>
+    </View>
+  )}
+</Container>;
+
+<TagChip data={{ id: 1, name: 'test' }} />;
+
+<TagCloudSelector tagOptions={[{ id: 1, name: 'test' }]} />;
+
+<Tickbox id="test" checked={true} readOnly />;
+
+<Toaster />;
+
+<Tooltip text="Tooltip text">
+  <div>something here</div>
+</Tooltip>;
+<Tooltip
+  text="Tooltip text"
+  isEnabled={true}
+  delay={1000}
+  highlight
+  allowWrapping={false}
+>
+  <div>something here</div>
+</Tooltip>;
