@@ -129,7 +129,9 @@ withButtonisation(Button);
   <option value={1}>1</option>
 </FormControls.SelectBox>;
 
+const Test = () => <li></li>;
 <Grid items={[]}>{() => <li></li>}</Grid>;
+<Grid items={[]}>{() => <Test />}</Grid>;
 
 <Header
   leftAlignTitle={true}

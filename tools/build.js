@@ -21,14 +21,14 @@ async function copyRootFile(fileName) {
   console.log(chalk.magenta(`Copied ${fileName} to build\\${fileName}`));
 }
 
-async function copyDir(folder) {
+async function copyDir(fromFolder, toFolder = '') {
   const fromPath = path.resolve(__dirname, '../');
   await copyDirAsync(
-    path.resolve(fromPath, folder),
-    path.resolve(buildFolder, folder)
+    path.resolve(fromPath, fromFolder),
+    path.resolve(buildFolder, toFolder)
   );
 
-  console.log(chalk.magenta(`Copied ${folder} to build\\${folder}`));
+  console.log(chalk.magenta(`Copied ${fromFolder} to build\\${toFolder}`));
 }
 
 async function babelJS() {
@@ -50,7 +50,7 @@ async function run() {
   await babelJS();
   await copyRootFile('package.json');
   await copyRootFile('README.md');
-  await copyDir('types');
+  await copyDir('types/components');
 }
 
 run();
