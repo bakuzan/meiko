@@ -60,6 +60,7 @@ exports[`should change active tab 1`] = `
         name="one"
       >
         <div
+          aria-hidden={true}
           className="tab-view  mko_i63we-view"
           role="tabpanel"
         >
@@ -74,6 +75,7 @@ exports[`should change active tab 1`] = `
         name="two"
       >
         <div
+          aria-hidden={false}
           className="tab-view tab-view--active  mko_i63we-view  mko_i63we-view_active"
           role="tabpanel"
         >
@@ -147,6 +149,7 @@ exports[`should pass isActive if child is function 1`] = `
         name="one"
       >
         <div
+          aria-hidden={true}
           className="tab-view  mko_i63we-view"
           role="tabpanel"
         />
@@ -157,6 +160,7 @@ exports[`should pass isActive if child is function 1`] = `
         name="two"
       >
         <div
+          aria-hidden={false}
           className="tab-view tab-view--active  mko_i63we-view  mko_i63we-view_active"
           role="tabpanel"
         >
