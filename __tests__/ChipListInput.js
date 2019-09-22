@@ -79,8 +79,6 @@ it('should render selected chips and remove', function() {
 });
 
 it('should ready removal of selected chip', function() {
-  const backspace = 8;
-
   const component = mount(
     <ChipListInput
       id="jest"
@@ -93,7 +91,7 @@ it('should ready removal of selected chip', function() {
   );
 
   const input = component.find('input#jest');
-  input.simulate('keydown', { keyCode: backspace });
+  input.simulate('keydown', { key: 'Backspace' });
 
   expect(component.state('readyRemoval')).toBe(true);
   expect(component).toMatchSnapshot();

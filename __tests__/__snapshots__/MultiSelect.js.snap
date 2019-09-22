@@ -28,8 +28,12 @@ exports[`should call onUpdate when select all clicked 1`] = `
   <div
     className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1xijne-multiSelect__dropdown  mko_1xijne-multiSelect__dropdown_open"
   >
-    <ul
+    <ForwardRef(TabTrap)
       className="multi-select__list  mko_1xijne-multiSelect__list"
+      element="ul"
+      firstId="mko--selectAll"
+      isActive={true}
+      lastId="mko--option-3"
     >
       <li
         key="ALL"
@@ -90,7 +94,7 @@ exports[`should call onUpdate when select all clicked 1`] = `
           text="Gen4"
         />
       </li>
-    </ul>
+    </ForwardRef(TabTrap)>
   </div>
 </div>
 `;
@@ -123,8 +127,12 @@ exports[`should call onUpdate when tickboxes are changed 1`] = `
   <div
     className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1xijne-multiSelect__dropdown  mko_1xijne-multiSelect__dropdown_open"
   >
-    <ul
+    <ForwardRef(TabTrap)
       className="multi-select__list  mko_1xijne-multiSelect__list"
+      element="ul"
+      firstId="mko--selectAll"
+      isActive={true}
+      lastId="mko--option-3"
     >
       <li
         key="ALL"
@@ -185,7 +193,7 @@ exports[`should call onUpdate when tickboxes are changed 1`] = `
           text="Gen4"
         />
       </li>
-    </ul>
+    </ForwardRef(TabTrap)>
   </div>
 </div>
 `;
@@ -218,8 +226,12 @@ exports[`should open dropdown on input click 1`] = `
   <div
     className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1xijne-multiSelect__dropdown  mko_1xijne-multiSelect__dropdown_open"
   >
-    <ul
+    <ForwardRef(TabTrap)
       className="multi-select__list  mko_1xijne-multiSelect__list"
+      element="ul"
+      firstId="mko--selectAll"
+      isActive={true}
+      lastId="mko--option-3"
     >
       <li
         key="ALL"
@@ -280,7 +292,7 @@ exports[`should open dropdown on input click 1`] = `
           text="Gen4"
         />
       </li>
-    </ul>
+    </ForwardRef(TabTrap)>
   </div>
 </div>
 `;
@@ -313,8 +325,12 @@ exports[`should render correct number of options 1`] = `
   <div
     className="multi-select__dropdown-container multi-select__dropdown-container--is-open  mko_1xijne-multiSelect__dropdown  mko_1xijne-multiSelect__dropdown_open"
   >
-    <ul
+    <ForwardRef(TabTrap)
       className="multi-select__list  mko_1xijne-multiSelect__list"
+      element="ul"
+      firstId="mko--selectAll"
+      isActive={true}
+      lastId="mko--option-3"
     >
       <li
         key="ALL"
@@ -375,7 +391,7 @@ exports[`should render correct number of options 1`] = `
           text="Gen4"
         />
       </li>
-    </ul>
+    </ForwardRef(TabTrap)>
   </div>
 </div>
 `;
@@ -408,8 +424,12 @@ exports[`should render with minimum props 1`] = `
   <div
     className="multi-select__dropdown-container  mko_1xijne-multiSelect__dropdown"
   >
-    <ul
+    <ForwardRef(TabTrap)
       className="multi-select__list  mko_1xijne-multiSelect__list"
+      element="ul"
+      firstId="mko--selectAll"
+      isActive={false}
+      lastId="mko--option-3"
     >
       <li
         key="ALL"
@@ -470,7 +490,7 @@ exports[`should render with minimum props 1`] = `
           text="Gen4"
         />
       </li>
-    </ul>
+    </ForwardRef(TabTrap)>
   </div>
 </div>
 `;

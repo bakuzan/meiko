@@ -52,21 +52,17 @@ it('should not call outsideClick callback on inside click', () => {
 });
 
 it('should call outsideClick callback on escape keydown', () => {
-  const escape = 27;
-
   addOutsideClick(node, mockedOutsideClickFn);
 
-  trigger.keydown({ keyCode: escape });
+  trigger.keydown({ key: 'Escape' });
 
   expect(mockedOutsideClickFn).toHaveBeenCalled();
 });
 
 it('should not call outsideClick callback on non-escape keydown', () => {
-  const notEscape = 32;
-
   addOutsideClick(node, mockedOutsideClickFn);
 
-  trigger.keydown({ keyCode: notEscape });
+  trigger.keydown({ key: ' ' });
 
   expect(mockedOutsideClickFn).not.toHaveBeenCalled();
 });
