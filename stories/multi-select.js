@@ -15,17 +15,19 @@ function MultiSelectStory(props) {
   const [state, setState] = useContext(MkoContext);
 
   return (
-    <MultiSelect
-      {...props}
-      {...state}
-      id="story"
-      listClassName="story-list"
-      className="meiko-multiselect"
-      name="multiSelect"
-      placeholder="Select a gen"
-      options={options}
-      onUpdate={(values) => setState({ values })}
-    />
+    <div style={{ maxHeight: 50 }}>
+      <MultiSelect
+        {...props}
+        {...state}
+        id="story"
+        listClassName="story-list"
+        className="meiko-multiselect"
+        name="multiSelect"
+        placeholder="Select a gen"
+        options={options}
+        onUpdate={(values) => setState({ values })}
+      />
+    </div>
   );
 }
 
@@ -35,6 +37,6 @@ storiesOf('MultiSelect', module)
       propTables: [MultiSelect],
       propTablesExclude: [MultiSelectStory]
     },
-    mko: { defaultValues: { values: [] } }
+    mko: { defaultValues: { values: [] }, style: { alignItems: 'center' } }
   })
   .add('basic', () => <MultiSelectStory />);
