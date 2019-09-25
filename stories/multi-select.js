@@ -11,7 +11,7 @@ const options = [
   { value: 4, text: 'Gen4' }
 ];
 
-function MultiSelectStory(props) {
+function MultiSelectStory({ items, ...props }) {
   const [state, setState] = useContext(MkoContext);
 
   return (
@@ -24,7 +24,7 @@ function MultiSelectStory(props) {
         className="meiko-multiselect"
         name="multiSelect"
         placeholder="Select a gen"
-        options={options}
+        options={items || options}
         onUpdate={(values) => setState({ values })}
       />
     </div>
@@ -39,4 +39,11 @@ storiesOf('MultiSelect', module)
     },
     mko: { defaultValues: { values: [] }, style: { alignItems: 'center' } }
   })
-  .add('basic', () => <MultiSelectStory />);
+  .add('basic', () => <MultiSelectStory />)
+  .add('with long list', () => (
+    <MultiSelectStory
+      items={Array(20)
+        .fill(null)
+        .map((_, i) => ({ value: i + 1, text: `Option ${i}` }))}
+    />
+  ));
