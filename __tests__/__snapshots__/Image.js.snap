@@ -10,7 +10,7 @@ exports[`should render with minimum props 1`] = `
 
 exports[`should update src with dead image onError 1`] = `
 <img
-  alt="jest"
+  alt="Error placeholder for jest"
   onError={null}
   src="https://i.imgur.com/gKr1YhF.png"
 />
