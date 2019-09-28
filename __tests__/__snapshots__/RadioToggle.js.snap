@@ -11,12 +11,12 @@ exports[`should render custom icons 1`] = `
     <div
       className="radio-toggle__option radio-toggle__checked  mko_drr40b-radioToggle__option"
     >
-      ‹
+      ‹︎
     </div>
     <div
       className="radio-toggle__option radio-toggle__unchecked  mko_drr40b-radioToggle__option"
     >
-      ›
+      ›︎
     </div>
   </div>
   <div
@@ -51,7 +51,7 @@ exports[`should render with minimum props 1`] = `
     <div
       className="radio-toggle__option radio-toggle__unchecked  mko_drr40b-radioToggle__option"
     >
-      ✓
+      ✓︎
     </div>
   </div>
   <div

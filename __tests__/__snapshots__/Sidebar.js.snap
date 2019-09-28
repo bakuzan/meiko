@@ -7,7 +7,7 @@ exports[`should apply collapsed styles 1`] = `
   <Button
     aria-label="Toggle sidebar"
     className="sidebar__toggler  mko_vrt9r1-sidebar__toggler"
-    icon="›"
+    icon="›︎"
     onClick={[MockFunction]}
     type="button"
   />
@@ -73,7 +73,7 @@ exports[`should apply hidden styles 1`] = `
   <Button
     aria-label="Toggle sidebar"
     className="sidebar__toggler  mko_vrt9r1-sidebar__toggler"
-    icon="‹"
+    icon="‹︎"
     onClick={[MockFunction]}
     type="button"
   />
@@ -139,7 +139,7 @@ exports[`should render with minimum props 1`] = `
   <Button
     aria-label="Toggle sidebar"
     className="sidebar__toggler  mko_vrt9r1-sidebar__toggler"
-    icon="‹"
+    icon="‹︎"
     onClick={[MockFunction]}
     type="button"
   />

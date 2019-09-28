@@ -3,7 +3,7 @@
 exports[`should display menu on toggler click 1`] = `
 <DropdownMenu
   align="center"
-  icon="⚙"
+  icon="⚙︎"
 >
   <div
     className="dropdown-menu  mko_dmkujd-container"
@@ -11,7 +11,7 @@ exports[`should display menu on toggler click 1`] = `
     <Button
       aria-label="Open dropdown menu"
       className="dropdown-menu__toggler  mko_dmkujd-toggler"
-      icon="⚙"
+      icon="⚙︎"
       id={null}
       onClick={[Function]}
       type="button"
@@ -19,7 +19,7 @@ exports[`should display menu on toggler click 1`] = `
       <button
         aria-label="Open dropdown menu"
         className="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon dropdown-menu__toggler  mko_dmkujd-toggler"
-        icon="⚙"
+        icon="⚙︎"
         id={null}
         onClick={[Function]}
         type="button"
@@ -53,7 +53,7 @@ exports[`should render with minimum props 1`] = `
   <Button
     aria-label="Open dropdown menu"
     className="dropdown-menu__toggler  mko_dmkujd-toggler"
-    icon="⚙"
+    icon="⚙︎"
     id={null}
     onClick={[Function]}
     type="button"
