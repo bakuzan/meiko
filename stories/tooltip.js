@@ -4,9 +4,19 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 
 import Tooltip from '@/Tooltip';
 
-function TooltipStory(props) {
+const leftAlign = {
+  mko: { style: { justifyContent: `flex-start`, marginLeft: `25px` } }
+};
+const rightAlign = {
+  mko: { style: { justifyContent: `flex-end`, marginRight: `25px` } }
+};
+
+const LONG_TEXT =
+  'This is a really long tooltip to test the offscreen protection.';
+
+function TooltipStory({ containerStyle = {}, ...props }) {
   return (
-    <div>
+    <div style={containerStyle}>
       <style>
         {`
           .tooltip { 
@@ -45,4 +55,34 @@ storiesOf('Tooltip', module)
   .add('with wrapping', () => <TooltipStory allowWrapping={true} />)
   .add('positioned', () => <TooltipStory usePosition={true} />)
   .add('centered', () => <TooltipStory center={true} />)
-  .add('disabled', () => <TooltipStory isEnabled={false} />);
+  .add('disabled', () => <TooltipStory isEnabled={false} />)
+  .add(
+    'offscreen LHS - standard',
+    () => <TooltipStory text={LONG_TEXT} />,
+    leftAlign
+  )
+  .add(
+    'offscreen LHS - centered',
+    () => <TooltipStory text={LONG_TEXT} center={true} />,
+    leftAlign
+  )
+  .add(
+    'offscreen LHS - positioned',
+    () => <TooltipStory text={LONG_TEXT} usePosition={true} />,
+    leftAlign
+  )
+  .add(
+    'offscreen RHS - standard',
+    () => <TooltipStory text={LONG_TEXT} />,
+    rightAlign
+  )
+  .add(
+    'offscreen RHS - centered',
+    () => <TooltipStory text={LONG_TEXT} center={true} />,
+    rightAlign
+  )
+  .add(
+    'offscreen RHS - positioned',
+    () => <TooltipStory text={LONG_TEXT} usePosition={true} />,
+    rightAlign
+  );
