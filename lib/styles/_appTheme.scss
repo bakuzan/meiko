@@ -141,9 +141,13 @@
       }
 
       // Calendar
-      .mko-calendar__view-button--selected,
-      .mko-calendar__view-button--selected:focus,
-      .mko-calendar__view-button--selected:hover {
+      .mko-calendar__view-option:focus {
+        background-color: $primary-background;
+        color: $primary-colour;
+      }
+      .mko-calendar__view-option--selected,
+      .mko-calendar__view-option--selected:focus,
+      .mko-calendar__view-option--selected:hover {
         background-color: $active-background;
         color: $active-colour;
       }
