@@ -5,6 +5,7 @@ exports[`should render error for clearable input 1`] = `
   className="form-control"
 >
   <ClearableInput
+    clearButtonProps={Object {}}
     id="jest"
     maxNumberText={[Function]}
     name="jester"

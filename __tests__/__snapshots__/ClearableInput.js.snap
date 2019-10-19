@@ -2,6 +2,7 @@
 
 exports[`should be clearable when type equals "text" 1`] = `
 <ClearableInput
+  clearButtonProps={Object {}}
   id="jest"
   maxNumberText={[Function]}
   onChange={

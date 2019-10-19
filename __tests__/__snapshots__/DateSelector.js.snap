@@ -7,6 +7,7 @@ exports[`should call onChange when clear is clicked 1`] = `
 >
   <ClearableInput
     className=" mko_1vy27dt-dateSelector__input"
+    clearButtonProps={Object {}}
     containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
@@ -44,6 +45,7 @@ exports[`should not display clear button when value required 1`] = `
 >
   <ClearableInput
     className=" mko_1vy27dt-dateSelector__input"
+    clearButtonProps={Object {}}
     containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
@@ -74,6 +76,7 @@ exports[`should open calendar 1`] = `
 >
   <ClearableInput
     className=" mko_1vy27dt-dateSelector__input"
+    clearButtonProps={Object {}}
     containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
@@ -127,6 +130,7 @@ exports[`should render standard view 1`] = `
 >
   <ClearableInput
     className=" mko_1vy27dt-dateSelector__input"
+    clearButtonProps={Object {}}
     containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"
@@ -156,6 +160,7 @@ exports[`should render with minimum props 1`] = `
 >
   <ClearableInput
     className=" mko_1vy27dt-dateSelector__input"
+    clearButtonProps={Object {}}
     containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
     id="jest-ctrl"
     label="Date"

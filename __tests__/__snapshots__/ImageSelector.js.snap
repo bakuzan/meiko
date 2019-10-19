@@ -144,6 +144,7 @@ exports[`should render with minimum props 1`] = `
     >
       <ClearableInput
         className=" mko_1qc9vl7-selector__urlInput"
+        clearButtonProps={Object {}}
         containerClassName="image-selector__url  mko_1qc9vl7-selector__url"
         id="imageUrl"
         label="Image Url"
@@ -217,6 +218,7 @@ exports[`should toggle url display 1`] = `
     >
       <ClearableInput
         className=" mko_1qc9vl7-selector__urlInput"
+        clearButtonProps={Object {}}
         containerClassName="image-selector__url  mko_1qc9vl7-selector__url"
         id="imageUrl"
         label="Image Url"

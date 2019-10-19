@@ -90,6 +90,7 @@ exports[`should call updateChipList when suggestion is clicked 1`] = `
       >
         <ClearableInput
           className="chip-list-input__clearable-input  mko_vagvjv-clearButton"
+          clearButtonProps={Object {}}
           id="jest"
           label="tags"
           maxNumberText={[Function]}
@@ -268,6 +269,7 @@ exports[`should ready removal of selected chip 1`] = `
       >
         <ClearableInput
           className="chip-list-input__clearable-input  mko_vagvjv-clearButton"
+          clearButtonProps={Object {}}
           id="jest"
           label="tags"
           maxNumberText={[Function]}
@@ -446,6 +448,7 @@ exports[`should render selected chips and remove 1`] = `
       >
         <ClearableInput
           className="chip-list-input__clearable-input  mko_vagvjv-clearButton"
+          clearButtonProps={Object {}}
           id="jest"
           label="tags"
           maxNumberText={[Function]}
@@ -639,6 +642,7 @@ exports[`should render selected chips and remove 2`] = `
       >
         <ClearableInput
           className="chip-list-input__clearable-input  mko_vagvjv-clearButton"
+          clearButtonProps={Object {}}
           id="jest"
           label="tags"
           maxNumberText={[Function]}
