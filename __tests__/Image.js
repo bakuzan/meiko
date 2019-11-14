@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Image, Urls } from '../lib';
-import { act } from 'react-testing-library';
+import { act } from '@testing-library/react';
 
 let trggerIntersection = null;
 const observeMock = {

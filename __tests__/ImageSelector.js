@@ -1,6 +1,6 @@
 import fetchMock from 'fetch-mock';
 import React from 'react';
-import { act } from 'react-testing-library';
+import { act } from '@testing-library/react';
 
 import { ImageSelector } from '../lib';
 

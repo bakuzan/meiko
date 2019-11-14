@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Tooltip } from '../lib';
-import { act } from 'react-testing-library';
+import { act } from '@testing-library/react';
 
 it('should render with minimum props', function() {
   const component = shallow(<Tooltip text="Tooltip!" />);

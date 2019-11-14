@@ -2,15 +2,15 @@
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="tickbox  mko_483rqv-tickbox"
+  className="tickbox  mko_1oj1nfd-tickbox"
 >
   <label
-    className="tickbox__label  mko_483rqv-tickbox__label"
+    className="tickbox__label  mko_1oj1nfd-tickbox__label"
     htmlFor="jest"
   >
     <input
       checked={false}
-      className=" mko_483rqv-tickbox__input"
+      className=" mko_1oj1nfd-tickbox__input"
       id="jest"
       onChange={[MockFunction]}
       type="checkbox"
@@ -21,15 +21,15 @@ exports[`should render with minimum props 1`] = `
 
 exports[`should toggle checkbox on click 1`] = `
 <div
-  className="tickbox  mko_483rqv-tickbox"
+  className="tickbox  mko_1oj1nfd-tickbox"
 >
   <label
-    className="tickbox__label  mko_483rqv-tickbox__label"
+    className="tickbox__label  mko_1oj1nfd-tickbox__label"
     htmlFor="jest"
   >
     <input
       checked={false}
-      className=" mko_483rqv-tickbox__input"
+      className=" mko_1oj1nfd-tickbox__input"
       id="jest"
       onChange={
         [MockFunction] {
