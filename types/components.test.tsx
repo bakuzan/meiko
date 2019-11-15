@@ -35,6 +35,7 @@ import {
   RadioToggle,
   RatingControl,
   RequestIndicator,
+  ScrollTopButton,
   SelectBox,
   Sidebar,
   Tabs,
@@ -179,6 +180,8 @@ const Test = () => <li></li>;
 <RatingControl id="rating" value={'5'} />;
 
 <RequestIndicator hide={false} requestInFlight={true} />;
+
+<ScrollTopButton offset={20} />;
 
 <SelectBox options={[]} />;
 <SelectBox>
