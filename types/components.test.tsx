@@ -238,3 +238,9 @@ const Test = () => <li></li>;
 >
   <div>something here</div>
 </Tooltip>;
+<Tooltip text="Tooltip text" usePosition>
+  <div>something here</div>
+</Tooltip>;
+<Tooltip text="Tooltip text" usePosition="above">
+  <div>something here</div>
+</Tooltip>;

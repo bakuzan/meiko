@@ -1,8 +1,10 @@
+type TooltipPosition = 'above';
+
 export interface TooltipProps extends React.HTMLProps<HTMLDivElement> {
   text: string;
   isEnabled?: boolean;
   allowWrapping?: boolean;
-  usePosition?: boolean;
+  usePosition?: boolean | TooltipPosition;
   delay?: number;
   center?: boolean;
   highlight?: boolean;

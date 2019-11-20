@@ -94,7 +94,7 @@ export {
 } from './components/RequestIndicator';
 export {
   ScrollTopButtonProps,
-  ScrollTopButton
+  default as ScrollTopButton
 } from './components/ScrollTopButton';
 export {
   default as SelectBox,
