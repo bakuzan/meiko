@@ -1,4 +1,6 @@
-export interface DropdownMenuProps extends React.HTMLProps<HTMLButtonElement> {
+import { ButtonProps } from './Button';
+
+export interface DropdownMenuProps extends ButtonProps {
   title?: string;
   icon?: string;
   align?: 'left' | 'right' | 'center';

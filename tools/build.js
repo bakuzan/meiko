@@ -51,6 +51,9 @@ async function run() {
   await copyRootFile('package.json');
   await copyRootFile('README.md');
   await copyDir('types/components');
+  await copyDir('types/constants', 'constants');
+  await copyDir('types/hooks', 'hooks');
+  await copyDir('types/utils', 'utils');
 }
 
 run();

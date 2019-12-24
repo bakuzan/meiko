@@ -142,3 +142,6 @@ export {
   ToasterService,
   Toast
 } from './utils/toasterService';
+
+// Constants
+export { default as Icons } from './constants/icons';

@@ -9,7 +9,10 @@ declare function withButtonisation<TProps>(
   WrappedComponent:
     | React.ComponentClass<TProps & any, any>
     | React.StatelessComponent<TProps & any>
-): (props: any) => React.ReactElement;
+):
+  | React.FC<TProps & ButtonProps>
+  | React.SFC<TProps & ButtonProps>
+  | React.ComponentClass<TProps & ButtonProps>;
 
 declare const Button: React.SFC<ButtonProps>;
 
