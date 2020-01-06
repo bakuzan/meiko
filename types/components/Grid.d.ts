@@ -10,6 +10,6 @@ export interface GridProps extends React.HTMLProps<HTMLUListElement> {
   footerChildren?: React.ReactNode | React.ReactElement<any>;
 }
 
-declare const Grid: React.SFC<GridProps>;
+declare const Grid: React.RefForwardingComponent<HTMLUListElement, GridProps>;
 
 export default Grid;

@@ -1,3 +1,3 @@
-export declare function useProgressiveLoading(
+export declare function useProgressiveLoading<E>(
   onIntersect: () => void
-): React.MutableRefObject<Element | undefined>;
+): React.RefObject<E> | undefined;

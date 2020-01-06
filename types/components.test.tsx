@@ -66,6 +66,7 @@ import {
   menuClassName="name"
   clearableInputProps={{ id: 'unique', clearInputButtonClass: 'input' }}
   onSelect={() => {}}
+  onChange={() => {}}
   suggestionTemplate={(a) => <div></div>}
   noSuggestionsItem={<div></div>}
 ></AutocompleteInput>;
@@ -134,6 +135,11 @@ const Test = () => <li></li>;
 <Grid items={[]}>{() => <li></li>}</Grid>;
 <Grid items={[]}>{() => <Test />}</Grid>;
 
+const gridRef = React.createRef<HTMLUListElement>();
+<Grid ref={gridRef} items={[]}>
+  {() => <Test />}
+</Grid>;
+
 <Header
   leftAlignTitle={true}
   navLeft={<div></div>}
@@ -151,6 +157,17 @@ const Test = () => <li></li>;
 <List shouldWrap columns={3}>
   <div>dfsdasdasda</div>
 </List>;
+
+function test() {
+  const listRef = React.useRef<HTMLUListElement>() as React.RefObject<
+    HTMLUListElement
+  >;
+  return (
+    <List ref={listRef} shouldWrap columns={3}>
+      <div>dfsdasdasda</div>
+    </List>
+  );
+}
 
 <SimpleLoading pastDelay={false} />;
 <Loading pastDelay={false} error={new Error()} timedOut={false} />;

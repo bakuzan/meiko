@@ -3,6 +3,6 @@ export interface ListProps extends React.HTMLProps<HTMLUListElement> {
   columns?: number;
 }
 
-declare const List: React.SFC<ListProps>;
+declare const List: React.RefForwardingComponent<HTMLUListElement, ListProps>;
 
 export default List;
