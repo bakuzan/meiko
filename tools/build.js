@@ -53,6 +53,7 @@ async function run() {
   await copyDir('types/components');
   await copyDir('types/constants', 'constants');
   await copyDir('types/hooks', 'hooks');
+  await copyDir('types/styles', 'styles');
   await copyDir('types/utils', 'utils');
 }
 
