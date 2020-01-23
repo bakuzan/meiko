@@ -7,8 +7,12 @@
 }
 
 @mixin respondTo($media) {
-  @if $media == xs {
-    @media (max-width: $screen-xs-max) {
+  @if $media == xxs {
+    @media (max-width: $screen-xxs-max) {
+      @content;
+    }
+  } @else if $media == xs {
+    @media (min-width: $screen-xs) and (max-width: $screen-xs-max) {
       @content;
     }
   } @else if $media == sm {

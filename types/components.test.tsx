@@ -233,7 +233,19 @@ function test() {
   )}
 </Container>;
 
-<TabTrap isActive={true} firstId="test" lastId="testLast"></TabTrap>;
+function tabTrapTest() {
+  const tabTrapRef = React.useRef<HTMLDivElement>() as React.MutableRefObject<
+    HTMLDivElement
+  >;
+  return (
+    <TabTrap
+      ref={tabTrapRef}
+      isActive={true}
+      firstId="test"
+      lastId="testLast"
+    ></TabTrap>
+  );
+}
 
 <TagChip data={{ id: 1, name: 'test' }} />;
 
