@@ -1,6 +1,7 @@
 export interface TabViewProps {
   isActive?: boolean;
   name: string;
+  displayName?: string;
   children:
     | ((isActive: boolean) => React.ReactNode)
     | React.ReactNode

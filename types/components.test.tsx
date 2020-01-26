@@ -220,7 +220,7 @@ function test() {
   </Tabs.View>
   <Tabs.View name="second">{() => <div></div>}</Tabs.View>
   {false && (
-    <Tabs.View name="third">
+    <Tabs.View name="third" displayName="Last">
       <div></div>
     </Tabs.View>
   )}
