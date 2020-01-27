@@ -273,3 +273,6 @@ function tabTrapTest() {
 <Tooltip text="Tooltip text" usePosition="above">
   <div>something here</div>
 </Tooltip>;
+<Tooltip text="Tooltip text" contentId="test" attachTo="body">
+  <div>something here that will get portalled to the body</div>
+</Tooltip>;

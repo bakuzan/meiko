@@ -1,4 +1,4 @@
-type TooltipPosition = 'above';
+export type TooltipPosition = 'above';
 
 export interface TooltipProps extends React.HTMLProps<HTMLDivElement> {
   text: string;
@@ -8,6 +8,8 @@ export interface TooltipProps extends React.HTMLProps<HTMLDivElement> {
   delay?: number;
   center?: boolean;
   highlight?: boolean;
+  contentId?: string;
+  attachTo?: string;
 }
 
 declare const Tooltip: React.SFC<TooltipProps>;

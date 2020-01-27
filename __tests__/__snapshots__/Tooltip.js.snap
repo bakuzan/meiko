@@ -2,16 +2,13 @@
 
 exports[`should render with minimum props 1`] = `
 <div
-  className="tooltip  mko_1dx2rda-tooltip"
+  className="tooltip  mko_25aqbz-tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  <div
-    aria-hidden={false}
-    className="tooltip__content  mko_1dx2rda-tooltipContent"
-    style={Object {}}
-  >
-    Tooltip!
-  </div>
+  <TooltipContent
+    hidden={false}
+    readable={true}
+  />
 </div>
 `;
