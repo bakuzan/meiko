@@ -1,4 +1,4 @@
-export type TooltipPosition = 'above';
+export type TooltipPosition = 'above' | 'below';
 
 export interface TooltipProps extends React.HTMLProps<HTMLDivElement> {
   text: string;
