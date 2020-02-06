@@ -3,7 +3,7 @@
 exports[`should render with minimum props 1`] = `
 <a
   href="#jest"
-  rel="noopener noreferrer"
+  rel="nofollow noopener noreferrer"
   target="_blank"
 />
 `;
