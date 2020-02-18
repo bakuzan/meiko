@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import {
+  Accordion,
   Alert,
   AppInformation,
   AutocompleteInput,
@@ -48,6 +49,10 @@ import {
   Tooltip,
   TabTrap
 } from 'meiko';
+
+<Accordion heading={'Header'}>
+  <div>children or something</div>
+</Accordion>;
 
 <Alert
   messageClassName="name"

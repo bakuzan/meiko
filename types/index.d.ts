@@ -1,5 +1,9 @@
 // Components
-
+export {
+  default as Accordion,
+  AccordionProps,
+  AccordionToggleProps
+} from './components/Accordion';
 export { default as Alert, AlertMessage, AlertProps } from './components/Alert';
 export {
   default as AppInformation,
