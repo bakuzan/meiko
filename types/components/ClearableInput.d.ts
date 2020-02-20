@@ -1,8 +1,8 @@
 import { ButtonProps } from './Button';
 
-declare const Input: React.ForwardRefExoticComponent<
-  React.HTMLProps<HTMLInputElement>
->;
+declare const Input: React.ForwardRefExoticComponent<React.HTMLProps<
+  HTMLInputElement
+>>;
 
 export interface ClearableInputProps extends React.HTMLProps<HTMLInputElement> {
   containerClassName?: string;
@@ -11,7 +11,7 @@ export interface ClearableInputProps extends React.HTMLProps<HTMLInputElement> {
   clearButtonProps?: ButtonProps;
 }
 
-declare const ClearableInput: React.SFC<ClearableInputProps>;
+declare const ClearableInput: React.ForwardRefExoticComponent<ClearableInputProps>;
 
 export { Input };
 

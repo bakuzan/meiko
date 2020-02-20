@@ -101,7 +101,10 @@ withButtonisation(Button);
   updateChipList={() => null}
 />;
 
+const inpRef = React.createRef<HTMLInputElement>();
+<ClearableInput ref={inpRef} label="Testing" value={'test'} />;
 <ClearableInput label="Testing" />;
+
 <Input />;
 
 <DateSelector id="unique" value="2019-09-18" onChange={() => null} />;

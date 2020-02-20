@@ -132,7 +132,8 @@
     "style-loader": "^1.0.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.5"
+    "@babel/runtime": "^7.4.5",
+    "@seznam/compose-react-refs": "^1.0.4"
   },
   "peerDependencies": {
     "ayaka": "file:../ayaka/build",

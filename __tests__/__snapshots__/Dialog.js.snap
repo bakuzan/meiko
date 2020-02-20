@@ -12,7 +12,9 @@ exports[`should call onCancel when cancel button clicked 1`] = `
 >
   <ForwardRef(TabTrap)
     element="div"
+    firstId="test"
     isActive={true}
+    lastId="test"
   >
     <div
       className="dialog__content"
@@ -70,7 +72,9 @@ exports[`should only render title when passed 1`] = `
 >
   <ForwardRef(TabTrap)
     element="div"
+    firstId="test"
     isActive={true}
+    lastId="test"
   >
     <div
       className="dialog__content"
@@ -141,7 +145,9 @@ exports[`should open when passed new prop 1`] = `
 >
   <ForwardRef(TabTrap)
     element="div"
+    firstId="test"
     isActive={true}
+    lastId="test"
   >
     <div
       className="dialog__content"
@@ -187,7 +193,9 @@ exports[`should render action button and call onAction when clicked 1`] = `
 >
   <ForwardRef(TabTrap)
     element="div"
+    firstId="test"
     isActive={true}
+    lastId="test"
   >
     <div
       className="dialog__content"
@@ -253,7 +261,9 @@ exports[`should render with minimum props 1`] = `
 >
   <ForwardRef(TabTrap)
     element="div"
+    firstId="test"
     isActive={false}
+    lastId="test"
   >
     <div
       className="dialog__content"
@@ -326,6 +336,12 @@ exports[`should replace form element with div 1`] = `
     }
   }
   style={Object {}}
+  tabTrapProps={
+    Object {
+      "firstId": "test",
+      "lastId": "test",
+    }
+  }
 >
   <dialog
     className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
@@ -338,7 +354,9 @@ exports[`should replace form element with div 1`] = `
   >
     <ForwardRef(TabTrap)
       element="div"
+      firstId="test"
       isActive={true}
+      lastId="test"
     >
       <div>
         <input

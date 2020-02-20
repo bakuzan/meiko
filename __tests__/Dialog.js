@@ -5,9 +5,18 @@ import { Dialog } from '../lib';
 const mockedActionFn = jest.fn();
 const mockedCloseFn = jest.fn();
 
+const firstId = 'test';
+const lastId = 'test';
+const tabTrapProps = { firstId, lastId };
+
 it('should render with minimum props', function() {
   const component = shallow(
-    <Dialog name="jest" isOpen={false} onCancel={mockedCloseFn}>
+    <Dialog
+      name="jest"
+      isOpen={false}
+      onCancel={mockedCloseFn}
+      tabTrapProps={tabTrapProps}
+    >
       <div>jest</div>
     </Dialog>
   );
@@ -18,7 +27,12 @@ it('should render with minimum props', function() {
 
 it('should open when passed new prop', function() {
   const component = shallow(
-    <Dialog name="jest" isOpen={false} onCancel={mockedCloseFn}>
+    <Dialog
+      name="jest"
+      isOpen={false}
+      onCancel={mockedCloseFn}
+      tabTrapProps={tabTrapProps}
+    >
       <div>jest</div>
     </Dialog>
   );
@@ -33,7 +47,12 @@ it('should open when passed new prop', function() {
 
 it('should call onCancel when cancel button clicked', function() {
   const component = shallow(
-    <Dialog name="jest" isOpen={true} onCancel={mockedCloseFn}>
+    <Dialog
+      name="jest"
+      isOpen={true}
+      onCancel={mockedCloseFn}
+      tabTrapProps={tabTrapProps}
+    >
       <div>jest</div>
     </Dialog>
   );
@@ -51,6 +70,7 @@ it('should render action button and call onAction when clicked', function() {
       isOpen={true}
       onAction={mockedActionFn}
       onCancel={mockedCloseFn}
+      tabTrapProps={tabTrapProps}
     >
       <div>jest</div>
     </Dialog>
@@ -72,6 +92,7 @@ it('should only render title when passed', function() {
       isOpen={true}
       onAction={mockedActionFn}
       onCancel={mockedCloseFn}
+      tabTrapProps={tabTrapProps}
     >
       <div>jest</div>
     </Dialog>
@@ -94,6 +115,7 @@ it('should replace form element with div', function() {
       isOpen={true}
       onAction={mockedActionFn}
       onCancel={mockedCloseFn}
+      tabTrapProps={tabTrapProps}
     >
       <div>jest</div>
     </Dialog>

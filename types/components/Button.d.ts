@@ -8,12 +8,11 @@ export interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
 declare function withButtonisation<TProps>(
   WrappedComponent:
     | React.ComponentClass<TProps & any, any>
-    | React.StatelessComponent<TProps & any>
+    | React.FunctionComponent<TProps & any>
 ):
-  | React.FC<TProps & ButtonProps>
-  | React.SFC<TProps & ButtonProps>
+  | React.FunctionComponent<TProps & ButtonProps>
   | React.ComponentClass<TProps & ButtonProps>;
 
-declare const Button: React.SFC<ButtonProps>;
+declare const Button: React.ForwardRefExoticComponent<ButtonProps>;
 
 export { withButtonisation, Button };
