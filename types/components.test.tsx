@@ -259,7 +259,7 @@ function tabTrapTest() {
 
 <TagCloudSelector tagOptions={[{ id: 1, name: 'test' }]} />;
 
-<Tickbox id="test" checked={true} readOnly />;
+<Tickbox id="test" containerClassName="" checked={true} readOnly />;
 
 <Toaster />;
 
