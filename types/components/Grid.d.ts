@@ -1,15 +1,17 @@
 import * as React from 'react';
 
-export interface GridProps extends React.HTMLProps<HTMLUListElement> {
-  items?: any[];
+export interface GridProps<T extends any>
+  extends React.HTMLProps<HTMLUListElement> {
+  items?: T[];
   noItemsText?: string | boolean;
-  children?:
-    | ((data: any, index: number, arr: any[]) => React.ReactNode)
-    | ((data: any, index: number, arr: any[]) => React.ReactElement<any>);
+  children?: (data: T, index: number, arr: T[]) => React.ReactNode;
   uniformRows?: boolean;
   footerChildren?: React.ReactNode | React.ReactElement<any>;
 }
 
-declare const Grid: React.RefForwardingComponent<HTMLUListElement, GridProps>;
+declare const Grid: <T extends any>(
+  props: React.PropsWithChildren<GridProps<T>>,
+  ref: React.Ref<HTMLUListElement>
+) => React.ReactElement | null;
 
 export default Grid;
