@@ -207,6 +207,7 @@ function test() {
 <RequestIndicator hide={false} requestInFlight={true} />;
 
 <ScrollTopButton offset={20} />;
+<ScrollTopButton className="" offset={20} style={{}} />;
 
 <SelectBox options={[]} />;
 <SelectBox>

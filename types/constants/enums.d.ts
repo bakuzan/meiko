@@ -20,7 +20,8 @@ export declare enum EventCodes {
   Escape = 'Escape',
   Space = ' ',
   KeyQ = 'q',
-  KeyS = 's'
+  KeyS = 's',
+  KeyG = 'g'
 }
 
 export declare enum KeyCodes {

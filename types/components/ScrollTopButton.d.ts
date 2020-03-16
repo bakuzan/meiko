@@ -1,4 +1,5 @@
-export interface ScrollTopButtonProps {
+export interface ScrollTopButtonProps
+  extends Pick<React.HTMLProps<HTMLButtonElement>, 'className' | 'style'> {
   offset?: number;
 }
 
