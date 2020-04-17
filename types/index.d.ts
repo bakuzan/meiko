@@ -125,9 +125,12 @@ export { default as Toaster } from './components/Toaster';
 export { default as Tooltip, TooltipProps } from './components/Tooltip';
 
 // Hooks
+export { useAsync } from './hooks/useAsync';
+export { useAsyncFn } from './hooks/useAsyncFn';
 export { useDebounce } from './hooks/useDebounce';
 export { useGlobalStyles } from './hooks/useGlobalStyles';
 export { useIntersect } from './hooks/useIntersect';
+export { useMountedState } from './hooks/useMountedState';
 export { useOutsideClick } from './hooks/useOutsideClick';
 export { usePrevious } from './hooks/usePrevious';
 export { useProgressiveLoading } from './hooks/useProgressiveLoading';

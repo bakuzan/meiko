@@ -1,9 +1,12 @@
 import { useRef } from 'react';
 
 import {
+  useAsync,
+  useAsyncFn,
   useDebounce,
   useGlobalStyles,
   useIntersect,
+  useMountedState,
   useOutsideClick,
   usePrevious,
   useProgressiveLoading,
@@ -11,6 +14,12 @@ import {
   useWhyDidYouUpdate,
   useWindowSize
 } from './index';
+
+const asyncState = useAsync(async () => Promise.resolve());
+
+const [asyncFnState, callback, reset] = useAsyncFn(async () =>
+  Promise.resolve()
+);
 
 useDebounce<string>('test');
 useDebounce<boolean>(true, 1000);
@@ -22,6 +31,8 @@ ref.current = document.createElement('div');
 
 useIntersect(ref);
 useIntersect(ref, '50px');
+
+useMountedState();
 
 useOutsideClick(ref.current, () => null);
 
