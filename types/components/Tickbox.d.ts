@@ -2,7 +2,7 @@ export interface TickboxProps extends React.HTMLProps<HTMLInputElement> {
   containerClassName?: string;
   id: string;
   checked?: boolean;
-  text?: string;
+  text?: React.ReactNode;
 }
 
 declare const Tickbox: React.SFC<TickboxProps>;
