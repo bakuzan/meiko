@@ -25,6 +25,16 @@ getTagChipSize(
   4
 );
 
+getTagChipSize(
+  [
+    { name: 'test1', count: 4 },
+    { name: 'test2', count: 3 },
+    { name: 'test3', count: 1 }
+  ],
+  4,
+  { min: 0.5, max: 2 }
+);
+
 getWindowScrollPosition();
 
 resolveErrorMessage('an error');

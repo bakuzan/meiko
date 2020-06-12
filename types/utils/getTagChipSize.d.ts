@@ -3,6 +3,15 @@ export interface CountableChip {
   [key: string]: any;
 }
 
-declare function getChipSize(chips: CountableChip[], count: number): number;
+export interface ChipSizeOptions {
+  min?: number;
+  max?: number;
+}
+
+declare function getChipSize(
+  chips: CountableChip[],
+  count: number,
+  opts?: ChipSizeOptions
+): number;
 
 export default getChipSize;

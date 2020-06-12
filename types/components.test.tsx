@@ -259,6 +259,10 @@ function tabTrapTest() {
 <TagChip data={{ id: 1, name: 'test' }} />;
 
 <TagCloudSelector tagOptions={[{ id: 1, name: 'test' }]} />;
+<TagCloudSelector
+  tagOptions={[{ id: 1, name: 'test' }]}
+  sizes={{ min: 0.5, max: 2 }}
+/>;
 
 <Tickbox id="test" containerClassName="" checked={true} readOnly />;
 
