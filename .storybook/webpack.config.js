@@ -39,8 +39,9 @@ module.exports = ({ config }) => {
           {
             loader: 'postcss-loader',
             options: {
-              ident: 'postcss',
-              plugins: () => [require('autoprefixer')()]
+              postcssOptions: {
+                plugins: ['autoprefixer']
+              }
             }
           },
           {

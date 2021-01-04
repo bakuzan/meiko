@@ -1,5 +1,5 @@
 import React from 'react';
-import addons from '@storybook/addons';
+import { addons, types } from '@storybook/addons';
 import { STORY_RENDERED } from '@storybook/core-events';
 
 const styles = {
@@ -57,8 +57,9 @@ class Mko extends React.Component {
 // Register the addon with a unique name.
 addons.register('Mko', (api) => {
   // Also need to set a unique name to the panel.
-  addons.addPanel('Mko/panel', {
+  addons.add('Mko/panel', {
     title: 'Mko',
+    type: types.PANEL,
     render: ({ active, key }) => <Mko key={key} api={api} active={active} />
   });
 });
