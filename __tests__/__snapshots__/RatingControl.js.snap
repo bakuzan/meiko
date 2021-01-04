@@ -806,11 +806,11 @@ exports[`should return value of 0 if active value is selected 1`] = `
     />
   </label>
   <label
-    aria-label="5/10"
+    aria-label="5/10 (selected)"
     className="rating-control__option rating-control__option--average rating-control__option--selected  mko_1a3l7p3-control__option  mko_1a3l7p3-average  mko_1a3l7p3-control__option_selected"
     htmlFor="jest-5"
     key="4"
-    title="5/10"
+    title="5/10 (selected)"
   >
     <input
       checked={true}
