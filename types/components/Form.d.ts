@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { ButtonProps } from './Button';
 
-export interface FormButtonProps extends React.HTMLProps<HTMLButtonElement> {
+export interface FormButtonProps extends ButtonProps {
   text?: string;
   hide?: boolean;
 }
