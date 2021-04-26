@@ -6,6 +6,7 @@ export interface ChipListOption {
 }
 
 export interface ChipListInputProps {
+  id?: string;
   label?: string;
   attr: string;
   name: string;
