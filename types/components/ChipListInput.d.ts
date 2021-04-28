@@ -1,13 +1,16 @@
 import * as React from 'react';
+import { AutocompleteInputProps } from './AutocompleteInput';
 
 export interface ChipListOption {
   id: number | string;
   [key: string]: any;
 }
 
-export interface ChipListInputProps {
-  id?: string;
-  label?: string;
+export interface ChipListInputProps
+  extends Pick<
+    AutocompleteInputProps,
+    'id' | 'label' | 'disableLocalFilter' | 'clearableInputProps'
+  > {
   attr: string;
   name: string;
   chipsSelected: ChipListOption[];
