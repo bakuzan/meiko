@@ -2,13 +2,14 @@ export interface TabViewProps {
   isActive?: boolean;
   name: string;
   displayName?: string;
+  disabled?: boolean;
   children:
     | ((isActive: boolean) => React.ReactNode)
     | React.ReactNode
     | React.ReactNode[];
 }
 
-declare const View: React.SFC<TabViewProps>;
+declare const View: React.FunctionComponent<TabViewProps>;
 
 export interface TabContainerProps {
   className?: string;
@@ -21,7 +22,7 @@ export interface TabContainerProps {
   onChange?: (name: string) => void;
 }
 
-declare const Container: React.SFC<TabContainerProps>;
+declare const Container: React.FunctionComponent<TabContainerProps>;
 
 export { View, Container };
 
