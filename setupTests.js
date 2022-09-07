@@ -1,13 +1,9 @@
-import { configure, shallow, mount, render } from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import { render, screen } from '@testing-library/react';
 import { JSDOM } from 'jsdom';
 
-configure({ adapter: new Adapter() });
-
-// Make enzyme func's global!
-global.shallow = shallow;
-global.mount = mount;
+// Make func's global!
 global.render = render;
+global.screen = screen;
 
 // Mock document
 const dom = new JSDOM();
