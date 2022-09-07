@@ -1,4 +1,5 @@
 const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = ({ config }) => {
   const includeLib = path.resolve(__dirname, '../lib');
@@ -6,6 +7,14 @@ module.exports = ({ config }) => {
   const includeStoryStyles = path.resolve(__dirname, '../stories/styles');
 
   config.stats = 'verbose';
+
+  config.plugins = [
+    ...(config.plugins || []),
+    new ESLintPlugin({
+      context: includeLib,
+      exclude: ['node_modules', 'stories']
+    })
+  ];
 
   config.resolve = {
     ...config.resolve,
@@ -19,13 +28,6 @@ module.exports = ({ config }) => {
 
   config.module.rules.push(
     ...[
-      {
-        enforce: 'pre',
-        test: /\.js$/,
-        include: includeLib,
-        exclude: /stories/,
-        loader: 'eslint-loader'
-      },
       {
         test: /\.scss$/,
         include: [includeLibStyles, includeStoryStyles],
