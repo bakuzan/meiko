@@ -2,61 +2,58 @@ import React from 'react';
 
 import { Header } from '../lib';
 
-it('should render with minimum props', function() {
-  const component = shallow(<Header />);
+it('should render with minimum props', function () {
+  const { container } = render(<Header />);
 
-  expect(component.is('.application-header')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).not.toBeNull();
+  expect(container).toMatchSnapshot();
 });
 
-it('should render title', function() {
-  const component = shallow(<Header title="" />);
+it('should render title', function () {
+  const { container, getByText, queryByText, rerender } = render(
+    <Header title="" />
+  );
 
-  let target = component.find('.application-header__title');
-  expect(target.exists()).toBe(false);
+  expect(queryByText('hello world')).toBeNull();
 
-  component.setProps({ title: 'hello world' });
+  rerender(<Header title={'hello world'} />);
 
-  target = component.find('.application-header__title');
-  expect(target.exists()).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByText('hello world')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should render navLeft', function() {
-  const component = shallow(<Header navLeft="" />);
+it('should render navLeft', function () {
+  const { container, getByText, queryByText, rerender } = render(
+    <Header navLeft="" />
+  );
 
-  let target = component.find('.application-header__links-block');
-  expect(target.exists()).toBe(false);
+  expect(queryByText('left side')).toBeNull();
 
-  component.setProps({ navLeft: <div /> });
+  rerender(<Header navLeft={<div>left side</div>} />);
 
-  target = component.find('.application-header__links-block');
-  expect(target.exists()).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByText('left side')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should render navRight', function() {
-  const component = shallow(<Header navRight="" />);
+it('should render navRight', function () {
+  const { container, getByText, queryByText, rerender } = render(
+    <Header navRight="" />
+  );
 
-  let target = component.find('.application-header__links-block');
-  expect(target.exists()).toBe(false);
+  expect(queryByText('right side')).toBeNull();
 
-  component.setProps({ navRight: <div /> });
+  rerender(<Header navRight={<div>right side</div>} />);
 
-  target = component.find('.application-header__links-block');
-  expect(target.exists()).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByText('right side')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should left align title', function() {
-  const component = shallow(<Header title="Hello" />);
+it('should left align title', function () {
+  const { container, rerender } = render(<Header title="Hello" />);
 
-  let target = component.find('.flex-spacer');
-  expect(target.length).toEqual(2);
+  expect(container).toMatchSnapshot();
 
-  component.setProps({ leftAlignTitle: true });
+  rerender(<Header title="Hello" leftAlignTitle />);
 
-  target = component.find('.flex-spacer');
-  expect(target.length).toEqual(1);
-  expect(component).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

@@ -10,8 +10,8 @@ const options = [
   { value: 3, text: 'three' }
 ];
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <SelectBox
       id="jest"
       text="Jesters"
@@ -21,13 +21,13 @@ it('should render with minimum props', function() {
     />
   );
 
-  expect(component.is('.select-container')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call onChange', function() {
+it('should call onChange', function () {
   const changeEvent = { target: { value: 2 } };
-  const component = shallow(
+  const { container, getByLabelText } = render(
     <SelectBox
       id="jest"
       text="Jesters"
@@ -37,10 +37,10 @@ it('should call onChange', function() {
     />
   );
 
-  expect(component.find('option').length).toBe(3);
+  const selectBox = getByLabelText('Jesters');
+  fireEvent.change(selectBox, changeEvent);
 
-  component.find('select').simulate('change', changeEvent);
-
+  expect(selectBox.children.length).toBe(3);
   expect(mockedChangeFn).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

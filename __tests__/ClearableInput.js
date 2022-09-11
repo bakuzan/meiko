@@ -7,45 +7,48 @@ const mockChangeFn = jest.fn();
 
 afterEach(() => jest.resetAllMocks());
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <ClearableInput id="jest" value={value} onChange={mockChangeFn} />
   );
 
-  expect(component.is('.clearable-input')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call onChange when value is updated', function() {
+it('should call onChange when value is updated', function () {
   const changeEvent = { target: { value: 'hello world' } };
-  const component = mount(
-    <ClearableInput id="jest" value={value} onChange={mockChangeFn} />
+  const { getByLabelText } = render(
+    <ClearableInput
+      id="jest"
+      label="jest input"
+      value={value}
+      onChange={mockChangeFn}
+    />
   );
 
-  const input = component.find('input#jest');
-  input.simulate('change', changeEvent);
+  const input = getByLabelText('jest input');
+  fireEvent.change(input, changeEvent);
 
   expect(mockChangeFn).toHaveBeenCalled();
-  component.unmount();
 });
 
-it('should be clearable when type equals "text"', function() {
-  const component = mount(
+it('should be clearable when type equals "text"', async function () {
+  const { container, getByLabelText, rerender } = render(
     <ClearableInput id="jest" value={'hello world'} onChange={mockChangeFn} />
   );
 
-  const clearButton = component.find('button.clearable-input__clear');
-  clearButton.simulate('click');
+  const user = userEvent.setup();
+  await user.click(getByLabelText('Clear input'));
 
-  component.setProps({ value: '' });
+  rerender(<ClearableInput id="jest" value={''} onChange={mockChangeFn} />);
 
   expect(mockChangeFn).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(container).toMatchSnapshot();
 });
 
-it('should NOT be clearable when type does not equal "text"', function() {
-  const component = mount(
+it('should NOT be clearable when type does not equal "text"', function () {
+  const { queryByLabelText } = render(
     <ClearableInput
       id="jest"
       value={39}
@@ -54,14 +57,11 @@ it('should NOT be clearable when type does not equal "text"', function() {
     />
   );
 
-  const clearButton = component.find('button.clearable-input__clear');
-
-  expect(clearButton.exists()).toBe(false);
-  component.unmount();
+  expect(queryByLabelText('Clear input')).toBeNull();
 });
 
-it('should display max length text', function() {
-  const component = mount(
+it('should display max length text', function () {
+  const { getByText } = render(
     <ClearableInput
       id="jest"
       value={'hello world'}
@@ -70,14 +70,11 @@ it('should display max length text', function() {
     />
   );
 
-  const countElement = component.find('.clearable-input__count');
-
-  expect(countElement.text()).toEqual('11/140');
-  component.unmount();
+  expect(getByText('11/140')).toBeTruthy();
 });
 
-it('should display max text for number field', function() {
-  const component = mount(
+it('should display max text for number field', function () {
+  const { getByText } = render(
     <ClearableInput
       id="jest"
       value={'hello world'}
@@ -87,8 +84,5 @@ it('should display max text for number field', function() {
     />
   );
 
-  const countElement = component.find('.clearable-input__count');
-
-  expect(countElement.text()).toEqual('out of 10');
-  component.unmount();
+  expect(getByText('out of 10')).toBeTruthy();
 });

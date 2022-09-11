@@ -21,25 +21,28 @@ beforeEach(() => {
   };
 });
 
-it('should render with minimum props', function() {
-  const component = shallow(<Image src="fakeimage" alt="jest" />);
+it('should render with minimum props', function () {
+  const { container } = render(<Image src="fakeimage" alt="jest" />);
 
-  expect(component.is('img')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should update src with dead image onError', function() {
-  const component = shallow(<Image src="fakeimage" alt="jest" />);
+it('should update src with dead image onError', function () {
+  const { container, getByAltText } = render(
+    <Image src="fakeimage" alt="jest" />
+  );
+  const imageElement = getByAltText('jest');
 
-  expect(component.find('img').prop('src')).toEqual('fakeimage');
+  expect(imageElement.src.includes('fakeimage')).toBe(true);
 
-  component.find('img').prop('onError')();
+  fireEvent.error(imageElement);
 
-  expect(component.find('img').prop('src')).toEqual(Urls.images.deadImage);
-  expect(component).toMatchSnapshot();
+  expect(imageElement.src).toEqual(Urls.images.deadImage);
+  expect(container).toMatchSnapshot();
 });
 
-xit('should delay source until intersect if lazy', function() {
+xit('should delay source until intersect if lazy', function () {
   const component = mount(<Image isLazy src="fakeimage" alt="jest" />);
 
   expect(component.find('img').prop('src')).toEqual(null);

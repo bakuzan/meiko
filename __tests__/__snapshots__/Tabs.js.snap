@@ -1,235 +1,229 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should change active tab 1`] = `
-<TabContainer
-  activeTab={null}
-  defaultTab={null}
->
+<div>
   <div
-    className="tabs  mko_i63we-container"
+    class="tabs  mko_i63we-container"
   >
     <ul
-      className="tabs__controls  mko_i63we-controls"
+      class="tabs__controls  mko_i63we-controls"
       role="tablist"
     >
       <li
-        className="tab-control  mko_i63we-tabControl"
-        key="one"
+        class="tab-control tab-control--active  mko_i63we-tabControl  mko_i63we-tabControl_active"
         role="tab"
       >
-        <Button
-          className="tab-control__button"
-          onClick={[Function]}
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
           type="button"
         >
-          <button
-            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
-            onClick={[Function]}
-            type="button"
-          >
-            one
-          </button>
-        </Button>
+          one
+        </button>
       </li>
       <li
-        className="tab-control tab-control--active  mko_i63we-tabControl  mko_i63we-tabControl_active"
-        key="two"
+        class="tab-control  mko_i63we-tabControl"
         role="tab"
       >
-        <Button
-          className="tab-control__button"
-          onClick={[Function]}
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
           type="button"
         >
-          <button
-            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
-            onClick={[Function]}
-            type="button"
-          >
-            two
-          </button>
-        </Button>
+          two
+        </button>
       </li>
     </ul>
     <div
-      className="tabs__panels  mko_i63we-panels"
+      class="tabs__panels  mko_i63we-panels"
     >
-      <TabView
-        isActive={false}
-        key="one"
-        name="one"
+      <div
+        aria-hidden="false"
+        class="tab-view tab-view--active  mko_i63we-view  mko_i63we-view_active"
+        role="tabpanel"
       >
-        <div
-          aria-hidden={true}
-          className="tab-view  mko_i63we-view"
-          role="tabpanel"
-        >
-          <div>
-            this is the first tab...
-          </div>
+        <div>
+          this is the first tab...
         </div>
-      </TabView>
-      <TabView
-        isActive={true}
-        key="two"
-        name="two"
+      </div>
+      <div
+        aria-hidden="true"
+        class="tab-view  mko_i63we-view"
+        role="tabpanel"
       >
-        <div
-          aria-hidden={false}
-          className="tab-view tab-view--active  mko_i63we-view  mko_i63we-view_active"
-          role="tabpanel"
-        >
-          <div>
-            ...and this is another tab
-          </div>
+        <div>
+          ...and this is another tab
         </div>
-      </TabView>
+      </div>
     </div>
   </div>
-</TabContainer>
+</div>
+`;
+
+exports[`should change active tab 2`] = `
+<div>
+  <div
+    class="tabs  mko_i63we-container"
+  >
+    <ul
+      class="tabs__controls  mko_i63we-controls"
+      role="tablist"
+    >
+      <li
+        class="tab-control  mko_i63we-tabControl"
+        role="tab"
+      >
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
+          type="button"
+        >
+          one
+        </button>
+      </li>
+      <li
+        class="tab-control tab-control--active  mko_i63we-tabControl  mko_i63we-tabControl_active"
+        role="tab"
+      >
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
+          type="button"
+        >
+          two
+        </button>
+      </li>
+    </ul>
+    <div
+      class="tabs__panels  mko_i63we-panels"
+    >
+      <div
+        aria-hidden="true"
+        class="tab-view  mko_i63we-view"
+        role="tabpanel"
+      >
+        <div>
+          this is the first tab...
+        </div>
+      </div>
+      <div
+        aria-hidden="false"
+        class="tab-view tab-view--active  mko_i63we-view  mko_i63we-view_active"
+        role="tabpanel"
+      >
+        <div>
+          ...and this is another tab
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`should pass isActive if child is function 1`] = `
-<TabContainer
-  activeTab={null}
-  defaultTab={null}
->
+<div>
   <div
-    className="tabs  mko_i63we-container"
+    class="tabs  mko_i63we-container"
   >
     <ul
-      className="tabs__controls  mko_i63we-controls"
+      class="tabs__controls  mko_i63we-controls"
       role="tablist"
     >
       <li
-        className="tab-control  mko_i63we-tabControl"
-        key="one"
+        class="tab-control  mko_i63we-tabControl"
         role="tab"
       >
-        <Button
-          className="tab-control__button"
-          onClick={[Function]}
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
           type="button"
         >
-          <button
-            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
-            onClick={[Function]}
-            type="button"
-          >
-            one
-          </button>
-        </Button>
+          one
+        </button>
       </li>
       <li
-        className="tab-control tab-control--active  mko_i63we-tabControl  mko_i63we-tabControl_active"
-        key="two"
+        class="tab-control tab-control--active  mko_i63we-tabControl  mko_i63we-tabControl_active"
         role="tab"
       >
-        <Button
-          className="tab-control__button"
-          onClick={[Function]}
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
           type="button"
         >
-          <button
-            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
-            onClick={[Function]}
-            type="button"
-          >
-            two
-          </button>
-        </Button>
+          two
+        </button>
       </li>
     </ul>
     <div
-      className="tabs__panels  mko_i63we-panels"
+      class="tabs__panels  mko_i63we-panels"
     >
-      <TabView
-        isActive={false}
-        key="one"
-        name="one"
+      <div
+        aria-hidden="true"
+        class="tab-view  mko_i63we-view"
+        role="tabpanel"
+      />
+      <div
+        aria-hidden="false"
+        class="tab-view tab-view--active  mko_i63we-view  mko_i63we-view_active"
+        role="tabpanel"
       >
-        <div
-          aria-hidden={true}
-          className="tab-view  mko_i63we-view"
-          role="tabpanel"
-        />
-      </TabView>
-      <TabView
-        isActive={true}
-        key="two"
-        name="two"
-      >
-        <div
-          aria-hidden={false}
-          className="tab-view tab-view--active  mko_i63we-view  mko_i63we-view_active"
-          role="tabpanel"
-        >
-          <div>
-            ...and this is another tab
-          </div>
+        <div>
+          ...and this is another tab
         </div>
-      </TabView>
+      </div>
     </div>
   </div>
-</TabContainer>
+</div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="tabs  mko_i63we-container"
->
-  <ul
-    className="tabs__controls  mko_i63we-controls"
-    role="tablist"
-  >
-    <li
-      className="tab-control  mko_i63we-tabControl"
-      key="one"
-      role="tab"
-    >
-      <Button
-        className="tab-control__button"
-        onClick={[Function]}
-        type="button"
-      >
-        one
-      </Button>
-    </li>
-    <li
-      className="tab-control  mko_i63we-tabControl"
-      key="two"
-      role="tab"
-    >
-      <Button
-        className="tab-control__button"
-        onClick={[Function]}
-        type="button"
-      >
-        two
-      </Button>
-    </li>
-  </ul>
+<div>
   <div
-    className="tabs__panels  mko_i63we-panels"
+    class="tabs  mko_i63we-container"
   >
-    <TabView
-      isActive={false}
-      key="one"
-      name="one"
+    <ul
+      class="tabs__controls  mko_i63we-controls"
+      role="tablist"
     >
-      <div>
-        this is the first tab...
-      </div>
-    </TabView>
-    <TabView
-      isActive={false}
-      key="two"
-      name="two"
+      <li
+        class="tab-control tab-control--active  mko_i63we-tabControl  mko_i63we-tabControl_active"
+        role="tab"
+      >
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
+          type="button"
+        >
+          one
+        </button>
+      </li>
+      <li
+        class="tab-control  mko_i63we-tabControl"
+        role="tab"
+      >
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard tab-control__button"
+          type="button"
+        >
+          two
+        </button>
+      </li>
+    </ul>
+    <div
+      class="tabs__panels  mko_i63we-panels"
     >
-      <div>
-        ...and this is another tab
+      <div
+        aria-hidden="false"
+        class="tab-view tab-view--active  mko_i63we-view  mko_i63we-view_active"
+        role="tabpanel"
+      >
+        <div>
+          this is the first tab...
+        </div>
       </div>
-    </TabView>
+      <div
+        aria-hidden="true"
+        class="tab-view  mko_i63we-view"
+        role="tabpanel"
+      >
+        <div>
+          ...and this is another tab
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;

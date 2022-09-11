@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render with minimum props 1`] = `
-<img
-  alt="jest"
-  onError={[Function]}
-  src="fakeimage"
-/>
+<div>
+  <img
+    alt="jest"
+    src="fakeimage"
+  />
+</div>
 `;
 
 exports[`should update src with dead image onError 1`] = `
-<img
-  alt="Error placeholder for jest"
-  onError={null}
-  src="https://i.imgur.com/gKr1YhF.png"
-/>
+<div>
+  <img
+    alt="Error placeholder for jest"
+    src="https://i.imgur.com/gKr1YhF.png"
+  />
+</div>
 `;

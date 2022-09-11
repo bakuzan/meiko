@@ -10,86 +10,100 @@ const canOps = {
   onCancel: jest.fn()
 };
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <Form name="jest" submitOptions={subOps} cancelOptions={canOps}>
       <div>Form Children</div>
     </Form>
   );
 
-  expect(component.is('.mko-form')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should render children', function() {
-  const component = shallow(
+it('should render children', function () {
+  const { container, getByText } = render(
     <Form name="jest" submitOptions={subOps} cancelOptions={canOps}>
       <div id="jestChild">Form Children</div>
     </Form>
   );
 
-  expect(component.find('#jestChild').exists()).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByText('Form Children')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should render title if truthy', function() {
-  const component = shallow(
+it('should render title if truthy', function () {
+  const { container, queryByRole, getByText, rerender } = render(
     <Form name="jest" submitOptions={subOps} cancelOptions={canOps}>
       <div>Form Children</div>
     </Form>
   );
 
-  expect(component.find('.mko-form__title').exists()).toBe(false);
+  expect(queryByRole('heading')).toBeNull();
 
-  component.setProps({ title: 'jester' });
+  rerender(
+    <Form
+      name="jest"
+      title={'jester'}
+      submitOptions={subOps}
+      cancelOptions={canOps}
+    >
+      <div>Form Children</div>
+    </Form>
+  );
 
-  expect(component.find('.mko-form__title').exists()).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByText('jester')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should display custom submit button text', function() {
+it('should display custom submit button text', function () {
   const customText = 'Save - Jest';
-  const component = mount(
+  const { container, getByText, rerender } = render(
     <Form name="jest" submitOptions={subOps} cancelOptions={canOps}>
       <div>Form Children</div>
     </Form>
   );
 
-  expect(component.find('button.mko-form__submit').text()).toEqual('Save');
+  expect(getByText('Save')).toBeTruthy();
 
-  component.setProps({ submitOptions: { ...subOps, text: customText } });
+  rerender(
+    <Form
+      name="jest"
+      submitOptions={{ ...subOps, text: customText }}
+      cancelOptions={canOps}
+    >
+      <div>Form Children</div>
+    </Form>
+  );
 
-  expect(component.find('button.mko-form__submit').text()).toEqual(customText);
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(getByText(customText)).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call onSubmit', function() {
-  const component = mount(
+it('should call onSubmit', async function () {
+  const { container, getByText } = render(
     <Form name="jest" submitOptions={subOps} cancelOptions={canOps}>
       <div>Form Children</div>
     </Form>
   );
 
-  component
-    .find('.mko-form__form')
-    .simulate('submit', { preventDefault: () => null });
+  const user = userEvent.setup();
+  await user.click(getByText('Save'));
 
   expect(subOps.onSubmit).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call onCancel', function() {
-  const component = mount(
+it('should call onCancel', async function () {
+  const { container, getByText } = render(
     <Form name="jest" submitOptions={subOps} cancelOptions={canOps}>
       <div>Form Children</div>
     </Form>
   );
 
-  component.find('button.mko-form__cancel').simulate('click');
+  const user = userEvent.setup();
+  await user.click(getByText('Cancel'));
 
   expect(canOps.onCancel).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(container).toMatchSnapshot();
 });

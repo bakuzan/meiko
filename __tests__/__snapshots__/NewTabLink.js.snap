@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render with minimum props 1`] = `
-<a
-  href="#jest"
-  rel="nofollow noopener noreferrer"
-  target="_blank"
-/>
+<div>
+  <a
+    href="#jest"
+    rel="nofollow noopener noreferrer"
+    target="_blank"
+  />
+</div>
 `;

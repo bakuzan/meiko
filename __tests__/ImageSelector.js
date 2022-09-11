@@ -24,36 +24,37 @@ afterEach(() => {
 });
 afterAll(() => jest.restoreAllMocks());
 
-it('should render with minimum props', function() {
-  const component = shallow(<ImageSelector onChange={mockedChangeFn} />);
+it('should render with minimum props', function () {
+  const { container } = render(<ImageSelector onChange={mockedChangeFn} />);
 
-  expect(component.is('.image-selector')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should show url display', function() {
-  const component = shallow(
+it('should show url display', function () {
+  const { container, getByText } = render(
     <ImageSelector url="fakeurlhere" onChange={mockedChangeFn} />
   );
 
-  expect(component.exists('.image-selector__value-display')).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByText('fakeurlhere')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should toggle url display', function() {
-  const component = shallow(
+it('should toggle url display', async function () {
+  const { container, queryByLabelText, getByLabelText, getByText } = render(
     <ImageSelector url="fakeurlhere" onChange={mockedChangeFn} />
   );
 
-  expect(component.exists('.image-selector__controls')).toBe(false);
+  expect(queryByLabelText('Image Url')).toBeNull();
 
-  component.find('.image-selector__show-controls').prop('onClick')();
+  const user = userEvent.setup();
+  await user.click(getByText('upload new image'));
 
-  expect(component.exists('.image-selector__controls')).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByLabelText('Image Url')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-xit('should call on change for file selection', async function() {
+xit('should call on change for file selection', async function () {
   setup();
   const file = new File(['qwerty'], 'jest.txt');
 
@@ -69,7 +70,7 @@ xit('should call on change for file selection', async function() {
   expect(component).toMatchSnapshot();
 });
 
-xit('should call on change for url upload button click', async function() {
+xit('should call on change for url upload button click', async function () {
   setup();
   const component = shallow(<ImageSelector onChange={mockedChangeFn} />);
 
@@ -85,7 +86,7 @@ xit('should call on change for url upload button click', async function() {
   expect(component).toMatchSnapshot();
 });
 
-xit('should call on error for failed upload', async function() {
+xit('should call on error for failed upload', async function () {
   setup(false, 'jest test expected error');
   const component = shallow(
     <ImageSelector onChange={mockedChangeFn} onError={mockedErrorFn} />

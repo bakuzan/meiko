@@ -4,25 +4,31 @@ import { Tickbox } from '../lib';
 
 const mockedChangeFn = jest.fn();
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <Tickbox id="jest" checked={false} onChange={mockedChangeFn} />
   );
 
-  expect(component.is('.tickbox')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should toggle checkbox on click', function() {
+it('should toggle checkbox on click', async function () {
   const changeEvent = { target: { checked: true } };
-  const component = shallow(
-    <Tickbox id="jest" checked={false} onChange={mockedChangeFn} />
+  const { container, getByLabelText } = render(
+    <Tickbox
+      id="jest"
+      checked={false}
+      text="checkbox test"
+      onChange={mockedChangeFn}
+    />
   );
 
-  expect(component.find('input').prop('checked')).toBe(false);
+  expect(getByLabelText('checkbox test').checked).toBe(false);
 
-  component.find('input').simulate('change', changeEvent);
+  const user = userEvent.setup();
+  await user.click(getByLabelText('checkbox test'));
 
   expect(mockedChangeFn).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

@@ -1,38 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should display menu on toggler click 1`] = `
-<DropdownMenu
-  align="center"
-  icon="⚙︎"
->
+<div>
   <div
-    className="dropdown-menu  mko_dmkujd-container"
+    class="dropdown-menu  mko_dmkujd-container"
   >
-    <Button
+    <button
       aria-label="Open dropdown menu"
-      className="dropdown-menu__toggler  mko_dmkujd-toggler"
+      class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon dropdown-menu__toggler  mko_dmkujd-toggler"
       icon="⚙︎"
-      id={null}
-      onClick={[Function]}
       type="button"
-    >
-      <button
-        aria-label="Open dropdown menu"
-        className="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon dropdown-menu__toggler  mko_dmkujd-toggler"
-        icon="⚙︎"
-        id={null}
-        onClick={[Function]}
-        type="button"
-      />
-    </Button>
+    />
     <div>
       <ul
-        className="dropdown-menu__menu  mko_dmkujd-menu  mko_dmkujd-menu_center"
-        id={null}
+        class="dropdown-menu__menu  mko_dmkujd-menu  mko_dmkujd-menu_center"
         role="menu"
       >
         <li
-          className="dropdown-menu__arrow  mko_dmkujd-arrow"
+          class="dropdown-menu__arrow  mko_dmkujd-arrow"
         />
         <li>
           Test item
@@ -43,21 +28,21 @@ exports[`should display menu on toggler click 1`] = `
       </ul>
     </div>
   </div>
-</DropdownMenu>
+</div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="dropdown-menu  mko_dmkujd-container"
->
-  <Button
-    aria-label="Open dropdown menu"
-    className="dropdown-menu__toggler  mko_dmkujd-toggler"
-    icon="⚙︎"
-    id={null}
-    onClick={[Function]}
-    type="button"
-  />
-  <div />
+<div>
+  <div
+    class="dropdown-menu  mko_dmkujd-container"
+  >
+    <button
+      aria-label="Open dropdown menu"
+      class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon dropdown-menu__toggler  mko_dmkujd-toggler"
+      icon="⚙︎"
+      type="button"
+    />
+    <div />
+  </div>
 </div>
 `;

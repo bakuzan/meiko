@@ -1,184 +1,1179 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should call onChange when clear is clicked 1`] = `
-<div
-  className="date-selector  mko_1vy27dt-dateSelector"
-  id="jest-date-selector"
->
-  <ClearableInput
-    className=" mko_1vy27dt-dateSelector__input"
-    clearButtonProps={Object {}}
-    containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
-    id="jest-ctrl"
-    label="Date"
-    maxNumberText={[Function]}
-    onChange={[Function]}
-    pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-    placeholder="__/__/____"
-    type="date"
-    value="2019-04-05"
-  />
-  <Button
-    aria-label="Clear date"
-    btnSize="small"
-    className="date-selector__button date-selector__clear"
-    icon="❌︎"
-    onClick={[Function]}
-    type="button"
-  />
-  <Button
-    aria-label="Open calendar"
-    btnSize="small"
-    className="date-selector__button date-selector__open"
-    icon="📅︎"
-    id="jest-calendarButton"
-    onClick={[Function]}
-    type="button"
-  />
+<div>
+  <div
+    class="date-selector  mko_1vy27dt-dateSelector"
+    id="jest-date-selector"
+  >
+    <div
+      class="clearable-input has-float-label date-selector__input  mko_1vy27dt-dateSelector__inputContainer  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+    >
+      <div
+        class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+      >
+        <input
+          autocomplete="off"
+          class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_1vy27dt-dateSelector__input"
+          id="jest-ctrl"
+          pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+          placeholder="__/__/____"
+          type="date"
+          value="2019-04-05"
+        />
+        <label
+          for="jest-ctrl"
+        >
+          Date
+        </label>
+      </div>
+    </div>
+    <button
+      aria-label="Clear date"
+      class="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small date-selector__button date-selector__clear"
+      icon="❌︎"
+      type="button"
+    />
+    <button
+      aria-label="Open calendar"
+      class="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small date-selector__button date-selector__open"
+      icon="📅︎"
+      id="jest-calendarButton"
+      type="button"
+    />
+  </div>
 </div>
 `;
 
 exports[`should not display clear button when value required 1`] = `
-<div
-  className="date-selector  mko_1vy27dt-dateSelector"
-  id="jest-date-selector"
->
-  <ClearableInput
-    className=" mko_1vy27dt-dateSelector__input"
-    clearButtonProps={Object {}}
-    containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
-    id="jest-ctrl"
-    label="Date"
-    maxNumberText={[Function]}
-    onChange={[Function]}
-    pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-    placeholder="__/__/____"
-    required={true}
-    type="date"
-    value="2019-04-05"
-  />
-  <Button
-    aria-label="Open calendar"
-    btnSize="small"
-    className="date-selector__button date-selector__open"
-    icon="📅︎"
-    id="jest-calendarButton"
-    onClick={[Function]}
-    type="button"
-  />
+<div>
+  <div
+    class="date-selector  mko_1vy27dt-dateSelector"
+    id="jest-date-selector"
+  >
+    <div
+      class="clearable-input has-float-label date-selector__input  mko_1vy27dt-dateSelector__inputContainer  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+    >
+      <div
+        class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+      >
+        <input
+          autocomplete="off"
+          class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_1vy27dt-dateSelector__input"
+          id="jest-ctrl"
+          pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+          placeholder="__/__/____"
+          required=""
+          type="date"
+          value="2019-04-05"
+        />
+        <label
+          for="jest-ctrl"
+        >
+          Date
+        </label>
+      </div>
+    </div>
+    <button
+      aria-label="Open calendar"
+      class="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small date-selector__button date-selector__open"
+      icon="📅︎"
+      id="jest-calendarButton"
+      type="button"
+    />
+  </div>
 </div>
 `;
 
 exports[`should open calendar 1`] = `
-<div
-  className="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
-  id="jest-date-selector"
->
-  <ClearableInput
-    className=" mko_1vy27dt-dateSelector__input"
-    clearButtonProps={Object {}}
-    containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
-    id="jest-ctrl"
-    label="Date"
-    maxNumberText={[Function]}
-    onChange={[Function]}
-    pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-    placeholder="__/__/____"
-    type="date"
-    value="2019-04-05"
-  />
-  <Button
-    aria-label="Open calendar"
-    btnSize="small"
-    className="date-selector__button date-selector__open"
-    icon="📅︎"
-    id="jest-calendarButton"
-    onClick={[Function]}
-    type="button"
-  />
-  <Calendar
-    className=""
-    id="jest"
-    isFlat={false}
-    onClose={[Function]}
-    onSelect={[Function]}
-    selected="2019-04-05"
-  />
+<div>
+  <div
+    class="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
+    id="jest-date-selector"
+  >
+    <div
+      class="clearable-input has-float-label date-selector__input  mko_1vy27dt-dateSelector__inputContainer  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+    >
+      <div
+        class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+      >
+        <input
+          autocomplete="off"
+          class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_1vy27dt-dateSelector__input"
+          id="jest-ctrl"
+          pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+          placeholder="__/__/____"
+          type="date"
+          value="2019-04-05"
+        />
+        <label
+          for="jest-ctrl"
+        >
+          Date
+        </label>
+      </div>
+    </div>
+    <button
+      aria-label="Open calendar"
+      class="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small date-selector__button date-selector__open"
+      icon="📅︎"
+      id="jest-calendarButton"
+      type="button"
+    />
+    <div
+      aria-label="Calendar"
+      aria-roledescription="datepicker"
+      role="application"
+    >
+      <input
+        class="tab-trap tab-trap--top  mko_1q23t0y-tabTrap"
+        type="text"
+      />
+      <div
+        class="mko-calendar  mko_dqqq79-calendar  mko_dqqq79-calendar_notFlat"
+        id="jest-calendar"
+      >
+        <div
+          class="mko-calendar__controls  mko_dqqq79-controls"
+        >
+          <button
+            aria-label="Move to previous month"
+            class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon mko-calendar__shift-button  mko_dqqq79-shiftButton"
+            icon="‹︎"
+            id="taxj_prev"
+            type="button"
+          />
+          <button
+            class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard"
+            type="button"
+          >
+            Apr 2019
+          </button>
+          <button
+            aria-label="Move to next month"
+            class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon mko-calendar__shift-button  mko_dqqq79-shiftButton"
+            icon="›︎"
+            id="taxj_next"
+            type="button"
+          />
+        </div>
+        <div
+          class="mko-calendar__view  mko_dqqq79-view"
+        >
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Mon
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Tue
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Wed
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Thu
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Fri
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Sat
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Sun
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="1st Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="1"
+            id="taxj_1"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            1
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="2nd Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="2"
+            id="taxj_2"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            2
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="3rd Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="3"
+            id="taxj_3"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            3
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="4th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="4"
+            id="taxj_4"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            4
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="5th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--selected  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy  mko_dqqq79-viewOption_selected"
+            data-date="5"
+            id="taxj_5"
+            role="button"
+            tabindex="0"
+            title=""
+          >
+            5
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="6th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="6"
+            id="taxj_6"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            6
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="7th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="7"
+            id="taxj_7"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            7
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="8th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="8"
+            id="taxj_8"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            8
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="9th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="9"
+            id="taxj_9"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            9
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="10th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="10"
+            id="taxj_10"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            10
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="11th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="11"
+            id="taxj_11"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            11
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="12th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="12"
+            id="taxj_12"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            12
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="13th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="13"
+            id="taxj_13"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            13
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="14th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="14"
+            id="taxj_14"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            14
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="15th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="15"
+            id="taxj_15"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            15
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="16th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="16"
+            id="taxj_16"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            16
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="17th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="17"
+            id="taxj_17"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            17
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="18th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="18"
+            id="taxj_18"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            18
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="19th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="19"
+            id="taxj_19"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            19
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="20th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="20"
+            id="taxj_20"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            20
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="21st Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="21"
+            id="taxj_21"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            21
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="22nd Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="22"
+            id="taxj_22"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            22
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="23rd Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="23"
+            id="taxj_23"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            23
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="24th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="24"
+            id="taxj_24"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            24
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="25th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="25"
+            id="taxj_25"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            25
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="26th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="26"
+            id="taxj_26"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            26
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="27th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="27"
+            id="taxj_27"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            27
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="28th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="28"
+            id="taxj_28"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            28
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="29th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="29"
+            id="taxj_29"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            29
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="30th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="30"
+            id="taxj_30"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            30
+          </div>
+          <div
+            aria-disabled="true"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--disabled mko-calendar__view-option--dummy-day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_disabled  mko_dqqq79-viewOption_dummyDay"
+            data-date=""
+            id="taxj_85ec5203-639a-43e0-8abf-879e0563cba1"
+            role="button"
+            tabindex="-1"
+            title=""
+          />
+          <div
+            aria-disabled="true"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--disabled mko-calendar__view-option--dummy-day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_disabled  mko_dqqq79-viewOption_dummyDay"
+            data-date=""
+            id="taxj_b2135bbb-05e7-4df9-a1a9-b2612ef4dd08"
+            role="button"
+            tabindex="-1"
+            title=""
+          />
+          <div
+            aria-disabled="true"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--disabled mko-calendar__view-option--dummy-day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_disabled  mko_dqqq79-viewOption_dummyDay"
+            data-date=""
+            id="taxj_31bd9c7f-fa55-49de-a71c-e6ea6846b15e"
+            role="button"
+            tabindex="-1"
+            title=""
+          />
+          <div
+            aria-disabled="true"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--disabled mko-calendar__view-option--dummy-day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_disabled  mko_dqqq79-viewOption_dummyDay"
+            data-date=""
+            id="taxj_66ef7499-546a-4072-8c06-291faa0a36ea"
+            role="button"
+            tabindex="-1"
+            title=""
+          />
+          <div
+            aria-disabled="true"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--disabled mko-calendar__view-option--dummy-day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_disabled  mko_dqqq79-viewOption_dummyDay"
+            data-date=""
+            id="taxj_e8817922-8e54-41ce-a4e1-c916f870695b"
+            role="button"
+            tabindex="-1"
+            title=""
+          />
+        </div>
+      </div>
+      <input
+        class="tab-trap tab-trap--bottom  mko_1q23t0y-tabTrap"
+        type="text"
+      />
+    </div>
+  </div>
 </div>
 `;
 
 exports[`should render flat view 1`] = `
-<div
-  className="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
-  id="jest-date-selector"
->
-  <Calendar
-    className=""
-    id="jest"
-    isFlat={true}
-    onClose={[Function]}
-    onSelect={[Function]}
-    selected="2019-04-05"
-  />
+<div>
+  <div
+    class="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
+    id="jest-date-selector"
+  >
+    <div
+      aria-label="Calendar"
+      aria-roledescription="datepicker"
+      role="application"
+    >
+      <div
+        class="mko-calendar  mko_dqqq79-calendar"
+        id="jest-calendar"
+      >
+        <div
+          class="mko-calendar__controls  mko_dqqq79-controls"
+        >
+          <button
+            aria-label="Move to previous month"
+            class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon mko-calendar__shift-button  mko_dqqq79-shiftButton"
+            icon="‹︎"
+            id="qevywcv_prev"
+            type="button"
+          />
+          <button
+            class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard"
+            type="button"
+          >
+            Apr 2019
+          </button>
+          <button
+            aria-label="Move to next month"
+            class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon mko-calendar__shift-button  mko_dqqq79-shiftButton"
+            icon="›︎"
+            id="qevywcv_next"
+            type="button"
+          />
+        </div>
+        <div
+          class="mko-calendar__view  mko_dqqq79-view"
+        >
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Mon
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Tue
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Wed
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Thu
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Fri
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Sat
+          </div>
+          <div
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--header  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_header"
+          >
+            Sun
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="1st Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="1"
+            id="qevywcv_1"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            1
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="2nd Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="2"
+            id="qevywcv_2"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            2
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="3rd Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="3"
+            id="qevywcv_3"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            3
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="4th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="4"
+            id="qevywcv_4"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            4
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="5th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--selected  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy  mko_dqqq79-viewOption_selected"
+            data-date="5"
+            id="qevywcv_5"
+            role="button"
+            tabindex="0"
+            title=""
+          >
+            5
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="6th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="6"
+            id="qevywcv_6"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            6
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="7th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="7"
+            id="qevywcv_7"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            7
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="8th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="8"
+            id="qevywcv_8"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            8
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="9th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="9"
+            id="qevywcv_9"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            9
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="10th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="10"
+            id="qevywcv_10"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            10
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="11th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="11"
+            id="qevywcv_11"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            11
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="12th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="12"
+            id="qevywcv_12"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            12
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="13th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="13"
+            id="qevywcv_13"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            13
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="14th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="14"
+            id="qevywcv_14"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            14
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="15th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="15"
+            id="qevywcv_15"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            15
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="16th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="16"
+            id="qevywcv_16"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            16
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="17th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="17"
+            id="qevywcv_17"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            17
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="18th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="18"
+            id="qevywcv_18"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            18
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="19th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="19"
+            id="qevywcv_19"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            19
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="20th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="20"
+            id="qevywcv_20"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            20
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="21st Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="21"
+            id="qevywcv_21"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            21
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="22nd Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="22"
+            id="qevywcv_22"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            22
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="23rd Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="23"
+            id="qevywcv_23"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            23
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="24th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="24"
+            id="qevywcv_24"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            24
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="25th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="25"
+            id="qevywcv_25"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            25
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="26th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="26"
+            id="qevywcv_26"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            26
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="27th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="27"
+            id="qevywcv_27"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            27
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="28th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="28"
+            id="qevywcv_28"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            28
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="29th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="29"
+            id="qevywcv_29"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            29
+          </div>
+          <div
+            aria-disabled="false"
+            aria-label="30th Apr 2019"
+            class="mko-calendar__view-option mko-calendar__view-option--day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_notHeaderNotDummy"
+            data-date="30"
+            id="qevywcv_30"
+            role="button"
+            tabindex="-1"
+            title=""
+          >
+            30
+          </div>
+          <div
+            aria-disabled="true"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--disabled mko-calendar__view-option--dummy-day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_disabled  mko_dqqq79-viewOption_dummyDay"
+            data-date=""
+            id="qevywcv_fb992650-f03d-4749-ba75-b8a7c6ea5968"
+            role="button"
+            tabindex="-1"
+            title=""
+          />
+          <div
+            aria-disabled="true"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--disabled mko-calendar__view-option--dummy-day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_disabled  mko_dqqq79-viewOption_dummyDay"
+            data-date=""
+            id="qevywcv_9ee404d9-63b4-49bd-a8b1-eaf2a46a25f7"
+            role="button"
+            tabindex="-1"
+            title=""
+          />
+          <div
+            aria-disabled="true"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--disabled mko-calendar__view-option--dummy-day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_disabled  mko_dqqq79-viewOption_dummyDay"
+            data-date=""
+            id="qevywcv_04c66143-dc8d-4d53-9e7e-e341531030c4"
+            role="button"
+            tabindex="-1"
+            title=""
+          />
+          <div
+            aria-disabled="true"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--disabled mko-calendar__view-option--dummy-day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_disabled  mko_dqqq79-viewOption_dummyDay"
+            data-date=""
+            id="qevywcv_1eb22b4a-a1b1-4f54-9bf9-9f7ba3d82fef"
+            role="button"
+            tabindex="-1"
+            title=""
+          />
+          <div
+            aria-disabled="true"
+            class="mko-calendar__view-option mko-calendar__view-option--day mko-calendar__view-option--disabled mko-calendar__view-option--dummy-day  mko_dqqq79-viewOption  mko_dqqq79-viewOption_day  mko_dqqq79-viewOption_disabled  mko_dqqq79-viewOption_dummyDay"
+            data-date=""
+            id="qevywcv_83e1a3a3-05d2-4798-bca3-6bbb5fae4326"
+            role="button"
+            tabindex="-1"
+            title=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`should render standard view 1`] = `
-<div
-  className="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
-  id="jest-date-selector"
->
-  <ClearableInput
-    className=" mko_1vy27dt-dateSelector__input"
-    clearButtonProps={Object {}}
-    containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
-    id="jest-ctrl"
-    label="Date"
-    maxNumberText={[Function]}
-    onChange={[Function]}
-    pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-    placeholder="__/__/____"
-    type="date"
-    value="2019-04-05"
-  />
-  <Button
-    aria-label="Open calendar"
-    btnSize="small"
-    className="date-selector__button date-selector__open"
-    icon="📅︎"
-    id="jest-calendarButton"
-    onClick={[Function]}
-    type="button"
-  />
+<div>
+  <div
+    class="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
+    id="jest-date-selector"
+  >
+    <div
+      class="clearable-input has-float-label date-selector__input  mko_1vy27dt-dateSelector__inputContainer  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+    >
+      <div
+        class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+      >
+        <input
+          autocomplete="off"
+          class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_1vy27dt-dateSelector__input"
+          id="jest-ctrl"
+          pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+          placeholder="__/__/____"
+          type="date"
+          value="2019-04-05"
+        />
+        <label
+          for="jest-ctrl"
+        >
+          jestInput
+        </label>
+      </div>
+    </div>
+    <button
+      aria-label="Open calendar"
+      class="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small date-selector__button date-selector__open"
+      icon="📅︎"
+      id="jest-calendarButton"
+      type="button"
+    />
+  </div>
 </div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
-  id="jest-date-selector"
->
-  <ClearableInput
-    className=" mko_1vy27dt-dateSelector__input"
-    clearButtonProps={Object {}}
-    containerClassName="date-selector__input  mko_1vy27dt-dateSelector__inputContainer"
-    id="jest-ctrl"
-    label="Date"
-    maxNumberText={[Function]}
-    onChange={[Function]}
-    pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-    placeholder="__/__/____"
-    type="date"
-    value="2019-04-05"
-  />
-  <Button
-    aria-label="Open calendar"
-    btnSize="small"
-    className="date-selector__button date-selector__open"
-    icon="📅︎"
-    id="jest-calendarButton"
-    onClick={[Function]}
-    type="button"
-  />
+<div>
+  <div
+    class="date-selector date-selector--read-only  mko_1vy27dt-dateSelector"
+    id="jest-date-selector"
+  >
+    <div
+      class="clearable-input has-float-label date-selector__input  mko_1vy27dt-dateSelector__inputContainer  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+    >
+      <div
+        class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+      >
+        <input
+          autocomplete="off"
+          class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_1vy27dt-dateSelector__input"
+          id="jest-ctrl"
+          pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+          placeholder="__/__/____"
+          type="date"
+          value="2019-04-05"
+        />
+        <label
+          for="jest-ctrl"
+        >
+          Date
+        </label>
+      </div>
+    </div>
+    <button
+      aria-label="Open calendar"
+      class="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small date-selector__button date-selector__open"
+      icon="📅︎"
+      id="jest-calendarButton"
+      type="button"
+    />
+  </div>
 </div>
 `;

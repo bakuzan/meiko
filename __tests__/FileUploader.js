@@ -4,8 +4,8 @@ import { FileUploader } from '../lib';
 
 const mockedFileSelectFn = jest.fn();
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <FileUploader
       id="file"
       name="file"
@@ -14,12 +14,12 @@ it('should render with minimum props', function() {
     />
   );
 
-  expect(component.is('.file-uploader')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call onFileSelect when changed', function() {
-  const component = shallow(
+it('should call onFileSelect when changed', function () {
+  const { container, getByPlaceholderText } = render(
     <FileUploader
       id="file"
       name="file"
@@ -28,10 +28,10 @@ it('should call onFileSelect when changed', function() {
     />
   );
 
-  component.find('.file-uploader__input').prop('onChange')({
+  fireEvent.change(getByPlaceholderText('upload'), {
     stopPropagation: () => null
   });
 
   expect(mockedFileSelectFn).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

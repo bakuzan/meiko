@@ -1,454 +1,315 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should call onCancel when cancel button clicked 1`] = `
-<dialog
-  className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
-  open={true}
-  style={
-    Object {
-      "top": "calc(0px + 50vh)",
-    }
-  }
->
-  <ForwardRef(TabTrap)
-    element="div"
-    firstId="test"
-    isActive={true}
-    lastId="test"
+<div>
+  <dialog
+    class="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+    open=""
+    style="top: calc(0px + 50vh);"
   >
-    <div
-      className="dialog__content"
-    >
-      <DialogContent
-        isForm={true}
-        name="jest"
+    <div>
+      <input
+        class="tab-trap tab-trap--top  mko_1q23t0y-tabTrap"
+        type="text"
+      />
+      <div
+        class="dialog__content"
       >
-        <div
-          className="dialog__content-custom"
+        <form
+          autocomplete="off"
+          class="dialog-content"
+          name="jest"
+          novalidate=""
         >
-          <div>
-            jest
-          </div>
-        </div>
-        <div
-          className="dialog__actions  mko_1h7ugta-actions"
-        >
-          <Button
-            className="dialog__cancel"
-            id="jestCancel"
-            onClick={
-              [MockFunction] {
-                "calls": Array [
-                  Array [],
-                ],
-                "results": Array [
-                  Object {
-                    "type": "return",
-                    "value": undefined,
-                  },
-                ],
-              }
-            }
-            type="button"
+          <div
+            class="dialog__content-custom"
           >
-            Cancel
-          </Button>
-        </div>
-      </DialogContent>
+            <div>
+              jest
+            </div>
+          </div>
+          <div
+            class="dialog__actions  mko_1h7ugta-actions"
+          >
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__cancel"
+              id="jestCancel"
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+      <input
+        class="tab-trap tab-trap--bottom  mko_1q23t0y-tabTrap"
+        type="text"
+      />
     </div>
-  </ForwardRef(TabTrap)>
-</dialog>
+  </dialog>
+</div>
 `;
 
 exports[`should only render title when passed 1`] = `
-<dialog
-  className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
-  open={true}
-  style={
-    Object {
-      "top": "calc(0px + 50vh)",
-    }
-  }
->
-  <ForwardRef(TabTrap)
-    element="div"
-    firstId="test"
-    isActive={true}
-    lastId="test"
+<div>
+  <dialog
+    class="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+    open=""
+    style="top: calc(0px + 50vh);"
   >
-    <div
-      className="dialog__content"
-    >
-      <DialogContent
-        isForm={true}
-        name="jest"
+    <div>
+      <input
+        class="tab-trap tab-trap--top  mko_1q23t0y-tabTrap"
+        type="text"
+      />
+      <div
+        class="dialog__content"
       >
-        <h4
-          className="dialog__title  mko_1h7ugta-title"
+        <form
+          autocomplete="off"
+          class="dialog-content"
+          name="jest"
+          novalidate=""
         >
-          jester!
-        </h4>
-        <div
-          className="dialog__content-custom"
-        >
-          <div>
-            jest
+          <h4
+            class="dialog__title  mko_1h7ugta-title"
+          >
+            jester!
+          </h4>
+          <div
+            class="dialog__content-custom"
+          >
+            <div>
+              jest
+            </div>
           </div>
-        </div>
-        <div
-          className="dialog__actions  mko_1h7ugta-actions"
-        >
-          <Button
-            className="dialog__action"
-            id="jestAction"
-            onClick={[Function]}
-            type="submit"
+          <div
+            class="dialog__actions  mko_1h7ugta-actions"
           >
-            Submit
-          </Button>
-          <Button
-            className="dialog__cancel"
-            id="jestCancel"
-            onClick={
-              [MockFunction] {
-                "calls": Array [
-                  Array [],
-                ],
-                "results": Array [
-                  Object {
-                    "type": "return",
-                    "value": undefined,
-                  },
-                ],
-              }
-            }
-            type="button"
-          >
-            Cancel
-          </Button>
-        </div>
-      </DialogContent>
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__action"
+              id="jestAction"
+              type="submit"
+            >
+              Submit
+            </button>
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__cancel"
+              id="jestCancel"
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+      <input
+        class="tab-trap tab-trap--bottom  mko_1q23t0y-tabTrap"
+        type="text"
+      />
     </div>
-  </ForwardRef(TabTrap)>
-</dialog>
+  </dialog>
+</div>
 `;
 
 exports[`should open when passed new prop 1`] = `
-<dialog
-  className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
-  open={true}
-  style={
-    Object {
-      "top": "calc(0px + 50vh)",
-    }
-  }
->
-  <ForwardRef(TabTrap)
-    element="div"
-    firstId="test"
-    isActive={true}
-    lastId="test"
+<div>
+  <dialog
+    class="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+    open=""
+    style="top: calc(0px + 50vh);"
   >
-    <div
-      className="dialog__content"
-    >
-      <DialogContent
-        isForm={true}
-        name="jest"
+    <div>
+      <input
+        class="tab-trap tab-trap--top  mko_1q23t0y-tabTrap"
+        type="text"
+      />
+      <div
+        class="dialog__content"
       >
-        <div
-          className="dialog__content-custom"
+        <form
+          autocomplete="off"
+          class="dialog-content"
+          name="jest"
+          novalidate=""
         >
-          <div>
-            jest
-          </div>
-        </div>
-        <div
-          className="dialog__actions  mko_1h7ugta-actions"
-        >
-          <Button
-            className="dialog__cancel"
-            id="jestCancel"
-            onClick={[MockFunction]}
-            type="button"
+          <div
+            class="dialog__content-custom"
           >
-            Cancel
-          </Button>
-        </div>
-      </DialogContent>
+            <div>
+              jest
+            </div>
+          </div>
+          <div
+            class="dialog__actions  mko_1h7ugta-actions"
+          >
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__cancel"
+              id="jestCancel"
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+      <input
+        class="tab-trap tab-trap--bottom  mko_1q23t0y-tabTrap"
+        type="text"
+      />
     </div>
-  </ForwardRef(TabTrap)>
-</dialog>
+  </dialog>
+</div>
 `;
 
 exports[`should render action button and call onAction when clicked 1`] = `
-<dialog
-  className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
-  open={true}
-  style={
-    Object {
-      "top": "calc(0px + 50vh)",
-    }
-  }
->
-  <ForwardRef(TabTrap)
-    element="div"
-    firstId="test"
-    isActive={true}
-    lastId="test"
+<div>
+  <dialog
+    class="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+    open=""
+    style="top: calc(0px + 50vh);"
   >
-    <div
-      className="dialog__content"
-    >
-      <DialogContent
-        isForm={true}
-        name="jest"
+    <div>
+      <input
+        class="tab-trap tab-trap--top  mko_1q23t0y-tabTrap"
+        type="text"
+      />
+      <div
+        class="dialog__content"
       >
-        <div
-          className="dialog__content-custom"
+        <form
+          autocomplete="off"
+          class="dialog-content"
+          name="jest"
+          novalidate=""
         >
-          <div>
-            jest
+          <div
+            class="dialog__content-custom"
+          >
+            <div>
+              jest
+            </div>
           </div>
-        </div>
-        <div
-          className="dialog__actions  mko_1h7ugta-actions"
-        >
-          <Button
-            className="dialog__action"
-            id="jestAction"
-            onClick={[Function]}
-            type="submit"
+          <div
+            class="dialog__actions  mko_1h7ugta-actions"
           >
-            Submit
-          </Button>
-          <Button
-            className="dialog__cancel"
-            id="jestCancel"
-            onClick={
-              [MockFunction] {
-                "calls": Array [
-                  Array [],
-                ],
-                "results": Array [
-                  Object {
-                    "type": "return",
-                    "value": undefined,
-                  },
-                ],
-              }
-            }
-            type="button"
-          >
-            Cancel
-          </Button>
-        </div>
-      </DialogContent>
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__action"
+              id="jestAction"
+              type="submit"
+            >
+              Submit
+            </button>
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__cancel"
+              id="jestCancel"
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+      <input
+        class="tab-trap tab-trap--bottom  mko_1q23t0y-tabTrap"
+        type="text"
+      />
     </div>
-  </ForwardRef(TabTrap)>
-</dialog>
+  </dialog>
+</div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<dialog
-  className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
-  open={false}
-  style={
-    Object {
-      "top": "calc(0px + 50vh)",
-    }
-  }
->
-  <ForwardRef(TabTrap)
-    element="div"
-    firstId="test"
-    isActive={false}
-    lastId="test"
+<div>
+  <dialog
+    class="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+    style="top: calc(0px + 50vh);"
   >
-    <div
-      className="dialog__content"
-    >
-      <DialogContent
-        isForm={true}
-        name="jest"
+    <div>
+      <div
+        class="dialog__content"
       >
-        <div
-          className="dialog__content-custom"
+        <form
+          autocomplete="off"
+          class="dialog-content"
+          name="jest"
+          novalidate=""
         >
-          <div>
-            jest
-          </div>
-        </div>
-        <div
-          className="dialog__actions  mko_1h7ugta-actions"
-        >
-          <Button
-            className="dialog__cancel"
-            id="jestCancel"
-            onClick={[MockFunction]}
-            type="button"
+          <div
+            class="dialog__content-custom"
           >
-            Cancel
-          </Button>
-        </div>
-      </DialogContent>
+            <div>
+              jest
+            </div>
+          </div>
+          <div
+            class="dialog__actions  mko_1h7ugta-actions"
+          >
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__cancel"
+              id="jestCancel"
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-  </ForwardRef(TabTrap)>
-</dialog>
+  </dialog>
+</div>
 `;
 
 exports[`should replace form element with div 1`] = `
-<Dialog
-  actionText="Submit"
-  hasBackdrop={true}
-  hideCancel={false}
-  isForm={false}
-  isOpen={true}
-  name="jest"
-  onAction={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          Object {
-            "preventDefault": [Function],
-          },
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
-  onCancel={
-    [MockFunction] {
-      "calls": Array [
-        Array [],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
-  style={Object {}}
-  tabTrapProps={
-    Object {
-      "firstId": "test",
-      "lastId": "test",
-    }
-  }
->
+<div>
   <dialog
-    className="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
-    open={true}
-    style={
-      Object {
-        "top": "calc(0px + 50vh)",
-      }
-    }
+    class="dialog dialog--backdrop  mko_1h7ugta-dialog  mko_1h7ugta-dialog_backdrop"
+    open=""
+    style="top: calc(0px + 50vh);"
   >
-    <ForwardRef(TabTrap)
-      element="div"
-      firstId="test"
-      isActive={true}
-      lastId="test"
-    >
-      <div>
-        <input
-          className="tab-trap tab-trap--top  mko_1q23t0y-tabTrap"
-          onFocus={[Function]}
-          type="text"
-        />
+    <div>
+      <input
+        class="tab-trap tab-trap--top  mko_1q23t0y-tabTrap"
+        type="text"
+      />
+      <div
+        class="dialog__content"
+      >
         <div
-          className="dialog__content"
+          class="dialog-content"
         >
-          <DialogContent
-            isForm={false}
-            name="jest"
+          <div
+            class="dialog__content-custom"
           >
-            <div
-              className="dialog-content"
-            >
-              <div
-                className="dialog__content-custom"
-              >
-                <div>
-                  jest
-                </div>
-              </div>
-              <div
-                className="dialog__actions  mko_1h7ugta-actions"
-              >
-                <Button
-                  className="dialog__action"
-                  id="jestAction"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <button
-                    className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__action"
-                    id="jestAction"
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    Submit
-                  </button>
-                </Button>
-                <Button
-                  className="dialog__cancel"
-                  id="jestCancel"
-                  onClick={
-                    [MockFunction] {
-                      "calls": Array [
-                        Array [],
-                      ],
-                      "results": Array [
-                        Object {
-                          "type": "return",
-                          "value": undefined,
-                        },
-                      ],
-                    }
-                  }
-                  type="button"
-                >
-                  <button
-                    className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__cancel"
-                    id="jestCancel"
-                    onClick={
-                      [MockFunction] {
-                        "calls": Array [
-                          Array [],
-                        ],
-                        "results": Array [
-                          Object {
-                            "type": "return",
-                            "value": undefined,
-                          },
-                        ],
-                      }
-                    }
-                    type="button"
-                  >
-                    Cancel
-                  </button>
-                </Button>
-              </div>
+            <div>
+              jest
             </div>
-          </DialogContent>
+          </div>
+          <div
+            class="dialog__actions  mko_1h7ugta-actions"
+          >
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__action"
+              id="jestAction"
+              type="button"
+            >
+              Submit
+            </button>
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard dialog__cancel"
+              id="jestCancel"
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
         </div>
-        <input
-          className="tab-trap tab-trap--bottom  mko_1q23t0y-tabTrap"
-          onFocus={[Function]}
-          type="text"
-        />
       </div>
-    </ForwardRef(TabTrap)>
+      <input
+        class="tab-trap tab-trap--bottom  mko_1q23t0y-tabTrap"
+        type="text"
+      />
+    </div>
   </dialog>
-</Dialog>
+</div>
 `;

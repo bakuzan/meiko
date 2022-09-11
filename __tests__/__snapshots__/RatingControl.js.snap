@@ -1,920 +1,691 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should call onChange 1`] = `
-<div
-  className="rating-control  mko_1a3l7p3-control"
-  role="radiogroup"
->
-  <label
-    aria-label="1/10"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-1"
-    key="0"
-    title="1/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-1"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={1}
-    />
-  </label>
-  <label
-    aria-label="2/10"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-2"
-    key="1"
-    title="2/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-2"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={2}
-    />
-  </label>
-  <label
-    aria-label="3/10"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-3"
-    key="2"
-    title="3/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-3"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={3}
-    />
-  </label>
-  <label
-    aria-label="4/10"
-    className="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
-    htmlFor="jest-4"
-    key="3"
-    title="4/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-4"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={4}
-    />
-  </label>
-  <label
-    aria-label="5/10"
-    className="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
-    htmlFor="jest-5"
-    key="4"
-    title="5/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-5"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={5}
-    />
-  </label>
-  <label
-    aria-label="6/10"
-    className="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
-    htmlFor="jest-6"
-    key="5"
-    title="6/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-6"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={6}
-    />
-  </label>
-  <label
-    aria-label="7/10"
-    className="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
-    htmlFor="jest-7"
-    key="6"
-    title="7/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-7"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={7}
-    />
-  </label>
-  <label
-    aria-label="8/10"
-    className="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
-    htmlFor="jest-8"
-    key="7"
-    title="8/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-8"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={8}
-    />
-  </label>
-  <label
-    aria-label="9/10"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-9"
-    key="8"
-    title="9/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-9"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={9}
-    />
-  </label>
-  <label
-    aria-label="10/10"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-10"
-    key="9"
-    title="10/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-10"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={10}
-    />
-  </label>
+<div>
   <div
-    className="rating-control__label  mko_1a3l7p3-control__label"
-  />
+    class="rating-control  mko_1a3l7p3-control"
+    role="radiogroup"
+  >
+    <label
+      aria-label="1/10"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-1"
+      title="1/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-1"
+        type="radio"
+        value="1"
+      />
+    </label>
+    <label
+      aria-label="2/10"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-2"
+      title="2/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-2"
+        type="radio"
+        value="2"
+      />
+    </label>
+    <label
+      aria-label="3/10"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-3"
+      title="3/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-3"
+        type="radio"
+        value="3"
+      />
+    </label>
+    <label
+      aria-label="4/10"
+      class="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
+      for="jest-4"
+      title="4/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-4"
+        type="radio"
+        value="4"
+      />
+    </label>
+    <label
+      aria-label="5/10"
+      class="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
+      for="jest-5"
+      title="5/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-5"
+        type="radio"
+        value="5"
+      />
+    </label>
+    <label
+      aria-label="6/10"
+      class="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
+      for="jest-6"
+      title="6/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-6"
+        type="radio"
+        value="6"
+      />
+    </label>
+    <label
+      aria-label="7/10"
+      class="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
+      for="jest-7"
+      title="7/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-7"
+        type="radio"
+        value="7"
+      />
+    </label>
+    <label
+      aria-label="8/10"
+      class="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
+      for="jest-8"
+      title="8/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-8"
+        type="radio"
+        value="8"
+      />
+    </label>
+    <label
+      aria-label="9/10"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-9"
+      title="9/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-9"
+        type="radio"
+        value="9"
+      />
+    </label>
+    <label
+      aria-label="10/10"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-10"
+      title="10/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-10"
+        type="radio"
+        value="10"
+      />
+    </label>
+    <div
+      class="rating-control__label  mko_1a3l7p3-control__label"
+    />
+  </div>
 </div>
 `;
 
 exports[`should render "maxRating" number of inputs 1`] = `
-<div
-  className="rating-control  mko_1a3l7p3-control"
-  role="radiogroup"
->
-  <label
-    aria-label="1/3"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-1"
-    key="0"
-    title="1/3"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-1"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={1}
-    />
-  </label>
-  <label
-    aria-label="2/3"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-2"
-    key="1"
-    title="2/3"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-2"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={2}
-    />
-  </label>
-  <label
-    aria-label="3/3"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-3"
-    key="2"
-    title="3/3"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-3"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={3}
-    />
-  </label>
+<div>
   <div
-    className="rating-control__label  mko_1a3l7p3-control__label"
-  />
+    class="rating-control  mko_1a3l7p3-control"
+    role="radiogroup"
+  >
+    <label
+      aria-label="1/3"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-1"
+      title="1/3"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-1"
+        type="radio"
+        value="1"
+      />
+    </label>
+    <label
+      aria-label="2/3"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-2"
+      title="2/3"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-2"
+        type="radio"
+        value="2"
+      />
+    </label>
+    <label
+      aria-label="3/3"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-3"
+      title="3/3"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-3"
+        type="radio"
+        value="3"
+      />
+    </label>
+    <div
+      class="rating-control__label  mko_1a3l7p3-control__label"
+    />
+  </div>
 </div>
 `;
 
 exports[`should render "maxRating" number of inputs 2`] = `
-<div
-  className="rating-control  mko_1a3l7p3-control"
-  role="radiogroup"
->
-  <label
-    aria-label="1/15"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-1"
-    key="0"
-    title="1/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-1"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={1}
-    />
-  </label>
-  <label
-    aria-label="2/15"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-2"
-    key="1"
-    title="2/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-2"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={2}
-    />
-  </label>
-  <label
-    aria-label="3/15"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-3"
-    key="2"
-    title="3/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-3"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={3}
-    />
-  </label>
-  <label
-    aria-label="4/15"
-    className="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
-    htmlFor="jest-4"
-    key="3"
-    title="4/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-4"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={4}
-    />
-  </label>
-  <label
-    aria-label="5/15"
-    className="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
-    htmlFor="jest-5"
-    key="4"
-    title="5/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-5"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={5}
-    />
-  </label>
-  <label
-    aria-label="6/15"
-    className="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
-    htmlFor="jest-6"
-    key="5"
-    title="6/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-6"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={6}
-    />
-  </label>
-  <label
-    aria-label="7/15"
-    className="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
-    htmlFor="jest-7"
-    key="6"
-    title="7/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-7"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={7}
-    />
-  </label>
-  <label
-    aria-label="8/15"
-    className="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
-    htmlFor="jest-8"
-    key="7"
-    title="8/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-8"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={8}
-    />
-  </label>
-  <label
-    aria-label="9/15"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-9"
-    key="8"
-    title="9/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-9"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={9}
-    />
-  </label>
-  <label
-    aria-label="10/15"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-10"
-    key="9"
-    title="10/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-10"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={10}
-    />
-  </label>
-  <label
-    aria-label="11/15"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-11"
-    key="10"
-    title="11/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-11"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={11}
-    />
-  </label>
-  <label
-    aria-label="12/15"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-12"
-    key="11"
-    title="12/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-12"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={12}
-    />
-  </label>
-  <label
-    aria-label="13/15"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-13"
-    key="12"
-    title="13/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-13"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={13}
-    />
-  </label>
-  <label
-    aria-label="14/15"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-14"
-    key="13"
-    title="14/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-14"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={14}
-    />
-  </label>
-  <label
-    aria-label="15/15"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-15"
-    key="14"
-    title="15/15"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-15"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={15}
-    />
-  </label>
+<div>
   <div
-    className="rating-control__label  mko_1a3l7p3-control__label"
-  />
+    class="rating-control  mko_1a3l7p3-control"
+    role="radiogroup"
+  >
+    <label
+      aria-label="1/15"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-1"
+      title="1/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-1"
+        type="radio"
+        value="1"
+      />
+    </label>
+    <label
+      aria-label="2/15"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-2"
+      title="2/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-2"
+        type="radio"
+        value="2"
+      />
+    </label>
+    <label
+      aria-label="3/15"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-3"
+      title="3/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-3"
+        type="radio"
+        value="3"
+      />
+    </label>
+    <label
+      aria-label="4/15"
+      class="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
+      for="jest-4"
+      title="4/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-4"
+        type="radio"
+        value="4"
+      />
+    </label>
+    <label
+      aria-label="5/15"
+      class="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
+      for="jest-5"
+      title="5/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-5"
+        type="radio"
+        value="5"
+      />
+    </label>
+    <label
+      aria-label="6/15"
+      class="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
+      for="jest-6"
+      title="6/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-6"
+        type="radio"
+        value="6"
+      />
+    </label>
+    <label
+      aria-label="7/15"
+      class="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
+      for="jest-7"
+      title="7/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-7"
+        type="radio"
+        value="7"
+      />
+    </label>
+    <label
+      aria-label="8/15"
+      class="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
+      for="jest-8"
+      title="8/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-8"
+        type="radio"
+        value="8"
+      />
+    </label>
+    <label
+      aria-label="9/15"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-9"
+      title="9/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-9"
+        type="radio"
+        value="9"
+      />
+    </label>
+    <label
+      aria-label="10/15"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-10"
+      title="10/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-10"
+        type="radio"
+        value="10"
+      />
+    </label>
+    <label
+      aria-label="11/15"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-11"
+      title="11/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-11"
+        type="radio"
+        value="11"
+      />
+    </label>
+    <label
+      aria-label="12/15"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-12"
+      title="12/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-12"
+        type="radio"
+        value="12"
+      />
+    </label>
+    <label
+      aria-label="13/15"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-13"
+      title="13/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-13"
+        type="radio"
+        value="13"
+      />
+    </label>
+    <label
+      aria-label="14/15"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-14"
+      title="14/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-14"
+        type="radio"
+        value="14"
+      />
+    </label>
+    <label
+      aria-label="15/15"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-15"
+      title="15/15"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-15"
+        type="radio"
+        value="15"
+      />
+    </label>
+    <div
+      class="rating-control__label  mko_1a3l7p3-control__label"
+    />
+  </div>
 </div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="rating-control rating-control--read-only  mko_1a3l7p3-control  mko_1a3l7p3-control_readOnly"
-  role="radiogroup"
->
-  <label
-    aria-label="1/10"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-1"
-    key="0"
-    title="1/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-1"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={1}
-    />
-  </label>
-  <label
-    aria-label="2/10"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-2"
-    key="1"
-    title="2/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-2"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={2}
-    />
-  </label>
-  <label
-    aria-label="3/10"
-    className="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
-    htmlFor="jest-3"
-    key="2"
-    title="3/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-3"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={3}
-    />
-  </label>
-  <label
-    aria-label="4/10"
-    className="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
-    htmlFor="jest-4"
-    key="3"
-    title="4/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-4"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={4}
-    />
-  </label>
-  <label
-    aria-label="5/10"
-    className="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
-    htmlFor="jest-5"
-    key="4"
-    title="5/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-5"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={5}
-    />
-  </label>
-  <label
-    aria-label="6/10"
-    className="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
-    htmlFor="jest-6"
-    key="5"
-    title="6/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-6"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={6}
-    />
-  </label>
-  <label
-    aria-label="7/10"
-    className="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
-    htmlFor="jest-7"
-    key="6"
-    title="7/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-7"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={7}
-    />
-  </label>
-  <label
-    aria-label="8/10"
-    className="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
-    htmlFor="jest-8"
-    key="7"
-    title="8/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-8"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={8}
-    />
-  </label>
-  <label
-    aria-label="9/10"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-9"
-    key="8"
-    title="9/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-9"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={9}
-    />
-  </label>
-  <label
-    aria-label="10/10"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-10"
-    key="9"
-    title="10/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-10"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={10}
-    />
-  </label>
+<div>
   <div
-    className="rating-control__label  mko_1a3l7p3-control__label"
-  />
+    class="rating-control rating-control--read-only  mko_1a3l7p3-control  mko_1a3l7p3-control_readOnly"
+    role="radiogroup"
+  >
+    <label
+      aria-label="1/10"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-1"
+      title="1/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-1"
+        type="radio"
+        value="1"
+      />
+    </label>
+    <label
+      aria-label="2/10"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-2"
+      title="2/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-2"
+        type="radio"
+        value="2"
+      />
+    </label>
+    <label
+      aria-label="3/10"
+      class="rating-control__option rating-control__option--low  mko_1a3l7p3-control__option  mko_1a3l7p3-low"
+      for="jest-3"
+      title="3/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-3"
+        type="radio"
+        value="3"
+      />
+    </label>
+    <label
+      aria-label="4/10"
+      class="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
+      for="jest-4"
+      title="4/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-4"
+        type="radio"
+        value="4"
+      />
+    </label>
+    <label
+      aria-label="5/10"
+      class="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
+      for="jest-5"
+      title="5/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-5"
+        type="radio"
+        value="5"
+      />
+    </label>
+    <label
+      aria-label="6/10"
+      class="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
+      for="jest-6"
+      title="6/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-6"
+        type="radio"
+        value="6"
+      />
+    </label>
+    <label
+      aria-label="7/10"
+      class="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
+      for="jest-7"
+      title="7/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-7"
+        type="radio"
+        value="7"
+      />
+    </label>
+    <label
+      aria-label="8/10"
+      class="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
+      for="jest-8"
+      title="8/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-8"
+        type="radio"
+        value="8"
+      />
+    </label>
+    <label
+      aria-label="9/10"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-9"
+      title="9/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-9"
+        type="radio"
+        value="9"
+      />
+    </label>
+    <label
+      aria-label="10/10"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-10"
+      title="10/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-10"
+        type="radio"
+        value="10"
+      />
+    </label>
+    <div
+      class="rating-control__label  mko_1a3l7p3-control__label"
+    />
+  </div>
 </div>
 `;
 
 exports[`should return value of 0 if active value is selected 1`] = `
-<div
-  className="rating-control  mko_1a3l7p3-control"
-  role="radiogroup"
->
-  <label
-    aria-label="1/10"
-    className="rating-control__option rating-control__option--low rating-control__option--past  mko_1a3l7p3-control__option  mko_1a3l7p3-low  mko_1a3l7p3-control__option_past"
-    htmlFor="jest-1"
-    key="0"
-    title="1/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input  mko_1a3l7p3-control__input_highlighted"
-      id="jest-1"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={1}
-    />
-  </label>
-  <label
-    aria-label="2/10"
-    className="rating-control__option rating-control__option--low rating-control__option--past  mko_1a3l7p3-control__option  mko_1a3l7p3-low  mko_1a3l7p3-control__option_past"
-    htmlFor="jest-2"
-    key="1"
-    title="2/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input  mko_1a3l7p3-control__input_highlighted"
-      id="jest-2"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={2}
-    />
-  </label>
-  <label
-    aria-label="3/10"
-    className="rating-control__option rating-control__option--low rating-control__option--past  mko_1a3l7p3-control__option  mko_1a3l7p3-low  mko_1a3l7p3-control__option_past"
-    htmlFor="jest-3"
-    key="2"
-    title="3/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input  mko_1a3l7p3-control__input_highlighted"
-      id="jest-3"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={3}
-    />
-  </label>
-  <label
-    aria-label="4/10"
-    className="rating-control__option rating-control__option--average rating-control__option--past  mko_1a3l7p3-control__option  mko_1a3l7p3-average  mko_1a3l7p3-control__option_past"
-    htmlFor="jest-4"
-    key="3"
-    title="4/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input  mko_1a3l7p3-control__input_highlighted"
-      id="jest-4"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={4}
-    />
-  </label>
-  <label
-    aria-label="5/10 (selected)"
-    className="rating-control__option rating-control__option--average rating-control__option--selected  mko_1a3l7p3-control__option  mko_1a3l7p3-average  mko_1a3l7p3-control__option_selected"
-    htmlFor="jest-5"
-    key="4"
-    title="5/10 (selected)"
-  >
-    <input
-      checked={true}
-      className="rating-control__input  mko_1a3l7p3-control__input  mko_1a3l7p3-control__input_highlighted"
-      id="jest-5"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={5}
-    />
-  </label>
-  <label
-    aria-label="6/10"
-    className="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
-    htmlFor="jest-6"
-    key="5"
-    title="6/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-6"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={6}
-    />
-  </label>
-  <label
-    aria-label="7/10"
-    className="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
-    htmlFor="jest-7"
-    key="6"
-    title="7/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-7"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={7}
-    />
-  </label>
-  <label
-    aria-label="8/10"
-    className="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
-    htmlFor="jest-8"
-    key="7"
-    title="8/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-8"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={8}
-    />
-  </label>
-  <label
-    aria-label="9/10"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-9"
-    key="8"
-    title="9/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-9"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={9}
-    />
-  </label>
-  <label
-    aria-label="10/10"
-    className="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
-    htmlFor="jest-10"
-    key="9"
-    title="10/10"
-  >
-    <input
-      checked={false}
-      className="rating-control__input  mko_1a3l7p3-control__input"
-      id="jest-10"
-      onChange={[Function]}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="radio"
-      value={10}
-    />
-  </label>
+<div>
   <div
-    className="rating-control__label  mko_1a3l7p3-control__label"
-  />
+    class="rating-control  mko_1a3l7p3-control"
+    role="radiogroup"
+  >
+    <label
+      aria-label="1/10"
+      class="rating-control__option rating-control__option--low rating-control__option--past  mko_1a3l7p3-control__option  mko_1a3l7p3-low  mko_1a3l7p3-control__option_past"
+      for="jest-1"
+      title="1/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input  mko_1a3l7p3-control__input_highlighted"
+        id="jest-1"
+        type="radio"
+        value="1"
+      />
+    </label>
+    <label
+      aria-label="2/10"
+      class="rating-control__option rating-control__option--low rating-control__option--past  mko_1a3l7p3-control__option  mko_1a3l7p3-low  mko_1a3l7p3-control__option_past"
+      for="jest-2"
+      title="2/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input  mko_1a3l7p3-control__input_highlighted"
+        id="jest-2"
+        type="radio"
+        value="2"
+      />
+    </label>
+    <label
+      aria-label="3/10"
+      class="rating-control__option rating-control__option--low rating-control__option--past  mko_1a3l7p3-control__option  mko_1a3l7p3-low  mko_1a3l7p3-control__option_past"
+      for="jest-3"
+      title="3/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input  mko_1a3l7p3-control__input_highlighted"
+        id="jest-3"
+        type="radio"
+        value="3"
+      />
+    </label>
+    <label
+      aria-label="4/10"
+      class="rating-control__option rating-control__option--average rating-control__option--past  mko_1a3l7p3-control__option  mko_1a3l7p3-average  mko_1a3l7p3-control__option_past"
+      for="jest-4"
+      title="4/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input  mko_1a3l7p3-control__input_highlighted"
+        id="jest-4"
+        type="radio"
+        value="4"
+      />
+    </label>
+    <label
+      aria-label="5/10 (selected)"
+      class="rating-control__option rating-control__option--average rating-control__option--selected  mko_1a3l7p3-control__option  mko_1a3l7p3-average  mko_1a3l7p3-control__option_selected"
+      for="jest-5"
+      title="5/10 (selected)"
+    >
+      <input
+        checked=""
+        class="rating-control__input  mko_1a3l7p3-control__input  mko_1a3l7p3-control__input_highlighted"
+        id="jest-5"
+        type="radio"
+        value="5"
+      />
+    </label>
+    <label
+      aria-label="6/10"
+      class="rating-control__option rating-control__option--average  mko_1a3l7p3-control__option  mko_1a3l7p3-average"
+      for="jest-6"
+      title="6/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-6"
+        type="radio"
+        value="6"
+      />
+    </label>
+    <label
+      aria-label="7/10"
+      class="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
+      for="jest-7"
+      title="7/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-7"
+        type="radio"
+        value="7"
+      />
+    </label>
+    <label
+      aria-label="8/10"
+      class="rating-control__option rating-control__option--good  mko_1a3l7p3-control__option  mko_1a3l7p3-good"
+      for="jest-8"
+      title="8/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-8"
+        type="radio"
+        value="8"
+      />
+    </label>
+    <label
+      aria-label="9/10"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-9"
+      title="9/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-9"
+        type="radio"
+        value="9"
+      />
+    </label>
+    <label
+      aria-label="10/10"
+      class="rating-control__option rating-control__option--great  mko_1a3l7p3-control__option  mko_1a3l7p3-great"
+      for="jest-10"
+      title="10/10"
+    >
+      <input
+        class="rating-control__input  mko_1a3l7p3-control__input"
+        id="jest-10"
+        type="radio"
+        value="10"
+      />
+    </label>
+    <div
+      class="rating-control__label  mko_1a3l7p3-control__label"
+    />
+  </div>
 </div>
 `;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Alert } from '../lib';
 
 const mockFn = jest.fn();
@@ -18,37 +17,41 @@ const alerts = [
 
 afterEach(() => jest.resetAllMocks());
 
-it('should render null when no alerts present', function() {
-  const component = shallow(<Alert alerts={[]} actions={actions} />);
-  expect(component.html()).toBeNull();
+it('should render null when no alerts present', function () {
+  const { container } = render(<Alert alerts={[]} actions={actions} />);
+  expect(container.firstChild).toMatchSnapshot();
 });
 
-it('should render container when has alerts', function() {
-  const component = shallow(<Alert alerts={alerts} actions={actions} />);
+it('should render container when has alerts', function () {
+  const { container, getByText } = render(
+    <Alert alerts={alerts} actions={actions} />
+  );
 
-  expect(component.is('.alert-container')).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByText(alerts[0].message)).not.toBeFalsy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call remove on close button click', function() {
-  const component = mount(<Alert alerts={alerts} actions={actions} />);
+it('should call remove on close button click', async function () {
+  const { container, getByLabelText } = render(
+    <Alert alerts={alerts} actions={actions} />
+  );
 
-  component.find('button.alert__close').simulate('click');
+  const user = userEvent.setup();
+  await user.click(getByLabelText('Close Alert'));
 
   expect(mockFn).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(container).toMatchSnapshot();
 });
 
-it('should expand alert on click', function() {
-  const component = mount(<Alert alerts={alerts} actions={actions} />);
+it('should expand alert on click', async function () {
+  const { container, getByText } = render(
+    <Alert alerts={alerts} actions={actions} />
+  );
 
-  expect(component.find('.alert__content--is-expanded').exists()).toBeFalsy();
-  expect(component).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 
-  component.find('button.alert__expand').simulate('click');
+  const user = userEvent.setup();
+  await user.click(getByText('Details'));
 
-  expect(component.find('.alert__content--is-expanded').exists()).toBeTruthy();
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(container).toMatchSnapshot();
 });

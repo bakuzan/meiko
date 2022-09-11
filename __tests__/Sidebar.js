@@ -21,12 +21,12 @@ const menuOptions = [
 ];
 
 const mockToggle = jest.fn();
-const mockClose = jest.fn();
+const mockClose = jest.fn((e) => e.preventDefault());
 
 afterEach(() => jest.resetAllMocks());
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <Sidebar
       isHidden={false}
       isCollapsed={false}
@@ -36,12 +36,12 @@ it('should render with minimum props', function() {
     />
   );
 
-  expect(component.is('.sidebar')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should apply hidden styles', function() {
-  const component = shallow(
+it('should apply hidden styles', function () {
+  const { container, getByTestId, rerender } = render(
     <Sidebar
       isHidden={false}
       isCollapsed={false}
@@ -51,16 +51,25 @@ it('should apply hidden styles', function() {
     />
   );
 
-  expect(component.is('.sidebar--hidden')).toBe(false);
+  const sidebarElement = container.firstChild;
+  expect(sidebarElement.className.includes('sidebar--hidden')).toBe(false);
 
-  component.setProps({ isHidden: true });
+  rerender(
+    <Sidebar
+      isHidden={true}
+      isCollapsed={false}
+      items={menuOptions}
+      toggleCollapse={mockToggle}
+      close={mockClose}
+    />
+  );
 
-  expect(component.is('.sidebar--hidden')).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(sidebarElement.className.includes('sidebar--hidden')).toBe(true);
+  expect(container).toMatchSnapshot();
 });
 
-it('should apply collapsed styles', function() {
-  const component = shallow(
+it('should apply collapsed styles', function () {
+  const { container, getByTestId, rerender } = render(
     <Sidebar
       isHidden={false}
       isCollapsed={false}
@@ -70,16 +79,25 @@ it('should apply collapsed styles', function() {
     />
   );
 
-  expect(component.is('.sidebar--collapsed')).toBe(false);
+  const sidebarElement = container.firstChild;
+  expect(sidebarElement.className.includes('sidebar--collapsed')).toBe(false);
 
-  component.setProps({ isCollapsed: true });
+  rerender(
+    <Sidebar
+      isHidden={false}
+      isCollapsed={true}
+      items={menuOptions}
+      toggleCollapse={mockToggle}
+      close={mockClose}
+    />
+  );
 
-  expect(component.is('.sidebar--collapsed')).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(sidebarElement.className.includes('sidebar--collapsed')).toBe(true);
+  expect(container).toMatchSnapshot();
 });
 
-it('should call toggleCollapse', function() {
-  const component = mount(
+it('should call toggleCollapse', async function () {
+  const { getByLabelText } = render(
     <Sidebar
       isHidden={false}
       isCollapsed={false}
@@ -89,13 +107,14 @@ it('should call toggleCollapse', function() {
     />
   );
 
-  component.find('button.sidebar__toggler').simulate('click');
+  const user = userEvent.setup();
+  await user.click(getByLabelText('Toggle sidebar'));
+
   expect(mockToggle).toHaveBeenCalled();
-  component.unmount();
 });
 
-it('should call close on default link click', function() {
-  const component = mount(
+it('should call close on default link click', async function () {
+  const { getByText } = render(
     <Sidebar
       isHidden={false}
       isCollapsed={false}
@@ -105,10 +124,8 @@ it('should call close on default link click', function() {
     />
   );
 
-  component
-    .find('a.sidebar-link')
-    .at(0)
-    .simulate('click');
+  const user = userEvent.setup();
+  await user.click(getByText('One'));
+
   expect(mockClose).toHaveBeenCalled();
-  component.unmount();
 });

@@ -15,8 +15,8 @@ const OPTIONS = [
 
 const mockedSelectFn = jest.fn();
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <TagCloudSelector
       name="selectedTags"
       tagOptions={OPTIONS}
@@ -24,12 +24,12 @@ it('should render with minimum props', function() {
     />
   );
 
-  expect(component.is('.tag-cloud')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should render correct children', function() {
-  const component = shallow(
+it('should render correct children', function () {
+  const { container, getByText } = render(
     <TagCloudSelector
       name="selectedTags"
       tagOptions={OPTIONS}
@@ -37,12 +37,13 @@ it('should render correct children', function() {
     />
   );
 
-  expect(component.find('TagChip').length).toEqual(8);
-  expect(component).toMatchSnapshot();
+  OPTIONS.forEach((option) => expect(getByText(option.name)).toBeTruthy());
+
+  expect(container).toMatchSnapshot();
 });
 
-it('should display clear button when has selected', function() {
-  const component = shallow(
+it('should display clear button when has selected', function () {
+  const { container, getByText } = render(
     <TagCloudSelector
       name="selectedTags"
       selectedTags={[1]}
@@ -51,12 +52,12 @@ it('should display clear button when has selected', function() {
     />
   );
 
-  expect(component.find('Button').exists()).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByText('Clear')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call onSelect when cleared', function() {
-  const component = shallow(
+it('should call onSelect when cleared', async function () {
+  const { container, getByText } = render(
     <TagCloudSelector
       name="selectedTags"
       selectedTags={[1]}
@@ -65,14 +66,15 @@ it('should call onSelect when cleared', function() {
     />
   );
 
-  component.find('Button').prop('onClick')();
+  const user = userEvent.setup();
+  await user.click(getByText('Clear'));
 
   expect(mockedSelectFn).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call onSelect when tagchip is clicked', function() {
-  const component = shallow(
+it('should call onSelect when tagchip is clicked', async function () {
+  const { container, getByText } = render(
     <TagCloudSelector
       name="selectedTags"
       selectedTags={[1]}
@@ -81,11 +83,9 @@ it('should call onSelect when tagchip is clicked', function() {
     />
   );
 
-  component
-    .find('TagChip')
-    .at(1)
-    .prop('onClick')(OPTIONS[1]);
+  const user = userEvent.setup();
+  await user.click(getByText(OPTIONS[1].name));
 
   expect(mockedSelectFn).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

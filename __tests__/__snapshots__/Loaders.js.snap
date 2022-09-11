@@ -7,113 +7,109 @@ exports[`LoadableContent should render spinner after timeout 1`] = `
 `;
 
 exports[`LoadableContent should render with minimum props 1`] = `
-<div
-  id="jest"
-/>
+<div>
+  <div
+    id="jest"
+  >
+    jest test
+  </div>
+</div>
 `;
 
 exports[`Loading should render 1`] = `
-<Loading
-  pastDelay={true}
->
-  <LoadingSpinner
-    size="fullscreen"
+<div>
+  <div
+    class="loader loader--fullscreen  mko_zz2xb6-loader  mko_zz2xb6-loader--fullscreen"
   >
-    <div
-      className="loader loader--fullscreen  mko_zz2xb6-loader  mko_zz2xb6-loader--fullscreen"
+    <svg
+      class="loader__circular  mko_zz2xb6-circular"
+      viewBox="25 25 50 50"
     >
-      <svg
-        className="loader__circular  mko_zz2xb6-circular"
-        viewBox="25 25 50 50"
-      >
-        <circle
-          className="loader__path  mko_zz2xb6-path"
-          cx="50"
-          cy="50"
-          fill="none"
-          r="20"
-          strokeMiterlimit="10"
-          strokeWidth="2"
-        />
-      </svg>
-    </div>
-  </LoadingSpinner>
-</Loading>
+      <circle
+        class="loader__path  mko_zz2xb6-path"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="20"
+        stroke-miterlimit="10"
+        stroke-width="2"
+      />
+    </svg>
+  </div>
+</div>
 `;
 
 exports[`Loading should render error message 1`] = `
 <div>
-  An Error was encountered loading the page!
+  <div>
+    An Error was encountered loading the page!
+  </div>
 </div>
 `;
 
 exports[`Loading should render timeout message 1`] = `
 <div>
-  The request has timed out!
+  <div>
+    The request has timed out!
+  </div>
 </div>
 `;
 
 exports[`LoadingBouncer should render with minimum props 1`] = `
-<div
-  className="loading-bouncer  mko_flo780-bouncer"
->
+<div>
   <div
-    className="loading-bouncer__orb  mko_flo780-orb"
-    key="0"
-  />
-  <div
-    className="loading-bouncer__orb  mko_flo780-orb"
-    key="1"
-  />
-  <div
-    className="loading-bouncer__orb  mko_flo780-orb"
-    key="2"
-  />
+    class="loading-bouncer  mko_flo780-bouncer"
+  >
+    <div
+      class="loading-bouncer__orb  mko_flo780-orb"
+    />
+    <div
+      class="loading-bouncer__orb  mko_flo780-orb"
+    />
+    <div
+      class="loading-bouncer__orb  mko_flo780-orb"
+    />
+  </div>
 </div>
 `;
 
 exports[`LoadingSpinner should render with minimum props 1`] = `
-<div
-  className="loader  mko_zz2xb6-loader"
->
-  <svg
-    className="loader__circular  mko_zz2xb6-circular"
-    viewBox="25 25 50 50"
+<div>
+  <div
+    class="loader  mko_zz2xb6-loader"
   >
-    <circle
-      className="loader__path  mko_zz2xb6-path"
-      cx="50"
-      cy="50"
-      fill="none"
-      r="20"
-      strokeMiterlimit="10"
-      strokeWidth="2"
-    />
-  </svg>
+    <svg
+      class="loader__circular  mko_zz2xb6-circular"
+      viewBox="25 25 50 50"
+    >
+      <circle
+        class="loader__path  mko_zz2xb6-path"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="20"
+        stroke-miterlimit="10"
+        stroke-width="2"
+      />
+    </svg>
+  </div>
 </div>
 `;
 
 exports[`SimpleLoading should render 1`] = `
-<SimpleLoading
-  pastDelay={true}
->
-  <LoadingBouncer>
+<div>
+  <div
+    class="loading-bouncer  mko_flo780-bouncer"
+  >
     <div
-      className="loading-bouncer  mko_flo780-bouncer"
-    >
-      <div
-        className="loading-bouncer__orb  mko_flo780-orb"
-        key="0"
-      />
-      <div
-        className="loading-bouncer__orb  mko_flo780-orb"
-        key="1"
-      />
-      <div
-        className="loading-bouncer__orb  mko_flo780-orb"
-        key="2"
-      />
-    </div>
-  </LoadingBouncer>
-</SimpleLoading>
+      class="loading-bouncer__orb  mko_flo780-orb"
+    />
+    <div
+      class="loading-bouncer__orb  mko_flo780-orb"
+    />
+    <div
+      class="loading-bouncer__orb  mko_flo780-orb"
+    />
+  </div>
+</div>
 `;

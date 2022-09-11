@@ -1,57 +1,159 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render error for clearable input 1`] = `
-<div
-  className="form-control"
->
-  <ClearableInput
-    clearButtonProps={Object {}}
-    id="jest"
-    maxNumberText={[Function]}
-    name="jester"
-    onChange={[MockFunction]}
-    value="hello world"
-  />
-  <ErrorBlock
-    className="form-control__error  mko_et6tqb-formControl__error"
+<div>
+  <div
+    class="form-control"
   >
-    Jest Error Test
-  </ErrorBlock>
+    <div
+      class="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+    >
+      <div
+        class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+      >
+        <input
+          autocomplete="off"
+          class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
+          id="jest"
+          name="jester"
+          placeholder=" "
+          type="text"
+          value="hello world"
+        />
+        <label
+          for="jest"
+        />
+        <button
+          aria-label="Clear input"
+          class="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small clearable-input__clear  mko_18z22vm-clearableInput__clear"
+          icon="❌︎"
+          type="button"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render error for clearable input 2`] = `
+<div>
+  <div
+    class="form-control"
+  >
+    <div
+      class="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+    >
+      <div
+        class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+      >
+        <input
+          autocomplete="off"
+          class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
+          id="jest"
+          name="jester"
+          placeholder=" "
+          type="text"
+          value="hello world"
+        />
+        <label
+          for="jest"
+        />
+        <button
+          aria-label="Clear input"
+          class="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small clearable-input__clear  mko_18z22vm-clearableInput__clear"
+          icon="❌︎"
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      class="error-block form-control__error  mko_et6tqb-formControl__error"
+    >
+      Jest Error Test
+    </div>
+  </div>
 </div>
 `;
 
 exports[`should render error for select box 1`] = `
-<div
-  className="form-control"
->
-  <SelectBox
-    disabled={false}
-    id="jest"
-    name="jester"
-    onChange={[MockFunction]}
-    options={
-      Array [
-        Object {
-          "text": "one",
-          "value": 1,
-        },
-        Object {
-          "text": "two",
-          "value": 2,
-        },
-        Object {
-          "text": "three",
-          "value": 3,
-        },
-      ]
-    }
-    text="Jesters"
-    value=""
-  />
-  <ErrorBlock
-    className="form-control__error  mko_et6tqb-formControl__error"
+<div>
+  <div
+    class="form-control"
   >
-    Jest Error Test
-  </ErrorBlock>
+    <div
+      class="has-float-label select-container  mko_1aosyyv-controlContainer"
+    >
+      <select
+        class="select-box  mko_16anp6y-select"
+        id="jest"
+        name="jester"
+      >
+        <option
+          value="1"
+        >
+          one
+        </option>
+        <option
+          value="2"
+        >
+          two
+        </option>
+        <option
+          value="3"
+        >
+          three
+        </option>
+      </select>
+      <label
+        for="jest"
+      >
+        Jesters
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render error for select box 2`] = `
+<div>
+  <div
+    class="form-control"
+  >
+    <div
+      class="has-float-label select-container  mko_1aosyyv-controlContainer"
+    >
+      <select
+        class="select-box  mko_16anp6y-select"
+        id="jest"
+        name="jester"
+      >
+        <option
+          value="1"
+        >
+          one
+        </option>
+        <option
+          value="2"
+        >
+          two
+        </option>
+        <option
+          value="3"
+        >
+          three
+        </option>
+      </select>
+      <label
+        for="jest"
+      >
+        Jesters
+      </label>
+    </div>
+    <div
+      class="error-block form-control__error  mko_et6tqb-formControl__error"
+    >
+      Jest Error Test
+    </div>
+  </div>
 </div>
 `;

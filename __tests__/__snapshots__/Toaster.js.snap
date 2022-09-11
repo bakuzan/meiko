@@ -1,65 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should remove toasts after 3sec 1`] = `
-<div
-  className="toaster  mko_aa16jz-toaster"
->
-  <span
-    className="toast toast--info  mko_aa16jz-toast  mko_aa16jz-toast--info"
-    key="1554336000000"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="button"
-    tabIndex={0}
-  >
-    <span
-      className="toast__title  mko_aa16jz-toast__title"
-    >
-      jest
-    </span>
-    <span
-      className="toast__message"
-    >
-      this is a test
-    </span>
-  </span>
+exports[`should remove toasts after 3sec 1`] = `<div />`;
+
+exports[`should remove toasts on click 1`] = `
+<div>
+  <div
+    class="toaster  mko_aa16jz-toaster"
+  />
 </div>
 `;
 
-exports[`should remove toasts on click 1`] = `
-<div
-  className="toaster  mko_aa16jz-toaster"
-/>
-`;
-
 exports[`should render toasts when popped 1`] = `
-<div
-  className="toaster  mko_aa16jz-toaster"
->
-  <span
-    className="toast toast--info  mko_aa16jz-toast  mko_aa16jz-toast--info"
-    key="1554336000000"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="button"
-    tabIndex={0}
+<div>
+  <div
+    class="toaster  mko_aa16jz-toaster"
   >
     <span
-      className="toast__title  mko_aa16jz-toast__title"
+      class="toast toast--info  mko_aa16jz-toast  mko_aa16jz-toast--info"
+      role="button"
+      tabindex="0"
     >
-      jest
+      <span
+        class="toast__title  mko_aa16jz-toast__title"
+      >
+        jest
+      </span>
+      <span
+        class="toast__message"
+      >
+        this is a test
+      </span>
     </span>
-    <span
-      className="toast__message"
-    >
-      this is a test
-    </span>
-  </span>
+  </div>
 </div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="toaster  mko_aa16jz-toaster"
-/>
+<div>
+  <div
+    class="toaster  mko_aa16jz-toaster"
+  />
+</div>
 `;

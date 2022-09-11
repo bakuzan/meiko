@@ -1,37 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render apply icon class 1`] = `
-<button
-  className="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon"
-  icon="T"
-  type="button"
-/>
+<div>
+  <button
+    class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon"
+    icon="T"
+    type="button"
+  />
+</div>
 `;
 
 exports[`should render apply link class 1`] = `
-<button
-  className="button ripple button--link  mko_c5ujei-button  mko_c5ujei-button_link"
-  type="button"
-/>
+<div>
+  <button
+    class="button ripple button--link  mko_c5ujei-button  mko_c5ujei-button_link"
+    type="button"
+  />
+</div>
 `;
 
 exports[`should render apply size class 1`] = `
-<button
-  className="button ripple button--standard button--small  mko_c5ujei-button  mko_c5ujei-button_standard  mko_c5ujei-button_small"
-  type="button"
-/>
+<div>
+  <button
+    class="button ripple button--standard button--small  mko_c5ujei-button  mko_c5ujei-button_standard  mko_c5ujei-button_small"
+    type="button"
+  />
+</div>
 `;
 
 exports[`should render apply style class 1`] = `
-<button
-  className="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard"
-  type="button"
-/>
+<div>
+  <button
+    class="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard"
+    type="button"
+  />
+</div>
 `;
 
 exports[`should render when no props 1`] = `
-<button
-  className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard"
-  type="button"
-/>
+<div>
+  <button
+    class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard"
+    type="button"
+  />
+</div>
 `;

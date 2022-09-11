@@ -9,36 +9,36 @@ const { trigger } = mockDocumentEventListeners();
 
 afterEach(() => jest.restoreAllMocks());
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <DropdownMenu>
       <li>Test item</li>
       <li>And another one!</li>
     </DropdownMenu>
   );
 
-  expect(component.is('.dropdown-menu')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should display menu on toggler click', function() {
-  const component = mount(
+it('should display menu on toggler click', async function () {
+  const { container, queryByText, getByText, getByLabelText } = render(
     <DropdownMenu>
       <li>Test item</li>
       <li>And another one!</li>
     </DropdownMenu>
   );
 
-  expect(component.find('.dropdown-menu__menu').exists()).toBe(false);
+  expect(queryByText('Test item')).toBeNull();
 
-  component.find('button.dropdown-menu__toggler').simulate('click');
+  const user = userEvent.setup();
+  await user.click(getByLabelText('Open dropdown menu'));
 
-  expect(component.find('.dropdown-menu__menu').exists()).toBe(true);
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(getByText('Test item')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-xit('should close display menu on outside click', async function() {
+xit('should close display menu on outside click', async function () {
   const component = shallow(
     <DropdownMenu>
       <li id="inside">Test item</li>
@@ -60,7 +60,7 @@ xit('should close display menu on outside click', async function() {
   expect(component).toMatchSnapshot();
 });
 
-xit('should close display menu on escape key', async function() {
+xit('should close display menu on escape key', async function () {
   const escape = 27;
   const component = shallow(
     <DropdownMenu>

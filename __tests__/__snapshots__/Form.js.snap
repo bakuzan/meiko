@@ -1,324 +1,218 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should call onCancel 1`] = `
-<Form
-  cancelOptions={
-    Object {
-      "onCancel": [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      },
-    }
-  }
-  name="jest"
-  submitOptions={
-    Object {
-      "onSubmit": [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      },
-    }
-  }
->
+<div>
   <div
-    className="mko-form  mko_u3fnxm-mkoForm"
+    class="mko-form  mko_u3fnxm-mkoForm"
   >
     <form
-      autoComplete="off"
-      className="mko-form__form  mko_u3fnxm-form"
+      autocomplete="off"
+      class="mko-form__form  mko_u3fnxm-form"
       name="jest"
-      noValidate={true}
-      onSubmit={[Function]}
+      novalidate=""
     >
       <div>
         Form Children
       </div>
       <div
-        className="button-group"
+        class="button-group"
       >
-        <Button
-          className="mko-form__submit"
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
           type="submit"
         >
-          <button
-            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
-            type="submit"
-          >
-            Save
-          </button>
-        </Button>
-        <Button
-          className="mko-form__cancel"
-          onClick={[Function]}
+          Save
+        </button>
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
           type="button"
         >
-          <button
-            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
-            onClick={[Function]}
-            type="button"
-          >
-            Cancel
-          </button>
-        </Button>
+          Cancel
+        </button>
       </div>
     </form>
   </div>
-</Form>
+</div>
 `;
 
 exports[`should call onSubmit 1`] = `
-<Form
-  cancelOptions={
-    Object {
-      "onCancel": [MockFunction],
-    }
-  }
-  name="jest"
-  submitOptions={
-    Object {
-      "onSubmit": [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      },
-    }
-  }
->
+<div>
   <div
-    className="mko-form  mko_u3fnxm-mkoForm"
+    class="mko-form  mko_u3fnxm-mkoForm"
   >
     <form
-      autoComplete="off"
-      className="mko-form__form  mko_u3fnxm-form"
+      autocomplete="off"
+      class="mko-form__form  mko_u3fnxm-form"
       name="jest"
-      noValidate={true}
-      onSubmit={[Function]}
+      novalidate=""
     >
       <div>
         Form Children
       </div>
       <div
-        className="button-group"
+        class="button-group"
       >
-        <Button
-          className="mko-form__submit"
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
           type="submit"
         >
-          <button
-            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
-            type="submit"
-          >
-            Save
-          </button>
-        </Button>
-        <Button
-          className="mko-form__cancel"
-          onClick={[Function]}
+          Save
+        </button>
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
           type="button"
         >
-          <button
-            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
-            onClick={[Function]}
-            type="button"
-          >
-            Cancel
-          </button>
-        </Button>
+          Cancel
+        </button>
       </div>
     </form>
   </div>
-</Form>
+</div>
 `;
 
 exports[`should display custom submit button text 1`] = `
-<Form
-  cancelOptions={
-    Object {
-      "onCancel": [MockFunction],
-    }
-  }
-  name="jest"
-  submitOptions={
-    Object {
-      "onSubmit": [MockFunction],
-      "text": "Save - Jest",
-    }
-  }
->
+<div>
   <div
-    className="mko-form  mko_u3fnxm-mkoForm"
+    class="mko-form  mko_u3fnxm-mkoForm"
   >
     <form
-      autoComplete="off"
-      className="mko-form__form  mko_u3fnxm-form"
+      autocomplete="off"
+      class="mko-form__form  mko_u3fnxm-form"
       name="jest"
-      noValidate={true}
-      onSubmit={[Function]}
+      novalidate=""
     >
       <div>
         Form Children
       </div>
       <div
-        className="button-group"
+        class="button-group"
       >
-        <Button
-          className="mko-form__submit"
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
           type="submit"
         >
-          <button
-            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
-            type="submit"
-          >
-            Save - Jest
-          </button>
-        </Button>
-        <Button
-          className="mko-form__cancel"
-          onClick={[Function]}
+          Save - Jest
+        </button>
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
           type="button"
         >
-          <button
-            className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
-            onClick={[Function]}
-            type="button"
-          >
-            Cancel
-          </button>
-        </Button>
+          Cancel
+        </button>
       </div>
     </form>
   </div>
-</Form>
+</div>
 `;
 
 exports[`should render children 1`] = `
-<div
-  className="mko-form  mko_u3fnxm-mkoForm"
->
-  <form
-    autoComplete="off"
-    className="mko-form__form  mko_u3fnxm-form"
-    name="jest"
-    noValidate={true}
-    onSubmit={[Function]}
+<div>
+  <div
+    class="mko-form  mko_u3fnxm-mkoForm"
   >
-    <div
-      id="jestChild"
+    <form
+      autocomplete="off"
+      class="mko-form__form  mko_u3fnxm-form"
+      name="jest"
+      novalidate=""
     >
-      Form Children
-    </div>
-    <div
-      className="button-group"
-    >
-      <Button
-        className="mko-form__submit"
-        type="submit"
+      <div
+        id="jestChild"
       >
-        Save
-      </Button>
-      <Button
-        className="mko-form__cancel"
-        onClick={[Function]}
-        type="button"
+        Form Children
+      </div>
+      <div
+        class="button-group"
       >
-        Cancel
-      </Button>
-    </div>
-  </form>
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
+          type="submit"
+        >
+          Save
+        </button>
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
 `;
 
 exports[`should render title if truthy 1`] = `
-<div
-  className="mko-form  mko_u3fnxm-mkoForm"
->
-  <h2
-    className="mko-form__title  mko_u3fnxm-title"
+<div>
+  <div
+    class="mko-form  mko_u3fnxm-mkoForm"
   >
-    jester
-  </h2>
-  <form
-    autoComplete="off"
-    className="mko-form__form  mko_u3fnxm-form"
-    name="jest"
-    noValidate={true}
-    onSubmit={[Function]}
-  >
-    <div>
-      Form Children
-    </div>
-    <div
-      className="button-group"
+    <h2
+      class="mko-form__title  mko_u3fnxm-title"
     >
-      <Button
-        className="mko-form__submit"
-        type="submit"
+      jester
+    </h2>
+    <form
+      autocomplete="off"
+      class="mko-form__form  mko_u3fnxm-form"
+      name="jest"
+      novalidate=""
+    >
+      <div>
+        Form Children
+      </div>
+      <div
+        class="button-group"
       >
-        Save
-      </Button>
-      <Button
-        className="mko-form__cancel"
-        onClick={[Function]}
-        type="button"
-      >
-        Cancel
-      </Button>
-    </div>
-  </form>
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
+          type="submit"
+        >
+          Save
+        </button>
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="mko-form  mko_u3fnxm-mkoForm"
->
-  <form
-    autoComplete="off"
-    className="mko-form__form  mko_u3fnxm-form"
-    name="jest"
-    noValidate={true}
-    onSubmit={[Function]}
+<div>
+  <div
+    class="mko-form  mko_u3fnxm-mkoForm"
   >
-    <div>
-      Form Children
-    </div>
-    <div
-      className="button-group"
+    <form
+      autocomplete="off"
+      class="mko-form__form  mko_u3fnxm-form"
+      name="jest"
+      novalidate=""
     >
-      <Button
-        className="mko-form__submit"
-        type="submit"
+      <div>
+        Form Children
+      </div>
+      <div
+        class="button-group"
       >
-        Save
-      </Button>
-      <Button
-        className="mko-form__cancel"
-        onClick={[Function]}
-        type="button"
-      >
-        Cancel
-      </Button>
-    </div>
-  </form>
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__submit"
+          type="submit"
+        >
+          Save
+        </button>
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard mko-form__cancel"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
 `;

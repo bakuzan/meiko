@@ -14,17 +14,17 @@ afterEach(() => jest.resetAllMocks());
 
 it('should render children', () => {
   const message = 'render this test error';
-  const component = shallow(
+  const { getByText } = render(
     <FormControls.ErrorBlock>{message}</FormControls.ErrorBlock>
   );
 
-  expect(component.text()).toEqual(message);
+  expect(getByText(message)).toBeTruthy();
 });
 
-it('should render error for clearable input', function() {
+it('should render error for clearable input', function () {
   const message = 'Jest Error Test';
 
-  const component = shallow(
+  const { container, getByText, rerender } = render(
     <FormControls.ClearableInput
       id="jest"
       name="jester"
@@ -34,20 +34,26 @@ it('should render error for clearable input', function() {
     />
   );
 
-  let error = component.find('.form-control__error');
-  expect(error.exists()).toBe(false);
+  expect(container).toMatchSnapshot();
 
-  component.setProps({ error: message });
+  rerender(
+    <FormControls.ClearableInput
+      id="jest"
+      name="jester"
+      value={'hello world'}
+      error={message}
+      onChange={mockChangeFn}
+    />
+  );
 
-  error = component.find('.form-control__error');
-  expect(error.exists()).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByText(message)).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should render error for select box', function() {
+it('should render error for select box', function () {
   const message = 'Jest Error Test';
 
-  const component = shallow(
+  const { container, getByText, rerender } = render(
     <FormControls.SelectBox
       id="jest"
       name="jester"
@@ -58,12 +64,20 @@ it('should render error for select box', function() {
     />
   );
 
-  let error = component.find('.form-control__error');
-  expect(error.exists()).toBe(false);
+  expect(container).toMatchSnapshot();
 
-  component.setProps({ error: message });
+  rerender(
+    <FormControls.SelectBox
+      id="jest"
+      name="jester"
+      text="Jesters"
+      value={''}
+      error={message}
+      options={options}
+      onChange={mockChangeFn}
+    />
+  );
 
-  error = component.find('.form-control__error');
-  expect(error.exists()).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByText(message)).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });

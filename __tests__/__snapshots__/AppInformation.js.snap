@@ -1,63 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render both 1`] = `
-<div
-  aria-label="Branch master, Version 4.0.0"
-  className="app-information  mko_1ko0jmt-appInformation"
-  data-icon="🛈︎"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
->
+<div>
   <div
-    className="app-information__detail  mko_1ko0jmt-appInformation__detail"
+    aria-label="Branch master, Version 4.0.0"
+    class="app-information  mko_1ko0jmt-appInformation"
+    data-icon="🛈︎"
   >
-    <span>
-      Branch: 
-      master
-    </span>
-    <br />
-    <span>
-      Version: 
-      4.0.0
-    </span>
+    <div
+      class="app-information__detail  mko_1ko0jmt-appInformation__detail"
+    >
+      <span>
+        Branch: 
+        master
+      </span>
+      <br />
+      <span>
+        Version: 
+        4.0.0
+      </span>
+    </div>
   </div>
 </div>
 `;
 
 exports[`should render when branch present 1`] = `
-<div
-  aria-label="Branch master"
-  className="app-information  mko_1ko0jmt-appInformation"
-  data-icon="🛈︎"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
->
+<div>
   <div
-    className="app-information__detail  mko_1ko0jmt-appInformation__detail"
+    aria-label="Branch master"
+    class="app-information  mko_1ko0jmt-appInformation"
+    data-icon="🛈︎"
   >
-    <span>
-      Branch: 
-      master
-    </span>
+    <div
+      class="app-information__detail  mko_1ko0jmt-appInformation__detail"
+    >
+      <span>
+        Branch: 
+        master
+      </span>
+    </div>
   </div>
 </div>
 `;
 
 exports[`should render when version present 1`] = `
-<div
-  aria-label="Version 4.0.0"
-  className="app-information  mko_1ko0jmt-appInformation"
-  data-icon="🛈︎"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
->
+<div>
   <div
-    className="app-information__detail  mko_1ko0jmt-appInformation__detail"
+    aria-label="Version 4.0.0"
+    class="app-information  mko_1ko0jmt-appInformation"
+    data-icon="🛈︎"
   >
-    <span>
-      Version: 
-      4.0.0
-    </span>
+    <div
+      class="app-information__detail  mko_1ko0jmt-appInformation__detail"
+    >
+      <span>
+        Version: 
+        4.0.0
+      </span>
+    </div>
   </div>
 </div>
 `;

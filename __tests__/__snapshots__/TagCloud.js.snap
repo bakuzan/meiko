@@ -1,641 +1,558 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should call onSelect when cleared 1`] = `
-<div
-  className="tag-cloud  mko_qcfya-tagCloud"
->
+<div>
   <div
-    className="tag-cloud__options  mko_qcfya-tagCloud__options"
+    class="tag-cloud  mko_qcfya-tagCloud"
   >
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 5,
-          "id": 1,
-          "name": "react",
-        }
-      }
-      isActive={true}
-      key="1"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 0,
-          "id": 2,
-          "name": "jquery",
-        }
-      }
-      isActive={false}
-      key="2"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 0,
-          "id": 3,
-          "name": "angular",
-        }
-      }
-      isActive={false}
-      key="3"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 2,
-          "id": 4,
-          "name": "elm",
-        }
-      }
-      isActive={false}
-      key="4"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 3,
-          "id": 5,
-          "name": "graphql",
-        }
-      }
-      isActive={false}
-      key="5"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 6,
-          "name": "apollo",
-        }
-      }
-      isActive={false}
-      key="6"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 7,
-          "name": "python",
-        }
-      }
-      isActive={false}
-      key="7"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 8,
-          "name": "rust",
-        }
-      }
-      isActive={false}
-      key="8"
-      onClick={[Function]}
-    />
-  </div>
-  <div
-    className="tag-cloud__actions  mko_qcfya-actions"
-  >
-    <Button
-      btnStyle="primary"
-      className="tag-cloud__clear"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
+    <div
+      class="tag-cloud__options  mko_qcfya-tagCloud__options"
     >
-      Clear
-    </Button>
+      <span
+        class="tag-chip tag-chip--clickable tag-chip--active  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          react
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          jquery
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          angular
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          elm
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          graphql
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          apollo
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          python
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          rust
+        </span>
+      </span>
+    </div>
+    <div
+      class="tag-cloud__actions  mko_qcfya-actions"
+    >
+      <button
+        class="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard tag-cloud__clear"
+        type="button"
+      >
+        Clear
+      </button>
+    </div>
   </div>
 </div>
 `;
 
 exports[`should call onSelect when tagchip is clicked 1`] = `
-<div
-  className="tag-cloud  mko_qcfya-tagCloud"
->
+<div>
   <div
-    className="tag-cloud__options  mko_qcfya-tagCloud__options"
+    class="tag-cloud  mko_qcfya-tagCloud"
   >
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 5,
-          "id": 1,
-          "name": "react",
-        }
-      }
-      isActive={true}
-      key="1"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 0,
-          "id": 2,
-          "name": "jquery",
-        }
-      }
-      isActive={false}
-      key="2"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 0,
-          "id": 3,
-          "name": "angular",
-        }
-      }
-      isActive={false}
-      key="3"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 2,
-          "id": 4,
-          "name": "elm",
-        }
-      }
-      isActive={false}
-      key="4"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 3,
-          "id": 5,
-          "name": "graphql",
-        }
-      }
-      isActive={false}
-      key="5"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 6,
-          "name": "apollo",
-        }
-      }
-      isActive={false}
-      key="6"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 7,
-          "name": "python",
-        }
-      }
-      isActive={false}
-      key="7"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 8,
-          "name": "rust",
-        }
-      }
-      isActive={false}
-      key="8"
-      onClick={[Function]}
-    />
-  </div>
-  <div
-    className="tag-cloud__actions  mko_qcfya-actions"
-  >
-    <Button
-      btnStyle="primary"
-      className="tag-cloud__clear"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
+    <div
+      class="tag-cloud__options  mko_qcfya-tagCloud__options"
     >
-      Clear
-    </Button>
+      <span
+        class="tag-chip tag-chip--clickable tag-chip--active  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          react
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          jquery
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          angular
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          elm
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          graphql
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          apollo
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          python
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          rust
+        </span>
+      </span>
+    </div>
+    <div
+      class="tag-cloud__actions  mko_qcfya-actions"
+    >
+      <button
+        class="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard tag-cloud__clear"
+        type="button"
+      >
+        Clear
+      </button>
+    </div>
   </div>
 </div>
 `;
 
 exports[`should display clear button when has selected 1`] = `
-<div
-  className="tag-cloud  mko_qcfya-tagCloud"
->
+<div>
   <div
-    className="tag-cloud__options  mko_qcfya-tagCloud__options"
+    class="tag-cloud  mko_qcfya-tagCloud"
   >
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 5,
-          "id": 1,
-          "name": "react",
-        }
-      }
-      isActive={true}
-      key="1"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 0,
-          "id": 2,
-          "name": "jquery",
-        }
-      }
-      isActive={false}
-      key="2"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 0,
-          "id": 3,
-          "name": "angular",
-        }
-      }
-      isActive={false}
-      key="3"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 2,
-          "id": 4,
-          "name": "elm",
-        }
-      }
-      isActive={false}
-      key="4"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 3,
-          "id": 5,
-          "name": "graphql",
-        }
-      }
-      isActive={false}
-      key="5"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 6,
-          "name": "apollo",
-        }
-      }
-      isActive={false}
-      key="6"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 7,
-          "name": "python",
-        }
-      }
-      isActive={false}
-      key="7"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 8,
-          "name": "rust",
-        }
-      }
-      isActive={false}
-      key="8"
-      onClick={[Function]}
-    />
-  </div>
-  <div
-    className="tag-cloud__actions  mko_qcfya-actions"
-  >
-    <Button
-      btnStyle="primary"
-      className="tag-cloud__clear"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
+    <div
+      class="tag-cloud__options  mko_qcfya-tagCloud__options"
     >
-      Clear
-    </Button>
+      <span
+        class="tag-chip tag-chip--clickable tag-chip--active  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          react
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          jquery
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          angular
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          elm
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          graphql
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          apollo
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          python
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          rust
+        </span>
+      </span>
+    </div>
+    <div
+      class="tag-cloud__actions  mko_qcfya-actions"
+    >
+      <button
+        class="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard tag-cloud__clear"
+        type="button"
+      >
+        Clear
+      </button>
+    </div>
   </div>
 </div>
 `;
 
 exports[`should render correct children 1`] = `
-<div
-  className="tag-cloud  mko_qcfya-tagCloud"
->
+<div>
   <div
-    className="tag-cloud__options  mko_qcfya-tagCloud__options"
+    class="tag-cloud  mko_qcfya-tagCloud"
   >
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 5,
-          "id": 1,
-          "name": "react",
-        }
-      }
-      isActive={false}
-      key="1"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 0,
-          "id": 2,
-          "name": "jquery",
-        }
-      }
-      isActive={false}
-      key="2"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 0,
-          "id": 3,
-          "name": "angular",
-        }
-      }
-      isActive={false}
-      key="3"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 2,
-          "id": 4,
-          "name": "elm",
-        }
-      }
-      isActive={false}
-      key="4"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 3,
-          "id": 5,
-          "name": "graphql",
-        }
-      }
-      isActive={false}
-      key="5"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 6,
-          "name": "apollo",
-        }
-      }
-      isActive={false}
-      key="6"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 7,
-          "name": "python",
-        }
-      }
-      isActive={false}
-      key="7"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 8,
-          "name": "rust",
-        }
-      }
-      isActive={false}
-      key="8"
-      onClick={[Function]}
-    />
-  </div>
-  <div
-    className="tag-cloud__actions  mko_qcfya-actions"
-  >
-    <Button
-      btnStyle="primary"
-      className="tag-cloud__clear"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
+    <div
+      class="tag-cloud__options  mko_qcfya-tagCloud__options"
     >
-      Clear
-    </Button>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          react
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          jquery
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          angular
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          elm
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          graphql
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          apollo
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          python
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          rust
+        </span>
+      </span>
+    </div>
+    <div
+      class="tag-cloud__actions  mko_qcfya-actions"
+    >
+      <button
+        class="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard tag-cloud__clear"
+        disabled=""
+        type="button"
+      >
+        Clear
+      </button>
+    </div>
   </div>
 </div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="tag-cloud  mko_qcfya-tagCloud"
->
+<div>
   <div
-    className="tag-cloud__options  mko_qcfya-tagCloud__options"
+    class="tag-cloud  mko_qcfya-tagCloud"
   >
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 5,
-          "id": 1,
-          "name": "react",
-        }
-      }
-      isActive={false}
-      key="1"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 0,
-          "id": 2,
-          "name": "jquery",
-        }
-      }
-      isActive={false}
-      key="2"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 0,
-          "id": 3,
-          "name": "angular",
-        }
-      }
-      isActive={false}
-      key="3"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 2,
-          "id": 4,
-          "name": "elm",
-        }
-      }
-      isActive={false}
-      key="4"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 3,
-          "id": 5,
-          "name": "graphql",
-        }
-      }
-      isActive={false}
-      key="5"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 6,
-          "name": "apollo",
-        }
-      }
-      isActive={false}
-      key="6"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 7,
-          "name": "python",
-        }
-      }
-      isActive={false}
-      key="7"
-      onClick={[Function]}
-    />
-    <TagChip
-      chipSize={null}
-      data={
-        Object {
-          "count": 1,
-          "id": 8,
-          "name": "rust",
-        }
-      }
-      isActive={false}
-      key="8"
-      onClick={[Function]}
-    />
-  </div>
-  <div
-    className="tag-cloud__actions  mko_qcfya-actions"
-  >
-    <Button
-      btnStyle="primary"
-      className="tag-cloud__clear"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
+    <div
+      class="tag-cloud__options  mko_qcfya-tagCloud__options"
     >
-      Clear
-    </Button>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          react
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          jquery
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          angular
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          elm
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          graphql
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          apollo
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          python
+        </span>
+      </span>
+      <span
+        class="tag-chip tag-chip--clickable  mko_xm6hi0-tagChip  mko_xm6hi0-tagChip_clickable"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="tag-chip__text  mko_xm6hi0-tagChip__text"
+        >
+          rust
+        </span>
+      </span>
+    </div>
+    <div
+      class="tag-cloud__actions  mko_qcfya-actions"
+    >
+      <button
+        class="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard tag-cloud__clear"
+        disabled=""
+        type="button"
+      >
+        Clear
+      </button>
+    </div>
   </div>
 </div>
 `;

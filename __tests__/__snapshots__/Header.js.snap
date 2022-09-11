@@ -1,83 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should left align title 1`] = `
-<nav
-  className="application-header  mko_1x9y6no-applicationHeader"
->
-  <h1
-    className="application-header__title"
+<div>
+  <nav
+    class="application-header  mko_1x9y6no-applicationHeader"
   >
-    Hello
-  </h1>
-  <div
-    className="flex-spacer"
-  />
-</nav>
+    <div
+      class="flex-spacer"
+    />
+    <h1
+      class="application-header__title"
+    >
+      Hello
+    </h1>
+    <div
+      class="flex-spacer"
+    />
+  </nav>
+</div>
+`;
+
+exports[`should left align title 2`] = `
+<div>
+  <nav
+    class="application-header  mko_1x9y6no-applicationHeader"
+  >
+    <h1
+      class="application-header__title"
+    >
+      Hello
+    </h1>
+    <div
+      class="flex-spacer"
+    />
+  </nav>
+</div>
 `;
 
 exports[`should render navLeft 1`] = `
-<nav
-  className="application-header  mko_1x9y6no-applicationHeader"
->
-  <div
-    className="application-header__links-block"
+<div>
+  <nav
+    class="application-header  mko_1x9y6no-applicationHeader"
   >
-    <div />
-  </div>
-  <div
-    className="flex-spacer"
-  />
-  <div
-    className="flex-spacer"
-  />
-</nav>
+    <div
+      class="application-header__links-block"
+    >
+      <div>
+        left side
+      </div>
+    </div>
+    <div
+      class="flex-spacer"
+    />
+    <div
+      class="flex-spacer"
+    />
+  </nav>
+</div>
 `;
 
 exports[`should render navRight 1`] = `
-<nav
-  className="application-header  mko_1x9y6no-applicationHeader"
->
-  <div
-    className="flex-spacer"
-  />
-  <div
-    className="flex-spacer"
-  />
-  <div
-    className="application-header__links-block"
+<div>
+  <nav
+    class="application-header  mko_1x9y6no-applicationHeader"
   >
-    <div />
-  </div>
-</nav>
+    <div
+      class="flex-spacer"
+    />
+    <div
+      class="flex-spacer"
+    />
+    <div
+      class="application-header__links-block"
+    >
+      <div>
+        right side
+      </div>
+    </div>
+  </nav>
+</div>
 `;
 
 exports[`should render title 1`] = `
-<nav
-  className="application-header  mko_1x9y6no-applicationHeader"
->
-  <div
-    className="flex-spacer"
-  />
-  <h1
-    className="application-header__title"
+<div>
+  <nav
+    class="application-header  mko_1x9y6no-applicationHeader"
   >
-    hello world
-  </h1>
-  <div
-    className="flex-spacer"
-  />
-</nav>
+    <div
+      class="flex-spacer"
+    />
+    <h1
+      class="application-header__title"
+    >
+      hello world
+    </h1>
+    <div
+      class="flex-spacer"
+    />
+  </nav>
+</div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<nav
-  className="application-header  mko_1x9y6no-applicationHeader"
->
-  <div
-    className="flex-spacer"
-  />
-  <div
-    className="flex-spacer"
-  />
-</nav>
+<div>
+  <nav
+    class="application-header  mko_1x9y6no-applicationHeader"
+  >
+    <div
+      class="flex-spacer"
+    />
+    <div
+      class="flex-spacer"
+    />
+  </nav>
+</div>
 `;

@@ -10,8 +10,8 @@ const options = [
   { value: 3, text: 'three' }
 ];
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <RadioButton
       id="jest"
       name="jest"
@@ -22,18 +22,17 @@ it('should render with minimum props', function() {
     />
   );
 
-  expect(component.is('.radio')).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call onChange', function() {
-  const changeEvent = { target: { value: 2 } };
-  const component = mount(
+it('should call onChange', async function () {
+  const { container, getByLabelText } = render(
     <div className="radio-group">
       {options.map((o) => (
         <RadioButton
           key={o.value}
-          id="jest"
+          id={`jest-${o.value}`}
           name="jest"
           value={o.value}
           label={o.text}
@@ -44,12 +43,9 @@ it('should call onChange', function() {
     </div>
   );
 
-  component
-    .find('.radio__input')
-    .at(1)
-    .prop('onChange')(changeEvent);
+  // hack because the proper way wasn't working
+  getByLabelText('two').click();
 
   expect(mockedChangeFn).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(container).toMatchSnapshot();
 });

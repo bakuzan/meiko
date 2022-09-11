@@ -1,71 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render custom icons 1`] = `
-<div
-  className="radio-toggle  mko_drr40b-radioToggle story"
-  onClick={[Function]}
->
+<div>
   <div
-    className="radio-toggle__options  mko_drr40b-radioToggle__options"
+    class="radio-toggle  mko_drr40b-radioToggle story"
   >
     <div
-      className="radio-toggle__option radio-toggle__checked  mko_drr40b-radioToggle__option"
+      class="radio-toggle__options  mko_drr40b-radioToggle__options"
     >
-      ‹︎
+      <div
+        class="radio-toggle__option radio-toggle__checked  mko_drr40b-radioToggle__option"
+      >
+        ‹︎
+      </div>
+      <div
+        class="radio-toggle__option radio-toggle__unchecked  mko_drr40b-radioToggle__option"
+      >
+        ›︎
+      </div>
     </div>
     <div
-      className="radio-toggle__option radio-toggle__unchecked  mko_drr40b-radioToggle__option"
-    >
-      ›︎
-    </div>
+      class="radio-toggle__control  mko_drr40b-radioToggle__control"
+    />
+    <input
+      aria-label="jest label"
+      class="radio-toggle__for-screenreader  mko_drr40b-radioToggle__forScreenReader"
+      name="story"
+      type="checkbox"
+    />
   </div>
-  <div
-    className="radio-toggle__control  mko_drr40b-radioToggle__control"
-  />
-  <input
-    aria-label="jest label"
-    checked={false}
-    className="radio-toggle__for-screenreader  mko_drr40b-radioToggle__forScreenReader"
-    name="story"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onFocus={[Function]}
-    type="checkbox"
-  />
 </div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="radio-toggle  mko_drr40b-radioToggle story"
-  onClick={[Function]}
->
+<div>
   <div
-    className="radio-toggle__options  mko_drr40b-radioToggle__options"
+    class="radio-toggle  mko_drr40b-radioToggle story"
   >
     <div
-      className="radio-toggle__option radio-toggle__checked  mko_drr40b-radioToggle__option"
+      class="radio-toggle__options  mko_drr40b-radioToggle__options"
     >
-      ❌︎
+      <div
+        class="radio-toggle__option radio-toggle__checked  mko_drr40b-radioToggle__option"
+      >
+        ❌︎
+      </div>
+      <div
+        class="radio-toggle__option radio-toggle__unchecked  mko_drr40b-radioToggle__option"
+      >
+        ✓︎
+      </div>
     </div>
     <div
-      className="radio-toggle__option radio-toggle__unchecked  mko_drr40b-radioToggle__option"
-    >
-      ✓︎
-    </div>
+      class="radio-toggle__control  mko_drr40b-radioToggle__control"
+    />
+    <input
+      aria-label="jest label"
+      class="radio-toggle__for-screenreader  mko_drr40b-radioToggle__forScreenReader"
+      name="story"
+      type="checkbox"
+    />
   </div>
-  <div
-    className="radio-toggle__control  mko_drr40b-radioToggle__control"
-  />
-  <input
-    aria-label="jest label"
-    checked={false}
-    className="radio-toggle__for-screenreader  mko_drr40b-radioToggle__forScreenReader"
-    name="story"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onFocus={[Function]}
-    type="checkbox"
-  />
 </div>
 `;

@@ -1,310 +1,197 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should call remove on close button click 1`] = `
-<Alert
-  actions={
-    Object {
-      "dismissAlertMessage": [MockFunction] {
-        "calls": Array [
-          Array [
-            1,
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      },
-    }
-  }
-  alerts={
-    Array [
-      Object {
-        "detail": "More words",
-        "id": 1,
-        "message": "Test message",
-        "type": "error",
-      },
-    ]
-  }
->
+<div>
   <div
-    className="alert-container  mko_13trn4w-container"
+    class="alert-container  mko_13trn4w-container"
   >
-    <AlertMessage
-      detail="More words"
-      expandDetail={[Function]}
-      id={1}
-      isExpanded={false}
-      key="1"
-      message="Test message"
-      remove={
-        [MockFunction] {
-          "calls": Array [
-            Array [
-              1,
-            ],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        }
-      }
-      type="error"
+    <div
+      class="alert alert--error  mko_13trn4w-alert  mko_13trn4w-error"
     >
       <div
-        className="alert alert--error  mko_13trn4w-alert  mko_13trn4w-error"
+        class="alert__content  mko_13trn4w-alert__content"
       >
         <div
-          className="alert__content  mko_13trn4w-alert__content"
+          class="alert__message  mko_13trn4w-alert__message"
         >
           <div
-            className="alert__message  mko_13trn4w-alert__message"
+            class="alert__icon  mko_13trn4w-alert__icon"
+          />
+          <div
+            class="alert__title  mko_13trn4w-alert__title"
           >
-            <div
-              className="alert__icon  mko_13trn4w-alert__icon"
-            />
-            <div
-              className="alert__title  mko_13trn4w-alert__title"
-            >
-              Test message
-            </div>
-            <div
-              className="alert__actions  mko_13trn4w-alert__actions"
-            >
-              <Button
-                className="alert__expand"
-                onClick={[Function]}
-                type="button"
-              >
-                <button
-                  className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard alert__expand"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  Details
-                </button>
-              </Button>
-              <Button
-                aria-label="Close Alert"
-                className="alert__close  mko_13trn4w-close"
-                icon="❌︎"
-                onClick={[Function]}
-                type="button"
-              >
-                <button
-                  aria-label="Close Alert"
-                  className="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon alert__close  mko_13trn4w-close"
-                  icon="❌︎"
-                  onClick={[Function]}
-                  type="button"
-                />
-              </Button>
-            </div>
+            Test message
           </div>
           <div
-            className="alert__details  mko_13trn4w-alert__details"
+            class="alert__actions  mko_13trn4w-alert__actions"
           >
-            More words
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard alert__expand"
+              type="button"
+            >
+              Details
+            </button>
+            <button
+              aria-label="Close Alert"
+              class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon alert__close  mko_13trn4w-close"
+              icon="❌︎"
+              type="button"
+            />
           </div>
         </div>
+        <div
+          class="alert__details  mko_13trn4w-alert__details"
+        >
+          More words
+        </div>
       </div>
-    </AlertMessage>
+    </div>
   </div>
-</Alert>
+</div>
 `;
 
 exports[`should expand alert on click 1`] = `
-<Alert
-  actions={
-    Object {
-      "dismissAlertMessage": [MockFunction],
-    }
-  }
-  alerts={
-    Array [
-      Object {
-        "detail": "More words",
-        "id": 1,
-        "message": "Test message",
-        "type": "error",
-      },
-    ]
-  }
->
+<div>
   <div
-    className="alert-container  mko_13trn4w-container"
+    class="alert-container  mko_13trn4w-container"
   >
-    <AlertMessage
-      detail="More words"
-      expandDetail={[Function]}
-      id={1}
-      isExpanded={false}
-      key="1"
-      message="Test message"
-      remove={[MockFunction]}
-      type="error"
+    <div
+      class="alert alert--error  mko_13trn4w-alert  mko_13trn4w-error"
     >
       <div
-        className="alert alert--error  mko_13trn4w-alert  mko_13trn4w-error"
+        class="alert__content  mko_13trn4w-alert__content"
       >
         <div
-          className="alert__content  mko_13trn4w-alert__content"
+          class="alert__message  mko_13trn4w-alert__message"
         >
           <div
-            className="alert__message  mko_13trn4w-alert__message"
+            class="alert__icon  mko_13trn4w-alert__icon"
+          />
+          <div
+            class="alert__title  mko_13trn4w-alert__title"
           >
-            <div
-              className="alert__icon  mko_13trn4w-alert__icon"
-            />
-            <div
-              className="alert__title  mko_13trn4w-alert__title"
-            >
-              Test message
-            </div>
-            <div
-              className="alert__actions  mko_13trn4w-alert__actions"
-            >
-              <Button
-                className="alert__expand"
-                onClick={[Function]}
-                type="button"
-              >
-                <button
-                  className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard alert__expand"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  Details
-                </button>
-              </Button>
-              <Button
-                aria-label="Close Alert"
-                className="alert__close  mko_13trn4w-close"
-                icon="❌︎"
-                onClick={[Function]}
-                type="button"
-              >
-                <button
-                  aria-label="Close Alert"
-                  className="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon alert__close  mko_13trn4w-close"
-                  icon="❌︎"
-                  onClick={[Function]}
-                  type="button"
-                />
-              </Button>
-            </div>
+            Test message
           </div>
           <div
-            className="alert__details  mko_13trn4w-alert__details"
+            class="alert__actions  mko_13trn4w-alert__actions"
           >
-            More words
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard alert__expand"
+              type="button"
+            >
+              Details
+            </button>
+            <button
+              aria-label="Close Alert"
+              class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon alert__close  mko_13trn4w-close"
+              icon="❌︎"
+              type="button"
+            />
           </div>
         </div>
+        <div
+          class="alert__details  mko_13trn4w-alert__details"
+        >
+          More words
+        </div>
       </div>
-    </AlertMessage>
+    </div>
   </div>
-</Alert>
+</div>
 `;
 
 exports[`should expand alert on click 2`] = `
-<Alert
-  actions={
-    Object {
-      "dismissAlertMessage": [MockFunction],
-    }
-  }
-  alerts={
-    Array [
-      Object {
-        "detail": "More words",
-        "id": 1,
-        "message": "Test message",
-        "type": "error",
-      },
-    ]
-  }
->
+<div>
   <div
-    className="alert-container  mko_13trn4w-container"
+    class="alert-container  mko_13trn4w-container"
   >
-    <AlertMessage
-      detail="More words"
-      expandDetail={[Function]}
-      id={1}
-      isExpanded={true}
-      key="1"
-      message="Test message"
-      remove={[MockFunction]}
-      type="error"
+    <div
+      class="alert alert--error  mko_13trn4w-alert  mko_13trn4w-error"
     >
       <div
-        className="alert alert--error  mko_13trn4w-alert  mko_13trn4w-error"
+        class="alert__content alert__content--is-expanded  mko_13trn4w-alert__content  mko_13trn4w-alert__content_expanded"
       >
         <div
-          className="alert__content alert__content--is-expanded  mko_13trn4w-alert__content  mko_13trn4w-alert__content_expanded"
+          class="alert__message  mko_13trn4w-alert__message"
         >
           <div
-            className="alert__message  mko_13trn4w-alert__message"
+            class="alert__icon  mko_13trn4w-alert__icon"
+          />
+          <div
+            class="alert__title  mko_13trn4w-alert__title"
           >
-            <div
-              className="alert__icon  mko_13trn4w-alert__icon"
-            />
-            <div
-              className="alert__title  mko_13trn4w-alert__title"
-            >
-              Test message
-            </div>
-            <div
-              className="alert__actions  mko_13trn4w-alert__actions"
-            >
-              <Button
-                aria-label="Close Alert"
-                className="alert__close  mko_13trn4w-close"
-                icon="❌︎"
-                onClick={[Function]}
-                type="button"
-              >
-                <button
-                  aria-label="Close Alert"
-                  className="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon alert__close  mko_13trn4w-close"
-                  icon="❌︎"
-                  onClick={[Function]}
-                  type="button"
-                />
-              </Button>
-            </div>
+            Test message
           </div>
           <div
-            className="alert__details  mko_13trn4w-alert__details"
+            class="alert__actions  mko_13trn4w-alert__actions"
           >
-            More words
+            <button
+              aria-label="Close Alert"
+              class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon alert__close  mko_13trn4w-close"
+              icon="❌︎"
+              type="button"
+            />
           </div>
         </div>
+        <div
+          class="alert__details  mko_13trn4w-alert__details"
+        >
+          More words
+        </div>
       </div>
-    </AlertMessage>
+    </div>
   </div>
-</Alert>
+</div>
 `;
 
 exports[`should render container when has alerts 1`] = `
-<div
-  className="alert-container  mko_13trn4w-container"
->
-  <AlertMessage
-    detail="More words"
-    expandDetail={[Function]}
-    id={1}
-    isExpanded={false}
-    key="1"
-    message="Test message"
-    remove={[MockFunction]}
-    type="error"
-  />
+<div>
+  <div
+    class="alert-container  mko_13trn4w-container"
+  >
+    <div
+      class="alert alert--error  mko_13trn4w-alert  mko_13trn4w-error"
+    >
+      <div
+        class="alert__content  mko_13trn4w-alert__content"
+      >
+        <div
+          class="alert__message  mko_13trn4w-alert__message"
+        >
+          <div
+            class="alert__icon  mko_13trn4w-alert__icon"
+          />
+          <div
+            class="alert__title  mko_13trn4w-alert__title"
+          >
+            Test message
+          </div>
+          <div
+            class="alert__actions  mko_13trn4w-alert__actions"
+          >
+            <button
+              class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard alert__expand"
+              type="button"
+            >
+              Details
+            </button>
+            <button
+              aria-label="Close Alert"
+              class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon alert__close  mko_13trn4w-close"
+              icon="❌︎"
+              type="button"
+            />
+          </div>
+        </div>
+        <div
+          class="alert__details  mko_13trn4w-alert__details"
+        >
+          More words
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
+
+exports[`should render null when no alerts present 1`] = `null`;

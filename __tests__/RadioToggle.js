@@ -6,8 +6,8 @@ const mockedChangeFn = jest.fn();
 
 afterEach(() => jest.resetAllMocks());
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <RadioToggle
       className="story"
       label="jest label"
@@ -17,33 +17,12 @@ it('should render with minimum props', function() {
     />
   );
 
-  expect(component.is('.radio-toggle')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should render custom icons', function() {
-  const component = shallow(
-    <RadioToggle
-      className="story"
-      label="jest label"
-      name="story"
-      icons={[Icons.left, Icons.right]}
-      checked={false}
-      onChange={mockedChangeFn}
-    />
-  );
-
-  expect(component.find('.radio-toggle__checked').text()).toEqual(Icons.left);
-  expect(component.find('.radio-toggle__unchecked').text()).toEqual(
-    Icons.right
-  );
-  expect(component).toMatchSnapshot();
-});
-
-it('should pass click from parent to input', function() {
-  const mockClickFn = jest.fn();
-
-  const component = mount(
+it('should render custom icons', function () {
+  const { container, getByText } = render(
     <RadioToggle
       className="story"
       label="jest label"
@@ -54,23 +33,33 @@ it('should pass click from parent to input', function() {
     />
   );
 
-  const input = component.find('input').get(0);
-  const inputDOMNode = input.ref.current;
-  inputDOMNode.click = mockClickFn;
-
-  component.find('.radio-toggle').prop('onClick')({
-    target: null,
-    preventDefault: () => null
-  });
-
-  expect(mockClickFn).toHaveBeenCalled();
-  component.unmount();
+  expect(getByText(Icons.left)).toBeTruthy();
+  expect(getByText(Icons.right)).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call on change function on change', function() {
+it('should pass click from parent to input', async function () {
+  const { container } = render(
+    <RadioToggle
+      className="story"
+      label="jest label"
+      name="story"
+      icons={[Icons.left, Icons.right]}
+      checked={false}
+      onChange={mockedChangeFn}
+    />
+  );
+
+  const user = userEvent.setup();
+  await user.click(container.firstChild);
+
+  expect(mockedChangeFn).toHaveBeenCalled();
+});
+
+it('should call on change function on change', async function () {
   const checked = true;
   const name = 'story';
-  const component = shallow(
+  const { getByLabelText } = render(
     <RadioToggle
       className="story"
       label="jest label"
@@ -81,7 +70,8 @@ it('should call on change function on change', function() {
     />
   );
 
-  component.find('input').prop('onChange')({ target: { checked, name } });
+  const user = userEvent.setup();
+  await user.click(getByLabelText('jest label'));
 
   expect(mockedChangeFn).toHaveBeenCalledWith(checked, name);
 });

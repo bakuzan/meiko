@@ -1,199 +1,238 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should apply collapsed styles 1`] = `
-<div
-  className="sidebar sidebar--collapsed  mko_vrt9r1-sidebar  mko_vrt9r1-sidebar_collapsed"
->
-  <Button
-    aria-label="Toggle sidebar"
-    className="sidebar__toggler  mko_vrt9r1-sidebar__toggler"
-    icon="›︎"
-    onClick={[MockFunction]}
-    type="button"
-  />
-  <ul
-    className="sidebar__menu  mko_vrt9r1-sidebar__menu"
+<div>
+  <div
+    class="sidebar sidebar--collapsed  mko_vrt9r1-sidebar  mko_vrt9r1-sidebar_collapsed"
   >
-    <li
-      className="sidebar__item  mko_vrt9r1-sidebar__item"
-      key="0"
-      title="One"
+    <button
+      aria-label="Toggle sidebar"
+      class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon sidebar__toggler  mko_vrt9r1-sidebar__toggler"
+      icon="›︎"
+      type="button"
+    />
+    <ul
+      class="sidebar__menu  mko_vrt9r1-sidebar__menu"
     >
-      <SidebarLinkTemplate
-        data={
-          Object {
-            "icon": "A",
-            "link": "fake/link",
-            "title": "One",
-          }
-        }
-        onClick={[MockFunction]}
-      />
-    </li>
-    <li
-      className="sidebar__item  mko_vrt9r1-sidebar__item"
-      key="1"
-      title="Two"
-    >
-      <SidebarLinkTemplate
-        data={
-          Object {
-            "icon": "B",
-            "link": "fake/link",
-            "title": "Two",
-          }
-        }
-        onClick={[MockFunction]}
-      />
-    </li>
-    <li
-      className="sidebar__item  mko_vrt9r1-sidebar__item"
-      key="2"
-      title="Three"
-    >
-      <SidebarLinkTemplate
-        data={
-          Object {
-            "icon": "C",
-            "link": "fake/link",
-            "title": "Three",
-          }
-        }
-        onClick={[MockFunction]}
-      />
-    </li>
-  </ul>
+      <li
+        class="sidebar__item  mko_vrt9r1-sidebar__item"
+        title="One"
+      >
+        <a
+          class="sidebar-link"
+          href="fake/link"
+        >
+          <div
+            class="sidebar-link__icon  mko_vrt9r1-sidebarLink__icon"
+          >
+            A
+          </div>
+          <div
+            class="sidebar-link__text  mko_vrt9r1-sidebarLink__text"
+          >
+            One
+          </div>
+        </a>
+      </li>
+      <li
+        class="sidebar__item  mko_vrt9r1-sidebar__item"
+        title="Two"
+      >
+        <a
+          class="sidebar-link"
+          href="fake/link"
+        >
+          <div
+            class="sidebar-link__icon  mko_vrt9r1-sidebarLink__icon"
+          >
+            B
+          </div>
+          <div
+            class="sidebar-link__text  mko_vrt9r1-sidebarLink__text"
+          >
+            Two
+          </div>
+        </a>
+      </li>
+      <li
+        class="sidebar__item  mko_vrt9r1-sidebar__item"
+        title="Three"
+      >
+        <a
+          class="sidebar-link"
+          href="fake/link"
+        >
+          <div
+            class="sidebar-link__icon  mko_vrt9r1-sidebarLink__icon"
+          >
+            C
+          </div>
+          <div
+            class="sidebar-link__text  mko_vrt9r1-sidebarLink__text"
+          >
+            Three
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`should apply hidden styles 1`] = `
-<div
-  className="sidebar sidebar--hidden  mko_vrt9r1-sidebar  mko_vrt9r1-sidebar_hidden"
->
-  <Button
-    aria-label="Toggle sidebar"
-    className="sidebar__toggler  mko_vrt9r1-sidebar__toggler"
-    icon="‹︎"
-    onClick={[MockFunction]}
-    type="button"
-  />
-  <ul
-    className="sidebar__menu  mko_vrt9r1-sidebar__menu"
+<div>
+  <div
+    class="sidebar sidebar--hidden  mko_vrt9r1-sidebar  mko_vrt9r1-sidebar_hidden"
   >
-    <li
-      className="sidebar__item  mko_vrt9r1-sidebar__item"
-      key="0"
-      title="One"
+    <button
+      aria-label="Toggle sidebar"
+      class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon sidebar__toggler  mko_vrt9r1-sidebar__toggler"
+      icon="‹︎"
+      type="button"
+    />
+    <ul
+      class="sidebar__menu  mko_vrt9r1-sidebar__menu"
     >
-      <SidebarLinkTemplate
-        data={
-          Object {
-            "icon": "A",
-            "link": "fake/link",
-            "title": "One",
-          }
-        }
-        onClick={[MockFunction]}
-      />
-    </li>
-    <li
-      className="sidebar__item  mko_vrt9r1-sidebar__item"
-      key="1"
-      title="Two"
-    >
-      <SidebarLinkTemplate
-        data={
-          Object {
-            "icon": "B",
-            "link": "fake/link",
-            "title": "Two",
-          }
-        }
-        onClick={[MockFunction]}
-      />
-    </li>
-    <li
-      className="sidebar__item  mko_vrt9r1-sidebar__item"
-      key="2"
-      title="Three"
-    >
-      <SidebarLinkTemplate
-        data={
-          Object {
-            "icon": "C",
-            "link": "fake/link",
-            "title": "Three",
-          }
-        }
-        onClick={[MockFunction]}
-      />
-    </li>
-  </ul>
+      <li
+        class="sidebar__item  mko_vrt9r1-sidebar__item"
+        title="One"
+      >
+        <a
+          class="sidebar-link"
+          href="fake/link"
+        >
+          <div
+            class="sidebar-link__icon  mko_vrt9r1-sidebarLink__icon"
+          >
+            A
+          </div>
+          <div
+            class="sidebar-link__text  mko_vrt9r1-sidebarLink__text"
+          >
+            One
+          </div>
+        </a>
+      </li>
+      <li
+        class="sidebar__item  mko_vrt9r1-sidebar__item"
+        title="Two"
+      >
+        <a
+          class="sidebar-link"
+          href="fake/link"
+        >
+          <div
+            class="sidebar-link__icon  mko_vrt9r1-sidebarLink__icon"
+          >
+            B
+          </div>
+          <div
+            class="sidebar-link__text  mko_vrt9r1-sidebarLink__text"
+          >
+            Two
+          </div>
+        </a>
+      </li>
+      <li
+        class="sidebar__item  mko_vrt9r1-sidebar__item"
+        title="Three"
+      >
+        <a
+          class="sidebar-link"
+          href="fake/link"
+        >
+          <div
+            class="sidebar-link__icon  mko_vrt9r1-sidebarLink__icon"
+          >
+            C
+          </div>
+          <div
+            class="sidebar-link__text  mko_vrt9r1-sidebarLink__text"
+          >
+            Three
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="sidebar  mko_vrt9r1-sidebar"
->
-  <Button
-    aria-label="Toggle sidebar"
-    className="sidebar__toggler  mko_vrt9r1-sidebar__toggler"
-    icon="‹︎"
-    onClick={[MockFunction]}
-    type="button"
-  />
-  <ul
-    className="sidebar__menu  mko_vrt9r1-sidebar__menu"
+<div>
+  <div
+    class="sidebar  mko_vrt9r1-sidebar"
   >
-    <li
-      className="sidebar__item  mko_vrt9r1-sidebar__item"
-      key="0"
-      title="One"
+    <button
+      aria-label="Toggle sidebar"
+      class="button ripple button--icon  mko_c5ujei-button  mko_c5ujei-button_icon sidebar__toggler  mko_vrt9r1-sidebar__toggler"
+      icon="‹︎"
+      type="button"
+    />
+    <ul
+      class="sidebar__menu  mko_vrt9r1-sidebar__menu"
     >
-      <SidebarLinkTemplate
-        data={
-          Object {
-            "icon": "A",
-            "link": "fake/link",
-            "title": "One",
-          }
-        }
-        onClick={[MockFunction]}
-      />
-    </li>
-    <li
-      className="sidebar__item  mko_vrt9r1-sidebar__item"
-      key="1"
-      title="Two"
-    >
-      <SidebarLinkTemplate
-        data={
-          Object {
-            "icon": "B",
-            "link": "fake/link",
-            "title": "Two",
-          }
-        }
-        onClick={[MockFunction]}
-      />
-    </li>
-    <li
-      className="sidebar__item  mko_vrt9r1-sidebar__item"
-      key="2"
-      title="Three"
-    >
-      <SidebarLinkTemplate
-        data={
-          Object {
-            "icon": "C",
-            "link": "fake/link",
-            "title": "Three",
-          }
-        }
-        onClick={[MockFunction]}
-      />
-    </li>
-  </ul>
+      <li
+        class="sidebar__item  mko_vrt9r1-sidebar__item"
+        title="One"
+      >
+        <a
+          class="sidebar-link"
+          href="fake/link"
+        >
+          <div
+            class="sidebar-link__icon  mko_vrt9r1-sidebarLink__icon"
+          >
+            A
+          </div>
+          <div
+            class="sidebar-link__text  mko_vrt9r1-sidebarLink__text"
+          >
+            One
+          </div>
+        </a>
+      </li>
+      <li
+        class="sidebar__item  mko_vrt9r1-sidebar__item"
+        title="Two"
+      >
+        <a
+          class="sidebar-link"
+          href="fake/link"
+        >
+          <div
+            class="sidebar-link__icon  mko_vrt9r1-sidebarLink__icon"
+          >
+            B
+          </div>
+          <div
+            class="sidebar-link__text  mko_vrt9r1-sidebarLink__text"
+          >
+            Two
+          </div>
+        </a>
+      </li>
+      <li
+        class="sidebar__item  mko_vrt9r1-sidebar__item"
+        title="Three"
+      >
+        <a
+          class="sidebar-link"
+          href="fake/link"
+        >
+          <div
+            class="sidebar-link__icon  mko_vrt9r1-sidebarLink__icon"
+          >
+            C
+          </div>
+          <div
+            class="sidebar-link__text  mko_vrt9r1-sidebarLink__text"
+          >
+            Three
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 `;

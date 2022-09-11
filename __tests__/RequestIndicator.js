@@ -2,39 +2,43 @@ import React from 'react';
 
 import { RequestIndicator } from '../lib';
 
-it('should render with minimum props', function() {
-  const component = shallow(<RequestIndicator />);
+it('should render with minimum props', function () {
+  const { container } = render(<RequestIndicator />);
 
-  expect(component.is('.request-indicator')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should render loader', function() {
-  const component = shallow(<RequestIndicator requestInFlight={false} />);
+it('should render loader', function () {
+  const { container, queryByTestId, getByTestId, rerender } = render(
+    <RequestIndicator requestInFlight={false} />
+  );
 
-  expect(component.find('.request-indicator__loader').exists()).toBe(false);
+  expect(queryByTestId('requestIndicator')).toBeNull();
 
-  component.setProps({ requestInFlight: true });
+  rerender(<RequestIndicator requestInFlight={true} />);
 
-  expect(component.find('.request-indicator__loader').exists()).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(getByTestId('requestIndicator')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should apply hide styles to loader', function() {
-  const component = shallow(<RequestIndicator requestInFlight={true} />);
+it('should apply hide styles to loader', function () {
+  const { container, getByTestId, rerender } = render(
+    <RequestIndicator requestInFlight={true} />
+  );
 
-  let hasHiddenClass = component
-    .find('.request-indicator__loader')
-    .hasClass('request-indicator__loader--hidden');
+  let hasHiddenClass = getByTestId('requestIndicator').className.includes(
+    'request-indicator__loader--hidden'
+  );
 
   expect(hasHiddenClass).toBe(false);
 
-  component.setProps({ hide: true });
+  rerender(<RequestIndicator requestInFlight={true} hide />);
 
-  hasHiddenClass = component
-    .find('.request-indicator__loader')
-    .hasClass('request-indicator__loader--hidden');
+  hasHiddenClass = getByTestId('requestIndicator').className.includes(
+    'request-indicator__loader--hidden'
+  );
 
   expect(hasHiddenClass).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

@@ -1,61 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should NOT render "no items" message 1`] = `
-<ul
-  className="mko-grid  mko_4w49wy-grid"
-/>
+<div>
+  <ul
+    class="mko-grid  mko_4w49wy-grid"
+  />
+</div>
 `;
 
 exports[`should render "no items" message 1`] = `
-<ul
-  className="mko-grid  mko_4w49wy-grid"
->
-  <li
-    className="mko-grid__no-items  mko_4w49wy-grid__noItems"
-    key="NONE"
+<div>
+  <ul
+    class="mko-grid  mko_4w49wy-grid"
   >
-    No items were found.
-  </li>
-</ul>
+    <li
+      class="mko-grid__no-items  mko_4w49wy-grid__noItems"
+    >
+      No items were found.
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`should render custom "no items" message 1`] = `
-<ul
-  className="mko-grid  mko_4w49wy-grid"
->
-  <li
-    className="mko-grid__no-items  mko_4w49wy-grid__noItems"
-    key="NONE"
+<div>
+  <ul
+    class="mko-grid  mko_4w49wy-grid"
   >
-    Jest No Items
-  </li>
-</ul>
+    <li
+      class="mko-grid__no-items  mko_4w49wy-grid__noItems"
+    >
+      Jest No Items
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`should render items using children render props 1`] = `
-<ul
-  className="mko-grid  mko_4w49wy-grid"
->
-  <li
-    key="jest"
+<div>
+  <ul
+    class="mko-grid  mko_4w49wy-grid"
   >
-    jest
-  </li>
-  <li
-    key="enzyme"
-  >
-    enzyme
-  </li>
-  <li
-    key="react"
-  >
-    react
-  </li>
-</ul>
+    <li>
+      jest
+    </li>
+    <li>
+      enzyme
+    </li>
+    <li>
+      react
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<ul
-  className="mko-grid  mko_4w49wy-grid"
-/>
+<div>
+  <ul
+    class="mko-grid  mko_4w49wy-grid"
+  />
+</div>
 `;

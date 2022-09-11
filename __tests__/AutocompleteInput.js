@@ -1,6 +1,8 @@
+import { fireEvent } from '@testing-library/react';
 import React from 'react';
 
 import { AutocompleteInput } from '../lib';
+import textMatcher from './__helpers__/getByTextComplex';
 
 const attr = 'text';
 const filter = '';
@@ -14,8 +16,8 @@ const mockSelectFn = jest.fn();
 
 afterEach(() => jest.resetAllMocks());
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <AutocompleteInput
       id="jest"
       attr={attr}
@@ -26,13 +28,11 @@ it('should render with minimum props', function() {
     />
   );
 
-  expect(component.is('.autocomplete')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call onChange when filter updated', function() {
-  const changeEvent = { target: { value: 'at' } };
-  const component = mount(
+it('should render filtered items when filter updated', async function () {
+  const { container, getByText, getByTitle, queryByText, rerender } = render(
     <AutocompleteInput
       id="jest"
       attr={attr}
@@ -40,20 +40,14 @@ it('should call onChange when filter updated', function() {
       items={items}
       onChange={mockChangeFn}
       onSelect={mockSelectFn}
+      clearableInputProps={{ title: 'testInput' }}
     />
   );
 
-  const input = component.find('input#jest');
-  input.prop('onChange')(changeEvent);
+  expect(container).toMatchSnapshot();
 
-  expect(mockChangeFn).toHaveBeenCalled();
-  expect(component.state('activeSuggestion')).toEqual(0);
-  expect(component).toMatchSnapshot();
-  component.unmount();
-});
-
-it('should call onSelect when suggestion is click', function() {
-  const component = mount(
+  // Check the display changes with the filter update
+  rerender(
     <AutocompleteInput
       id="jest"
       attr={attr}
@@ -61,17 +55,54 @@ it('should call onSelect when suggestion is click', function() {
       items={items}
       onChange={mockChangeFn}
       onSelect={mockSelectFn}
+      clearableInputProps={{ title: 'testInput' }}
     />
   );
 
-  const input = component.find('input#jest');
-  input.simulate('focus', {});
-  expect(component.state('inUse')).toBe(true);
+  const user = userEvent.setup();
+  await user.click(getByTitle('testInput'));
 
-  const suggestion = component.find('AutocompleteSuggestionItem').at(0);
-  suggestion.find('button').simulate('click');
+  expect(getByText(textMatcher('Bat'))).toBeTruthy();
+  expect(getByText(textMatcher('Cat'))).toBeTruthy();
+  expect(queryByText(textMatcher('Frog'))).toBeNull();
+  expect(container).toMatchSnapshot();
+});
+
+it('should call onChange when filter updated', async function () {
+  const { getByTitle } = render(
+    <AutocompleteInput
+      id="jest"
+      attr={attr}
+      filter={filter}
+      items={items}
+      onChange={mockChangeFn}
+      onSelect={mockSelectFn}
+      clearableInputProps={{ title: 'testInput' }}
+    />
+  );
+
+  fireEvent.change(getByTitle('testInput'), { target: { value: 'at' } });
+
+  expect(mockChangeFn).toHaveBeenCalled();
+});
+
+it('should call onSelect when suggestion is click', async function () {
+  const { container, getByText, getByTitle } = render(
+    <AutocompleteInput
+      id="jest"
+      attr={attr}
+      filter={'at'}
+      items={items}
+      onChange={mockChangeFn}
+      onSelect={mockSelectFn}
+      clearableInputProps={{ title: 'testInput' }}
+    />
+  );
+
+  const user = userEvent.setup();
+  await user.click(getByTitle('testInput'));
+  await user.click(getByText(textMatcher('Bat')));
 
   expect(mockSelectFn).toHaveBeenCalledWith(5);
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(container).toMatchSnapshot();
 });

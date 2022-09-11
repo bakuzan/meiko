@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="tooltip  mko_25aqbz-tooltip"
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
->
-  <TooltipContent
-    hidden={false}
-    readable={true}
-  />
+<div>
+  <div
+    class="tooltip  mko_25aqbz-tooltip"
+  >
+    <div
+      aria-hidden="false"
+      class="tooltip__content  mko_25aqbz-tooltipContent"
+    >
+      Tooltip!
+    </div>
+  </div>
 </div>
 `;

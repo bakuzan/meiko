@@ -133,120 +133,170 @@ exports[`should call on error for failed upload 1`] = `
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="image-selector  mko_1qc9vl7-selector"
->
+<div>
   <div
-    className="image-selector__controls  mko_1qc9vl7-controls"
+    class="image-selector  mko_1qc9vl7-selector"
   >
     <div
-      className="image-selector__url-uploader  mko_1qc9vl7-selector__urlUploader"
+      class="image-selector__controls  mko_1qc9vl7-controls"
     >
-      <ClearableInput
-        className=" mko_1qc9vl7-selector__urlInput"
-        clearButtonProps={Object {}}
-        containerClassName="image-selector__url  mko_1qc9vl7-selector__url"
-        id="imageUrl"
-        label="Image Url"
-        maxNumberText={[Function]}
-        name="imageUrl"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        value=""
-      />
-      <Button
-        btnStyle="primary"
-        className="image-selector__upload-url"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <div
+        class="image-selector__url-uploader  mko_1qc9vl7-selector__urlUploader"
       >
-        upload url
-      </Button>
+        <div
+          class="clearable-input has-float-label image-selector__url  mko_1qc9vl7-selector__url  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+        >
+          <div
+            class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+          >
+            <input
+              autocomplete="off"
+              class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable  mko_1qc9vl7-selector__urlInput"
+              id="imageUrl"
+              name="imageUrl"
+              placeholder=" "
+              type="text"
+              value=""
+            />
+            <label
+              for="imageUrl"
+            >
+              Image Url
+            </label>
+          </div>
+        </div>
+        <button
+          class="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard image-selector__upload-url"
+          type="button"
+        >
+          upload url
+        </button>
+      </div>
+      <div
+        class="file-uploader  mko_1shwo9j-uploader"
+      >
+        <input
+          aria-label="select a file to upload"
+          class="file-uploader__input  mko_1shwo9j-uploader__input"
+          id="imageFile"
+          name="imageFile"
+          placeholder="upload file"
+          type="file"
+          value=""
+        />
+        <div
+          class="file-uploader__value  mko_1shwo9j-uploader__value"
+        >
+          Nothing selected
+        </div>
+        <button
+          aria-label="select a file to upload"
+          class="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard file-uploader__button"
+          type="button"
+        >
+          upload file
+        </button>
+      </div>
     </div>
-    <FileUploader
-      disabled={false}
-      id="imageFile"
-      name="imageFile"
-      onFileSelect={[Function]}
-      placeholder="upload file"
-      value=""
-    />
   </div>
 </div>
 `;
 
 exports[`should show url display 1`] = `
-<div
-  className="image-selector  mko_1qc9vl7-selector"
->
+<div>
   <div
-    className="image-selector__value-display  mko_1qc9vl7-selector__display"
+    class="image-selector  mko_1qc9vl7-selector"
   >
     <div
-      className=" mko_1qc9vl7-selector__text"
+      class="image-selector__value-display  mko_1qc9vl7-selector__display"
     >
-      <div>
-        fakeurlhere
-      </div>
       <div
-        className="image-selector__error  mko_1qc9vl7-error"
-      />
+        class=" mko_1qc9vl7-selector__text"
+      >
+        <div>
+          fakeurlhere
+        </div>
+        <div
+          class="image-selector__error  mko_1qc9vl7-error"
+        />
+      </div>
+      <button
+        class="button ripple button--standard button--accent  mko_c5ujei-button  mko_c5ujei-button_standard image-selector__show-controls"
+        type="button"
+      >
+        upload new image
+      </button>
     </div>
-    <Button
-      btnStyle="accent"
-      className="image-selector__show-controls"
-      onClick={[Function]}
-      type="button"
-    >
-      upload new image
-    </Button>
   </div>
 </div>
 `;
 
 exports[`should toggle url display 1`] = `
-<div
-  className="image-selector  mko_1qc9vl7-selector"
->
+<div>
   <div
-    className="image-selector__controls  mko_1qc9vl7-controls"
+    class="image-selector  mko_1qc9vl7-selector"
   >
     <div
-      className="image-selector__url-uploader  mko_1qc9vl7-selector__urlUploader"
+      class="image-selector__controls  mko_1qc9vl7-controls"
     >
-      <ClearableInput
-        className=" mko_1qc9vl7-selector__urlInput"
-        clearButtonProps={Object {}}
-        containerClassName="image-selector__url  mko_1qc9vl7-selector__url"
-        id="imageUrl"
-        label="Image Url"
-        maxNumberText={[Function]}
-        name="imageUrl"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        value=""
-      />
-      <Button
-        btnStyle="primary"
-        className="image-selector__upload-url"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <div
+        class="image-selector__url-uploader  mko_1qc9vl7-selector__urlUploader"
       >
-        upload url
-      </Button>
+        <div
+          class="clearable-input has-float-label image-selector__url  mko_1qc9vl7-selector__url  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+        >
+          <div
+            class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+          >
+            <input
+              autocomplete="off"
+              class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable  mko_1qc9vl7-selector__urlInput"
+              id="imageUrl"
+              name="imageUrl"
+              placeholder=" "
+              type="text"
+              value=""
+            />
+            <label
+              for="imageUrl"
+            >
+              Image Url
+            </label>
+          </div>
+        </div>
+        <button
+          class="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard image-selector__upload-url"
+          type="button"
+        >
+          upload url
+        </button>
+      </div>
+      <div
+        class="file-uploader  mko_1shwo9j-uploader"
+      >
+        <input
+          aria-label="select a file to upload"
+          class="file-uploader__input  mko_1shwo9j-uploader__input"
+          id="imageFile"
+          name="imageFile"
+          placeholder="upload file"
+          type="file"
+          value=""
+        />
+        <div
+          class="file-uploader__value  mko_1shwo9j-uploader__value"
+        >
+          Nothing selected
+        </div>
+        <button
+          aria-label="select a file to upload"
+          class="button ripple button--standard button--primary  mko_c5ujei-button  mko_c5ujei-button_standard file-uploader__button"
+          type="button"
+        >
+          upload file
+        </button>
+      </div>
     </div>
-    <FileUploader
-      disabled={false}
-      id="imageFile"
-      name="imageFile"
-      onFileSelect={[Function]}
-      placeholder="upload file"
-      value=""
-    />
   </div>
 </div>
 `;

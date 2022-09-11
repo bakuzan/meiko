@@ -1,321 +1,220 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should call onChange when filter updated 1`] = `
-<AutocompleteInput
-  attr="text"
-  clearableInputProps={Object {}}
-  disableLocalFilter={false}
-  filter=""
-  id="jest"
-  items={
-    Array [
-      Object {
-        "id": 5,
-        "text": "Bat",
-      },
-      Object {
-        "id": 6,
-        "text": "Cat",
-      },
-      Object {
-        "id": 9,
-        "text": "Frog",
-      },
-    ]
-  }
-  noSuggestionsItem={null}
-  onChange={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          Object {
-            "target": Object {
-              "value": "at",
-            },
-          },
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
-  onSelect={[MockFunction]}
-  suggestionTemplate={[Function]}
->
-  <div
-    className="autocomplete  mko_ydt0iq-autocomplete"
-  >
-    <ClearableInput
-      clearButtonProps={Object {}}
-      id="jest"
-      maxNumberText={[Function]}
-      name="text"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      value=""
-    >
-      <div
-        className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
-      >
-        <div
-          className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
-        >
-          <ForwardRef(Input)
-            className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
-            id="jest"
-            name="text"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            value=""
-          >
-            <input
-              autoComplete="off"
-              className="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
-              id="jest"
-              name="text"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder=" "
-              type="text"
-              value=""
-            />
-          </ForwardRef(Input)>
-          <label
-            htmlFor="jest"
-          />
-        </div>
-      </div>
-    </ClearableInput>
-  </div>
-</AutocompleteInput>
-`;
-
 exports[`should call onSelect when suggestion is click 1`] = `
-<AutocompleteInput
-  attr="text"
-  clearableInputProps={Object {}}
-  disableLocalFilter={false}
-  filter="at"
-  id="jest"
-  items={
-    Array [
-      Object {
-        "id": 5,
-        "text": "Bat",
-      },
-      Object {
-        "id": 6,
-        "text": "Cat",
-      },
-      Object {
-        "id": 9,
-        "text": "Frog",
-      },
-    ]
-  }
-  noSuggestionsItem={null}
-  onChange={[MockFunction]}
-  onSelect={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          5,
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
-  suggestionTemplate={[Function]}
->
+<div>
   <div
-    className="autocomplete  mko_ydt0iq-autocomplete"
+    class="autocomplete  mko_ydt0iq-autocomplete"
   >
-    <ClearableInput
-      clearButtonProps={Object {}}
-      id="jest"
-      maxNumberText={[Function]}
-      name="text"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      value="at"
+    <div
+      class="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
     >
       <div
-        className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+        class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
       >
-        <div
-          className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
-        >
-          <ForwardRef(Input)
-            className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
-            id="jest"
-            name="text"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            value="at"
-          >
-            <input
-              autoComplete="off"
-              className="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
-              id="jest"
-              name="text"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder=" "
-              type="text"
-              value="at"
-            />
-          </ForwardRef(Input)>
-          <label
-            htmlFor="jest"
-          />
-          <Button
-            aria-label="Clear input"
-            btnSize="small"
-            className="clearable-input__clear  mko_18z22vm-clearableInput__clear"
-            icon="❌︎"
-            onClick={[Function]}
-            type="button"
-          >
-            <button
-              aria-label="Clear input"
-              className="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small clearable-input__clear  mko_18z22vm-clearableInput__clear"
-              icon="❌︎"
-              onClick={[Function]}
-              type="button"
-            />
-          </Button>
-        </div>
+        <input
+          autocomplete="off"
+          class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
+          id="jest"
+          name="text"
+          placeholder=" "
+          title="testInput"
+          type="text"
+          value="at"
+        />
+        <label
+          for="jest"
+        />
+        <button
+          aria-label="Clear input"
+          class="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small clearable-input__clear  mko_18z22vm-clearableInput__clear"
+          icon="❌︎"
+          type="button"
+        />
       </div>
-    </ClearableInput>
+    </div>
     <ul
-      className="autocomplete__menu  mko_ydt0iq-autocomplete__menu"
+      class="autocomplete__menu  mko_ydt0iq-autocomplete__menu"
     >
-      <AutocompleteSuggestionItem
-        activeSuggestion={0}
-        attr="text"
-        highlightMatch={[Function]}
-        index={0}
-        item={
-          Object {
-            "id": 5,
-            "text": "Bat",
-          }
-        }
-        key="5"
-        selectAutocompleteSuggestion={[Function]}
+      <li
+        class="autocomplete-suggestion autocomplete-suggestion--active  mko_ydt0iq-suggestion"
       >
-        <li
-          className="autocomplete-suggestion autocomplete-suggestion--active  mko_ydt0iq-suggestion"
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard autocomplete-suggestion__button"
+          title="Bat"
+          type="button"
         >
-          <Button
-            className="autocomplete-suggestion__button"
-            onClick={[Function]}
-            title="Bat"
-            type="button"
+          <span
+            class="autocomplete-suggestion__text  mko_ydt0iq-suggestion__text"
           >
-            <button
-              className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard autocomplete-suggestion__button"
-              onClick={[Function]}
-              title="Bat"
-              type="button"
+            B
+            <span
+              class="autocomplete-suggestion-highlight  mko_ydt0iq-suggestionHighlight"
             >
-              <span
-                className="autocomplete-suggestion__text  mko_ydt0iq-suggestion__text"
-              >
-                B
-                <span
-                  className="autocomplete-suggestion-highlight  mko_ydt0iq-suggestionHighlight"
-                >
-                  at
-                </span>
-              </span>
-            </button>
-          </Button>
-        </li>
-      </AutocompleteSuggestionItem>
-      <AutocompleteSuggestionItem
-        activeSuggestion={0}
-        attr="text"
-        highlightMatch={[Function]}
-        index={1}
-        item={
-          Object {
-            "id": 6,
-            "text": "Cat",
-          }
-        }
-        key="6"
-        selectAutocompleteSuggestion={[Function]}
+              at
+            </span>
+          </span>
+        </button>
+      </li>
+      <li
+        class="autocomplete-suggestion  mko_ydt0iq-suggestion"
       >
-        <li
-          className="autocomplete-suggestion  mko_ydt0iq-suggestion"
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard autocomplete-suggestion__button"
+          title="Cat"
+          type="button"
         >
-          <Button
-            className="autocomplete-suggestion__button"
-            onClick={[Function]}
-            title="Cat"
-            type="button"
+          <span
+            class="autocomplete-suggestion__text  mko_ydt0iq-suggestion__text"
           >
-            <button
-              className="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard autocomplete-suggestion__button"
-              onClick={[Function]}
-              title="Cat"
-              type="button"
+            C
+            <span
+              class="autocomplete-suggestion-highlight  mko_ydt0iq-suggestionHighlight"
             >
-              <span
-                className="autocomplete-suggestion__text  mko_ydt0iq-suggestion__text"
-              >
-                C
-                <span
-                  className="autocomplete-suggestion-highlight  mko_ydt0iq-suggestionHighlight"
-                >
-                  at
-                </span>
-              </span>
-            </button>
-          </Button>
-        </li>
-      </AutocompleteSuggestionItem>
+              at
+            </span>
+          </span>
+        </button>
+      </li>
     </ul>
   </div>
-</AutocompleteInput>
+</div>
+`;
+
+exports[`should render filtered items when filter updated 1`] = `
+<div>
+  <div
+    class="autocomplete  mko_ydt0iq-autocomplete"
+  >
+    <div
+      class="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+    >
+      <div
+        class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+      >
+        <input
+          autocomplete="off"
+          class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
+          id="jest"
+          name="text"
+          placeholder=" "
+          title="testInput"
+          type="text"
+          value=""
+        />
+        <label
+          for="jest"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render filtered items when filter updated 2`] = `
+<div>
+  <div
+    class="autocomplete  mko_ydt0iq-autocomplete"
+  >
+    <div
+      class="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+    >
+      <div
+        class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+      >
+        <input
+          autocomplete="off"
+          class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
+          id="jest"
+          name="text"
+          placeholder=" "
+          title="testInput"
+          type="text"
+          value="at"
+        />
+        <label
+          for="jest"
+        />
+        <button
+          aria-label="Clear input"
+          class="button ripple button--icon button--small  mko_c5ujei-button  mko_c5ujei-button_icon  mko_c5ujei-button_small clearable-input__clear  mko_18z22vm-clearableInput__clear"
+          icon="❌︎"
+          type="button"
+        />
+      </div>
+    </div>
+    <ul
+      class="autocomplete__menu  mko_ydt0iq-autocomplete__menu"
+    >
+      <li
+        class="autocomplete-suggestion autocomplete-suggestion--active  mko_ydt0iq-suggestion"
+      >
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard autocomplete-suggestion__button"
+          title="Bat"
+          type="button"
+        >
+          <span
+            class="autocomplete-suggestion__text  mko_ydt0iq-suggestion__text"
+          >
+            B
+            <span
+              class="autocomplete-suggestion-highlight  mko_ydt0iq-suggestionHighlight"
+            >
+              at
+            </span>
+          </span>
+        </button>
+      </li>
+      <li
+        class="autocomplete-suggestion  mko_ydt0iq-suggestion"
+      >
+        <button
+          class="button ripple button--standard  mko_c5ujei-button  mko_c5ujei-button_standard autocomplete-suggestion__button"
+          title="Cat"
+          type="button"
+        >
+          <span
+            class="autocomplete-suggestion__text  mko_ydt0iq-suggestion__text"
+          >
+            C
+            <span
+              class="autocomplete-suggestion-highlight  mko_ydt0iq-suggestionHighlight"
+            >
+              at
+            </span>
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="autocomplete  mko_ydt0iq-autocomplete"
->
-  <ClearableInput
-    clearButtonProps={Object {}}
-    id="jest"
-    maxNumberText={[Function]}
-    name="text"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    value=""
-  />
+<div>
+  <div
+    class="autocomplete  mko_ydt0iq-autocomplete"
+  >
+    <div
+      class="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+    >
+      <div
+        class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+      >
+        <input
+          autocomplete="off"
+          class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
+          id="jest"
+          name="text"
+          placeholder=" "
+          type="text"
+          value=""
+        />
+        <label
+          for="jest"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;

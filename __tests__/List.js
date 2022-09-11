@@ -2,28 +2,26 @@ import React from 'react';
 
 import { List } from '../lib';
 
-it('should render with minimum props', function() {
-  const component = shallow(<List />);
+it('should render with minimum props', function () {
+  const { container } = render(<List />);
 
-  expect(component.is('ul')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should render children', function() {
-  const component = shallow(
+it('should render children', function () {
+  const { container, getByText } = render(
     <List>
-      <li />
-      <li />
-      <li />
+      <li>my item</li>
     </List>
   );
 
-  expect(component.find('li').length).toEqual(3);
-  expect(component).toMatchSnapshot();
+  expect(getByText('my item')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should apply wrapping style', function() {
-  const component = shallow(
+it('should apply wrapping style', function () {
+  const { container } = render(
     <List shouldWrap>
       <li />
       <li />
@@ -31,12 +29,11 @@ it('should apply wrapping style', function() {
     </List>
   );
 
-  expect(component.is('.list--wrap')).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
-it('should apply columns style', function() {
-  const component = shallow(
+it('should apply columns style', function () {
+  const { container, rerender } = render(
     <List columns={1}>
       <li />
       <li />
@@ -44,12 +41,15 @@ it('should apply columns style', function() {
     </List>
   );
 
-  expect(component.is('.list--column')).toBe(true);
-  expect(component.is('.list--wrap')).toBe(false);
+  expect(container).toMatchSnapshot();
 
-  component.setProps({ columns: 2 });
+  rerender(
+    <List columns={2}>
+      <li />
+      <li />
+      <li />
+    </List>
+  );
 
-  expect(component.is('.list--column')).toBe(true);
-  expect(component.is('.list--wrap')).toBe(true);
-  expect(component).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

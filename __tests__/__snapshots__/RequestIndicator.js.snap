@@ -1,27 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should apply hide styles to loader 1`] = `
-<div
-  className="request-indicator  mko_xu7w92-indicator"
->
+<div>
   <div
-    className="request-indicator__loader request-indicator__loader--hidden  mko_xu7w92-loader  mko_xu7w92-loader_hidden"
-  />
+    class="request-indicator  mko_xu7w92-indicator"
+  >
+    <div
+      class="request-indicator__loader request-indicator__loader--hidden  mko_xu7w92-loader  mko_xu7w92-loader_hidden"
+      data-testid="requestIndicator"
+    />
+  </div>
 </div>
 `;
 
 exports[`should render loader 1`] = `
-<div
-  className="request-indicator  mko_xu7w92-indicator"
->
+<div>
   <div
-    className="request-indicator__loader  mko_xu7w92-loader"
-  />
+    class="request-indicator  mko_xu7w92-indicator"
+  >
+    <div
+      class="request-indicator__loader  mko_xu7w92-loader"
+      data-testid="requestIndicator"
+    />
+  </div>
 </div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="request-indicator  mko_xu7w92-indicator"
-/>
+<div>
+  <div
+    class="request-indicator  mko_xu7w92-indicator"
+  />
+</div>
 `;

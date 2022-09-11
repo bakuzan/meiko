@@ -6,45 +6,43 @@ const mockFn = jest.fn();
 
 afterEach(() => jest.resetAllMocks());
 
-it('should render when no props', function() {
-  const component = shallow(<Button />);
-  expect(component.is('.button--standard')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+it('should render when no props', function () {
+  const { container } = render(<Button />);
+
+  expect(container.firstChild).not.toBeNull();
+  expect(container).toMatchSnapshot();
 });
 
-it('should pass on click', function() {
-  const component = shallow(<Button onClick={mockFn} />);
+it('should pass on click', async function () {
+  const words = 'Click me!';
+  const { getByText } = render(<Button onClick={mockFn}>{words}</Button>);
 
-  component.find('.button').simulate('click');
+  const user = userEvent.setup();
+  await user.click(getByText(words));
 
-  expect(component.is('.button--standard')).toBeTruthy();
   expect(mockFn).toHaveBeenCalled();
 });
 
-it('should render apply style class', function() {
-  const component = shallow(<Button btnStyle="primary" />);
-  expect(component.is('.button--standard')).toBeTruthy();
-  expect(component.is('.button--primary')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+it('should render apply style class', function () {
+  const { container } = render(<Button btnStyle="primary" />);
+
+  expect(container).toMatchSnapshot();
 });
 
-it('should render apply size class', function() {
-  const component = shallow(<Button btnSize="small" />);
-  expect(component.is('.button--standard')).toBeTruthy();
-  expect(component.is('.button--small')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+it('should render apply size class', function () {
+  const { container } = render(<Button btnSize="small" />);
+
+  expect(container).toMatchSnapshot();
 });
 
-it('should render apply link class', function() {
-  const component = shallow(<Button link />);
-  expect(component.is('.button--standard')).toBeFalsy();
-  expect(component.is('.button--link')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+it('should render apply link class', function () {
+  const { container } = render(<Button link />);
+
+  expect(container).toMatchSnapshot();
 });
 
-it('should render apply icon class', function() {
-  const component = shallow(<Button icon="T" />);
-  expect(component.is('.button--standard')).toBeFalsy();
-  expect(component.is('.button--icon')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+it('should render apply icon class', function () {
+  const { container } = render(<Button icon="T" />);
+
+  expect(container).toMatchSnapshot();
 });

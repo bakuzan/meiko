@@ -1,119 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should be clearable when type equals "text" 1`] = `
-<ClearableInput
-  clearButtonProps={Object {}}
-  id="jest"
-  maxNumberText={[Function]}
-  onChange={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          Object {
-            "target": Object {
-              "name": undefined,
-              "type": "text",
-              "value": "",
-            },
-          },
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
-  value=""
->
+<div>
   <div
-    className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
+    class="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
   >
     <div
-      className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+      class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
     >
-      <ForwardRef(Input)
-        className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
+      <input
+        autocomplete="off"
+        class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
         id="jest"
-        onChange={
-          [MockFunction] {
-            "calls": Array [
-              Array [
-                Object {
-                  "target": Object {
-                    "name": undefined,
-                    "type": "text",
-                    "value": "",
-                  },
-                },
-              ],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          }
-        }
+        placeholder=" "
+        type="text"
         value=""
-      >
-        <input
-          autoComplete="off"
-          className="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
-          id="jest"
-          onChange={
-            [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "target": Object {
-                      "name": undefined,
-                      "type": "text",
-                      "value": "",
-                    },
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "type": "return",
-                  "value": undefined,
-                },
-              ],
-            }
-          }
-          placeholder=" "
-          type="text"
-          value=""
-        />
-      </ForwardRef(Input)>
+      />
       <label
-        htmlFor="jest"
+        for="jest"
       />
     </div>
   </div>
-</ClearableInput>
+</div>
 `;
 
 exports[`should render with minimum props 1`] = `
-<div
-  className="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
->
+<div>
   <div
-    className="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+    class="clearable-input has-float-label  mko_18z22vm-clearableInput  mko_1aosyyv-controlContainer"
   >
-    <ForwardRef(Input)
-      className="clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
-      id="jest"
-      onChange={[MockFunction]}
-      value=""
-    />
-    <label
-      htmlFor="jest"
-    />
+    <div
+      class="clearable-input__inner  mko_18z22vm-clearableInput__inner"
+    >
+      <input
+        autocomplete="off"
+        class="input clearable-input__input  mko_18z22vm-clearableInput__input  mko_18z22vm-clearableInput__input_clearable"
+        id="jest"
+        placeholder=" "
+        type="text"
+        value=""
+      />
+      <label
+        for="jest"
+      />
+    </div>
   </div>
 </div>
 `;

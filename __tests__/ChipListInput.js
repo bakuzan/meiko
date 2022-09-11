@@ -1,6 +1,8 @@
+import { act } from '@testing-library/react';
 import React from 'react';
 
 import { ChipListInput } from '../lib';
+import { keydown } from './__helpers__/fireEvent';
 
 const attr = 'text';
 const options = [
@@ -8,12 +10,12 @@ const options = [
   { id: 6, text: 'Cat' },
   { id: 9, text: 'Frog' }
 ];
-const mockUpdateFn = jest.fn();
 
+const mockUpdateFn = jest.fn();
 afterEach(() => jest.resetAllMocks());
 
-it('should render with minimum props', function() {
-  const component = shallow(
+it('should render with minimum props', function () {
+  const { container } = render(
     <ChipListInput
       id="jest"
       name="jest"
@@ -24,15 +26,16 @@ it('should render with minimum props', function() {
     />
   );
 
-  expect(component.is('.chip-list-input')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(container.firstChild).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should call updateChipList when suggestion is clicked', function() {
-  const component = mount(
+it('should call updateChipList when suggestion is clicked', async function () {
+  const { container, getByLabelText, getByTitle } = render(
     <ChipListInput
       id="jest"
       name="jest"
+      label="jest test"
       attr={attr}
       chipsSelected={[]}
       chipOptions={options}
@@ -40,22 +43,23 @@ it('should call updateChipList when suggestion is clicked', function() {
     />
   );
 
-  const input = component.find('input#jest');
-  input.simulate('focus', {});
-  expect(component.state('isFocused')).toBe(true);
+  const input = getByLabelText('jest test');
+  const user = userEvent.setup();
 
-  component.setState({ text: 'at' });
+  await act(async () => {
+    await user.click(input);
 
-  const suggestion = component.find('AutocompleteSuggestionItem').at(0);
-  suggestion.find('button').simulate('click');
+    fireEvent.change(input, { target: { value: 'at' } });
+
+    await user.click(getByTitle('Bat'));
+  });
 
   expect(mockUpdateFn).toHaveBeenCalledWith('jest', [{ id: 5, text: 'Bat' }]);
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(container).toMatchSnapshot();
 });
 
-it('should render selected chips and remove', function() {
-  const component = mount(
+it('should render selected chips and remove', async function () {
+  const { container, getByText, getByTitle } = render(
     <ChipListInput
       id="jest"
       name="jest"
@@ -66,20 +70,20 @@ it('should render selected chips and remove', function() {
     />
   );
 
-  const chips = component.find('TagChip');
-  expect(chips.exists()).toBe(true);
-  expect(component).toMatchSnapshot();
+  const chip = getByText('Bat');
+  expect(chip).toBeTruthy();
+  expect(container).toMatchSnapshot();
 
-  const chip = chips.at(0);
-  chip.find('button').simulate('click');
+  const chipRemove = getByTitle('remove');
+  const user = userEvent.setup();
+  await user.click(chipRemove);
 
   expect(mockUpdateFn).toHaveBeenCalledWith('jest', []);
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(container).toMatchSnapshot();
 });
 
-it('should ready removal of selected chip', function() {
-  const component = mount(
+it('should ready removal of selected chip', function () {
+  const { container, getByLabelText } = render(
     <ChipListInput
       id="jest"
       name="jest"
@@ -90,10 +94,10 @@ it('should ready removal of selected chip', function() {
     />
   );
 
-  const input = component.find('input#jest');
-  input.simulate('keydown', { key: 'Backspace' });
+  const input = getByLabelText('tags');
+  keydown(input, { key: 'Backspace' });
+  keydown(input, { key: 'Backspace' });
 
-  expect(component.state('readyRemoval')).toBe(true);
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(mockUpdateFn).toHaveBeenCalledWith('jest', []);
+  expect(container).toMatchSnapshot();
 });

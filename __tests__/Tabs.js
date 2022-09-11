@@ -3,7 +3,7 @@ import React from 'react';
 import { Tabs } from '../lib';
 
 it('should render with minimum props', function () {
-  const component = shallow(
+  const { container, getByText } = render(
     <Tabs.Container>
       <Tabs.View name="one">
         <div>this is the first tab...</div>
@@ -14,12 +14,12 @@ it('should render with minimum props', function () {
     </Tabs.Container>
   );
 
-  expect(component.is('.tabs')).toBeTruthy();
-  expect(component).toMatchSnapshot();
+  expect(getByText('this is the first tab...')).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
-it('should change active tab', function () {
-  const component = mount(
+it('should change active tab', async function () {
+  const { container, getByText } = render(
     <Tabs.Container>
       <Tabs.View name="one">
         <div>this is the first tab...</div>
@@ -30,22 +30,16 @@ it('should change active tab', function () {
     </Tabs.Container>
   );
 
-  expect(component.find('.tab-view').at(0).hasClass('tab-view--active')).toBe(
-    true
-  );
+  expect(container).toMatchSnapshot();
 
-  component.find('button.tab-control__button').at(1).simulate('click');
+  const user = userEvent.setup();
+  await user.click(getByText('two'));
 
-  expect(component.find('.tab-view').at(1).hasClass('tab-view--active')).toBe(
-    true
-  );
-
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(container).toMatchSnapshot();
 });
 
-it('should pass isActive if child is function', function () {
-  const component = mount(
+it('should pass isActive if child is function', async function () {
+  const { container, getByText, queryByText } = render(
     <Tabs.Container>
       <Tabs.View name="one">
         {(isActive) =>
@@ -58,11 +52,11 @@ it('should pass isActive if child is function', function () {
     </Tabs.Container>
   );
 
-  expect(component.find('#jest').exists()).toBe(true);
+  expect(getByText('this is the first tab...')).toBeTruthy();
 
-  component.find('button.tab-control__button').at(1).simulate('click');
+  const user = userEvent.setup();
+  await user.click(getByText('two'));
 
-  expect(component.find('#jest').exists()).toBe(false);
-  expect(component).toMatchSnapshot();
-  component.unmount();
+  expect(queryByText('this is the first tab...')).toBeNull();
+  expect(container).toMatchSnapshot();
 });
