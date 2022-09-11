@@ -45,12 +45,8 @@
       "prettier --write"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run pretty && npm run test"
-    }
-  },
   "scripts": {
+    "prepare": "husky install",
     "pretty": "lint-staged",
     "dtslint": "dtslint types",
     "test": "npx jest",
