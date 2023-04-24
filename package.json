@@ -80,7 +80,7 @@
     "@babel/register": "^7.18.9",
     "@storybook/addon-a11y": "^6.5.10",
     "@storybook/addon-actions": "^6.5.10",
-    "@storybook/addon-docs": "^6.5.10",
+    "@storybook/addon-docs": "^7.0.6",
     "@storybook/addon-knobs": "^6.4.0",
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/react": "^7.0.6",
