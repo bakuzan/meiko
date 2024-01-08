@@ -32,9 +32,10 @@ async function copyDir(fromFolder, toFolder = '') {
 }
 
 async function babelJS() {
-  await execa.shell(
+  await execa(
     `npx babel ${projectRoot} --out-dir ${buildFolder} --extensions=.js --presets @babel/preset-env --copy-files --env-name "lib"`,
     {
+      shell: true,
       stdio: ['pipe', 'pipe', 'inherit']
     }
   );
